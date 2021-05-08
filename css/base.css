@@ -1,43 +1,17 @@
-/* =================================================================== 
- *
- *  Count v1.0 Base Stylesheet
- *  04-16-2018
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # imports 
- *  # normalize
- *  # basic/base setup styles
- *    ## media
- *    ## typography resets
- *    ## links     
- *    ## inputs
- *  # grid
- *    ## medium size devices
- *    ## tablets 
- *    ## mobile devices
- *    ## small mobile devices
- *  # block grids
- *    ## medium size devices
- *    ## tablets
- *    ## mobile devices
- *    ## small mobile devices
- *  # MISC
- *
- * =================================================================== */
-
 
 /* ===================================================================
- * # imports - (_imports.scss)
+ * # imports 
  *
  * ------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,600,700|Chivo:300,400,700,700i,900");
 @import url("font-awesome/css/fontawesome-all.css");
-@import url("fonts.css");
+@import url("micons/micons.css");
+
 
 
 /* ===================================================================
- * # normalize - (_normalize.scss)
- * normalize.css v5.0.0 | MIT License | 
+ * # normalize
+ * normalize.css v5.0.0 | MIT License |
  * github.com/necolas/normalize.css
  *
  * ------------------------------------------------------------------- */
@@ -282,8 +256,9 @@ template {
 }
 
 
+
 /* ===================================================================
- * # basic/base setup styles - (_basic.scss) 
+ * # basic/base setup styles
  *
  * ------------------------------------------------------------------- */
 html {
@@ -313,8 +288,9 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## media - (_basic.scss) 
+ * ## Media
  * ------------------------------------------------------------------- */
 img,
 video {
@@ -322,8 +298,9 @@ video {
   height: auto;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## typography resets - (_basic.scss) 
+ * ## Typography resets 
  * ------------------------------------------------------------------- */
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
@@ -365,8 +342,9 @@ li {
   display: block;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## links - (_basic.scss) 
+ * ## links
  * ------------------------------------------------------------------- */
 a {
   text-decoration: none;
@@ -377,8 +355,9 @@ a img {
   border: none;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## inputs - (_basic.scss) 
+ * ## inputs
  * ------------------------------------------------------------------- */
 fieldset {
   margin: 0;
@@ -400,12 +379,14 @@ textarea {
   appearance: none;
 }
 
+
+
 /* ===================================================================
- * # grid - (_grid.scss)
+ * # grid
  *
  * ------------------------------------------------------------------- */
 .row {
-  width: 94%;
+  width: 89%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -432,6 +413,11 @@ textarea {
 
 [class*="col-"] + [class*="col-"].end {
   float: right;
+}
+
+.collapse > [class*="col-"],
+[class*="col-"].collapse {
+  padding: 0;
 }
 
 /* column width classes 
@@ -492,17 +478,18 @@ textarea {
   width: 100%;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## medium size devices - (_grid.scss)
+ * ## medium size devices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1200px) {
   .row .row {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -16px;
+    margin-right: -16px;
   }
 
   [class*="col-"] {
-    padding: 0 15px;
+    padding: 0 16px;
   }
 
   .md-one {
@@ -563,8 +550,9 @@ textarea {
 
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## tablets - (_grid.scss)
+ * ## tablets
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:800px) {
   .row {
@@ -601,8 +589,9 @@ textarea {
 
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## mobile devices - (_grid.scss)
+ * ## mobile devices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:600px) {
   .row {
@@ -652,8 +641,9 @@ textarea {
 
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## small mobile devices - (_grid.scss)
+ * ## small mobile devices
  * ------------------------------------------------------------------- */
 
 /* stack columns on small mobile devices
@@ -664,7 +654,7 @@ textarea {
     margin-right: 0;
   }
 
-  [class*="col-"] {
+  [class*="col-"]:not(.col-block) {
     width: 100% !important;
     float: none !important;
     clear: both !important;
@@ -677,14 +667,24 @@ textarea {
     float: none;
   }
 
+  .stack .col-block {
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
 }
 
 
+
 /* ===================================================================
- * # block grids - (_grid.scss)
+ * # block grids
  * ------------------------------------------------------------------- */
 
-/*   Equally-sized columns define at row level
+/* Equally-sized columns define at row level
  * ------------------------------------------------------------------- */
 [class*="block-"]:after {
   content: "";
@@ -724,8 +724,9 @@ textarea {
   clear: both;
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## medium size devices - (_grid.scss)
+ * ## medium size devices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1200px) {
   .block-m-1-6 .col-block {
@@ -767,8 +768,9 @@ textarea {
 
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## tablets - (_grid.scss)
+ * ## tablets
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:800px) {
   .block-tab-1-6 .col-block {
@@ -801,7 +803,7 @@ textarea {
   }
 
   .block-tab-1-6 .col-block:nth-child(6n+1),
-  .block-tab-1-6 .col-block:nth-child(5n+1),
+  .block-tab-1-5 .col-block:nth-child(5n+1),
   .block-tab-1-4 .col-block:nth-child(4n+1),
   .block-tab-1-3 .col-block:nth-child(3n+1),
   .block-tab-1-2 .col-block:nth-child(2n+1) {
@@ -810,8 +812,9 @@ textarea {
 
 }
 
+
 /* ------------------------------------------------------------------- 
- * ## mobile devices - (_grid.scss)
+ * ## mobile devices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:600px) {
   .block-mob-1-6 .col-block {
@@ -853,26 +856,10 @@ textarea {
 
 }
 
-/* ------------------------------------------------------------------- 
- * ## small mobile devices - (_grid.scss)
- * ------------------------------------------------------------------- */
-
-/* stack columns on small mobile devices
- * ------------------------------------------------------------------- */
-@media only screen and (max-width:400px) {
-  .stack .col-block {
-    width: 100% !important;
-    float: none !important;
-    clear: both !important;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-}
 
 
 /* ===================================================================
- * # MISC - (_grid.scss)
+ * # MISC
  *
  * ------------------------------------------------------------------- */
 .group:after {
@@ -905,11 +892,11 @@ textarea {
 }
 
 .half-bottom {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
 .add-bottom {
-  margin-bottom: 3rem !important;
+  margin-bottom: 3.2rem !important;
 }
 
 .no-border {

@@ -5,9 +5,9 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Adversary Village</title>
-    <meta name="description" content="Adversary Village">
-    <meta name="author" content="Adversary Village">
+    <title>DEF CON Adversary Village</title>
+    <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life and urban survival skills.">
+    <meta name="author" content="DEF CON 29 Adversary Village">
 
     <!-- mobile specific metas
     ================================================== -->
@@ -26,110 +26,235 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 </head>
 
-<body>
-
-    <!-- home
-    ================================================== -->
-    <main class="s-home s-home--static">
-
-        <div class="overlay"></div>
-
-        <div class="home-content">
-
-            <div class="home-logo">
-                <a href="index-static.html">
-                    <img src="images/logo.png" alt="Homepage">
-                </a>
-            </div>
-
-            <div class="row home-content__main">
-
-                <div class="col-eight home-content__text pull-right">
-                    <h3></h3>
-
-                    <h1>
-                    Adversary Village.
-                    </h1>
-
-                    <p>
-                   
-                    </p>
-
-                  
-                </div>  <!-- end home-content__text -->
-
-                <div class="col-four home-content__counter">
-                    <h3>From day 0.</h3>
-
-                    <div class="home-content__clock">
-                        <div class="top">
-                            <div class="time days">
-                                blah
-                                <span>Days</span>
-                            </div>
-                        </div>    
-                        <div class="time hours">
-                            09
-                            <span>H</span>
-                        </div>
-                        <div class="time minutes">
-                            54
-                            <span>M</span>
-                        </div>
-                        <div class="time seconds">
-                            30
-                            <span>S</span>
-                        </div>
-                    </div>  <!-- end home-content__clock -->
-                </div>  <!-- end home-content__counter -->
-
-            </div>  <!-- end home-content__main -->
-
-            <ul class="home-social">
-              
-                <li>
-                <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-                </li>
-                <li>
-                <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-                </li>
-              
-                
-            </ul> <!-- end home-social -->
-
-            <div class="row home-copyright">
-                <span>Copyright © Adversary Village 2020</span> 
-              
-            </div> <!-- end home-copyright -->
-
-            <div class="home-content__line"></div>
-
-        </div> <!-- end home-content -->
-
-    </main> <!-- end s-home -->
-
-    <!-- info
-    ================================================== -->
-   
+<body id="top">
 
     <!-- preloader
     ================================================== -->
     <div id="preloader">
-        <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+
+
+    <!-- header 
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="index.html">
+                   <img src="images/test1.png" alt="Homepage">
+                </a>
+            </div>
+    
+            <nav class="header-nav-wrap">
+                <ul class="header-main-nav">
+                    <li class="current"><a class="smoothscroll" href="#home" title="intro">Home</a></li>
+                    
+                    <li><a  href="#">DEF CON 29</a>
+					</li>
+                    <li><a href="#">Call for papers</a></li>
+					<li><a href="#">Call for volunteers</a></li>
+                    <li><a href="#">Sponsors</a></li>	
+					<li><a href="#">About</a></li>
+                </ul>
+    
+                
+            </nav> <!-- end header-nav-wrap -->
+    
+            <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+        </div>
+
+    </header> <!-- end header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <div class="home-content__left">
+                    <h1>
+                    DEF CON 29 <br>
+                    Adversary Village.
+                    </h1>
+    
+                    <h3>
+                    We're excited to be a part of DEF CON this year! <br> Join Adversary Village virtually on Aug 6<sup>th</sup> - 8<sup>th</sup> 2021. <br> Stay tuned for more information!
+                    </h3>
+    
+                    <div class="home-content__btn-wrap">
+                        <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+                            Submit CFP
+                        </a>
+                    </div>
+                </div> <!-- end home-content__left-->
+
+                <div class="home-content__right">
+                    <img src="images/adversary-village-800.png" srcset="images/adversary-village-800.png 1x, images/adversary-village-1600.png 2x">
+                </div> <!-- end home-content__right -->
+
+            </div> <!-- end home-content__main -->
+
+            <ul class="home-content__social">
+                
+                <li><a href="https://twitter.com/AdversaryVillag" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/AdversaryVillage" target="_blank">Instagram</a></li>
+				<li><a href="#0">Linkedin</a></li>
+				<li><a href="https://facebook.com/AdversaryVillage" target="_blank">Facebook</a></li>
+            </ul>
+
+        </div> <!-- end home-content -->
+
+        <a href="#about" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll</span>
+            <span class="home-scroll__icon"></span>
+        </a> 
+
+    </section> <!-- end s-home -->
+
+
+
+
+
+
+
+ 
+    <!-- download
+    ================================================== -->
+    <section id="download" class="s-download target-section">
+
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Join our community of Adversaries.
+                </h1>
+                <p class="lead">
+                    Join Adversary Village official Discord server to be a part of our Adversary community! 
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row">
+            <div class="col-full text-center">
+                <ul class="download-badges" data-aos="fade-up">
+                    <li><a href="#0" title="" class="badge-appstore">Join Discord</a></li>
+                   
+                </ul>
+            </div> 
+        </div>
+
+        <div class="row download-bottom-image" data-aos="fade-up">
+         
+        </div>
+
+    </section> <!-- end s-download -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer footer">
+
+        <div class="row section-header align-center">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Let's stay in touch.
+                </h1>
+                <p class="lead">
+                Subscribe our social media handles for updates, schedule, and other amazing stuff.
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+
+        <div class="row footer__bottom">
+
+            <div class="footer__about col-five tab-full left">
+
+                <h4>About Adversary Village.</h4>
+
+                <p>
+                "Adversary Village" a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, life and urban survival skills.
+                </p>
+
+                <ul class="footer__social">
+                    
+                    <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+					<li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-five md-seven tab-full right end">
+                <div class="row">
+
+                    <div class="footer__site-links col-five mob-full">
+                        <h4>Site links.</h4>
+
+                        <ul class="footer__site-links">
+                            <li><a href="https://defcon.org/" target="_blank">DEF CON 29</a></li>
+                            <li><a href="#" class="smoothscroll">About Us</a></li>
+                            <li><a href="#" class="smoothscroll">Call for papers</a></li>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="footer__contact col-seven mob-full">
+                        <h4>Contact Us.</h4>
+
+                      
+                        <p>
+                        Would you like to sponsor? or have a question for us? Ping us: <br>
+                        <a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-full ss-copyright">
+                <span>&copy; Copyright Adversary Village 2020</span> 
+               
+            </div>
+
+        </div> <!-- end footer__bottom -->
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
 
     <!-- Java Script
     ================================================== -->
@@ -138,5 +263,3 @@
     <script src="js/main.js"></script>
 
 </body>
-
-</html>
