@@ -135,7 +135,7 @@ p.lead {
   font-size: 2.8rem;
   line-height: 1.571;
   margin-bottom: 3.6rem;
-  color: #898989;
+  color: #171616;
 }
 
 @media only screen and (max-width:1200px) {
@@ -3092,7 +3092,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-features {
   padding-top: 19.2rem;
-  padding-bottom: 20rem;
+  padding-bottom: 2rem;
   background-color: #eaeaea;
   overflow: hidden;
   position: relative;
@@ -3142,7 +3142,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width:1000px) {
   .s-features {
     padding-top: 17.2rem;
-    padding-bottom: 17.2rem;
+    padding-bottom: 1.2rem;
   }
 
   .features .item-feature:nth-child(2n+1) {
@@ -3158,7 +3158,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width:800px) {
   .s-features {
     padding-top: 16rem;
-    padding-bottom: 16rem;
+    padding-bottom: 0.8rem;
   }
 
   .features {
@@ -3188,7 +3188,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width:600px) {
   .s-features {
     padding-top: 14.8rem;
-    padding-bottom: 14.8rem;
+    padding-bottom: 0.8rem;
   }
 
   .features .item-feature:nth-child(n) {
@@ -3201,7 +3201,7 @@ html.no-csstransitions .home-content__main {
 @media only screen and (max-width:400px) {
   .s-features {
     padding-top: 14rem;
-    padding-bottom: 14rem;
+    padding-bottom: 1.4rem;
   }
 
   .features .item-feature:nth-child(n) {
