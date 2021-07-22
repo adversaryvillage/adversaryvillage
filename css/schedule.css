@@ -1,0 +1,382 @@
+
+/* Schedule Area */
+#schedules {
+  background: #f3f4f3;
+}
+
+#schedule-tab {
+  position: relative;
+}
+
+.schedule .schedule-tab-title {
+  margin-bottom: 35px;
+}
+
+.schedule .schedule-tab-title .nav-tabs {
+  background: #ffffff;
+}
+
+.schedule .schedule-tab-title .nav-tabs .nav-link {
+  border-radius: 0px;
+  position: relative;
+  cursor: pointer;
+  height: 90px;
+  width: 255px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 500ms ease;
+  padding: 20px 20px;
+}
+
+.schedule .schedule-tab-title .nav-tabs .nav-item.show .nav-link, .schedule .schedule-tab-title .nav-tabs .nav-link.active,
+.schedule .schedule-tab-title .nav-tabs .nav-item .nav-link:hover {
+  background: #E91E63;
+  border: 1px solid #E91E63;
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.schedule .schedule-tab-title .nav-tabs .nav-item.show .nav-link h4, .schedule .schedule-tab-title .nav-tabs .nav-link.active h4,
+.schedule .schedule-tab-title .nav-tabs .nav-item .nav-link:hover h4 {
+  color: #fff;
+}
+
+.schedule .schedule-tab-title .nav-tabs .nav-item.show .nav-link h5, .schedule .schedule-tab-title .nav-tabs .nav-link.active h5,
+.schedule .schedule-tab-title .nav-tabs .nav-item .nav-link:hover h5 {
+  color: #fff;
+}
+
+.schedule .schedule-tab-title .item-text h4 {
+  font-size: 15px;
+  color: #2f323c;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.schedule .schedule-tab-title .item-text h5 {
+  font-size: 14px;
+  color: #848484;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.schedule .schedule-tab-content .tab-content {
+  box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule .schedule-tab-content .card {
+  border: none;
+}
+
+.schedule .show .card-body {
+  background: #f3f4f3;
+}
+
+.schedule .card-header {
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule .card-header .images-box {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+.schedule .card-header .images-box img {
+  border-radius: 50%;
+}
+
+.schedule .card-header .time {
+  color: #777777;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.schedule .card-header h4 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.schedule .card-header .name {
+  position: relative;
+  font-size: 14px;
+  color: #777777;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.schedule .card-body {
+  padding: 15px 70px 15px 110px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule .card-body .location {
+  font-size: 13px;
+  color: #777777;
+}
+
+.schedule .card-body .location span {
+  color: #E91E63;
+  margin-right: 5px;
+}
+
+.accordion .card {
+  border-radius: 0px;
+  margin-bottom: -2px;
+}
+
+.accordion .header-title {
+  position: relative;
+}
+
+.accordion .header-title:after {
+  font-family: "LineIcons";
+  content: "\e93a";
+  position: absolute;
+  right: 10px;
+  color: #999;
+  top: 50%;
+  line-height: 1;
+  padding: 0px 5px;
+  margin-top: -7px;
+}
+
+.accordion .collapsed:after {
+  content: "\e940";
+}
+
+.accordion .card-header {
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.accordion .card-header i {
+  color: #E91E63;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.accordion .card-body {
+  padding-left: 56px;
+}
+
+
+
+.section-titile-bg {
+  display: inline;
+  font-size: 115px;
+  font-weight: 700;
+  height: 100%;
+  left: -173px;
+  opacity: 0.1;
+  position: absolute;
+  top: -14px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-title-header p {
+  text: center;
+  font-weight: 400;
+  line-height: 26px;
+  padding-bottom: 36px;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #212121;
+  line-height: 52px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.section-title:before {
+  position: absolute;
+  content: '';
+  left: 15px;
+  bottom: 8px;
+  width: 48px;
+  height: 1px;
+  background-color: #E91E63;
+}
+
+.section-title:after {
+  position: absolute;
+  content: '';
+  left: 0px;
+  bottom: 2px;
+  width: 48px;
+  height: 1px;
+  background-color: #E91E63;
+}
+
+.section-title:before, .section-title:after {
+  left: 50%;
+  margin-left: -45px;
+}
+
+.section-title:after {
+  margin-left: -30px;
+}
+
+.section-subcontent {
+  font-size: 16px;
+  text: center;
+  font-weight: 400;
+  line-height: 26px;
+  padding-bottom: 36px;
+}
+
+.section-sub {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 52px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-sub:before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 45px;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #E91E63;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.inner-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-tranform: capitalize;
+}
+
+.page-tagline {
+  font-size: 24px;
+  font-weight: 400;
+  color: #ddd;
+}
+
+.page-title {
+  font-size: 62px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+
+.btn i {
+  margin-right: 5px;
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+  outline: none;
+  color: #fff;
+}
+
+.btn-common {
+  background-color: #E91E63;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-common:hover {
+  color: #fff;
+  background: #F50057;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.btn-border {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-border:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-lg {
+  padding: 12px 34px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.btn-rm {
+  padding: 7px 10px;
+  text-transform: capitalize;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.icon-close, .icon-check {
+  color: #E91E63;
+}
+
+.bg-drack {
+  background: #f1f1f1;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
