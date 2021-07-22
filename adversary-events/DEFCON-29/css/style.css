@@ -1,13 +1,4 @@
-/**
-* Template Name: TheEvent - v4.3.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 
 a {
   color: #f82249;
@@ -784,6 +775,7 @@ p {
 #schedule .nav-tabs li {
   display: inline-block;
   margin-bottom: 0;
+  padding-top: 10px;
 }
 
 #schedule .nav-tabs a {
