@@ -96,65 +96,128 @@
       <section id="features" style="background-color:white;">
          <div class="row half-bottom" style="background-color:white;">
             <div class="col-six tab-full">
-               </br>           
-               <p style="text-align: center;"><img  src="../images/speakers/atul-nair.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
-               <div class="footer-social-icons">
-                  <ul class="social-icons">
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                     <li><a href="https://in.linkedin.com/in/atul-nair-3932a2141" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                  </ul>
-               </div>
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Atul Nair</h2>
-               <p class="job">Malware Researcher, Qualys</p>
-               <p class="drop-cap">Atul is a Malware Researcher at Qualys. His name has been listed in Google,
-                  Microsoft,Olx, Twitter Hall of fame for finding critical security vulnerabilities. Before joining
-                  Qualys he worked as a Cybersecurity consultant at Ernst & Young. Atul has extensive experience
-                  in MITRE ATT&CK framework and Adversary emulation. He is currently researching on Android
-                  adversary emulation techniques.
-               </p>
-            </div>
-         </div>
-         <div class="row half-bottom" style="background-color:white;">
-            <div class="col-six tab-full">
                </br>
-               <p style="text-align: center;"><img src="../images/speakers/adversary-village.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+               <p style="text-align: center;"><img src="../images/speakers/Jose-Garduno.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
                <div class="footer-social-icons">
                   <ul class="social-icons">
                      <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                     <li><a href="https://in.linkedin.com/in/harshal-tupsamudre-28a58735" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
+                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
                   </ul>
                </div>
                </p>
             </div>
             <div class="col-six tab-full">
-               <h2>Harshal Tupsamudre</h2>
-               <p class="job">Senior Threat Research Engineer, Qualys</p>
-               <p class="drop-cap">Harshal Tupsamudre is a senior threat researcher at Qualys. He has 8 years of research
-                  experience in the areas of cryptanalysis and usable security. He has published 15+ research
-                  articles in top-tier international conferences. He has contributed techniques, threat groups and
-                  tools to MITRE ATT&CK framework. Currently, he is researching on detection methodologies for
-                  MITRE ATT&CK techniques.
+               <h2>Jose Garduno</h2>
+               <p class="job">Senior Security Consultant, Dreamlab Technologies AG</p>
+               <p class="drop-cap">José Garduño is a senior security consultant at Dreamlab Technologies since 2014,
+                  where he usually takes part in security audits, pentesting and red teaming engagements. He has
+                  participated as a speaker in several technical conferences like: Hackito Ergo Sum (France), Swiss
+                  Cybersecurity days (Switzerland), DSS ITSEC (Latvia), 8.8 Security Conference (Chile, Bolivia),
+                  OWASP Patagonia (Argentina), Congreso Seguridad en Computo UNAM (Mexico), DragonJar
+                  Security Conference (Colombia), where he has presented his work on privacy attacks on
+                  Latin-America (The government as your hacking partner), Hacking with open hardware
+                  platforms (revisiting hardware keyloggers, say hi to mikey: an offensive hardware keylogger) and
+                  C2 detection (RATSPOTTING: Analysis of popular Remote Administration Tools & discovery of C2
+                  servers on the wild)
                </p>
             </div>
          </div>
          <div class="row">
             <div class="col-twelve tab-full">
-               <h3>Tool Demo: Tenacity- An Adversary Emulation Tool for Persistence</h3>
+               <h3>Talk: C2Centipede: APT level C2 communications for common reverse HTTP shell
+                  tools.
+               </h3>
                <p>
-                  Persistence consists of techniques that adversaries use to maintain
-                  their foothold on systems across restarts. Techniques used for persistence include any access,
-                  action, or configuration changes that allow attackers retain access on systems. Persistence is
-                  one of the more sought-after techniques of an attacker. Every 3 techniques out of top 10 usedby Adversaries belong to Persistence. We leveraged data from MITRE ATT&CK and open source
-                  cyber threat intelligence to understand how adversary achieves persistence. We created
-                  Tenacity, a light-weight adversary emulation tool that emulates over 30+ persistence techniques
-                  using 100+ procedures employed by attackers in the wild. Using this tool the organizations and
-                  individuals can quickly validate the risk posture and exposure of their business as well as the
-                  performance of the existing security solutions.
+                  Adversaries have been continuously improving their malware to
+                  be stealthier and more resilient on both the victim’s host as well as on the network.Examples of these innovations on the latter include Fast Flux networks, Domain Generation
+                  Algorithms and Domain Fronting among other techniques.
+               </p>
+               <p>Unfortunately, open source tools for threat emulation currently have limited support for
+                  such advanced features, leaving redteams with easy to detect C2 communications. We
+                  present C2Centipede, a proxy tool that provides these features to HTTP reverse shell tools
+                  (like Metasploit or Empire) to be stealthier on the network by dynamically and transparently
+                  modifying the trojan’s C2 communication routing and beaconing strategies, with the aim of
+                  evading some of the blueteam’s detection strategies.
+               </p>
+               <h6>Beaconing Evasion</h6>
+               <p>
+                  Detection of HTTP reverse shell beaconing activity is possible because most of the patterns
+                  on which malware sends the beacons through the network can be identified as they occur in
+                  static time intervals or are adjusted in specific increments, attributes which are possible to
+                  detect using statistical analysis.[1]
+               </p>
+               <p>For instance, Metasploit’s reverse_http meterpreter sends a message to the C2 server every
+                  100 milliseconds and increases the interval by this same measure each time the C2 server
+                  gives no new jobs to the trojan, up to a maximum of 10 seconds.[2]
+               </p>
+               <p>It is easy then for tools like RITA to perform statistical analysis on the number, timing and
+                  size of connections between pairs of hosts (source, destination)[3]. This IP-pair evaluation
+                  works in the most typical approach of having only one IP per C2 server. We implement a
+                  beaconing detection evasion method that works by 1) Altering the trojan’s C2
+                  communication message interval and 2) Splitting and routing the C2 communication among
+                  many C2 server addresses to hide beaconing and exfiltration.
+               </p>
+               <h6>Jitter Modification</h6>
+               <p>The Achille’s heel of most RAT (Remote Access Trojan) and TES (Threat Emulation Software)
+                  tools network stealthiness is fixed beaconing intervals. The time interval between each
+                  message that goes to the C2 server is usually hardcoded and just too short, making manyrequests across the network, so we have incorporated in the tool, better control of the
+                  beaconing, with the possibility of modifying the jitter on the fly or having preset
+                  configurations, like allowing C2 communication just on certain time window.
                </p>
                <p>
+                  Some RAT/TES tools will fail after a specific amount of unsuccessful C2 communication
+                  attempts, so the C2Centipede proxy client cannot just drop the HTTP calls that don’t fit the
+                  operator’s beaconing strategy, therefore fake C2 response messages are generated in order
+                  to keep the trojan alive.
+               </p>
+               <h6>Faux Flux</h6>
+               <p>The concept of Fast Flux networks as a technique to improve a botnet’s C2 availability has
+                  been in use since 2007-2008.[4] Using this technique, an attacker can hide the real C2 server
+                  behind proxies (which are usually compromised edge servers in a botnet), and distributing
+                  said proxies IPs through DNS records with a very low TTL[5], allowing them to rapidly (and
+                  thus the name fast flux) change the resolved IP for a given domain name. This results in
+                  making the shutdown of each C2 IP so difficult as to be usually compared to a whack a mole
+                  game.[4] The weakness of this approach is the reliance on a domain name[5], which can be
+                  sinkholed by the domain name registrar, as in the case of the shutdown of the Conficker
+                  botnet.[4] Some of the common detection methods for Fast Flux networks is the low TTL
+                  (time to live) of the record and a high number of IPs resolved for that record.[3]
+               </p>
+               <p>
+                  We have incorporated the C2 proxying technique without the DNS and botnet requirements
+                  by utilizing open reverse tcp/http tunnels found on the internet, which provide plenty of IP
+                  addresses on which we can spread our C2 comms and provide anonymity as the real C2
+                  server is hidden behind the reverse proxy. In our most recent internet-wide survey we found
+                  more than 1.5K servers that could be abused for this purpose
+               </p>
+               <h6>Multifronting</h6>
+               <p>Domain fronting (ATT&CK T1090.004) is a widely used technique for evading network
+                  detection. This technique hides the trojan’s HTTP requests to the C2 as if it was directed to
+                  another domain hosted on the same Content Delivery Network (CDN) as the attacker’s.
+                  Without TLS inspection, where a mismatch between TLS’s SNI and the HTTP header could be
+                  detected, it becomes very hard for the defenders to detect malicious traffic using this
+                  technique, having as a last resource the detection via statistical analysis like beaconing
+                  detection.
+               </p>
+               <p>
+                  C2Centipede has the ability to utilize multiple domain fronting configurations, which are not
+                  necessarily on the same CDN, this provides additional resilience in case one of the CDN
+                  providers blocks the redteamer’s account.
+               </p>
+               <h6>Domain Generation Algorithms</h6>
+               <p>We have incorporated Flubot’s algorithm for Domain Generation Algorithm (ATT&CK:
+                  T1568.002). The seed, and maximum number of domains generated are easily configurable.
+               </p>
+               <h6>Dynamic Proxy Configuration</h6>
+               <p>C2Centipede’s configuration on the server and client can be modified on the fly by the
+                  operator. The original trojan’s and C2 messages are wrapped in the tool’s own HTTP
+                  messages along with the configuration changes of the routing, jitter and encryption settings
+                  for the c2centipede client and server. These are piggybacked on the original HTTP requests,
+                  requiring no additional “noise” in the network.
+               </p>
+               <h6>Limitations</h6>
+               <p>The tool currently works with reverse HTTP shells that close the TCP connections (eg.
+                  Metasploit, Empire) and currently does not support those with long connections (eg.
+                  PoshC2, Koadic)
                </p>
             </div>
          </div>
