@@ -892,11 +892,11 @@ textarea {
 }
 
 .half-bottom {
-  margin-bottom: 1.6rem !important;
+ /* margin-bottom: 1.6rem !important; */
 }
 
 .add-bottom {
-  margin-bottom: 3.2rem !important;
+  /* margin-bottom: 3.2rem !important; */
 }
 
 .no-border {
