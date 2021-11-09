@@ -3529,7 +3529,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-download {
-  padding-top: 9.4rem;
+  padding-top: 5rem;
   background-color: #5b4f96;
   color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
@@ -3606,14 +3606,14 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width:1000px) {
   .s-download {
-    padding-top: 10.2rem;
+    padding-top: 5rem;
   }
 
 }
 
 @media only screen and (max-width:800px) {
   .s-download {
-    padding-top: 10rem;
+    padding-top: 5rem;
   }
 
   .s-download .download-content__badges li a {
@@ -3626,7 +3626,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width:600px) {
   .s-download {
-    padding-top: 10.8rem;
+    padding-top: 5rem;
   }
 
   .s-download .download-bottom-image {
