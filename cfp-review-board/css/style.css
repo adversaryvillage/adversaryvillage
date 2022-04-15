@@ -125,15 +125,12 @@
     transform-style: preserve-3d;
 }
 
-.team-9:hover {
-    transform: rotateY(180deg);
-}
 
 .team-9 .team-img {
     position: relative;
     font-size: 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .team-9 .team-img img {
@@ -149,7 +146,7 @@
 .team-9 .team-content h2 {
     font-size: 25px;
     font-weight: 700;
-    letter-spacing: 2px;
+   
     margin-bottom: 5px;
 }
 
@@ -189,6 +186,7 @@
     align-items: center;
     justify-content: center;
     font-size: 0;
+	padding-top:15px;
 }
 
 .team-9 .team-social a {

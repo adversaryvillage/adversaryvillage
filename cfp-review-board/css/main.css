@@ -33,7 +33,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #5b4f96;
+ color: #000000;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -41,7 +41,8 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #000000;
+  
+  color: #5b4f96;
 }
 
 a:hover,
@@ -68,8 +69,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 @media only screen and (max-width:600px) {
-  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  h1, .h1, h2, .h2, h4, .h4 {
     margin-top: 5.6rem;
+  }
+   h3, .h3 {
+    margin-top: 1.2rem;
   }
 }
 
