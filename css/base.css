@@ -445,7 +445,10 @@ textarea {
   width: 41.66667%;
 }
 
-.col-six,
+.col-six
+{
+width:33%;
+}
 .col-1-2 {
   width: 50%;
 }
