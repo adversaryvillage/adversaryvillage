@@ -4,13 +4,13 @@
       <!--- basic page needs
          ================================================== -->
       <meta charset="utf-8">
-      <title> Scott Small | Adversary Village at DEF CON 30</title>
+      <title> Martin Sohn Christensen | Adversary Village at DEF CON 30</title>
       <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
       <meta name="author" content="Adversary Village at DEF CON 30">
-      <meta property="og:title" content="Scott Small | Adversary Village at DEF CON 30"/>
+      <meta property="og:title" content=" Martin Sohn Christensen | Adversary Village at DEF CON 30"/>
       <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."/>
       <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Adversary Tactics and purple teaming!"/>
-      <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-30/images/og-images/adv-dc-30-Scott-Small.jpg"/>
+      <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-30/images/og-images/adv-dc-30-Martin-Sohn-Christensen.jpg"/>
       <!-- mobile specific metas
          ================================================== -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,41 +97,62 @@
          <div class="row half-bottom" style="background-color:white;">
             <div class="col-six tab-full">
                </br>
-               <p style="text-align: center;"><img src="../images/speakers/Scott-Small.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+               <p style="text-align: center;"><img src="../images/speakers/Martin-Sohn-Christensen-full.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
                <div class="footer-social-icons">
                   <ul class="social-icons">
-                     <li><a href="https://www.linkedin.com/in/scott-small-20ba0164" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="https://twitter.com/IntelScott" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
+                     <li><a href="https://www.linkedin.com/in/martinsohn " target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
+                     <li><a href="https://twitter.com/martinsohndk" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
                   </ul>
                </div>
                </p>
             </div>
             <div class="col-six tab-full">
-               <h2> Scott Small</h2>
-               <p class="job">Senior CTI Analyst at Major US Retailer</p>
-               <p class="drop-cap">
-                  Scott Small is an expert in open source research, investigations, and
-                  analysis. Scott’s recent roles focused on advising clients on technical and strategic
-                  applications of intelligence, and using technology to help identify and mitigate supply
-                  chain and cyber risk. Scott has published multiple projects that aggregate and streamline
-                  publicly accessible intelligence/security resources. He believes strongly in the power of
-                  open source for upskilling and strengthening our collective security. His favorite ATT&CK
-                  technique is T1027.
-               </p>           
-            </div>
+               <h2> Martin Sohn Christensen </h2>
+               <p class="job">Security Advisor at Improsec</p>
+               <p class="drop-cap"> 
+                  Martin Sohn Christensen ,Martin is a security consultant at
+                  Improsec, a pragmatic security consulting firm in Denmark. With a background in
+                  Windows IT operations, he has pivoted to security in mainly Windows and Active
+                  Directory where he performs offence, analysis, and assessments. Although new to the
+                  industry, both his security passion and knowledge is strong because of a desire to
+                  understand concepts, technologies, and problems to their core. He enjoys researching,
+                  brain sharing, and solving hard problems in a team. </p>
+         </div>
          </div>
          <div class="row">
             <div class="col-twelve tab-full">
-               <h3>Tool demo: Control Validation Compass: Intelligence for Improved Security Validation 
-               </br><span style="font-size:1rem; background-color: #5b4f96; padding: 4px; color: white;">Adversary Tool </span></h3>
+               <h3>Talk: Don’t be trusted: Active Directory trust attacks
+               </br><span style="font-size:1rem; background-color: #5b4f96; padding: 4px; margin-left:10px; color: white;"> Adversary Tradecraft </span></h3>	
                <p>
-                  Control Validation Compass ("CVC") is the hub for publicly accessible, operational
-                  cybersecurity resources. CVC unites a broad set of technical controls, offensive security
-                  tests, and governance resources around a common language for adversary behavior
-                  (MITRE ATT&CK). CVC allows intelligence analysts, defenders, and red teamers to
-                  instantly surface relevant detection rules, scripts, and policy controls across more than
-                  30 repositories, reducing time and effort to strengthen, validate, and measure security
-                  posture.
+                  Not understanding Active Directory domain- and forest trusts can be a big risk. We often
+                  have to stress, to quote from Microsoft: “the forest (not the domain) is the security
+                  boundary in an Active Directory implementation”.
+                  This means that any compromised child domain could result in a compromised root
+                  domain. But why is it so? We guessed the answer must be because of the
+                  attack/technique known as Access Token Manipulation: SID-History Injection, which
+                  enable a Domain Admin of a child domain to escalate to Enterprise Admin and gain full
+                  control of the forest. The attack can be mitigated by enabling SID filtering on the trust
+                  relationship, but it is not enabled by default for intra-forest domain trusts. SID Filtering is
+                  however enabled for inter-forest trusts by default, as Microsoft explains: “SID filtering
+                  helps prevent malicious users with administrative credentials in a trusted forest from
+                  taking control of a trusting forest”. </p> <p>
+                  What is interesting is that SID filtering can be enabled on intra-forest domain trust as
+                  well and in theory prevent the SID-History injection technique. This posed the question –
+                  could SID filtering make the domain a security boundary?
+                  Our talk will take the audience through our research on this question. We will
+                  demonstrate typical trust attacks, how they can be mitigated, and present our SID
+                  filtering research including new techniques we discovered that make intra-forest SID
+                  filtering obsolete. Finally, we will explain and demonstrate a trust attack technique for
+                  moving from a TRUSTING domain to a TRUSTED domain (opposite direction of other
+                  trust attacks) which works even over one-way forest trusts (thereby breaking both
+                  Microsoft’s “forest is security boundary” statement and the “Red Forest”/ESAE design).
+                  Deep knowledge of Kerberos authentication is not necessary as the attacks are of low
+                  complexity, but a basic understanding of the protocol is an advantage. Attacks will be
+                  demonstrated using living-off-the-land tools and FOSS tools like Mimikatz and Rubeus.
+                  The talk is a summary of our work published in the “SID filter as security boundary
+                  between domains?” blog post series where part 1 explains Kerberos authentication
+                  between domains: <a href="https://improsec.com/tech-blog/o83i79jgzk65bbwn1fwib1ela0rl2d" target="_blank" style="color: rgb(68, 68, 68)";>
+                  https://improsec.com/tech-blog/o83i79jgzk65bbwn1fwib1ela0rl2d</a> 
                </p>
                
             </div>
@@ -204,4 +225,3 @@
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
    </body>
-   </html>
