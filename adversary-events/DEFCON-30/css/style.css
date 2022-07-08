@@ -822,6 +822,8 @@ p {
   border-bottom: 1px solid #cad4f6;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 5px;
+   padding-right: 5px;
   transition: background-color ease-in-out 0.3s;
 }
 
