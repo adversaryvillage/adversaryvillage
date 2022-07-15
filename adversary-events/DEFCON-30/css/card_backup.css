@@ -172,7 +172,7 @@
 /* ------------------------------------------------------------------- 
  * ## tablets
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:800px) {
   .row1 {
     width: 90%;
   }
@@ -266,7 +266,7 @@
 
 /* stack columns on small mobile devices
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:400px) {
   .row1 .row1 {
     margin-left: 0;
     margin-right: 0;
@@ -390,7 +390,7 @@
 /* ------------------------------------------------------------------- 
  * ## tablets
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:800px) {
   .block-tab-1-6 .col-block {
     width: 16.66667%;
   }
@@ -477,7 +477,7 @@
 #content-desktop {display: block;}
 #content-mobile {display: none;}
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
 #content-desktop {display: none;}
 #content-mobile {display: block;}
