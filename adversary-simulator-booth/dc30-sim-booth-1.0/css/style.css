@@ -125,9 +125,9 @@
     transform-style: preserve-3d;
 }
 
-.team-9:hover {
+/** .team-9:hover { 
     transform: rotateY(180deg);
-}
+} **/
 
 .team-9 .team-img {
     position: relative;
