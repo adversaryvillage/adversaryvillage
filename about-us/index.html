@@ -1,482 +1,590 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-
-    <!--- basic page needs
+   <head>
+      <!--- basic page needs
     ================================================== -->
-    <meta charset="utf-8">
-    <title>Adversary Village at DEF CON</title>
-    
-	   <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
-   
-	<meta name="author" content="Adversary Village at DEF CON">
-<meta property="og:title" content="About us | Adversary Village at DEF CON"/>
-<meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."/>
-<meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, purple teaming and Adversary Tactics!"/>
-<meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/defcon-adversary-village.jpg"/>
-
-    <!-- mobile specific metas
+      <meta charset="utf-8">
+      <title>About Us | Adversary Village at DEF CON</title>
+      <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
+      <meta name="author" content="Adversary Village at DEF CON">
+      <meta property="og:title" content="About Us | Adversary Village at DEF CON" />
+      <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming." />
+      <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, purple teaming and Adversary Tactics!" />
+      <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/defcon-adversary-village.jpg" />
+      <!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
- <link rel="stylesheet" href="../css/speaker.css">
-    <!-- script
+      <link rel="stylesheet" href="../css/base.css">
+      <link rel="stylesheet" href="../css/vendor.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="../css/speaker.css">
+      <link rel="stylesheet" href="css/style.css">
+      <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-
-    <!-- favicons
+      <script src="js/modernizr.js"></script>
+      <script src="js/pace.min.js"></script>
+      <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-<link rel="manifest" href="../favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
-</head>
-
-<body id="top">
-
-    <!-- preloader
+      <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+      <link rel="manifest" href="../favicon/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body id="top">
+      <!-- preloader
     ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-jump">
+      <div id="preloader">
+         <div id="loader" class="dots-jump">
             <div></div>
             <div></div>
             <div></div>
-        </div>
-    </div>
-
-
-    <!-- header 
+         </div>
+      </div>
+      <!-- header 
     ================================================== -->
-    <header class="s-header">
-
-        <div class="row">
+      <header class="s-header">
+         <div class="row">
             <div class="header-logo">
-                <a class="site-logo" href="../index.html">
-                   <img src="../images/adversary-village-org.png" alt="Homepage">
-                </a>
+               <a class="site-logo" href="../index.html">
+                  <img src="../images/adversary-village-org.png" alt="Homepage">
+               </a>
             </div>
-    
             <nav class="header-nav-wrap">
-                <ul class="header-main-nav">
-                    <li><a href="../" >Home</a></li>
-                    
-                     <li><a  href="../adversary-events">Events </a>
+               <ul class="header-main-nav">
+                  <li>
+                     <a href="../">Home</a>
                   </li>
-                    <li><a href="../call-for-papers">Call for papers</a></li>
-					<li><a href="../adversary-wars-ctf">Adversary Wars CTF</a></li>
-                    <li><a href="../sponsors">Sponsors</a></li>	
-					 <li><a href="../council-of-generals">CoG</a></li>	
-					<li class="current"><a href="../about-us">About</a></li>
-                </ul>
-    
-                
-            </nav> <!-- end header-nav-wrap -->
-    
-           <a class="header-menu-toggle" href="#"><span></span></a> 
-        </div>
-
-    </header> <!-- end header -->
-
-
-
-
- 
-  <!-- features
+                  <li>
+                     <a href="../adversary-events">Events </a>
+                  </li>
+                  <li>
+                     <a href="../call-for-papers">Call for papers</a>
+                  </li>
+                  <li>
+                     <a href="../adversary-wars-ctf">Adversary Wars CTF</a>
+                  </li>
+                  <li>
+                     <a href="../sponsors">Sponsors</a>
+                  </li>
+                  <li>
+                     <a href="../council-of-generals">CoG</a>
+                  </li>
+                  <li class="current">
+                     <a href="../about-us">About</a>
+                  </li>
+               </ul>
+            </nav>
+            <!-- end header-nav-wrap -->
+            <a class="header-menu-toggle" href="#">
+               <span></span>
+            </a>
+         </div>
+      </header>
+      <!-- end header -->
+      <!-- features
     ================================================== -->
-    <section id="features" class="s-features target-section">
-	
-        <div class="row section-header has-bottom-sep" data-aos="fade-up" style="max-width: 1100px; padding-top: 10px;">
-		
-            <div class="col-full" >
-			 <div class="row half-bottom text-center">
-           
-              
-        </div> 
-                <h1 class="display-1">
-                    What do we do?
-                </h1>
-				
-                <p class="lead">
-                 
-Adversary Village<sup>™</sup>  is a community initiative which purely focuses on Adversary simulation, Adversary emulation, Threat/APT emulation, Breach and adversarial attack simulation, Supply chain security, Adversary Tactics, Life, Adversary Philosophy, urban survival skills and a bit of Purple teaming. We have hosted the first edition of Adversary Village, as part of DEF CON Villages virtually at DEF CON 29 hacking and cyber security conference, Las Vegas.
-
-				   </p> 
-            </div>
-        </div> <!-- end section-header -->
-		
-		
-       
-    </section> 
-	
-	<section id="features"  style="background-color: white; padding-top: 1rem;">
-	<div class="row section-header" data-aos="fade-up" style="max-width: 1200px; padding-top: 10px;">
-		
+      <section id="features" class="s-features target-section">
+         <div class="row section-header has-bottom-sep" data-aos="fade-up" style="max-width: 1100px; padding-top: 10px;">
             <div class="col-full">
-
- <p style="padding-top: 10px; font-weight: 300; font-size: 2.2rem;">  
-				   
-				   As this domain matures, we anticipate active participation from organizations, as such, simulations would help immensely towards internal capacity building, from having a "live fire" training opportunity. An increasing number of researchers too are focusing on building tools and techniques, for simulation of various adversarial actions against an organization or supply chain, instead of actual full scope real-world exploitation. With this village we hope to be enablers in community driven development, with aiming to better adversary tactics, TTPs, philosophy, skill set and mindset. Adversary Village will be organizing technical talks, workshops, live demos, Adversary Wars CTF, panel discussions and other hands-on activities on adversary simulation, emulation and purple teaming.
-                </p>
-				</div>
-        </div>
-	
-	</section> 
-	
-	    <section id="features"  style="background-color: #5b4f96; padding-top: 1rem;">
-	
-       
-
-        <div class="row features" style="margin-top: 1rem;">
-		  <div class="row half-bottom">
-            <div class="col-six tab-full">
-               
-               <p style="text-align: center;"><img src="../images/adversary-village-800.png" width="60%" alt="">
-             
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2 style="color: white;">Our vision </br> What do we aim for?</h2>
-              <p class="lead" style="color: white; font-size: 2.4rem;">The goal of the Adversary Village is to build an open Security community for the researchers and organizations, who are putting together new means, methodologies towards the simulation and emulation of adversary tactics and purple teaming. 
-</p>
+               <div class="row half-bottom text-center"></div>
+               <h1 class="display-1"> What do we do? </h1>
+               <p class="lead"> Adversary Village <sup>™</sup> is a community initiative which purely focuses on Adversary simulation, Adversary emulation, Threat/APT emulation, Breach and adversarial attack simulation, Supply chain security, Adversary Tactics, Life, Adversary Philosophy, urban survival skills and a bit of Purple teaming. We have hosted the first edition of Adversary Village, as part of DEF CON Villages virtually at DEF CON 29 hacking and cyber security conference, Las Vegas. </p>
             </div>
          </div>
-	
-
-
-			
-        </div> <!-- end features -->
-
-       
-    </section> <!-- end s-features -->
-	
-	
-	
-	    <section id="features" style="background-color: white; padding-top: 8rem;">
-	
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-		
+         <!-- end section-header -->
+      </section>
+      <section id="features" style="background-color: white; padding-top: 1rem;">
+         <div class="row section-header" data-aos="fade-up" style="max-width: 1200px; padding-top: 10px;">
             <div class="col-full">
-			 
-                <h1 class="display-1">
-                    Leadership
-                </h1>
-                
+               <p style="padding-top: 10px; font-weight: 300; font-size: 2.2rem;"> As this domain matures, we anticipate active participation from organizations, as such, simulations would help immensely towards internal capacity building, from having a "live fire" training opportunity. An increasing number of researchers too are focusing on building tools and techniques, for simulation of various adversarial actions against an organization or supply chain, instead of actual full scope real-world exploitation. With this village we hope to be enablers in community driven development, with aiming to better adversary tactics, TTPs, philosophy, skill set and mindset. Adversary Village will be organizing technical talks, workshops, live demos, Adversary Wars CTF, panel discussions and other hands-on activities on adversary simulation, emulation and purple teaming. </p>
             </div>
-        </div> <!-- end section-header -->
-
-       
-    </section> <!-- end s-features -->
-	
-	
-	
-	    <section id="features" style="background-color:white;">
+         </div>
+      </section>
+      <section id="features" style="background-color: #5b4f96; padding-top: 1rem;">
+         <div class="row features" style="margin-top: 1rem;">
+            <div class="row half-bottom">
+               <div class="col-six tab-full">
+                  <p style="text-align: center;">
+                     <img src="../images/adversary-village-800.png" width="60%" alt="">
+                  </p>
+               </div>
+               <div class="col-six tab-full">
+                  <h2 style="color: white;">Our vision </br> What do we aim for? </h2>
+                  <p class="lead" style="color: white; font-size: 2.4rem;">The goal of the Adversary Village is to build an open Security community for the researchers and organizations, who are putting together new means, methodologies towards the simulation and emulation of adversary tactics and purple teaming. </p>
+               </div>
+            </div>
+         </div>
+         <!-- end features -->
+      </section>
+      <!-- end s-features -->
+      <section id="features" style="background-color: white; padding-top: 8rem;">
+         <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+               <h1 class="display-1"> Leadership </h1>
+            </div>
+         </div>
+         <!-- end section-header -->
+      </section>
+      <!-- end s-features -->
+      <section id="features" style="background-color:white;">
          <div class="row half-bottom" style="background-color:white;">
             <div class="col-six tab-full">
                </br>
-               <p style="text-align: center;"><img src="images/abhijith-b-r.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+               <p style="text-align: center; ">
+                  <img src="images/abhijith-b-r.jpg" alt="" style="border-radius: 100%; max-width: 70%;">
                <div class="footer-social-icons">
                   <ul class="social-icons">
-                     <li><a href="https://in.linkedin.com/in/abhijith-b-r" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="https://twitter.com/abhijithbr" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
+                     <li>
+                        <a href="https://in.linkedin.com/in/abhijith-b-r" target="_blank" class="social-icon">
+                           <i class="fa fa-linkedin linkedin"></i>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="https://twitter.com/abhijithbr" target="_blank" class="social-icon">
+                           <i class="fa fa-twitter twitter"></i>
+                        </a>
+                     </li>
                   </ul>
                </div>
                </p>
             </div>
             <div class="col-six tab-full">
-               <h2>Abhijith B R / Abx</h2>
-               <p class="job"><b>Founder and Lead organizer, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Abhijith also known by the psuedonym Abx, has more than a decade of experience in the Information and Cyber Security domain. </br>He is the founder and Lead organizer of Adversary Village at DEF CON. Currently managing offensive security operations and Adversary simulation for a global FinTech company. Lead Organizer of an official DEFCON Group, DC0471. He has recently started running <a href="https://tacticaladversary.io" target="_blank" style="color: #5b4f96;">(https://tacticaladversary.io/)</a> project.
-</p>
+               <h2>Abhijith "Abx" B R</h2>
+               <p class="job">
+                  <b>Founder and Lead, Adversary Village at DEF CON</b>
+               </p>
+               <p class="drop-cap">Abhijith is the founder and Lead organizer of Adversary Village at DEF CON. </br>His vision is to build an open Security community for the researchers and organizations, who are putting together new means, methodologies towards the simulation and emulation of adversary tactics and purple teaming</p>
             </div>
          </div>
-        
       </section>
-	  
-	    <section id="features" style="background-color: white; padding-top: 8rem;">
-	
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-		
+      <section id="features" style="background-color: white; padding-top: 8rem;">
+         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-			 
-                <h1 class="display-1">
-                    Village team
-                </h1>
-                
+               <h1 class="display-1"> Village Team </h1>
             </div>
-        </div> <!-- end section-header -->
-</br>
-       
-    </section> <!-- end s-features -->
+         </div>
+         <!-- end section-header -->
+         </br>
+         <style type="text/css">
+            .team-9 a {
+               color: #5b4f96;
+               margin-top: 0px;
+            }
+            .team-9 a:hover {
+    color: black;
+}
 
-	    <section id="features" style="background-color:#eaeaea;">
-         <div class="row half-bottom" style="background-color:#eaeaea;">
-	   
-            <div class="col-six tab-full">
+            .team-9 h3 {
+               margin-top: 0px;
+            }
+
+            .team-9 .team-content h2 {
+               margin-top: 2px;
+            }
+         </style>
+         <style type="text/css">
+            .card_icon li a {
+               display: block;
+               line-height: 36px;
+               height: 36px;
+               width: 36px;
+               text-align: center;
+               background-color: rgb(202 100 100 / 3%);
+               color: #000;
+               border-radius: 50%;
+            }
+         </style>
+      </section>
+      <!-- end s-features -->
+      <section id="features" style="background-color:#f0f0f0;">
+         <div class="row">
+            <div class="col-twelve tab-full">
                </br>
-               <p style="text-align: center;"><img src="images/adithya-p-s.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-               <div class="footer-social-icons">
-                  <ul class="social-icons">
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                  </ul>
+               <!-- Team #9 Start -->
+               <div class="container-cfp">
+                  <div class="row-cfp">
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/adithya-p-s.jpg" alt="Adithya P S">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Adithya P S</a>
+                              </h2>
+                              <h3>Operations head</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/adversary-village.jpg" alt="Akash Joseph">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Akash Joseph/OB</a>
+                              </h2>
+                              <h3>Communications head</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                   
+                  
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/Invisible.jpg" alt="Invisible">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Invisible</a>
+                              </h2>
+                              <h3>CTF master</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>   <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/tan.jpg" alt="Tania">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_target">Tania</a>
+                              </h2>
+                              <h3>Research head</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/vpg.jpg" alt="VPG">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">VPG</a>
+                              </h2>
+                              <h3>Technical viking</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://www.twitter.com/vishnuprasadnta" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/vishnuprasadnta" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+					   <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/mr-hulk.jpg" alt="Anjith">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Mr. Hulk</a>
+                              </h2>
+                              <h3>Logistics and Badges</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                               
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Adithya P S</h2>
-               <p class="job"><b>Operations head, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Adithya is a Cyber Threat Intelligence Analyst at one of the Big4 organizations. 
-
-He is a Cyber defense professional, who has worked with many security operations centre/blue team functions. He is mostly focused in cyber threat intelligence; researches on threat detection mechanisms.
-
-He is the co-organizer of DEF CON Group Trivandrum and supports as the operations head of Adversary Village at DEF CON. 
-
-</p>
+               <!-- Team #9 End -->
             </div>
          </div>
-        
       </section>
-	   <section id="features" style="background-color:white;">
-         <div class="row half-bottom" style="background-color:white;">
-	  	   
-            <div class="col-six tab-full">
-               </br>
-               <p style="text-align: center;"><img src="images/adversary-village.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-              
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Akash Joseph / OB</h2>
-               <p class="job"><b>Communications head, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Akash aka OB, acts as the communications head for Adversary Village. He is an information security management professional who spearhead the efforts of a leading cyber security startup. </p><p>
-
-            
-               </p>
-            </div>
-         </div>
-        
-      </section>
-	 <section id="features" style="background-color:#eaeaea;">
-         <div class="row half-bottom" style="background-color:#eaeaea;">
-	        <div class="col-six tab-full">
-               </br>
-               <p style="text-align: center;"><img src="images/tan.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-              
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Tania / tanlight</h2>
-               <p class="job"><b>Research head, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Tania, contributes as the research head for Adversary Village. She is a Senior Cyber defense professional with over 8 years of experience in detection, defense and security operations centre. </p><p>
-
-            
-               </p>
-            </div>
-	   
-	   
-        
-         </div>
-        
-      </section>
-	  
-	  
-	     <section id="features" style="background-color:white;">
-         <div class="row half-bottom" style="background-color:white;">
-	  	   
-           <div class="col-six tab-full">
-               </br>
-               <p style="text-align: center;"><img src="images/Invisible.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-               <div class="footer-social-icons">
-                  <ul class="social-icons">
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                  </ul>
-               </div>
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Invisible</h2>
-               <p class="job"><b>CTF master, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Invisible is an experienced Offensive Security professional and Security researcher who loves to break things. He is working as a Red Team Lead for a security consulting organization. He is also a co-organizer of DEF CON Group Trivandrum which is a hacking and cyber security community, and CTF Master of Adversary Village at DEF CON.
-
-</p>
-            </div>
-         </div>
-        
-      </section>
-
-   <section id="features" style="background-color:#eaeaea;">
-         <div class="row half-bottom" style="background-color:#eaeaea;">
-	  	   
-           <div class="col-six tab-full">
-               </br>
-               <p style="text-align: center;"><img src="images/vpg.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-               <div class="footer-social-icons">
-                  <ul class="social-icons">
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                  </ul>
-               </div>
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>VPG</h2>
-               <p class="job"><b>Technical viking, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Vishnu is an offensive security proffessional who works for a leading security consulting organization. Vpg started as a volunteer and currently contributes the technical support required for the Adversary Village activities also takes part in building CTF Challenges.
-
-</p>
-            </div>
-         </div>
-        
-      </section>
-	  
-	    <section id="features" style="background-color: white; padding-top: 8rem;">
-	
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-		
+      <section id="features" style="background-color: white; padding-top: 8rem;">
+         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-			 
-                <h1 class="display-1">
-                    DEF CON 30 </br>Team
-                </h1>
-                
-            </div>
-        </div> <!-- end section-header -->
-</br>
-       
-    </section> <!-- end s-features -->
-
-	    <section id="features" style="background-color:#eaeaea;">
-         <div class="row half-bottom" style="background-color:#eaeaea;">
-	   
-            <div class="col-six tab-full">
-               </br>
-               <p style="text-align: center;"><img src="images/Jamie-Williams.jpg" sizes="(max-width: 1000px) 100vw, 1000px" alt="" style="max-width: 68%;">
-               <div class="footer-social-icons">
-                  <ul class="social-icons">
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-linkedin linkedin"></i></a></li>
-                     <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
-                  </ul>
-               </div>
-               </p>
-            </div>
-            <div class="col-six tab-full">
-               <h2>Jamie Williams</h2>
-               <p class="job"><b>Speaker Operations, Adversary Village at DEF CON</b></p>
-               <p class="drop-cap">Jamie is an adversary emulation engineer for The MITRE Corporation where he works with amazing people on various exciting efforts involving security operations and research, mostly focused on adversary emulation and behavior-based detections. He leads the development of MITRE ATT&CK® for Enterprise and has also led teams that help shape and deliver the “adversary-touch” within MITRE Engenuity ATT&CK Evaluations as well as the Center for Threat-Informed Defense (CTID).
-
-</p>
+               <h1 class="display-1"> DEF CON 30 </br>Team </h1>
             </div>
          </div>
-        
+         <!-- end section-header -->
+         </br>
       </section>
-
-    <!-- footer
+      <!-- end s-features -->
+      <section id="features" style="background-color:#f0f0f0;">
+         <div class="row">
+            <div class="col-twelve tab-full">
+               </br>
+               <!-- Team #9 Start -->
+               <div class="container-cfp">
+                  <div class="row-cfp">
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/Jamie-Williams.jpg" alt="Jamie-Williams">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Jamie Williams</a>
+                              </h2>
+                              <h3>Speaker Operations, Adversary Village at DEF CON 30</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/Jose-Barajas.jpg" alt="#">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Jose Barajas</a>
+                              </h2>
+                              <h3>Speaker Operations and CTF management</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/Shawn-Edwards.jpg" alt="#">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Shawn Edwards</a>
+                              </h2>
+                              <h3>CTF and Logistics management
+						</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                     <div class="column">
+                        <div class="team-9">
+                           <div class="team-img">
+                              <img src="images/Ian-Davila.jpg" alt="#">
+                           </div>
+                           <div class="team-content">
+                              <h2>
+                                 <a href="#" target="_blank">Ian Davila</a>
+                              </h2>
+                              <h3>CTF management</h3>
+                              <ul class="footer__social card_icon" style="padding-top:30px;">
+                                 <li>
+                                    <a href="https://twitter.com/#" target="_blank">
+                                       <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.linkedin.com/in/#" target="_blank">
+                                       <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="team-overlay"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Team #9 End -->
+            </div>
+         </div>
+      </section>
+      <!-- footer
     ================================================== -->
-    <footer class="s-footer footer">
-
-        <div class="row section-header align-center">
+      <footer class="s-footer footer">
+         <div class="row section-header align-center">
             <div class="col-full">
-                <h1 class="display-1">
-                    Let's stay in touch.
-                </h1>
-                <p class="lead">
-                Subscribe to our social media handles for updates, schedule, and other amazing stuff.
-                </p>
+               <h1 class="display-1"> Let's stay in touch. </h1>
+               <p class="lead"> Subscribe to our social media handles for updates, schedule, and other amazing stuff. </p>
             </div>
-        </div> <!-- end section-header -->
-
-
-        <div class="row footer__bottom">
-
+         </div>
+         <!-- end section-header -->
+         <div class="row footer__bottom">
             <div class="footer__about col-five tab-full left">
-
-                <h4>About Adversary Village.</h4>
-
-             
-                <p>
-                "Adversary Village" a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, life, urban survival skills and Purple teaming.
-                </p>
-
-                <ul class="footer__social">
-                    
-                    <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-						<li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-					<li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-					<li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></li>
-                </ul>
+               <h4>About Adversary Village.</h4>
+               <p> "Adversary Village" a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, life, urban survival skills and Purple teaming. </p>
+               <ul class="footer__social">
+                  <li>
+                     <a href="https://twitter.com/AdversaryVillag" target="_blank">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://instagram.com/AdversaryVillage" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://www.linkedin.com/company/adversaryvillage" target="_blank">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://facebook.com/AdversaryVillage" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://twitch.tv/AdversaryVillage" target="_blank">
+                        <i class="fab fa-twitch" aria-hidden="true"></i>
+                     </a>
+                  </li>
+               </ul>
             </div>
-
             <div class="col-five md-seven tab-full right end">
-                <div class="row">
-
-                    <div class="footer__site-links col-five mob-full">
-                        <h4>Site links.</h4>
-
-                        <ul class="footer__site-links">
-                            <li><a href="https://defcon.org/" target="_blank">DEF CON 29</a></li>
-                            <li><a href="../about-us">About Us</a></li>
-                            <li><a href="../call-for-papers">Call for papers</a></li>
-                           <li><a href="../call-for-volunteers">Call for volunteers</a></li>
-						    <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
-						   <li><a href="
-https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__contact col-seven mob-full">
-                        <h4>Contact Us.</h4>
-
-                      
-                        <p>
-                        Would you like to sponsor? or have a question for us? Ping us: <br>
+               <div class="row">
+                  <div class="footer__site-links col-five mob-full">
+                     <h4>Site links.</h4>
+                     <ul class="footer__site-links">
+                        <li>
+                           <a href="https://defcon.org/" target="_blank">DEF CON 29</a>
+                        </li>
+                        <li>
+                           <a href="../about-us">About Us</a>
+                        </li>
+                        <li>
+                           <a href="../call-for-papers">Call for papers</a>
+                        </li>
+                        <li>
+                           <a href="../call-for-volunteers">Call for volunteers</a>
+                        </li>
+                        <li>
+                           <a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a>
+                        </li>
+                        <li>
+                           <a href="
+https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footer__contact col-seven mob-full">
+                     <h4>Contact Us.</h4>
+                     <p> Would you like to sponsor? or have a question for us? Ping us: <br>
                         <a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a>
-                        </p>
-                    </div>
-
-                </div>
+                     </p>
+                  </div>
+               </div>
             </div>
-
             <div class="col-full ss-copyright">
-                <span>&copy; Copyright Adversary Village 2021 - 2022 | Tactical Adversary™</span> 
-               
+               <span>&copy; Copyright Adversary Village 2021 - 2022 | Tactical Adversary™</span>
             </div>
-
-        </div> <!-- end footer__bottom -->
-
-        <div class="go-top">
+         </div>
+         <!-- end footer__bottom -->
+         <div class="go-top">
             <a class="smoothscroll" title="Back to Top" href="#top"></a>
-        </div>
-
-    </footer> <!-- end s-footer -->
-
-
-    <!-- Java Script
+         </div>
+      </footer>
+      <!-- end s-footer -->
+      <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-</body>
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+   </body>
 </html>
