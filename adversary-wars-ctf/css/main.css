@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  /*  margin-top: 6rem; */
+  margin-top: 6rem;
   margin-bottom: 1.6rem;
 }
 
@@ -3339,19 +3339,19 @@ html.no-csstransitions .home-content__main {
 
 
 /* ===================================================================
- * # pricing
+ * # sponsors
  *
  * ------------------------------------------------------------------- */
-.s-pricing {
-  padding-top: 19.2rem;
-  padding-bottom: 16rem;
+.s-sponsors {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #ffffff;
   position: relative;
 }
 
 
 /* ------------------------------------------------------------------- 
- * ## pricing plan blocks
+ * ## sponsors plan blocks
  * ------------------------------------------------------------------- */
 .plans {
   margin-top: 6.4rem;
@@ -3463,11 +3463,11 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * pricing
+ * sponsors
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1200px) {
-  .s-pricing {
-    padding-top: 18.4rem;
+  .s-sponsors {
+    padding-top: 5rem;
   }
 
   .plans {
@@ -3477,17 +3477,17 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width:1000px) {
-  .s-pricing {
-    padding-top: 17.2rem;
-    padding-bottom: 17.2rem;
+  .s-sponsors {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
 }
 
 @media only screen and (max-width:800px) {
-  .s-pricing {
-    padding-top: 16rem;
-    padding-bottom: 14.8rem;
+  .s-sponsors {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .plans {
@@ -3497,9 +3497,9 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width:600px) {
-  .s-pricing {
-    padding-top: 14.8rem;
-    padding-bottom: 12rem;
+  .s-sponsors {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
 }
@@ -3909,7 +3909,7 @@ html.no-csstransitions .home-content__main {
   width: 5.6rem;
   line-height: 5.6rem;
   text-align: center;
-  background-image: url(../../images/icons/icon-arrow-up.svg);
+  background-image: url(../images/icons/icon-arrow-up.svg);
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: center center;
@@ -4028,5 +4028,3 @@ html.no-csstransitions .home-content__main {
 }
 
 /*# sourceMappingURL=main.css.map */
-
-
