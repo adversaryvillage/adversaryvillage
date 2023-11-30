@@ -5,644 +5,645 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+
 <url>
   <loc>https://adversaryvillage.org/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/index.html</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/call-for-papers/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-wars-ctf/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/sponsors/</loc>
-  <lastmod>2023-07-15T14:48:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://adversaryvillage.org/council-of-generals/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://adversaryvillage.org/about-us/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://adversaryvillage.org/adversary-events/DEFCON-31/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/live-streaming-series/</loc>
-  <lastmod>2023-07-15T14:48:31+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/about-us/</loc>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/call-for-volunteers/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-wars-ctf/adversary-wars-1.0/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-31/</loc>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/The-Diana-Initiative-2023/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/RSA-Conference-2023/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2022/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-wars-ctf/adversary-wars-2.0/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/live-streaming-series/Samuel-Rossier/</loc>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/live-streaming-series/Cas-Van-Hooten/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/live-streaming-series/David-Hunt/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/live-streaming-series/Carsten-Boeving-Dr-Malcolm-Shore/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/live-streaming-series/Scott-Small/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Tim-MalcomVetter/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Christopher-Cottrell/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Jack-Wells/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Sanne-Maasakkers/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Frank-Duff/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Ian-Davila/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Daniel-Feichter/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Jean-Michel-Amblat/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/David-Hunt/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Stephan-Wampouille/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Joe-Vest/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Itzik-Kotler/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Ben-Opel/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Daniel-Isler/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Cas-van-Cooten/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Scott-Small/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Diego-Capriotti/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Rod-Soto/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Teoderick-Contreras/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Phillip-Wylie/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Andrew-Costis/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Jake-Williams/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Christopher-Peacock/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Cat-Self/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/TJ-Null/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Niru-Ragupathy/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Jamie-Williams/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Andy-Grant/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Jonas-Knudsen/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Martin-Sohn-Christensen/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Dan-Borges/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Alex-Martirosyan/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Oleg-Lerner/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-30/Or-Yair/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-simulator-booth/dc30-sim-booth-1.0/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/discord/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Joseph-Mlodzianowski/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Alexander-Manners/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Kristopher-Willis/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Michael-C-Long-II/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Akib-Sayyed/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/c0c0n-2021/Hidayath-Khan/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Phillip-Wylie/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Mike-Gualtieri/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Jose-Garduno/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Carlos-Polop/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Cheryl-Biswas/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Jose-Barajas/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Mauro-Eldritch/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Luis-Angel-Ramirez-Mendoza/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/David-Hunt/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/texas-cyber-summit-2021/Matthew-Eidelberg/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Abhijith-B-R/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Dave-Kennedy-Keynote/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Samuel-Kimmons/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Sergey-Chubarov/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Marc-Smeets/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Mauro-Caseres-And-Luis-Angel-Ramirez-Mendoza/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Daniel-Duggan/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Fatih-Ozavci/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Anant-Shrivastava/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Vincent-Yiu/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Martin-Ingesen/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jean-Marie-Bourbon/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Joe-Vest/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Phillip-Wylie/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jean-Francois-Maes/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Matthew-Eidelberg/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Shantanu-Khandelwal/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Mauricio-Velazco/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Sanne-Maasakkers/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Atul-Nair-Harshal-Tupsamudre/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jose-Garduno/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Stephan-Wampouille/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Juneau-Jones/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Carlos-Polop/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jamie-Williams/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Frank-Duff/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Michael-Long/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Tim-Schulz/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Cat-Self/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jose-Barajas/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Chris-Jellen/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Manu-Zacharia/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Aseem-Jakhar/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jay-Turla/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Omar-Santos/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Dave-Lewis/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Dhillon-Kannabhiran/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/David-Hunt-Alex-Manners/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Mark-Loveless/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Jonas-Bulow-Knudsen/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Gil-Biton/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Cheryl-Biswas/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-29/Daniel-Isler/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Jonathan-Baker/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Anant-Shrivastava/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Vincent-Yiu/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Bryson-Bort/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Cheryl-Biswas/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Omar-Santos/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Joe-Vest/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://adversaryvillage.org/cfp-review-board/Abhijith-B-R/</loc>
-  <lastmod>2023-07-15T14:48:30+00:00</lastmod>
+  <lastmod>2023-11-30T17:19:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
