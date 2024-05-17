@@ -33,7 +33,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #5b4f96;
+  color: #604ca9;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -189,7 +189,7 @@ blockquote:before {
   line-height: 0px;
   margin: 0;
   color: #c2c2c2;
-  color: #5b4f96;
+  color: #604ca9;
   font-family: Arial, Sans-serif;
   position: absolute;
   top: 4.4rem;
@@ -339,7 +339,7 @@ ul.disc li::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #5b4f96;
+  background: #604ca9;
   position: absolute;
   left: -16px;
   top: 11px;
@@ -348,7 +348,7 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 dd {
@@ -474,7 +474,7 @@ form,
 
 .pace .pace-progress {
   z-index: 900;
-  background: #5b4f96;
+  background: #604ca9;
   width: 100%;
   height: 4px;
   position: fixed;
@@ -525,7 +525,7 @@ form,
 
 #loader > div {
   content: "";
-  background: #5b4f96;
+  background: #604ca9;
   width: 6px;
   height: 6px;
   position: absolute;
@@ -788,7 +788,7 @@ textarea:focus,
 select:focus {
   color: #000000;
   box-shadow: 0 0 5px rgba(91, 79, 150, 0.8);
-  border: 1px solid #5b4f96;
+  border: 1px solid #604ca9;
 }
 
 label,
@@ -881,7 +881,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #5b4f96;
+  -webkit-text-fill-color: #604ca9;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -941,8 +941,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #5b4f96;
-  border-color: #5b4f96;
+  background: #604ca9;
+  border-color: #604ca9;
   color: #ffffff;
 }
 
@@ -1151,7 +1151,7 @@ input::-moz-focus-inner {
   position: absolute;
   font-size: 10rem;
   font-family: Arial, Sans-serif;
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 .pull-quote:before {
@@ -1227,7 +1227,7 @@ input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 .stats-tabs li a em {
@@ -1273,7 +1273,7 @@ input::-moz-focus-inner {
 }
 
 .skill-bars li .progress {
-  background: #5b4f96;
+  background: #604ca9;
   position: relative;
   height: 100%;
 }
@@ -1518,7 +1518,7 @@ input::-moz-focus-inner {
 
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li:hover button {
-  background: #5b4f96;
+  background: #604ca9;
 }
 
 
@@ -2037,7 +2037,7 @@ input::-moz-focus-inner {
   content: "";
   height: 2px;
   width: 8rem;
-  background-color: #5b4f96;
+  background-color: #604ca9;
   position: absolute;
   left: 8px;
   top: 0;
@@ -2153,7 +2153,7 @@ input::-moz-focus-inner {
   line-height: 5.6rem;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  color: #5b4f96;
+  color: #604ca9;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -2575,7 +2575,7 @@ html.no-csstransitions .home-content__main {
 .s-about {
   padding-top: 12.2rem;
   padding-bottom: calc((62.4rem/2) + 6.4rem);
-  background-color: #5b4f96;
+  background-color: #604ca9;
   color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   position: relative;
@@ -2760,7 +2760,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .btn-video:hover .video-icon {
-  background-color: #5b4f96;
+  background-color: #604ca9;
   background-image: url(../images/icons/icon-play.svg);
 }
 
@@ -2874,7 +2874,7 @@ html.no-csstransitions .home-content__main {
   line-height: 54px;
   text-align: center;
   border-radius: 50%;
-  background-color: #5b4f96;
+  background-color: #604ca9;
   box-shadow: 0 0 0 15px #ffffff;
   z-index: 500;
   position: absolute;
@@ -3111,7 +3111,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .item-feature__icon {
-  color: #5b4f96;
+  color: #604ca9;
   font-size: 4.8rem;
 }
 
@@ -3421,7 +3421,7 @@ html.no-csstransitions .home-content__main {
   font-size: 1.2rem;
   font-weight: 900;
   display: inline-block;
-  color: #5b4f96;
+  color: #604ca9;
   margin-right: 18px;
 }
 
@@ -3434,7 +3434,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .item-plan--popular .item-plan__block {
-  background-color: #5b4f96;
+  background-color: #604ca9;
   border: none;
 }
 
@@ -3530,7 +3530,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-download {
   padding-top: 9.4rem;
-  background-color: #5b4f96;
+  background-color: #604ca9;
   color: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   position: relative;
@@ -3655,11 +3655,11 @@ html.no-csstransitions .home-content__main {
 .s-footer a:hover,
 .s-footer a:focus,
 .s-footer a:active {
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 .s-footer .display-1 {
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 .s-footer h4 {
@@ -3674,7 +3674,7 @@ html.no-csstransitions .home-content__main {
 
 .s-footer .footer__mail-link {
   font-weight: 800;
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 .s-footer .footer__mail-link:hover,
@@ -3766,8 +3766,8 @@ html.no-csstransitions .home-content__main {
 
 .footer__subscribe #mc-form input[type=submit] {
   color: #ffffff;
-  background: #5b4f96;
-  border-color: #5b4f96;
+  background: #604ca9;
+  border-color: #604ca9;
   margin-right: 0;
   padding: 0 20px 0 24px;
   height: 6.8rem;
@@ -3819,7 +3819,7 @@ html.no-csstransitions .home-content__main {
 .footer__social li a:hover,
 .footer__social li a:focus,
 .footer__social li a:active {
-  background-color: #5b4f96;
+  background-color: #604ca9;
   color: #ffffff;
 }
 
@@ -3853,7 +3853,7 @@ html.no-csstransitions .home-content__main {
 .footer__site-links li a:hover,
 .footer__site-links li a:focus,
 .footer__site-links li a:active {
-  color: #5b4f96;
+  color: #604ca9;
 }
 
 
