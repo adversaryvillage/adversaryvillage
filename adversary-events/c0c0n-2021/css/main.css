@@ -947,8 +947,8 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-  background: #514686;
-  border-color: #514686;
+  background: #604ca9;
+  border-color: #604ca9;
 }
 
 /* button modifiers
@@ -3916,7 +3916,7 @@ html.no-csstransitions .home-content__main {
 .go-top a:hover,
 .go-top a:focus,
 .go-top a:active {
-  background-color: #514686;
+  background-color: #604ca9;
 }
 
 .go-top.link-is-visible {
