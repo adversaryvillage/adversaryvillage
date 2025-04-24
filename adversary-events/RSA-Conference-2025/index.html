@@ -1,456 +1,830 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-   <head>
-      <!--- basic page needs
+
+<head>
+    <!--- basic page needs
          ================================================== -->
-      <meta charset="utf-8">
-      <title>Adversary Village SandBox at RSA Conference 2025 | San Francisco</title>
-      <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
-      <meta name="author" content="Adversary Village SandBox at RSA Conference 2025 | San Francisco">
-      <meta property="og:title" content="Adversary Village SandBox at RSA Conference 2025 | San Francisco"/>
-      <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."/>
-      <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Adversary Tactics and purple teaming!"/>
-      <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/og-image-adv-rsac-2025.jpg"/>
-      <!-- mobile specific metas
+    <meta charset="utf-8">
+    <title>Adversary Village SandBox at RSA Conference 2025 | San Francisco</title>
+    <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
+    <meta name="author" content="Adversary Village SandBox at RSA Conference 2025 | San Francisco">
+    <meta property="og:title" content="Adversary Village SandBox at RSA Conference 2025 | San Francisco" />
+    <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."
+    />
+    <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Adversary Tactics and purple teaming!" />
+    <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/og-image-adv-rsac-2025.jpg" />
+    <!-- mobile specific metas
          ================================================== -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- CSS
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
          ================================================== -->
-      <link rel="stylesheet" href="../../css/base2.css">
-      <link rel="stylesheet" href="./css/card.css">
-      <link rel="stylesheet" href="../../css/vendor.css">
-      <link rel="stylesheet" href="./css/main.css">
-      <link rel="stylesheet" href="./css/bootstrap.css">
-      <link rel="stylesheet" href="./css/style.css">
-      <link rel="stylesheet" href="css/style-2.css">
-      <!-- script
+    <link rel="stylesheet" href="../../css/base2.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="../../css/vendor.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style-2.css">
+    <!-- script
          ================================================== -->
-      <script src="js/modernizr.js"></script>
-      <script src="js/pace.min.js"></script>
-      <!-- favicons
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <!-- favicons
          ================================================== -->
-      <link rel="apple-touch-icon" sizes="57x57" href="../../favicon/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="../../favicon/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-      <link rel="manifest" href="../../favicon/manifest.json">
-      <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="../../favicon/ms-icon-144x144.png">
-      <meta name="theme-color" content="#ffffff">
-   </head>
-   <body id="top">
-      
-      <div id="preloader">
-         <div id="loader" class="dots-jump">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style type="text/css">
+        .schedule-box {
+            max-width: 800px; /* Adjust as needed */
+            margin: 20px auto; /* Center the box horizontally */
+          }
+        
+          .day-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px; /* Increased margin for better spacing */
+          }
+        
+          .day-button {
+            background-color: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 10px 20px; /* Slightly larger padding */
+            border-radius: 8px; /* More rounded corners */
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 1rem; /* Slightly larger font */
+          }
+        
+          .day-button.active {
+            background-color: #604ca9;
+            color: #fff;
+          }
+        
+          .add-calendar-btn {
+            background-color: #604ca9;
+            color: white;
+            padding: 8px 16px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: inline-block;
+          }
+        
+          .add-calendar-btn:hover {
+            background-color: #5a00b5;
+            transform: scale(1.05);
+            color: white;
+          }
+        
+          .schedule-content {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 25px; /* Slightly more padding inside the box */
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          }
+        
+          .timeline {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #604ca9;
+          }
+        
+          .timeline-entry {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px; /* Adjusted gap */
+          }
+        
+          .timeline-entry::before {
+            content: "";
+            position: absolute;
+            left: -11px;
+            top: 6px; /* Adjusted top for better vertical alignment */
+            width: 16px;
+            height: 16px;
+            background-color: #604ca9;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.3);
+          }
+        
+          .timeline-time {
+            font-weight: bold;
+            color: #604ca9;
+            font-size: 1.1rem; /* Slightly larger time font */
+          }
+        
+          .timeline-description {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 12px; /* Adjusted margin */
+          }
+        
+          .timeline-photo-time {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Adjusted gap */
+          }
+        
+          .timeline-photo img {
+            width: 45px; /* Slightly larger image */
+            height: 45px; /* Slightly larger image */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+          }
+        
+          .timeline-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+          }
+        
+          @keyframes fadeInUp {
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+    </style>
+
+    <script>
+        function showSchedule(button, scheduleId) {
+            // Deactivate all buttons and hide all content divs
+            document.querySelectorAll('.day-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.schedule-content').forEach(div => div.style.display = 'none');
+        
+            // Activate the clicked button and show the corresponding content div
+            button.classList.add('active');
+            document.getElementById(scheduleId).style.display = 'block';
+          }
+    </script>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
             <div></div>
             <div></div>
             <div></div>
-         </div>
-      </div>
-      
-      <header class="s-header">
-         <div class="row">
+        </div>
+    </div>
+    <header class="s-header">
+        <div class="row">
             <div class="header-logo">
-               <a class="site-logo" href="../../index.html">
-               <img src="../../images/adversary-village-org.png" alt="Homepage">
-               </a>
+                <a class="site-logo" href="../../index.html">
+                    <img src="../../images/adversary-village-org.png" alt="Homepage">
+                </a>
             </div>
             <nav class="header-nav-wrap">
-               <ul class="header-main-nav">
-                  <li><a href="../../" >Home</a></li>
-                  <li class="current"><a href="../../adversary-events">Events</a>
-                  </li>
-                  <li><a href="../../call-for-papers">Call for papers</a></li>
-                  <li><a href="../../adversary-wars-ctf/adversary-wars-2.0">Adversary Wars CTF</a></li>
-                  <li><a href="../../sponsors">Sponsors</a></li>
-                  <li><a href="../../live-streaming-series">LiveStream</a></li>
-                  <li><a href="../../about-us">About</a></li>
-               </ul>
+                <ul class="header-main-nav">
+                    <li>
+                        <a href="../../">Home</a>
+                    </li>
+                    <li class="current">
+                        <a href="../../adversary-events">Events</a>
+                    </li>
+                    <li>
+                        <a href="../../call-for-papers">Call for papers</a>
+                    </li>
+                    <li>
+                        <a href="../../adversary-wars-ctf/adversary-wars-2.0">Adversary Wars CTF</a>
+                    </li>
+                    <li>
+                        <a href="../../sponsors">Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="../../live-streaming-series">LiveStream</a>
+                    </li>
+                    <li>
+                        <a href="../../about-us">About</a>
+                    </li>
+                </ul>
             </nav>
             <!-- end header-nav-wrap -->
-            <a class="header-menu-toggle" href="#"><span></span></a> 
-         </div>
-      </header>
-      
-      <section  class="s-home target-section" data-parallax="scroll" data-image-src="images/bsidessf-bg-2024.jpg" data-natural-width=3000 data-natural-height=1703 data-position-y=center>
+            <a class="header-menu-toggle" href="#">
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <section class="s-home target-section" data-parallax="scroll" data-image-src="images/bsidessf-bg-2024.jpg" data-natural-width=3000 data-natural-height=1703 data-position-y=center>
+        <div class="row section-header" style="padding-top:19rem;">
+            <div class="col-full">
+                <h1 class="display-1" style="color:white; text-align: center; position: relative; margin-bottom: .5rem;"> Adversary Village </br>RSA Conference 2025 </h1>
+                <h4 style="color:white; text-align: center; position: relative; margin-top: .5rem;">YBCA, Gallery 2, Opposite Moscone Center, San Francisco </br>28 April - 1 May, 2025. </h4>
+            </div>
+            <div class="row half-bottom text-center">
+                <div class="col-twelve tab-full" style="padding-top:5px; position: relative;">
+                    <br>
+                    <br>
+                    <p>
+                        <img src="images/RSAC_2025.PNG" width="550px" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="s-features target-section" style="padding-bottom:0px; padding-top:0px; background-color: #101125;">
+        <section id="schedule" class="section-with-bg" style="padding-top:5px; ">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <h3 class="sub-heading"></h3>
+                <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://adversaryvillage.org/discord" target="_blank">Join Discord Server</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.rsaconference.com/" target="_blank">RSAC 2025 Website</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="color: white; background-color: #604ca9; padding-top:40px; padding-bottom:30px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3 style="margin-top: 1rem; color: white;">Adversary Village at RSAC 2025!</h3>
+                        <p style=" font-weight: 400; font-size: 2rem; color: white;">Join us for Adversary Village Sandbox at RSAC 2025!
+                            <br> Adversary Village is a community initiative focused on adversary simulation, offensive cyber security tradecraft and purple teaming. The sandbox will feature talks, live demos, gamified table-top exercises, adversary/ransomware
+                            simulator, guided breach simulation, panels, and hands-on activities. </p>
+                    </div>
+                </div>
+                <br>
 
+                <div class="row" style="font-weight: 400; color: #ffffff;">	
+                    <div class="col-twelve tab-full">
+              <h3 style="margin-top: 1rem; color: white;">Adversary Village Sandbox timings:</h3></br>
+                          <div class="col-six tab-full">
+              
+              
+                           <ul class="disc" style="margin-bottom: 1rem;">
+                            <li>Monday, April 28, 9:30 AM - 3:30 PM</li>
+                                 
+                              </ul>
+                          </div>
+              
+                          <div class="col-six tab-full">
+              
+                          <ul class="disc">
+                                 <li>Tuesday, April 29, 9:30 AM - 4:30 PM </li>
+                              </ul>
+                          </div>
+                      <div class="col-six tab-full">
+
+                           <ul class="disc" style="margin-bottom: 1rem;">
+                            <li>Wednesday, April 30, 9:30 AM - 4:30 PM</li>
+                                 
+                              </ul>
+                          </div>
+                          <div class="col-six tab-full">
+
+                            <ul class="disc" style="margin-bottom: 1rem;">
+                             <li>Thursday May 1, 9:30 AM - 2:00 PM</li>
+                                  
+                               </ul>
+                           </div>
+                          
+                      </div>	
+              </div>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #d9dadc;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+    
+        <div class="row">
+    
+            <div class="col-twelve tab-full">
+    
+               <h3>Interactive session: Rise of augmented adversaries, hacking humans at next level</h3>
+               <span style="font-weight: 800;">Adversary Village Sandbox | Gallery 2, Yerba Buena Center for the Arts (YBCA) |  April 28th, 10:30 AM PT</span>
+               <span style="font-weight: 600;">
+    
+    </span>
+               </br> </br>
+               
+                 <div class="container-cfp">
+            
+            <div class="row-cfp">
        
 
-         <div class="row section-header"   style="padding-top:19rem;">
-            <div class="col-full">
-               <h1 class="display-1" style="color:white; text-align: center; position: relative; margin-bottom: .5rem;">
-               
-                  Adversary Village</br>RSA Conference 2025
-                </h1>
-               <h4 style="color:white; text-align: center; position: relative; margin-top: .5rem;">YBCA, Gallery 2, Opposite Moscone Center, San Francisco</br>28 April - 1 May, 2025. </h4>
-            </div>
-           
-            <div class="row half-bottom text-center">
-               <div class="col-twelve tab-full" style="padding-top:5px; position: relative;">
-                  <br> <br>
-                  <p><img src="images/RSAC_2025.PNG" width="550px" alt=""></p>
-               </div>
-            </div>
-         </div>
-     
-         </section>
-
-
-      <section id="features" class="s-features target-section" style="padding-bottom:0px; padding-top:0px; background-color: #101125;" >
-      
-		 <section id="schedule" class="section-with-bg" style="padding-top:5px; ">
-            <div class="container aos-init aos-animate" data-aos="fade-up">
-               <h3 class="sub-heading"></h3>
-                     <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
-                        <li class="nav-item">
-                           <a class="nav-link active" href="https://adversaryvillage.org/discord" target="_blank">Join Discord Server</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link active" href="https://www.rsaconference.com/" target="_blank">RSAC 2025 Website</a>
-                        </li>
-                        
-                     </ul>
-
-                  
-                  </div>
-
-     
-</section>
-
-<section id="schedule" class="section-with-bg" style="color: white; background-color: #604ca9; padding-top:40px; padding-bottom:30px;">
-   <div class="container aos-init aos-animate" data-aos="fade-up">
-      <div class="row">
-         <div class="col-twelve tab-full">
-      <h3 style="margin-top: 1rem; color: white;">Adversary Village at RSAC 2025!</h3>
-   
-     <p style=" font-weight: 400; font-size: 2rem; color: white;">Join us for Adversary Village Sandbox at RSAC 2025! <br>
-      Adversary Village is a community initiative focused on adversary simulation, offensive cyber security tradecraft and purple teaming. The sandbox will feature talks, live demos, gamified table-top exercises, adversary/ransomware simulator, guided breach simulation, panels, and hands-on activities.
-     </p>
-   </div></div>
-   </div>
-   </section>
-
-
-			  	<!-------- panel -->
-              <section id="schedule" class="section-with-bg" style="padding-top:5px;">
-               <div class="container aos-init aos-animate" data-aos="fade-up">
-              <div class="row">
-   
-               <div class="col-twelve tab-full">
-           <h3><a href="https://path.rsaconference.com/flow/rsac/us25/FullAgenda/page/catalog/session/1728273304865001DR1p" target="_blank" style="color: #604ca9;">Panel Discussion: Building Cyber Defenses to Withstand Sophisticated Cyber Adversaries</a></h3><span style="font-weight: 800;">SBV-W02 | RSAC Sandbox stage | Wednesday, Apr 30 | 9:40 AM - 10:30 AM PDT</span>
-         </br>
-   
-                   <p>
-                     Cyber attacks ranging from sophisticated ransomware to state-sponsored breaches have targeted critical infrastructure and major organizations, driving escalation in security efforts. Despite advanced tools, no organization is immune to adversaries. This panel will review the key breaches of 2024, discuss ongoing issues, and strategies for improving incident response, containment, and defense.</p>
-   
-                 
-           <div class="container-cfp">
-               
-               <div class="row-cfp">
-             <div class="column">
-                       <div class="team-9">
-                           <div class="team-img">
-                               <img src="images/speakers/jonathan-baker.jpg" alt="Jon Baker">
-                           </div>
-                           <div class="team-content">
-                               <h2 style="margin-top: 2rem;"><a href="#" target="_blank" style="color: #604ca9;">Jonathan Baker</a></h2>
-                               <h3 style="margin-top: 1rem;">Director, Center for Threat-Informed Defense, MITRE</h3>
-                        
-                           </div>
-                           <div class="team-overlay">
-                               <p> Director, Center for Threat-Informed Defense, MITRE Engenuity</p>
-                               <div class="team-social">
-                                   <a class="social-tw" href="#"><i class="fab fa-twitter"></i></a>
-                                   
-                                   
-                               </div>
-                           </div>
-                       </div>
-                   </div> 
-         
-                   <div class="column">
-                       <div class="team-9">
-                           <div class="team-img">
-                               <img src="images/speakers/Vivek-Ramachandran.jpg" alt="Jorge">
-                           </div>
-                           <div class="team-content">
-                               <h2 style="margin-top: 2rem;"><a href="#" target="_blank" style="color: #604ca9;">Vivek Ramachandran</a></h2>
-                               <h3 style="margin-top: 1rem;">Founder and CEO of SquareX</h3>
-                        
-                           </div>
-                           <div class="team-overlay">
-                               <p></p>
-                               <div class="team-social">
-                                   <a class="social-tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                   
-                                   <a class="social-li" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                  
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="column">
-                       <div class="team-9">
-                           <div class="team-img">
-                               <img src="images/speakers/Ken-Kato.jpg" alt="Daniel">
-                           </div>
-                           <div class="team-content">
-                               <h2 style="margin-top: 2rem;"><a href="#" target="_target" style="color: #604ca9;">Ken Kato</a></h2>
-                               <h3 style="margin-top: 1rem;">Chief Security Officer at Kindo, Former White House Fellow</h3>
-                        
-                           </div>
-                           <div class="team-overlay">
-                               <p>‌</p>
-                               <div class="team-social">
-                                   <a class="social-tw" href="#"  target="_blank"><i class="fab fa-twitter"></i></a>
-                                  
-                                   <a class="social-li" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                              
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               
                 <div class="column">
-                       <div class="team-9">
-                           <div class="team-img">
-                               <img src="images/speakers/Abhijith-BR.jpg" alt="#">
-                           </div>
-                           <div class="team-content">
-                               <h2 style="margin-top: 2rem;"><a href="#" target="_blank" style="color: #604ca9;">Abhijith B R</a></h2>
-                               <h3 style="margin-top: 1rem;">Founder and Lead at Adversary Village</h3>
-                        
-                           </div>
-                           <div class="team-overlay">
-                               <p></p>
-                               <div class="team-social">
-                                   <a class="social-tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                                                                   
-                               </div>
-                           </div>
-                       </div>
-                   </div> 
-            
-               </div> 
-           </div>
-          </br>
-         
-               </div>
-              
-            </div>
-
-   
-   </div>
-   </section>
-
-<section id="download" class="s-download target-section"  style="background: url('images/choose-adv-bg.jpg'); background-repeat: no-repeat; background-size: cover;">
-
-   <div class="container aos-init aos-animate" data-aos="fade-up">
-
-      <div class="row">
-      
-         <div class="col-twelve tab-full">
-           
-            <h3 style="color:white;">Hands-on activity<br>Choose-your-own-Adversary-Adventure Tabletop Game</h3>
-            <span style="font-weight: 800;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
-      <p style=" font-weight: 400; font-size: 2rem; color: white;"> 
-         Adversary adventure is a story-scenario based, interactive, cyber war-gaming, choose-your-own adventure model interactive game. This is a gamified version of table-top exercises which is presented to the participants as they can choose to play as an attacker, post exploitation OR a Defender who is defending against an attacker group-threat actor OR even play as a CISO who is dealing with an adversarial situation such as a ransomware incident.
-         </p>
-       </div>
-      
-            </div> 
-  </div>
-   <div class="row download-bottom-image" data-aos="fade-up">
-    
-   </div>
-
-</section> 
-
-<section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
-   <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
-
-      <div class="row"> 
-      <h3 style="color:black;"> Hands-on activity<br>AI-Assisted cyber incident response playbook generation</h3>
-      <span style="font-weight: 800; color: black;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
-         <p style=" font-weight: 400; font-size: 2rem; color:black;"> 
-            In this hands-on activity, participants will use an open-source generative AI model to build a dynamic, effective incident response  playbook to deal with real-world cyber threats. Using the GPT systems speed and adaptability, the participants get to collect and analyze threat intelligence, map potential attack scenarios, and outline step-by-step response actions for each phase from detection and containment to eradication and recovery. <br>Through interactive prompts and guided AI model collaboration, participants will craft a flexible, well-structured IR playbook designed to counter evolving adversary tactics and minimize organizational impact during an incident.
-            </p>
-</div>
-         </div>
-   </section>
-
-<section id="schedule" class="section-with-bg" style="padding-top:60px; padding-bottom: 5px; background: url('images/bg2-tdi-range-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
-   <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
-
-      <div class="row"> 
-      <h3 style="color:white;"> Hands-on activity<br>Guided Attack and Breach Simulation exercises</h3>
-      <span style="font-weight: 800; color: white;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
-         <p style=" font-weight: 400; font-size: 2rem; color:white;"> 
-            This area will feature guided breach simulation exercises for participants to engage with. There will be two activities, "Breach-the-Hospital" and "Breach-the-Office," based on two LEGO sets. A simulated cyber range will be available for each scenario, providing an exact replica of an enterprise production environment. We will provide a detailed walkthrough of the attack scenarios, including Tools-Techniques-and-Procedures (TTPs) commands and how-to guides, demonstrating how to attack and breach the hospital's infrastructure or the office environment. <br>
-            The participants who complete the exercises and come to the top place will be rewarded with exciting goodies.
-            </p>
-</div>
-         </div>
-   </section>
-
-   <section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
-      <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
-   
-         <div class="row"> 
-         <h3 style="color:black;"> Hands-on activity<br>Table-top exercises and Roundtable discussions</h3>
-         <span style="font-weight: 800; color: black;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
-            <p style=" font-weight: 400; font-size: 2rem; color:black;"> 
-               Short interactive table-tops and roundtable discussions focused on offensive cyber security, adversary attack simulation, and incident response. These sessions bring together industry experts to explore real-world attack scenarios, tactics, and defense strategies. Participants would collaborate, share insights, and strengthen their approach to handling cyber threats and incidents effectively.
-               </p>
-   </div>
-            </div>
-      </section>
-      
-   
-   <section id="schedule" class="section-with-bg" style="padding-top:5px; background: url('images/bg-2-bsidesf-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
-      <div class="container aos-init aos-animate" data-aos="fade-up">
-
-         <div class="row"> 
-         <h3 style="color:white;"> Hands-on activity<br>Adversary Simulator and Purple Teaming hands-on booth </h3>
-         <span style="font-weight: 800; color: white;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
-            <p style=" font-weight: 400; font-size: 2rem; color:white;"> 
-               Adversary Simulator booth has hands-on adversary emulation plans specific to a wide variety of threat-actors, ransomware; these are meant to provide the participant/visitor with a better understanding of the Adversary tactics. This is a volunteer assisted activity where anyone, both management and technical folks can come in and experience different categories of simulation, emulation and purple scenarios.  </br>
-            </br>Adversary Simulator booth will be having a lab environment focused on recreating enterprise infrastructure, aimed at simulation and emulating various adversaries. Visitors will be able to view, simulate and control various TTPs used by adversaries. The simulator is meant to be a learning experience, irrespective of whether one is hands-on with highly sophisticated attack tactics or from the management.
-            
-        
-           </p>
-			
-         </div>
-			   </div>
-      </section>
-
-    
-   
-        </section>
-        <section id="sponsors" class="s-sponsors target-section" style="padding-bottom: 1rem; background-color: white;">
-         <div class="row section-header align-center" data-aos="fade-up">
-            <div class="">
-               <h1 class="display-1" style="font-size:4rem;">
-                  Adversary Village at </br>RSA Conference 2025
-               </h1>
-               <p class="lead" style="font-size: 4rem; font-weight: 900; color: gold;">
-                  Sponsors
-               </p>
-            </div>
-         </div>
-         <div class="row section-header align-center" data-aos="fade-up">
-         
-            <div class="row download-bottom-image" data-aos="fade-up">
-               <div class="col-twelve tab-full">
-                 <a href="https://www.whiterabbitneo.com/" target="_blank">
-                     <img width="300" height="180" class="pull-center" alt="Adversary Village" src="../../images/whiterabbitneo.png"> </a>
-               </div>
-              
-            </div>
-<br><br>
-             <div class="row download-bottom-image" data-aos="fade-up">
-                <div class="col-twelve tab-full">
-                  <a href="https://sqrx.com" target="_blank">
-                      <img width="350" height="180" class="pull-center" alt="Adversary Village" src="../../images/sqrx.png"> </a>
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/len-noe-color.jpg" alt="Jon Baker">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+          <a href="#" target="_blank" style="color: #604ca9;">Len Noe</a>
+        </h2>
+                            <h3 style="margin-top: 1rem;">Technical Evangelist and Cyborg Hacker</h3>
+                        </div>
+                  
+                    </div>
                 </div>
-               
-             </div>
-          </div>   </br></br>
-      </section>
-
-        <section id="download" class="s-download target-section"  style="background-color: #121619;">
-
-         <div class="row section-header align-center" data-aos="fade-up">
-             <div class="col-full">
-                 <h1 class="display-1">
-                  Join Adversary Village Discord Server. 
-                 </h1>
-                 <p class="lead">
-                  Join Adversary Village official Discord server to connect with our amazing community of adversary simulation experts and offensive security researchers!
-                 </p>
-             </div>
-         </div> <!-- end section-header -->
- 
-         <div class="row">
-             <div class="col-full text-center">
-                 <ul class="download-badges" data-aos="fade-up">
-                     <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join Discord</a></li>
+                
+                  <div class="column2">
+                      <p>
+                        Join us for an interactive deep dive into the evolving tactics of modern threat actors who are no longer just targeting systems - but the human psyche itself. We'll explore how adversaries are augmenting their capabilities with AI, automation, and behavioral manipulation to exploit human trust, bypass traditional defenses, and execute highly sophisticated social engineering campaigns.
+                        Get ready to unpack real-world scenarios, engage in live discussions, and discover how to build resilience against this new wave of human-centric cyber threats.
+                </p>
                     
-                 </ul>
-             </div> 
-         </div>
- 
-         <div class="row download-bottom-image" data-aos="fade-up">
-          
-         </div>
- 
-     </section> 
-      <footer class="s-footer footer" style="padding-top: .5rem;">
+                </div>
+                
+                </div>
+                </div>
     
-         <!-- end section-header -->
-         <div class="row footer__bottom">
+    
+    
+            </div>
+    
+               </div>
+            
+    
+               
+            </div>
+          
+         </section>	
+        <!-------- panel -->
+        <section id="schedule" class="section-with-bg" style="padding-top:5px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3>
+                <a href="https://path.rsaconference.com/flow/rsac/us25/FullAgenda/page/catalog/session/1728273304865001DR1p" target="_blank" style="color: #604ca9;">Panel Discussion: Building Cyber Defenses to Withstand Sophisticated Cyber Adversaries</a>
+              </h3>
+                        <span style="font-weight: 800;">SBV-W02 | RSAC Sandbox stage | Wednesday, Apr 30 | 9:40 AM - 10:30 AM PDT</span>
+                        </br>
+                        <p> Cyber attacks ranging from sophisticated ransomware to state-sponsored breaches have targeted critical infrastructure and major organizations, driving escalation in security efforts. Despite advanced tools, no organization is immune
+                            to adversaries. This panel will review the key breaches of 2024, discuss ongoing issues, and strategies for improving incident response, containment, and defense.</p>
+                        <div class="container-cfp">
+                            <div class="row-cfp">
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/jonathan-baker.jpg" alt="Jon Baker">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Jonathan Baker</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Director, Center for Threat-Informed Defense, MITRE</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p> Director, Center for Threat-Informed Defense, MITRE Engenuity</p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/Vivek-Ramachandran.jpg" alt="Jorge">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Vivek Ramachandran</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Founder and CEO of SquareX</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p></p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                                <a class="social-li" href="#" target="_blank">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/Ken-Kato.jpg" alt="Daniel">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_target" style="color: #604ca9;">Ken Kato</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Chief Security Officer at Kindo, Former White House Fellow</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p>‌</p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                                <a class="social-li" href="#" target="_blank">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/Abhijith-BR.jpg" alt="#">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Abhijith</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Founder and Lead at Adversary Village</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p></p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download" class="s-download target-section" style="background: url('images/choose-adv-bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3 style="color:white;">Hands-on activity <br>Choose-your-own-Adversary-Adventure Tabletop Game </h3>
+                        <span style="font-weight: 800;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 03:30 PM PT</span>
+                        <p style=" font-weight: 400; font-size: 2rem; color: white;"> Adversary adventure is a story-scenario based, interactive, cyber war-gaming, choose-your-own adventure model interactive game. This is a gamified version of table-top exercises which is presented to the participants as they can
+                            choose to play as an attacker, post exploitation OR a Defender who is defending against an attacker group-threat actor OR even play as a CISO who is dealing with an adversarial situation such as a ransomware incident. </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row download-bottom-image" data-aos="fade-up"></div>
+        </section>
+
+        <section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
+                <div class="row">
+                    <h3 style="color:black;"> Hands-on activity <br>AI-Assisted cyber incident response playbook generation </h3>
+                    <span style="font-weight: 800; color: black;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:black;"> In this hands-on activity, participants will use an open-source generative AI model to build a dynamic, effective incident response playbook to deal with real-world cyber threats. Using the GPT systems speed and adaptability, the participants
+                        get to collect and analyze threat intelligence, map potential attack scenarios, and outline step-by-step response actions for each phase from detection and containment to eradication and recovery.
+                        <br>Through interactive prompts and guided AI model collaboration, participants will craft a flexible, well-structured IR playbook designed to counter evolving adversary tactics and minimize organizational impact during an incident.
+                        </p>
+                    <!-- Schedule begins -->
+                    <div id="schedule2-box" class="schedule-box">
+                        <!-- Day Buttons -->
+                        <div class="day-buttons">
+                            <button class="day-button active" onclick="showSchedule(this, 'schedule2-day1')">April 29, Tuesday</button>
+                            
+                        </div>
+                
+                        <div id="schedule2-day1" class="schedule-content active">
+                            <div class="timeline">
+                                
+                                <div class="timeline-entry">
+                                    <div class="timeline-description">AI-Assisted Cyber Incidence Response Playbook Generation<br><span style="color:#5a00b5; font-size:10px;">April 29th, 1:00 PM PT - 3:00 PM PT | Gallery 2, Yerba Buena Center for the Arts (YBCA)</span></div>
+                                    <div class="timeline-photo-time">
+                                        <div class="timeline-photo">
+                                            <img src="images/speakers/Ken-Kato.jpg" alt="Speaker 3">
+                                        </div>
+                                        <div class="timeline-time"><span style="color:#545454; font-size:12px;">Ken Kato</span>
+                                            <br> Cheif Security Officer at Kindo.AI, Former White House Fellow</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-entry">
+                        
+                                    <div class="timeline-photo-time">
+                                        <div class="timeline-photo">
+                                            <img src="images/speakers/bailey-williams.jpg" alt="Speaker 3">
+                                        </div>
+                                        <div class="timeline-time"><span style="color:#545454; font-size:12px;">Bailey Williams</span>
+                                            <br>Cyber security Specialist and Intern at Kindo.AI</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <!-- Schedule Ends -->
+                </div>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="padding-top:60px; padding-bottom: 5px; background: url('images/bg2-tdi-range-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
+                <div class="row">
+                    <h3 style="color:white;"> Hands-on activity <br>Guided Breach and Attack Simulation exercises </h3>
+                    <span style="font-weight: 800; color: white;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 03:30 PM PT</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:white;"> This area will feature guided breach simulation exercises for participants to engage with. There will be two activities, "Breach-the-Hospital" and "Breach-the-Office," based on two LEGO sets. A simulated cyber range will be available
+                        for each scenario, providing an exact replica of an enterprise production environment. We will provide a detailed walkthrough of the attack scenarios, including Tools-Techniques-and-Procedures (TTPs) commands and how-to guides,
+                        demonstrating how to attack and breach the hospital's infrastructure or the office environment.
+                        <br> The participants who complete the exercises and come to the top place will be rewarded with exciting goodies. </p>
+       
+                </div>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
+                <div class="row">
+                    <h3 style="color:black;"> Hands-on activity <br>Table-top exercises and Roundtable discussions </h3>
+                    <span style="font-weight: 800; color: black;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 17:00</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:black;"> Short interactive table-tops and roundtable discussions focused on offensive cyber security, adversary attack simulation, and incident response. These sessions bring together industry experts to explore real-world attack scenarios,
+                        tactics, and defense strategies. Participants would collaborate, share insights, and strengthen their approach to handling cyber threats and incidents effectively. </p>
+                    <!-- Schedule begins -->
+                    <div id="schedule4-box" class="schedule-box">
+                        <!-- Day Buttons -->
+                        <div class="day-buttons">
+                            <button class="day-button" onclick="showSchedule(this, 'schedule5-day1')">April 28, Monday</button>
+                            <button class="day-button" onclick="showSchedule(this, 'schedule5-day2')">April 29, Tuesday</button>
+                            <button class="day-button active" onclick="showSchedule(this, 'schedule4-day3')">April 30, Wednesday</button>
+                            <button class="day-button" onclick="showSchedule(this, 'schedule5-day4')">May 1, Thursday</button>
+                   
+                        </div>
+                   
+                      
+                        <div id="schedule4-day3" class="schedule-content active">
+                            <div class="timeline">
+                                <div class="timeline-entry">
+                                    <div class="timeline-description">Roundtable discussion: Recon operations for the modern adversaries<br><span style="color:#5a00b5; font-size:10px;">April 30th, 11:00 AM PT | Gallery 2, Yerba Buena Center for the Arts (YBCA)</span></div>
+                                    <div class="timeline-photo-time">
+                                        <div class="timeline-photo">
+                                            <img src="images/speakers/shubham-mittal.jpg" alt="Speaker 3">
+                                        </div>
+                                        <div class="timeline-time"><span style="color:#545454; font-size:12px;">Shubham Mittal</span>
+                                            <br>Co-founder of RedHunt Labs and Co-founder of Recon Village at DEF CON</div>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section-with-bg" style="padding-top:5px; background: url('images/bg-2-bsidesf-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <h3 style="color:white;"> Hands-on activity <br>Adversary Simulator and Purple Teaming hands-on booth </h3>
+                    <span style="font-weight: 800; color: white;">Adversary Village Sandbox Area | 28 April-01 May, 2025 | 09:30 to 03:30</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:white;"> Adversary Simulator booth has hands-on adversary emulation plans specific to a wide variety of threat-actors, ransomware; these are meant to provide the participant/visitor with a better understanding of the Adversary tactics. This
+                        is a volunteer assisted activity where anyone, both management and technical folks can come in and experience different categories of simulation, emulation and purple scenarios. </br>
+                        </br>Adversary Simulator booth will be having a lab environment focused on recreating enterprise infrastructure, aimed at simulation and emulating various adversaries. Visitors will be able to view, simulate and control various TTPs
+                        used by adversaries. The simulator is meant to be a learning experience, irrespective of whether one is hands-on with highly sophisticated attack tactics or from the management. </p>
+ </div>
+            </div>
+        </section>
+    </section>
+	   
+    <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #d9dadc;">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+
+    <div class="row">
+
+        <div class="col-twelve tab-full">
+
+           <h3>Hands-on interactive workshop <br>Collecting threat intel and crafting attack emulation plans with open source, uncensored AI</h3>
+           <span style="font-weight: 800;">Adversary Village Sandbox | Gallery 2, Yerba Buena Center for the Arts (YBCA) |  April 28th, 01:00 PM - 03:00 PM PT | April 30th, 01:00 PM - 03:00 PM PT</span>
+           <span style="font-weight: 600;">
+
+</span>
+           </br> </br>
+           
+             <div class="container-cfp">
+        
+        <div class="row-cfp">
+   
+
+            <div class="column">
+                <div class="team-9">
+                    <div class="team-img">
+                        <img src="images/speakers/andrew-manoske.jpg" alt="Jon Baker">
+                    </div>
+                    <div class="team-content">
+                        <h2 style="margin-top: 2rem;">
+      <a href="#" target="_blank" style="color: #604ca9;">Andrew Manoske</a>
+    </h2>
+                        <h3 style="margin-top: 1rem;">VP of Product at Kindo</h3>
+                    </div>
+              
+                </div>
+            </div>
+            
+              <div class="column2">
+                  <p>
+                    In this hands-on workshop, leverage the power of White Rabbit Neo open-source generative AI model to power your cyber threat intelligence collection and attack emulation planning. Learn how to gather and analyze real-world threat-actors, adversary tactics, techniques, and procedures (TTPs), and transform them into realistic, actionable attack scenarios. Through practical exercises, the participants get to see how uncensored AI can accelerate adversary emulation, enhance operations, and push the boundaries of offensive cyber security. Get ready to learn with uncensored AI models and craft emulation plans like never before.
+            </p>
+                
+            </div>
+            
+            </div>
+            </div>
+
+
+
+        </div>
+
+           </div>
+        
+
+           
+        </div>
+      
+     </section>	
+
+
+
+
+    <section id="sponsors" class="s-sponsors target-section" style="padding-bottom: 1rem; background-color: white;">
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="">
+                <h1 class="display-1" style="font-size:4rem;"> Adversary Village at </br>RSA Conference 2025 </h1>
+                <p class="lead" style="font-size: 4rem; font-weight: 900; color: gold;"> Sponsors </p>
+            </div>
+        </div>
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+                <div class="col-twelve tab-full">
+                    <a href="https://www.whiterabbitneo.com/" target="_blank">
+                        <img width="300" height="180" class="pull-center" alt="Adversary Village" src="../../images/whiterabbitneo.png">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row download-bottom-image" data-aos="fade-up">
+                <div class="col-twelve tab-full">
+                    <a href="https://sqrx.com" target="_blank">
+                        <img width="350" height="180" class="pull-center" alt="Adversary Village" src="../../images/sqrx.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </br>
+        </br>
+    </section>
+    <section id="download" class="s-download target-section" style="background-color: #121619;">
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1"> Join Adversary Village Discord Server. </h1>
+                <p class="lead"> Join Adversary Village official Discord server to connect with our amazing community of adversary simulation experts and offensive security researchers! </p>
+            </div>
+        </div>
+        <!-- end section-header -->
+        <div class="row">
+            <div class="col-full text-center">
+                <ul class="download-badges" data-aos="fade-up">
+                    <li>
+                        <a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join Discord</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row download-bottom-image" data-aos="fade-up"></div>
+    </section>
+    <footer class="s-footer footer" style="padding-top: .5rem;">
+        <!-- end section-header -->
+        <div class="row footer__bottom">
             <div class="footer__about col-five tab-full left">
-               <h4>About Adversary Village.</h4>
-               <p>
-                  Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a bit of purple teaming. 
-               </p>
-               <ul class="footer__social">
-                  <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
-                   <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch" aria-hidden="true"></i></a></li>
-              <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                   <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon" aria-hidden="true"></i></a></li>
-                   <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i></a></li>
-               </ul>
+                <h4>About Adversary Village.</h4>
+                <p> Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a bit of purple teaming. </p>
+                <ul class="footer__social">
+                    <li>
+                        <a href="https://twitter.com/AdversaryVillag" target="_blank">
+                            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/adversaryvillage" target="_blank">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitch.tv/AdversaryVillage" target="_blank">
+                            <i class="fab fa-twitch" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://defcon.social/@AdversaryVillage" target="_blank">
+                            <i class="fab fa-mastodon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/GDB3rC7KYz" target="_blank">
+                            <i class="fab fa-discord" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="col-five md-seven tab-full right end">
-               <div class="row">
-                  <div class="footer__site-links col-five mob-full">
-                     <h4>Site links.</h4>
-                     <ul class="footer__site-links">
-                        <li><a href="https://defcon.org/" target="_blank">DEF CON 33</a></li>
-                        <li><a href="../../about-us">About Us</a></li>
-                  
-                        <li><a href="../../call-for-volunteers">Call for volunteers</a></li>
-                        <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
-                        <li><a href="
-                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
-                     </ul>
-                  </div>
-                  <div class="footer__contact col-seven mob-full">
-                     <h4>Contact Us.</h4>
-                     <p>
-                        Would you like to sponsor? or have a question for us? Ping us: <br>
-                        <a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a>
-                     </p>
-                  </div>
-               </div>
+                <div class="row">
+                    <div class="footer__site-links col-five mob-full">
+                        <h4>Site links.</h4>
+                        <ul class="footer__site-links">
+                            <li>
+                                <a href="https://defcon.org/" target="_blank">DEF CON 33</a>
+                            </li>
+                            <li>
+                                <a href="../../about-us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="../../call-for-volunteers">Call for volunteers</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a>
+                            </li>
+                            <li>
+                                <a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact col-seven mob-full">
+                        <h4>Contact Us.</h4>
+                        <p> Would you like to sponsor? or have a question for us? Ping us:
+                            <br>
+                            <a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-full ss-copyright">
-               <span>Copyright &copy; 2021-2025, Adversary Village<sup>®</sup> All Rights Reserved.</span>
+                <span>Copyright &copy; 2021-2025, Adversary Village <sup>®</sup> All Rights Reserved. </span>
             </div>
-         </div>
-         <!-- end footer__bottom -->
-         <div class="go-top">
+        </div>
+        <!-- end footer__bottom -->
+        <div class="go-top">
             <a class="smoothscroll" title="Back to Top" href="#top"></a>
-         </div>
-      </footer>
-      <!-- end s-footer -->
-    
-      <script src="js/jquery-3.2.1.min.js"></script>
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
-      <script src="./js/bootstrap.bundle.min.js"></script>
-   </body>
+        </div>
+    </footer>
+    <!-- end s-footer -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
