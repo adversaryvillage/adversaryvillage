@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackPill APT - Persistence at Nightfall Writeup</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #ff6b6b;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      color: #ff9f43;
+    }
+    pre {
+      background-color: #1e1e1e;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      border: 1px solid #333;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #7bed9f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .step-image {
+      display: block;
+      border: 2px solid white;
+      margin: 1.5em auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    th {
+      background-color: #1f1f1f;
+    }
+    a {
+      color: #54a0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Breach the Hospital
+Guided attack simulation scenario</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Challenge Overview</h2>
+      <p>Follow this guide to conduct a simple breach and attack simulation (BAS) exercise, designed to replicate the activities of adversaries attempting to breach an actual hospital’s network and systems. This simulation will mimic real-world cyber attacks, allowing you to observe how malicious hackers exploit vulnerabilities and bypass security measures. <br><br>
+By testing your defenses through such simulations, you can evaluate the effectiveness of your security protocols, identify weaknesses, and refine your response strategies to improve the hospital’s overall cybersecurity posture.</p>
+    </section>
+
+    <section>
+     <h2><p>Here is the target Hospital's URL: <a href="http://128.199.1.108"> http://128.199.1.108</a> </p></h2>
+    </section>
+
+    <section>
+      <h2>Recon &amp; Initial Access</h2>
+      <ol>
+        <li><strong>Landing Page</strong><br>
+          URL: <a href="http://128.199.1.108/">http://128.199.1.108/</a><br>
+          A dark-themed welcome screen with an <em>Enter Portal ➔</em> button linking to <code>portal.php</code>.
+        </li>
+        <img src="1.png" alt="Landing page: St. Nocturne Hospital" class="step-image">
+
+        <li><strong>Bypass Portal Access</strong><br>
+          Prompt: “Enter passcode”<br>
+          Hint: “Staffs rotate shifts after 11PM.”<br>
+          <strong>Solution:</strong> Submit <code>nightshift</code> → Access granted.
+        </li>
+        <img src="2.png" alt="Passive recon output" class="step-image">
+      </ol>
+    </section>
+    <section>
+      <h2>Local File Inclusion (LFI)</h2>
+      <ol>
+        
+        <li><strong>Internal Viewer</strong><br>
+          Page: <code>view.php?page=patients.csv</code> shows patient records.
+        </li>
+        <img src="3.png" alt="Directory bruteforce output" class="step-image">
+        <li><strong>LFI Exploitation</strong><br>
+          Modify the <code>page</code> parameter to read arbitrary files:<br>
+          <pre><code>view.php?page=notes/hidden_password.txt</code></pre>
+          <img src="4.png" alt="Portal login page" class="step-image">
+          <strong>Leaked credential</strong> found:
+          <pre><code>deepaccess=nightowlR00t</code></pre>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Deep-Admin Backdoor</h2>
+      <ol>
+        <li><strong>Locate Hidden Panel</strong><br>
+          Guess common admin paths: <code>/hidden/</code>, <code>/admin/</code>, <code>deep_admin.php</code>…<br>
+          Found at: <code>/hidden/deep_admin.php</code> (unauthorized but accepts <code>pw</code> parameter).
+        </li>
+         <img src="5.png" alt="Patient records page" class="step-image">
+        <li><strong>Authenticate with Leaked Password</strong><br>
+          Visit:<br>
+          <pre><code>/hidden/deep_admin.php?pw=nightowlR00t</code></pre>
+          You are greeted with “Welcome deep admin.”<br>
+          <strong>Flag-2 Retrieved:</strong> <code>FLAG-2 (Show the ADV Team this for your hoodie)</code>
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Lessons &amp; Remediations</h2>
+      <ul>
+        <li><strong>Weak Access Controls:</strong> Avoid easily guessed passcodes; implement multi-factor authentication.</li>
+        <li><strong>File Inclusion Vulnerabilities:</strong> Sanitize and whitelist include paths.</li>
+        <li><strong>Hidden Backdoors:</strong> Conduct thorough audits of all admin endpoints.</li>
+        <li><strong>Credential Management:</strong> Never store secrets in plaintext files accessible via HTTP.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Adversary Village
+  </footer>
+</body>
+</html>
