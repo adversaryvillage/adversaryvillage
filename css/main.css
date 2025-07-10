@@ -4027,4 +4027,79 @@ html.no-csstransitions .home-content__main {
 
 }
 
-/*# sourceMappingURL=main.css.map */
+
+
+
+
+
+  .sponsor-box {
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    background-color: #fdfdfd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .sponsor-box img.logo {
+    max-height: 240px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .sponsor-box p {
+    color: #000;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .sponsor-socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .sponsor-socials a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .sponsor-socials a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  .sponsor-socials img.icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .sponsor-box {
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .sponsor-box p {
+      font-size: 0.95rem;
+    }
+
+    .sponsor-socials {
+      gap: 20px;
+    }
+
+    .sponsor-socials a {
+      font-size: 0.95rem;
+    }
+  }
+
