@@ -58,20 +58,11 @@ a:active {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Chivo", sans-serif;
   font-weight: 600;
-  color: #000000;
+  color: #228833;
   text-rendering: optimizeLegibility;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  margin-top: 6rem;
-  margin-bottom: 1.6rem;
-}
 
-@media only screen and (max-width:600px) {
-  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    margin-top: 5.6rem;
-  }
-}
 
 h5, .h5, h6, .h6 {
   margin-top: 4.8rem;
@@ -3569,7 +3560,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-download .download-badges li a.badge-appstore {
-  background-image: url("../../images/join-discord.png");
+  background-image: url("../images/join-discord.png");
 }
 
 .s-download .download-badges li a.badge-googleplay {

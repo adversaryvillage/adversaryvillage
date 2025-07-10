@@ -770,7 +770,7 @@ p {
 
 #schedule .nav-tabs a {
   border-style: solid;
-  border-color: #604ca9;
+  border-color: #4477aa;
   border-radius: 5px;
   font-weight: 600;
   background-color: #E6E6FA;
@@ -797,7 +797,7 @@ p {
 }
 
 #schedule .nav-tabs a.active {
-  background-color: #604ca9;
+  background-color: #4477aa;
   color: #fff;
 }
 
@@ -828,7 +828,7 @@ p {
 }
 
 #schedule .schedule-item:hover {
-  background-color: #fff;
+  background-color: #0c0c0c;
 }
 
 #schedule .schedule-item time {
@@ -860,7 +860,7 @@ p {
 
 #schedule .schedule-item h4 span {
   font-style: italic;
-  color: #19328e;
+  color: #bbbbbb;
   font-weight: normal;
   font-size: 16px;
 }
@@ -1586,3 +1586,76 @@ p {
   font-size: 13px;
   color: #ddd;
 }
+
+
+
+  .sponsor-box {
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+    background-color: #fdfdfd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .sponsor-box img.logo {
+    max-height: 240px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .sponsor-box p {
+    color: #000;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .sponsor-socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .sponsor-socials a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .sponsor-socials a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  .sponsor-socials img.icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .sponsor-box {
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .sponsor-box p {
+      font-size: 0.95rem;
+    }
+
+    .sponsor-socials {
+      gap: 20px;
+    }
+
+    .sponsor-socials a {
+      font-size: 0.95rem;
+    }
+  }
