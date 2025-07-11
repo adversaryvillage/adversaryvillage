@@ -1659,3 +1659,9 @@ p {
       font-size: 0.95rem;
     }
   }
+
+
+  .nav.nav-tabs {
+  position: relative;
+  z-index: 1001;
+}
