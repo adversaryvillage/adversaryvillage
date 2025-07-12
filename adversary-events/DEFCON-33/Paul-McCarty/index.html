@@ -4,11 +4,11 @@
 <head>
 
    <meta charset="utf-8">
-   <title> Alexandre Cabrol-Perales | Adversary Village at DEF CON 33</title>
+   <title> Paul McCarty | Adversary Village at DEF CON 33</title>
    <meta name="description"
       content="Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
    <meta name="author" content="Adversary Village at DEF CON 33">
-   <meta property="og:title" content=" Alexandre Cabrol-Perales | Adversary Village at DEF CON 33" />
+   <meta property="og:title" content=" Paul McCarty | Adversary Village at DEF CON 33" />
    <meta property="og:description"
       content="Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming." />
    <meta property="og:type"
@@ -95,26 +95,27 @@
       <div class="row half-bottom" style="background-color:white;">
          <div class="col-six tab-full">
             </br>
-            <p style="text-align: center;"><img src="../images/speakers/alexandre-cabrol-perales-full.jpg"
+            <p style="text-align: center;"><img src="../images/speakers/Paul-McCarty.jpg"
                   sizes="(max-width: 1000px) 100vw, 1000px" alt="">
             <div class="footer-social-icons">
                <ul class="social-icons">
-                  <li><a href="https://www.linkedin.com/in/alexandrecabrolperales" target="_blank" class="social-icon">
-                        <i class="fa fa-linkedin linkedin"></i></a></li>
-                  <li><a href="#" target="_blank" class="social-icon"> <i class="fa fa-twitter twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/mccartypaul/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="https://twitter.com/eastsidemccarty" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
                </ul>
             </div>
             </p>
          </div>
          <div class="col-six tab-full">
-            <h2> Alexandre Cabrol-Perales</h2>
-            <p class="job"> President of NPO Multi-country WOCSA, Teach at French University Cybersecurity Master, Head
-               of Sopra Steria Cybersecurity Detection & Response Services
-            </p>
-            <p>President of WOCSA France, Cyberjutsu Project Leader for WOCSA
-               Head of Managed Detection and Response Services at Sopra Steria Cybersecurity
-               External Professor at Cybersecurity Master (SSIR) for Science University of Toulouse, France
-               1st dan Judo Jujitsu</p>
+            <h2> Paul McCarty </h2>
+            <p class="job"> Founder of SecureStack. DevSecOps evangelist, startup lover and failed professional
+               snowboarder.</p>
+            <p> Don't let Paul's baby face fool you, he has been working with engineering teams for 30 years. Paul's
+               specialty is helping organizations build secure applications at scale. He's done that for large
+               organizations like NASA, John Deere, Blue Cross/Blue Shield, US Army, and the Australian government. He's
+               also built or worked for several startups along the way helping them do the same thing. Paul spent most
+               of his career in Utah but now lives in Australia with his wife and 3 kids.</p>
          </div>
       </div>
    </section>
@@ -125,31 +126,95 @@
          <div class="col-twelve tab-full">
 
 
-            <h2 style="color: #228833;">Hands-on workshop : Cyberjutsu Path to a Digital Martial Art</h2>
+            <h2 style="color: #228833;">Talk: Malware in the gist: How malicious packages on npm bypass existing security tools</h2>
             <p>
 
-               <span style="font-weight: 600; color: white;"><time> 15:00-17:00 PDT</time> Saturday | Aug 9<sup>th</sup>
-                  2025 <br /> Adversary Village workshop stage | Las Vegas Convention Center</span>
+               <span style="font-weight: 600; color: white;"><time>11:00-11:30 PDT</time> Saturday | Aug
+                  9<sup>th</sup>2025 <br /> DEF CON Creator Stage 4 (Room 228) | Las Vegas Convention Center</span>
                </br>
                <span style="font-size:1rem; background-color: #66ccee; padding: 4px; color: black;">Adversary
-                  Philosophy</span>
-               <br>
-               <!-- <span style="font-size:1rem; background-color: #66ccee; padding: 4px; color: black;">Adversary Emulation</span> -->
+                  Automation</span>
             </p>
-            <p style="color:white;">Cyberjūtsu is a new way to teach cybersecurity inspired from martial arts trainings.
-               It is an educational way which allows everyone (novice to expert) to practice together and improve
-               themselves in cybersecurity through confrontation. It follows budō (judo, jujitsu, karate...) principles
-               and ethical code. The goal is to reach "maximum-efficient use of computer" in a "mutual benefit" of a
-               human confrontation. It's a digital martial art fight e-sport using linux shell.
-            <p>Detailed workshop outline</p>
+            <p style="color:white;"> npm is owned by Microsoft and is the world’s largest software registry. It hosts
+               nearly 5 million packages and 4.5 trillion requests for packages were made to npm in 2024. The open and
+               accessible nature of npm is one of its main features, but its also one of the reasons that threat actors
+               are attracted to it. A recent study by Sonatype found that 98.5% of malicious software packages are
+               hosted and delivered via npm.</p>
+            <p>This technical deep-dive will explain why npm is so good at delivering malware; expose how threat actors
+               are using npm; and why existing security tools like SCA, SAST, EDR and anti-virus solutions will not
+               protect you from npm based malware.</p>
+            <p>Key Topics:</p>
             <ul>
-               <li>Jujitsu Demo (10 min)</li>
-               <li>Reigi (Greetings)</li>
-               <li>Warmup (5min)</li>
-               <li>Uchikomi Training Techniques 打込 [hit in a bulk] (20min)</li>
-               <li>Yakusukugeiko Sparing(10 min)</li>
-               <li>Randori Free Practice(10min)</li>
+               <li>Technical analysis of how attackers leverage npm's unique characteristics (namespace claiming,
+                  pre/post install scripts, package name recycling) to deliver successful malware</li>
+               <li>Why existing security solutions like SCA, SAST, EDR and anti-virus won’t find npm based malware</li>
+               <li>Comparative analysis of attack patterns across different threat actors (researchers, crypto thieves,
+                  criminal APTs, nation-states)</li>
+               <li>Introduction to OSV, GHSA and other resources to help your teams stay informed about new malcious
+                  packages</li>
             </ul>
+            <p>Target Audience:</p>
+            <p>This talk is aimed at security researchers, threat hunters, and defenders responsible for securing the
+               software supply chain. Attendees will gain practical insights into detecting and defending against
+               package-based malware that evades conventional security controls.</p>
+            <p>Why This Talk?</p>
+            <p>While binary malware analysis is well understood, package-based malware presents unique challenges. This
+               talk fills a critical knowledge gap by providing detailed technical analysis of real-world attacks and
+               practical defensive strategies for an increasingly important threat vector.</p>
+            <ol>
+               <li>Software package malware is different from typical binary based malware
+                  <ol>
+                     <li>No binary to detect on or reverse engineer. Hashing is useless.</li>
+                     <li>Javascript packages use hundreds or thousands of transitive dependencies. Dynamic loading of JS
+                        via CDNs or lazy loading adds to the complexity.</li>
+                     <li>Uses Javascript native functionality and can run 100% in browser. This lets bad guys target
+                        browser behaviour directly</li>
+                     <li>Sandboxing is difficult. Depending on malware you need different sandboxing. Most sandboxes
+                        like Joes, any.run, Triage won’t find Javascript based malware.</li>
+                  </ol>
+               </li>
+               <li>What makes bad guys target npm? What are the specific reasons that make it such a common target for
+                  malware?
+                  <ol>
+                     <li>Namespace can be claimed by anyone</li>
+                     <li>Pre and post install scripts deliver RCE by design</li>
+                     <li>You can reclaim package names once they’ve been removed</li>
+                     <li>The Javascript ethos of “everything is a small library”</li>
+                  </ol>
+               </li>
+               <li>Types of attackers. “Ecosystem of malicious software peddlers”
+                  <ol>
+                     <li>Researchers:</li>
+                     <li>Crypto theft - usually on import (i.e., actually doing the thing its supposed to)</li>
+                     <li>Criminal APTs</li>
+                     <li>Nation state actors</li>
+                  </ol>
+               </li>
+               <li>How do existing security tools address malicious Javascript packages?
+                  <ol>
+                     <li>EDR doesn’t detect it, nor does IDS. Explain why it doesn’t</li>
+                     <li>Explain how SCA (or SAST/other tools) works and why it doesn’t detect malware in packages.</li>
+                     <li>Lack of telemetry, TTPs, IOCs, etc. Most of the detection data comes from a relatively small
+                        group of researchers, including me. Other companies are doing the research, but not sharing it
+                        with the public.</li>
+                  </ol>
+               </li>
+               <li>npm package malware resources for red teams/researchers
+                  <ol>
+                     <li>Special domains</li>
+                     <li>Building publisher clout == better adoption</li>
+                     <li>GOAT list for package based malware</li>
+                  </ol>
+               </li>
+               <li>npm package malware resources for defenders
+                  <ol>
+                     <li>osv.dev</li>
+                     <li>GitHub security advisory</li>
+                     <li>Hosting your own npm registry</li>
+                     <li>Software supply chain firewalls</li>
+                  </ol>
+               </li>
+            </ol>
          </div>
       </div>
    </section>
@@ -235,6 +300,7 @@
    </section>
 
    <footer class="s-footer footer">
+
       <!-- end section-header -->
       <div class="row footer__bottom">
          <div class="footer__about col-five tab-full left">
