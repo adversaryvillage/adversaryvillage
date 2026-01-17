@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!--- basic page needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>Adversary Village at RSAC 2026 | San Francisco</title>
+    <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
+    <meta name="author" content="Adversary Village at RSAC 2026 | San Francisco">
+    <meta property="og:title" content="Adversary Village at RSAC 2026 | San Francisco" />
+    <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."
+    />
+    <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Adversary Tactics and purple teaming!" />
+    <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/og-image-adv-rsac-2025.jpg" />
+    <!-- mobile specific metas
+         ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+         ================================================== -->
+    <link rel="stylesheet" href="../../css/base2.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="../../css/vendor.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style-2.css">
+    <!-- script
+         ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <!-- favicons
+         ================================================== -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style type="text/css">
+        .schedule-box {
+            max-width: 800px; /* Adjust as needed */
+            margin: 20px auto; /* Center the box horizontally */
+          }
+        
+          .day-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px; /* Increased margin for better spacing */
+          }
+        
+          .day-button {
+            background-color: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 10px 20px; /* Slightly larger padding */
+            border-radius: 8px; /* More rounded corners */
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 1rem; /* Slightly larger font */
+          }
+        
+          .day-button.active {
+            background-color: #604ca9;
+            color: #fff;
+          }
+        
+          .add-calendar-btn {
+            background-color: #604ca9;
+            color: white;
+            padding: 8px 16px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: inline-block;
+          }
+        
+          .add-calendar-btn:hover {
+            background-color: #5a00b5;
+            transform: scale(1.05);
+            color: white;
+          }
+        
+          .schedule-content {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 25px; /* Slightly more padding inside the box */
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          }
+        
+          .timeline {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #604ca9;
+          }
+        
+          .timeline-entry {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px; /* Adjusted gap */
+          }
+        
+          .timeline-entry::before {
+            content: "";
+            position: absolute;
+            left: -11px;
+            top: 6px; /* Adjusted top for better vertical alignment */
+            width: 16px;
+            height: 16px;
+            background-color: #604ca9;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.3);
+          }
+        
+          .timeline-time {
+            font-weight: bold;
+            color: #604ca9;
+            font-size: 1.1rem; /* Slightly larger time font */
+          }
+        
+          .timeline-description {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 12px; /* Adjusted margin */
+          }
+        
+          .timeline-photo-time {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Adjusted gap */
+          }
+        
+          .timeline-photo img {
+            width: 45px; /* Slightly larger image */
+            height: 45px; /* Slightly larger image */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+          }
+        
+          .timeline-entry {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+          }
+        
+          @keyframes fadeInUp {
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+    </style>
+
+    <script>
+        function showSchedule(button, scheduleId) {
+            // Deactivate all buttons and hide all content divs
+            document.querySelectorAll('.day-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.schedule-content').forEach(div => div.style.display = 'none');
+        
+            // Activate the clicked button and show the corresponding content div
+            button.classList.add('active');
+            document.getElementById(scheduleId).style.display = 'block';
+          }
+    </script>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header class="s-header">
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="../../index.html">
+                    <img src="../../images/adversary-village-org.png" alt="Homepage">
+                </a>
+            </div>
+            <nav class="header-nav-wrap">
+                <ul class="header-main-nav">
+                    <li>
+                        <a href="../../">Home</a>
+                    </li>
+                    <li class="current">
+                        <a href="../../adversary-events">Events</a>
+                    </li>
+                    <li>
+                        <a href="../../call-for-papers">Call for papers</a>
+                    </li>
+                    <li>
+                        <a href="../../adversary-wars-ctf/adversary-wars-2.0">Adversary Wars CTF</a>
+                    </li>
+                    <li>
+                        <a href="../../sponsors">Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="../../live-streaming-series">LiveStream</a>
+                    </li>
+                    <li>
+                        <a href="../../about-us">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- end header-nav-wrap -->
+            <a class="header-menu-toggle" href="#">
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <section class=" target-section" style="background-color: #003591;">
+        <div class="row section-header" style="padding-top:19rem;">
+            <div class="col-full">
+                <h1 class="display-1" style="color:white; text-align: center; position: relative; margin-bottom: .5rem;"> Adversary Village </br>RSAC 2026 </h1>
+                <h4 style="color:white; text-align: center; position: relative; margin-top: .5rem;">Moscone Center, San Francisco </br>23-26 March, 2026. </h4>
+            </div>
+            <div class="row half-bottom text-center">
+                <div class="col-twelve tab-full" style="padding-top:5px; position: relative;">
+                    <br>
+                    <br>
+                    <p>
+                        <img src="images/RSAC_2026.PNG" width="550px" alt="">
+                    </p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="s-features target-section" style="padding-bottom:0px; padding-top:0px; background-color: #101125;">
+        <section id="schedule" class="section-with-bg" style="padding-top:5px; ">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <h3 class="sub-heading"></h3>
+                <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://adversaryvillage.org/discord" target="_blank">Join Discord Server</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.rsaconference.com/" target="_blank">RSAC 2026 Website</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="color: white; background-color: #003591; padding-top:40px; padding-bottom:30px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3 style="margin-top: 1rem; color: white;">Adversary Village at RSAC 2026!</h3>
+                        <p style=" font-weight: 400; font-size: 2rem; color: white;">Join us for Adversary Village at RSAC 2026!
+                            <br> Adversary Village is a community initiative focused on adversary simulation, offensive cyber security tradecraft and purple teaming. The sandbox will feature talks, live demos, gamified table-top exercises, adversary/ransomware
+                            simulator, guided breach simulation, panels, and hands-on activities. </p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row" style="font-weight: 400; color: #ffffff;">	
+                    <div class="col-twelve tab-full">
+              <h3 style="margin-top: 1rem; color: white;">Adversary Village Sandbox timings:</h3></br>
+                          <div class="col-six tab-full">
+              
+              
+                           <ul class="disc" style="margin-bottom: 1rem;">
+                            <li>Tuesday, March 24, 09:30 AM - 03:15 PM | 04:15 PM - 06:00 PM</li>
+                                 
+                              </ul>
+                          </div>
+              
+                          <div class="col-six tab-full">
+              
+                          <ul class="disc">
+                                 <li>Wednesday, March 25, 09:30 AM - 04:30 PM </li>
+                              </ul>
+                          </div>
+                      <div class="col-six tab-full">
+
+                           <ul class="disc" style="margin-bottom: 1rem;">
+                            <li>Thursday, March 26, 9:30 AM - 02:30 PM</li>
+                                 
+                              </ul>
+                          </div>
+
+                          
+                      </div>	
+              </div>
+            </div>
+        </section>
+
+        <!-------- panel -->
+        <section id="schedule" class="section-with-bg" style="padding-top:5px;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3>
+                <a href="#" target="_blank" style="color: #604ca9;">Panel Discussion: AI and the New Offensive Playbook of State Sponsored Cyber threat Actors</a>
+              </h3>
+                        <span style="font-weight: 800;">VLG-W02 | March 25, 2026 09:40 AM PDT</span>
+                        </br>
+                        <p>Threat actors quickly folding generative AI into their attacks, AI often stands for Adversarial Intelligence. This panel will unpack how adversaries use AI to build sophisticated tooling, phishing campaigns, automate exploitation, and craft malware on the fly to evade defenses. The discussion will focus on attacker tactics and incidents, highlighting how AI is impacting and changing the game.</p>
+                        <div class="container-cfp">
+                            <div class="row-cfp">
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/adam-pennington.jpg" alt="Jon Baker">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Adam Pennington</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">MITRE ATT&CK Lead, MITRE Corporation.</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p>MITRE ATT&CK Lead, MITRE Corporation.</p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/seeyew-mo.jpg" alt="Jorge">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Seeyew Mo</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Director at DEF CON Training</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p></p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                                <a class="social-li" href="#" target="_blank">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/Paul-McCarty.jpg" alt="Daniel">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_target" style="color: #604ca9;">Paul McCarty</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Resercher</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p>‌</p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                                <a class="social-li" href="#" target="_blank">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="team-9">
+                                        <div class="team-img">
+                                            <img src="images/speakers/Abhijith-BR.jpg" alt="#">
+                                        </div>
+                                        <div class="team-content">
+                                            <h2 style="margin-top: 2rem;">
+                          <a href="#" target="_blank" style="color: #604ca9;">Abhijith</a>
+                        </h2>
+                                            <h3 style="margin-top: 1rem;">Founder and Lead at Adversary Village</h3>
+                                        </div>
+                                        <div class="team-overlay">
+                                            <p></p>
+                                            <div class="team-social">
+                                                <a class="social-tw" href="#" target="_blank">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download" class="s-download target-section" style="background: url('images/choose-adv-bg.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-twelve tab-full">
+                        <h3 style="color:white;">Hands-on activity <br>Choose-your-own-Adversary-Adventure Tabletop Game </h3>
+                        <span style="font-weight: 800;">Adversary Village Area | 24-26 March, 20256| 09:30 to 03:30 PM PT</span>
+                        <p style=" font-weight: 400; font-size: 2rem; color: white;"> Adversary adventure is a story-scenario based, interactive, cyber war-gaming, choose-your-own adventure model interactive game. This is a gamified version of table-top exercises which is presented to the participants as they can
+                            choose to play as an attacker, post exploitation OR a Defender who is defending against an attacker group-threat actor OR even play as a CISO who is dealing with an adversarial situation such as a ransomware incident. </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row download-bottom-image" data-aos="fade-up"></div>
+        </section>
+
+        <section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
+
+        </section>
+        <section id="schedule" class="section-with-bg" style="padding-top:60px; padding-bottom: 5px; background: url('images/bg2-tdi-range-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-top: 30px; padding-bottom: 25px;">
+                <div class="row">
+                    <h3 style="color:white;"> Hands-on activity <br>Guided Breach and Attack Simulation exercises </h3>
+                    <span style="font-weight: 800; color: white;">Adversary Village Area | 24-26 March, 2026 | 09:30 to 03:30 PM PT</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:white;"> This area will feature guided breach simulation exercises for participants to engage with. There will be two activities, "Breach-the-Hospital" and "Breach-the-Office," based on two LEGO sets. A simulated cyber range will be available
+                        for each scenario, providing an exact replica of an enterprise production environment. We will provide a detailed walkthrough of the attack scenarios, including Tools-Techniques-and-Procedures (TTPs) commands and how-to guides,
+                        demonstrating how to attack and breach the hospital's infrastructure or the office environment.
+                        <br> The participants who complete the exercises and come to the top place will be rewarded with exciting goodies. </p>
+       
+                </div>
+            </div>
+        </section>
+        <section id="schedule" class="section-with-bg" style="padding-top:40px; padding-bottom: 5px;">
+
+        </section>
+
+        <section id="schedule" class="section-with-bg" style="padding-top:5px; background: url('images/bg-2-bsidesf-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+                <div class="row">
+                    <h3 style="color:white;"> Hands-on activity <br>Adversary Simulator and Purple Teaming hands-on booth </h3>
+                    <span style="font-weight: 800; color: white;">Adversary Village Area | 24-26 March, 2026 | 09:30 to 03:30</span>
+                    <p style=" font-weight: 400; font-size: 2rem; color:white;"> Adversary Simulator booth has hands-on adversary emulation plans specific to a wide variety of threat-actors, ransomware; these are meant to provide the participant/visitor with a better understanding of the Adversary tactics. This
+                        is a volunteer assisted activity where anyone, both management and technical folks can come in and experience different categories of simulation, emulation and purple scenarios. </br>
+                        </br>Adversary Simulator booth will be having a lab environment focused on recreating enterprise infrastructure, aimed at simulation and emulating various adversaries. Visitors will be able to view, simulate and control various TTPs
+                        used by adversaries. The simulator is meant to be a learning experience, irrespective of whether one is hands-on with highly sophisticated attack tactics or from the management. </p>
+ </div>
+            </div>
+        </section>
+    </section>
+	   
+
+
+
+
+
+    <section id="sponsors" class="s-sponsors target-section" style="padding-bottom: 1rem; background-color: white;">
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="">
+                <h1 class="display-1" style="font-size:4rem;"> Adversary Village at </br>RSA Conference 2026 </h1>
+                <p class="lead" style="font-size: 4rem; font-weight: 900; color: gold;"> Sponsors </p>
+            </div>
+        </div>
+
+        </br>
+        </br>
+    </section>
+    <section id="download" class="s-download target-section" style="background-color: #121619;">
+        <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1"> Join Adversary Village Discord Server. </h1>
+                <p class="lead"> Join Adversary Village official Discord server to connect with our amazing community of adversary simulation experts and offensive security researchers! </p>
+            </div>
+        </div>
+        <!-- end section-header -->
+        <div class="row">
+            <div class="col-full text-center">
+                <ul class="download-badges" data-aos="fade-up">
+                    <li>
+                        <a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join Discord</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row download-bottom-image" data-aos="fade-up"></div>
+    </section>
+    <footer class="s-footer footer" style="padding-top: .5rem;">
+        <!-- end section-header -->
+        <div class="row footer__bottom">
+            <div class="footer__about col-five tab-full left">
+                <h4>About Adversary Village.</h4>
+                <p> Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a bit of purple teaming. </p>
+                <ul class="footer__social">
+                    <li>
+                        <a href="https://twitter.com/AdversaryVillag" target="_blank">
+                            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/adversaryvillage" target="_blank">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitch.tv/AdversaryVillage" target="_blank">
+                            <i class="fab fa-twitch" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/AdversaryVillage" target="_blank">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://defcon.social/@AdversaryVillage" target="_blank">
+                            <i class="fab fa-mastodon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/GDB3rC7KYz" target="_blank">
+                            <i class="fab fa-discord" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-five md-seven tab-full right end">
+                <div class="row">
+                    <div class="footer__site-links col-five mob-full">
+                        <h4>Site links.</h4>
+                        <ul class="footer__site-links">
+                            <li>
+                                <a href="https://defcon.org/" target="_blank">DEF CON 33</a>
+                            </li>
+                            <li>
+                                <a href="../../about-us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="../../call-for-volunteers">Call for volunteers</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a>
+                            </li>
+                            <li>
+                                <a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact col-seven mob-full">
+                        <h4>Contact Us.</h4>
+                        <p> Would you like to sponsor? or have a question for us? Ping us:
+                            <br>
+                            <a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-full ss-copyright">
+                <span>Copyright &copy; 2021-2025, Adversary Village <sup>®</sup> All Rights Reserved. </span>
+            </div>
+        </div>
+        <!-- end footer__bottom -->
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+    </footer>
+    <!-- end s-footer -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
