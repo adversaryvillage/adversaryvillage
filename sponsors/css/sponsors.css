@@ -1,0 +1,318 @@
+
+   ========================================================================== */
+
+/* Sponsor box styles - matching main site */
+.sponsor-box {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    max-width: 800px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sponsor-box .logo {
+    max-height: 160px;
+    max-width: 380px;
+    width: auto;
+    height: auto;
+}
+
+.sponsor-box p {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.sponsor-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.sponsor-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.sponsor-socials a:hover {
+    background: #e0e0e0;
+}
+
+.sponsor-socials .icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Horizontal sponsor row for multiple sponsors in same tier (3 per row) */
+.sponsors-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.sponsors-row .sponsor-box {
+    flex: 1 1 380px;
+    max-width: 420px;
+    margin: 0;
+    padding: 30px;
+}
+
+.sponsors-row .sponsor-box .logo {
+    max-height: 140px;
+    max-width: 320px;
+}
+
+.sponsors-row .sponsor-box p {
+    font-size: 1.4rem;
+    min-height: 90px;
+}
+
+/* 2 boxes in a row - add more gap */
+.sponsors-row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.sponsors-row-2 .sponsor-box {
+    flex: 0 1 420px;
+    max-width: 450px;
+    margin: 0;
+    padding: 30px;
+}
+
+.sponsors-row-2 .sponsor-box .logo {
+    max-height: 140px;
+    max-width: 320px;
+}
+
+.sponsors-row-2 .sponsor-box p {
+    font-size: 1.4rem;
+    min-height: 90px;
+}
+
+/* Community partner - slightly larger */
+.sponsor-box.community-partner .logo {
+    max-height: 180px;
+    max-width: 450px;
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .sponsors-row,
+    .sponsors-row-2 {
+        gap: 25px;
+        padding: 0 20px;
+    }
+    
+    .sponsors-row .sponsor-box,
+    .sponsors-row-2 .sponsor-box {
+        flex: 1 1 300px;
+        max-width: 380px;
+        padding: 25px;
+    }
+    
+    .sponsors-row .sponsor-box .logo,
+    .sponsors-row-2 .sponsor-box .logo {
+        max-height: 120px;
+        max-width: 280px;
+    }
+    
+    .sponsors-row .sponsor-box p,
+    .sponsors-row-2 .sponsor-box p {
+        font-size: 1.3rem;
+        min-height: 80px;
+    }
+}
+
+/* Mobile landscape / small tablet */
+@media (max-width: 768px) {
+    .sponsor-box {
+        padding: 20px 15px;
+        margin: 0 15px 25px 15px;
+        max-width: calc(100% - 30px);
+    }
+    
+    .sponsor-box .logo {
+        max-height: 120px;
+        max-width: 280px;
+        width: 100%;
+    }
+    
+    .sponsor-box p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    
+    .sponsors-row,
+    .sponsors-row-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .sponsors-row .sponsor-box,
+    .sponsors-row-2 .sponsor-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 20px 15px;
+    }
+    
+    .sponsors-row .sponsor-box .logo,
+    .sponsors-row-2 .sponsor-box .logo {
+        max-height: 100px;
+        max-width: 250px;
+        width: auto;
+    }
+    
+    .sponsors-row .sponsor-box p,
+    .sponsors-row-2 .sponsor-box p {
+        font-size: 1.3rem;
+        min-height: auto;
+    }
+    
+    .sponsor-box.community-partner .logo {
+        max-height: 120px;
+        max-width: 300px;
+    }
+    
+    .sponsor-socials {
+        gap: 10px;
+    }
+    
+    .sponsor-socials a {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .sponsor-box {
+        padding: 15px 12px;
+        margin: 0 10px 20px 10px;
+        max-width: calc(100% - 20px);
+        border-radius: 6px;
+    }
+    
+    .sponsor-box .logo {
+        max-height: 90px;
+        max-width: 220px;
+    }
+    
+    .sponsor-box p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 12px 0;
+    }
+    
+    .sponsors-row,
+    .sponsors-row-2 {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .sponsors-row .sponsor-box,
+    .sponsors-row-2 .sponsor-box {
+        padding: 15px 12px;
+    }
+    
+    .sponsors-row .sponsor-box .logo,
+    .sponsors-row-2 .sponsor-box .logo {
+        max-height: 80px;
+        max-width: 200px;
+    }
+    
+    .sponsors-row .sponsor-box p,
+    .sponsors-row-2 .sponsor-box p {
+        font-size: 1.2rem;
+    }
+    
+    .sponsor-box.community-partner .logo {
+        max-height: 100px;
+        max-width: 250px;
+    }
+    
+    .sponsor-socials {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    
+    .sponsor-socials a {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+        background: #f0f0f0;
+        border-radius: 6px;
+    }
+    
+    .sponsor-socials a:hover {
+        background: #e0e0e0;
+    }
+    
+    .sponsor-socials .icon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .sponsor-box {
+        padding: 12px 10px;
+        margin: 0 8px 15px 8px;
+    }
+    
+    .sponsor-box .logo {
+        max-height: 70px;
+        max-width: 180px;
+    }
+    
+    .sponsor-box p {
+        font-size: 1.1rem;
+    }
+    
+    .sponsors-row .sponsor-box .logo,
+    .sponsors-row-2 .sponsor-box .logo {
+        max-height: 70px;
+        max-width: 180px;
+    }
+    
+    .sponsor-socials a {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
