@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <!--- basic page needs
+         ================================================== -->
+    <meta charset="utf-8">
+    <title>Full Schedule | Adversary Village at RSAC 2026 | San Francisco</title>
+    <meta name="description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Breach simulation, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming.">
+    <meta name="author" content="Adversary Village at RSAC 2026 | San Francisco">
+    <meta property="og:title" content="Full Schedule | Adversary Village at RSAC 2026 | San Francisco" />
+    <meta property="og:description" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, APT emulation, Simulation CTFs, Adversary Tactics, life, urban survival skills and purple teaming."
+    />
+    <meta property="og:type" content="Adversary Village is a community torqued combat readiness platform purely focuses on Adversary simulation, emulation tactics, Adversary Tactics and purple teaming!" />
+    <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/images/og-image-adv-rsac-2025.jpg" />
+    <!-- mobile specific metas
+         ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../css/base2.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-2.css">
+
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/pace.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://adversaryvillage.org/favicon/favicon-32x32.png">
+
+    <style type="text/css">
+
+        .schedule-section-title {
+            text-align: center;
+            color: #604ca9;
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .three-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+            align-items: start;
+            width: 100%;
+        }
+
+        .day-column {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .day-column-header {
+            background: #604ca9;
+            color: #fff;
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .day-column-header h3 {
+            font-family: "Chivo", sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+        }
+
+        .day-column-header .day-hours {
+            font-size: 1.4rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+        }
+
+        .day-column-body {
+            padding: 22px 20px;
+        }
+
+        .fullday-section {
+            margin-bottom: 20px;
+        }
+
+        .fullday-label {
+            font-family: "Chivo", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #604ca9;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0 0 10px 0;
+        }
+
+        .fullday-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fullday-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 14px;
+            background: rgba(96,76,169,0.05);
+            border: 1px solid rgba(96,76,169,0.12);
+            border-radius: 8px;
+            margin-bottom: 6px;
+        }
+
+        .fullday-list li .fd-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #604ca9 0%, #8b6fdb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .fullday-list li .fd-icon svg { width: 18px; height: 18px; fill: #fff; }
+
+        .fullday-list li .fd-icon.fd-red { background: linear-gradient(135deg, #e63946 0%, #f4845f 100%); }
+
+        .fullday-list li .fd-body { flex: 1; min-width: 0; }
+
+        .fullday-list li .fd-name {
+            font-family: "Chivo", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #222;
+            line-height: 1.3;
+        }
+
+        .fullday-list li .fd-meta {
+            font-size: 1.15rem;
+            color: #888;
+            line-height: 1.3;
+        }
+
+        .fullday-list li .fd-time {
+            font-size: 1.15rem;
+            color: #604ca9;
+            font-weight: 700;
+        }
+
+        .fullday-list li .fd-desc {
+            font-size: 1.15rem;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+
+        .fullday-list li .fd-location {
+            font-size: 1.05rem;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            margin-top: 1px;
+        }
+
+        .fullday-list li .fd-location svg {
+            width: 11px;
+            height: 11px;
+            fill: #aaa;
+            flex-shrink: 0;
+        }
+
+    
+        .day-divider {
+            border: none;
+            border-top: 1px solid rgba(96,76,169,0.15);
+            margin: 16px 0 18px;
+        }
+        .tl-entry {
+            padding: 16px 16px;
+            background: rgba(255,255,255,0.5);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: background 0.2s, box-shadow 0.2s;
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .tl-entry:hover {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .tl-entry.tl-featured {
+            background: rgba(96,76,169,0.06);
+            border: 1px solid rgba(96,76,169,0.15);
+        }
+        .tl-top {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        .tl-photo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(96,76,169,0.2);
+        }
+
+        .tl-photo-ph {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 2px solid rgba(96,76,169,0.15);
+            background: linear-gradient(135deg, #604ca9 0%, #8b6fdb 100%);
+        }
+
+        .tl-photo-ph svg { width: 28px; height: 28px; fill: rgba(255,255,255,0.7); }
+        .tl-photo-ph.ph-demo { background: linear-gradient(135deg, #f77f00 0%, #fcbf49 100%); }
+        .tl-photo-ph.ph-social { background: linear-gradient(135deg, #2ec4b6 0%, #5ee6d8 100%); }
+        .tl-photo-ph.ph-handson { background: linear-gradient(135deg, #0096c7 0%, #48cae4 100%); }
+        .tl-photo-ph.ph-setup { background: linear-gradient(135deg, #888 0%, #bbb 100%); }
+        .tl-photo-ph.ph-closing { background: linear-gradient(135deg, #e63946 0%, #f4845f 100%); }
+
+        .tl-top-info { flex: 1; min-width: 0; }
+
+        .tl-top-info .tl-name {
+            font-family: "Chivo", sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .tl-top-info .tl-role {
+            font-size: 1.2rem;
+            color: #777;
+            margin: 3px 0 0;
+            line-height: 1.3;
+        }
+
+        /* Body */
+        .tl-type {
+            display: inline-block;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .type-setup { background: #e0e0e0; color: #666; }
+        .type-talk { background: rgba(96,76,169,0.15); color: #604ca9; }
+        .type-panel { background: #604ca9; color: #fff; }
+        .type-demo { background: rgba(247,127,0,0.15); color: #e36d00; }
+        .type-handson { background: rgba(0,150,199,0.15); color: #0077a8; }
+        .type-social { background: rgba(46,196,182,0.15); color: #1a9e8f; }
+        .type-closing { background: rgba(230,57,70,0.15); color: #c5303b; }
+
+        .tl-session {
+            font-size: 1.35rem;
+            color: #444;
+            font-style: italic;
+            margin: 3px 0 6px;
+            line-height: 1.4;
+        }
+
+        .tl-time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #604ca9;
+            margin: 0 0 2px;
+        }
+
+        .tl-location {
+            font-size: 1.2rem;
+            color: #999;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tl-location svg { width: 13px; height: 13px; fill: #aaa; flex-shrink: 0; }
+
+        .tl-desc {
+            font-size: 1.3rem;
+            color: #555;
+            line-height: 1.5;
+            margin: 6px 0 0;
+        }
+
+      
+        .tl-panel-speakers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tl-ps {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            padding: 4px 8px 4px 4px;
+        }
+
+        .tl-ps img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .tl-ps-info { font-size: 1.2rem; line-height: 1.3; }
+        .tl-ps-info strong { color: #222; display: block; }
+        .tl-ps-info span { color: #888; font-size: 1.05rem; }
+
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: none; }
+        }
+
+        .tl-entry:nth-child(1) { animation-delay: 0.04s; }
+        .tl-entry:nth-child(2) { animation-delay: 0.08s; }
+        .tl-entry:nth-child(3) { animation-delay: 0.12s; }
+        .tl-entry:nth-child(4) { animation-delay: 0.16s; }
+        .tl-entry:nth-child(5) { animation-delay: 0.20s; }
+        .tl-entry:nth-child(6) { animation-delay: 0.24s; }
+        .tl-entry:nth-child(7) { animation-delay: 0.28s; }
+        .tl-entry:nth-child(8) { animation-delay: 0.32s; }
+        .tl-entry:nth-child(9) { animation-delay: 0.36s; }
+
+
+        @media only screen and (min-width: 1600px) {
+            .three-col-grid { gap: 30px; }
+            .day-column-body { padding: 26px 24px; }
+        }
+
+
+        @media only screen and (max-width: 1200px) {
+            .three-col-grid {
+                grid-template-columns: 1fr 1fr;
+                max-width: none;
+            }
+            .day-column:nth-child(2) {
+                grid-column: 1 / -1;
+            }
+        }
+
+       
+        @media only screen and (max-width: 800px) {
+            .three-col-grid {
+                grid-template-columns: 1fr;
+                max-width: none;
+                gap: 18px;
+            }
+            .day-column:nth-child(2) {
+                grid-column: auto;
+            }
+        }
+
+   
+        @media only screen and (max-width: 600px) {
+            .section-with-bg { padding-left: 10px !important; padding-right: 10px !important; }
+            .day-column-header { padding: 18px 16px; }
+            .day-column-header h3 { font-size: 2.2rem; }
+            .day-column-header .day-hours { font-size: 1.3rem; }
+            .day-column-body { padding: 16px 14px; }
+            .day-column { border-radius: 10px; }
+            .tl-entry { padding: 14px 12px; }
+            .tl-top { gap: 12px; }
+            .tl-top-info .tl-name { font-size: 1.8rem; }
+            .tl-top-info .tl-role { font-size: 1.2rem; }
+            .tl-photo img, .tl-photo-ph { width: 52px; height: 52px; }
+            .tl-photo-ph svg { width: 24px; height: 24px; }
+            .tl-type { font-size: 1rem; padding: 3px 8px; }
+            .tl-time { font-size: 1.4rem; }
+            .tl-session { font-size: 1.3rem; }
+            .tl-location { font-size: 1.15rem; }
+            .tl-desc { font-size: 1.25rem; }
+            .tl-panel-speakers { gap: 8px; }
+            .tl-ps img { width: 36px; height: 36px; }
+            .tl-ps-info { font-size: 1.1rem; }
+            .tl-ps-info span { font-size: 1rem; }
+            .fullday-label { font-size: 1.15rem; }
+            .fullday-list li { padding: 10px 12px; }
+            .fullday-list li .fd-name { font-size: 1.4rem; }
+            .fullday-list li .fd-meta { font-size: 1.1rem; }
+            .fullday-list li .fd-time { font-size: 1.1rem; }
+            .fullday-list li .fd-desc { font-size: 1.1rem; }
+            .fullday-list li .fd-location { font-size: 1rem; }
+            .fullday-list li .fd-icon { width: 32px; height: 32px; }
+            .fullday-list li .fd-icon svg { width: 16px; height: 16px; }
+            .schedule-section-title { font-size: 2.6rem; margin-bottom: 2rem; }
+        }
+
+
+        @media only screen and (max-width: 400px) {
+            .section-with-bg { padding-left: 6px !important; padding-right: 6px !important; padding-top: 40px !important; padding-bottom: 40px !important; }
+            .day-column-body { padding: 14px 10px; }
+            .tl-entry { padding: 12px 10px; border-radius: 8px; }
+            .tl-top-info .tl-name { font-size: 1.7rem; }
+            .tl-time { font-size: 1.35rem; }
+            .tl-session { font-size: 1.2rem; }
+            .tl-location { font-size: 1.1rem; }
+            .tl-photo img, .tl-photo-ph { width: 46px; height: 46px; }
+            .schedule-section-title { font-size: 2.4rem; }
+        }
+
+        .pin-svg { display: inline; }
+    </style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-jump"><div></div><div></div><div></div></div>
+    </div>
+
+
+    <header class="s-header">
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="https://adversaryvillage.org/index.html">
+                    <img src="https://adversaryvillage.org/images/adversary-village-org.png" alt="Homepage">
+                </a>
+            </div>
+            <nav class="header-nav-wrap">
+                <ul class="header-main-nav">
+                    <li><a href="https://adversaryvillage.org/">Home</a></li>
+                    <li class="current"><a href="https://adversaryvillage.org/adversary-events">Events</a></li>
+                    <li><a href="https://adversaryvillage.org/call-for-papers">Call for papers</a></li>
+                    <li><a href="https://adversaryvillage.org/adversary-wars-ctf/adversary-wars-2.0">Adversary Wars CTF</a></li>
+                    <li><a href="https://adversaryvillage.org/sponsors">Sponsors</a></li>
+                    <li><a href="https://adversaryvillage.org/live-streaming-series">LiveStream</a></li>
+                    <li><a href="https://adversaryvillage.org/about-us">About</a></li>
+                </ul>
+            </nav>
+            <a class="header-menu-toggle" href="#"><span></span></a>
+        </div>
+    </header>
+
+   
+    <section class="target-section" style="background-color:#003591;">
+        <div class="row section-header" style="padding-top:19rem;">
+            <div class="col-full">
+                <h1 class="display-1" style="color:white; text-align:center; margin-bottom:.5rem;">Adversary Village</br>RSAC 2026 Schedule</h1>
+                <h4 style="color:white; text-align:center; margin-top:.5rem;">Room 204, Level 2, Moscone South, San Francisco</br>24-26 March, 2026</h4>
+            </div>
+        </div>
+        <section class="s-download target-section" style="background-color:#003591; padding-top:1rem;">
+            <div class="container" style="padding:20px;">
+                <a href="https://www.rsaconference.com/usa?utm_source=village-adversaryvil&utm_medium=referral&utm_campaign=textad-us2026">
+                    <img src="https://adversaryvillage.org/images/RSAC2026-1.jpg" width="100%" alt="">
+                </a>
+            </div>
+        </section>
+        <br/><br/>
+    </section>
+
+
+    <section id="features" class="s-features target-section" style="padding:0; background-color:#101125;">
+
+
+     
+        <section class="section-with-bg" style="padding:60px 30px; background-color:#eaeaea;">
+            <div style="max-width:1660px; width:100%; margin:0 auto;">
+
+                <h3 class="schedule-section-title">Adversary Village Schedule</h3>
+
+                <div class="three-col-grid">
+
+                
+                    <div class="day-column">
+                        <div class="day-column-header">
+                            <h3>Tuesday, March 24</h3>
+                            <div class="day-hours">09:30 AM – 03:15 PM | 04:15 – 06:00 PM</div>
+                        </div>
+                        <div class="day-column-body">
+
+                            <div class="fullday-section">
+                                <div class="fullday-label">All-Day Activities</div>
+                                <ul class="fullday-list">
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h18v8z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Adversary Adventure Game</div>
+                                            <div class="fd-desc">Choose-your-own-adventure style interactive cyber war-gaming tabletop game. Play as attacker, defender, or CISO.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 3:15 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Hospital</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based hospital environment with a full cyber range replica.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 3:15 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Office</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based office environment with enterprise infrastructure range.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 3:15 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">AD Lab</div>
+                                            <div class="fd-desc">Hands-on Active Directory lab for adversary simulation and purple teaming exercises.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Hands-On Lab Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 3:15 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon fd-red"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Ransomware Sim</div>
+                                            <div class="fd-desc">Hands-on adversary emulation plans for ransomware and threat actors. Volunteer-assisted, all skill levels welcome.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Simulator Booth, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 3:15 PM</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="day-divider">
+
+                    
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo"><img src="https://adversaryvillage.org/adversary-events/RSA-Conference-2025/images/speakers/len-noe-color.jpg" alt="Len Noe"></div><div class="tl-top-info"><div class="tl-name">Len Noe</div><div class="tl-role">Technical Evangelist &amp; Cyborg Hacker</div></div></div>
+                                <span class="tl-type type-talk">Interactive Session</span>
+                                <div class="tl-session">Humanity 2.0 - We are no longer standing at the edge of the future. We are living inside it.</div>
+                                <div class="tl-time">9:30 – 11:00 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-demo"><svg viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/></svg></div><div class="tl-top-info"><div class="tl-name">Ransomware Simulator Demo</div></div></div>
+                                <span class="tl-type type-demo">Live Demo</span>
+                                <div class="tl-session">Live ransomware attack simulation walkthrough</div>
+                                <div class="tl-time">11:00 – 11:30 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Simulator Booth</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.2 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div><div class="tl-top-info"><div class="tl-name">Sarah Hume</div></div></div>
+                                <span class="tl-type type-talk">Interactive Session</span>
+                                <div class="tl-session">Running Point: How to Execute and Track Purple Team Exercises</div>
+                                <div class="tl-time">11:30 AM – 1:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo"><img src="https://adversaryvillage.org/adversary-events/RSA-Conference-2025/images/speakers/jonathan-baker.jpg" alt="Jonathan Baker"></div><div class="tl-top-info"><div class="tl-name">Jonathan Baker</div><div class="tl-role">Director, CTID, MITRE</div></div></div>
+                                <span class="tl-type type-talk">Talk</span>
+                                <div class="tl-session">TBA</div>
+                                <div class="tl-time">1:30 – 2:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo"><img src="https://adversaryvillage.org/adversary-events/RSA-Conference-2025/images/speakers/len-noe-color.jpg" alt="Len Noe"></div><div class="tl-top-info"><div class="tl-name">Len Noe</div><div class="tl-role">Technical Evangelist &amp; Cyborg Hacker</div></div></div>
+                                <span class="tl-type type-talk">Interacative Session</span>
+                                <div class="tl-session">Humanity 2.0: We are no longer standing at the edge of the future. We are living inside it.</div>
+                                <div class="tl-time">2:30 – 3:15 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-social"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div class="tl-top-info"><div class="tl-name">Cybeer Ops</div><div class="tl-role">Community Networking Social</div></div></div>
+                                <span class="tl-type type-social">Social</span>
+                                <div class="tl-time">3:15 – 4:15 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.2 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div><div class="tl-top-info"><div class="tl-name">Patrick Gorman</div></div></div>
+                                <span class="tl-type type-talk">Talk</span>
+                                <div class="tl-session">TBA</div>
+                                <div class="tl-time">4:15 – 5:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-demo"><svg viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"/></svg></div><div class="tl-top-info"><div class="tl-name">Ransomware Simulator Demo</div></div></div>
+                                <span class="tl-type type-demo">Live Demo</span>
+                                <div class="tl-session">Live ransomware simulation walkthrough</div>
+                                <div class="tl-time">5:30 – 6:00 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Simulator Booth</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="day-column">
+                        <div class="day-column-header">
+                            <h3>Wednesday, March 25</h3>
+                            <div class="day-hours">09:30 AM – 04:30 PM</div>
+                        </div>
+                        <div class="day-column-body">
+
+                            <div class="fullday-section">
+                                <div class="fullday-label">All-Day Activities</div>
+                                <ul class="fullday-list">
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h18v8z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Adversary Adventure Game</div>
+                                            <div class="fd-desc">Choose-your-own-adventure style interactive cyber war-gaming tabletop game. Play as attacker, defender, or CISO.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 4:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Hospital</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based hospital environment with a full cyber range replica.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 4:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Office</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based office environment with enterprise infrastructure range.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 4:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">AD Lab</div>
+                                            <div class="fd-desc">Hands-on Active Directory lab for adversary simulation and purple teaming exercises.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Hands-On Lab Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 4:30 PM</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="day-divider">
+
+                    
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo"><img src="https://adversaryvillage.org/adversary-events/RSA-Conference-2025/images/speakers/len-noe-color.jpg" alt="Len Noe"></div><div class="tl-top-info"><div class="tl-name">Len Noe</div><div class="tl-role">Technical Evangelist &amp; Cyborg Hacker</div></div></div>
+                                <span class="tl-type type-talk">Interactive Session</span>
+                                <div class="tl-session">Humanity 2.0 - We are no longer standing at the edge of the future. We are living inside it.</div>
+                                <div class="tl-time">9:30 – 10:00 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <!-- PANEL -->
+                            <div class="tl-entry tl-featured">
+                                <span class="tl-type type-panel">Panel &middot; VLG-W02</span>
+                                <div class="tl-top" style="margin-top:6px;"><div class="tl-photo"><img src="../images/speakers/Abhijith-BR.jpg" alt="Panel"></div><div class="tl-top-info"><div class="tl-name">AI and the New Offensive Playbook of State-Sponsored Cyber Threat Actors</div></div></div>
+                                <div class="tl-time">9:40 – 10:30 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                                <div class="tl-desc">How adversaries use AI for tooling, phishing, automated exploitation, and evasive malware.</div>
+                                <div class="tl-panel-speakers">
+                                    <div class="tl-ps"><img src="../images/speakers/adam-pennington.jpg" alt=""><div class="tl-ps-info"><strong>Adam Pennington</strong><span>MITRE ATT&amp;CK</span></div></div>
+                                    <div class="tl-ps"><img src="../images/speakers/seeyew-mo.jpg" alt=""><div class="tl-ps-info"><strong>Seeyew Mo</strong><span>DEF CON</span></div></div>
+                                    <div class="tl-ps"><img src="../images/speakers/Paul-McCarty.jpg" alt=""><div class="tl-ps-info"><strong>Paul McCarty</strong><span>Researcher</span></div></div>
+                                    <div class="tl-ps"><img src="../images/speakers/Abhijith-BR.jpg" alt=""><div class="tl-ps-info"><strong>Abhijith</strong><span>Adversary Village</span></div></div>
+                                </div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-handson"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div class="tl-top-info"><div class="tl-name">Table-Top Exercise</div><div class="tl-role">Abx</div></div></div>
+                                <span class="tl-type type-handson">Hands-On</span>
+                                <div class="tl-session">Gamified adversarial scenario exercise</div>
+                                <div class="tl-time">10:00 – 11:30 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.2 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div><div class="tl-top-info"><div class="tl-name">Sarah Hume</div></div></div>
+                                <span class="tl-type type-talk">Interactive Session</span>
+                                <div class="tl-session">Running Point: How to Execute and Track Purple Team Exercises</div>
+                                <div class="tl-time">11:30 AM – 1:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-handson"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div class="tl-top-info"><div class="tl-name">SIMOC</div><div class="tl-role">Joel</div></div></div>
+                                <span class="tl-type type-handson">Hands-On</span>
+                                <div class="tl-session">Scalable Interactive Model of Complexity</div>
+                                <div class="tl-time">1:30 – 2:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo"><img src="https://adversaryvillage.org/adversary-events/RSA-Conference-2025/images/speakers/jonathan-baker.jpg" alt="Jonathan Baker"></div><div class="tl-top-info"><div class="tl-name">Jonathan Baker</div><div class="tl-role">Director, CTID, MITRE</div></div></div>
+                                <span class="tl-type type-talk">Talk</span>
+                                <div class="tl-session">TBA</div>
+                                <div class="tl-time">2:30 – 4:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ============ THURSDAY ============ -->
+                    <div class="day-column">
+                        <div class="day-column-header">
+                            <h3>Thursday, March 26</h3>
+                            <div class="day-hours">09:30 AM – 02:30 PM</div>
+                        </div>
+                        <div class="day-column-body">
+
+                            <div class="fullday-section">
+                                <div class="fullday-label">All-Day Activities</div>
+                                <ul class="fullday-list">
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 10H3V8h18v8z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Adversary Adventure Game</div>
+                                            <div class="fd-desc">Choose-your-own-adventure style interactive cyber war-gaming tabletop game. Play as attacker, defender, or CISO.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 2:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Hospital</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based hospital environment with a full cyber range replica.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 2:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">Breach the Office</div>
+                                            <div class="fd-desc">Guided breach simulation on a LEGO-based office environment with enterprise infrastructure range.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Guided Breach Sim Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 2:30 PM</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fd-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+                                        <div class="fd-body">
+                                            <div class="fd-name">AD Lab</div>
+                                            <div class="fd-desc">Hands-on Active Directory lab for adversary simulation and purple teaming exercises.</div>
+                                            <div class="fd-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Hands-On Lab Area, Room 204</div>
+                                            <div class="fd-time">9:30 AM – 2:30 PM</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <hr class="day-divider">
+
+                 
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.2 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div><div class="tl-top-info"><div class="tl-name">Trey</div></div></div>
+                                <span class="tl-type type-talk">Talk</span>
+                                <div class="tl-session">TBA</div>
+                                <div class="tl-time">9:30 – 11:00 AM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-handson"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div class="tl-top-info"><div class="tl-name">Table-Top Exercise</div></div></div>
+                                <span class="tl-type type-handson">Hands-On</span>
+                                <div class="tl-session">Gamified adversarial scenario exercise</div>
+                                <div class="tl-time">11:00 AM – 12:00 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-handson"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><div class="tl-top-info"><div class="tl-name">SIMOC</div><div class="tl-role">Joel</div></div></div>
+                                <span class="tl-type type-handson">Hands-On</span>
+                                <div class="tl-session">Scalable Interactive Model of Complexity</div>
+                                <div class="tl-time">12:00 – 2:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village Area</div>
+                            </div>
+
+                            <div class="tl-entry">
+                                <div class="tl-top"><div class="tl-photo-ph ph-closing"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="tl-top-info"><div class="tl-name">Village Closing</div><div class="tl-role">Closing remarks &amp; wrap-up</div></div></div>
+                                <span class="tl-type type-closing">Closing</span>
+                                <div class="tl-time">2:30 PM</div>
+                                <div class="tl-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Adversary Village, Room 204, Moscone South</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div><!-- /three-col-grid -->
+            </div>
+        </section>
+    </section>
+
+    <!-- DISCORD CTA -->
+    <section id="download" class="s-download target-section" style="background-color:#121619;">
+        <div class="row section-header align-center"><div class="col-full">
+            <h1 class="display-1">Join Adversary Village Discord Server.</h1>
+            <p class="lead">Join Adversary Village official Discord server to connect with our amazing community of adversary simulation experts and offensive security researchers!</p>
+        </div></div>
+        <div class="row"><div class="col-full text-center"><ul class="download-badges"><li><a href="https://discord.gg/GDB3rC7KYz" class="badge-appstore" target="_blank">Join Discord</a></li></ul></div></div>
+        <div class="row download-bottom-image"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="s-footer footer" style="padding-top:.5rem;">
+        <div class="row footer__bottom">
+            <div class="footer__about col-five tab-full left">
+                <h4>About Adversary Village.</h4>
+                <p>Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics, Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a bit of purple teaming.</p>
+                <ul class="footer__social">
+                    <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                    <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-five md-seven tab-full right end"><div class="row">
+                <div class="footer__site-links col-five mob-full"><h4>Site links.</h4>
+                    <ul class="footer__site-links">
+                        <li><a href="https://defcon.org/" target="_blank">DEF CON 33</a></li>
+                        <li><a href="https://adversaryvillage.org/about-us">About Us</a></li>
+                        <li><a href="https://adversaryvillage.org/call-for-volunteers">Call for volunteers</a></li>
+                        <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact col-seven mob-full"><h4>Contact Us.</h4>
+                    <p>Would you like to sponsor or have a question?<br><a href="mailto:hello@adversaryvillage.org" class="footer__mail-link">hello@adversaryvillage.org</a></p>
+                </div>
+            </div></div>
+            <div class="col-full ss-copyright"><span>Copyright &copy; 2021-2026, Adversary Village <sup>&reg;</sup> All Rights Reserved.</span></div>
+        </div>
+        <div class="go-top"><a class="smoothscroll" title="Back to Top" href="#top"></a></div>
+    </footer>
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
