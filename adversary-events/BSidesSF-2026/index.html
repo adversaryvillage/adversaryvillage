@@ -17,11 +17,13 @@
       <!-- CSS
          ================================================== -->
       <link rel="stylesheet" href="../../css/base2.css">
-      <link rel="stylesheet" href="./css/card.css">
+      <link rel="stylesheet" href="css/card.css">
       <link rel="stylesheet" href="../../css/vendor.css">
-      <link rel="stylesheet" href="./css/main.css">
-      <link rel="stylesheet" href="./css/bootstrap.css">
-      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style-2.css">
+ 
       <!-- script
          ================================================== -->
       <script src="js/modernizr.js"></script>
@@ -45,6 +47,50 @@
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="../../favicon/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
+
+      <style>
+         .activities-grid {
+            display: flex;
+            gap: 0;
+            width: 100%;
+         }
+
+         .activities-grid > .activity-col {
+            flex: 1;
+            min-width: 0;
+         }
+
+         .activities-grid > .activity-col > section {
+            height: 100%;
+            margin: 0;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            box-sizing: border-box;
+         }
+
+         .activities-grid > .activity-col > section > .container {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+         }
+
+         .activities-grid > .activity-col > section h3 {
+            font-size: 2.4rem;
+         }
+
+         .activities-grid > .activity-col > section p {
+            font-size: 1.6rem !important;
+         }
+
+         .activities-grid > .activity-col > section span {
+            font-size: 1.3rem;
+         }
+
+         @media screen and (max-width: 900px) {
+            .activities-grid {
+               flex-direction: column;
+            }
+         }
+      </style>
    </head>
    <body id="top">
       
@@ -131,72 +177,326 @@
 
 
 
-<section class="s-download target-section"  style="background: url('images/bg-1-bsidesf-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
+<div class="activities-grid">
 
-   <div class="container aos-init aos-animate" data-aos="fade-up">
 
-      <div class="row">
-      
-         <div class="col-twelve tab-full">
-           
-            <h3 style="color:white;">Choose-your-own-Adversary-Adventure Tabletop Game</h3>
-            <span style="font-weight: 800;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
-      <p style=" font-weight: 400; font-size: 2rem; color: white;"> 
-         Adversary Adventure is a Choose-Your-Own-Adventure model interactive game, where everyone can participate and choose various tasks. The participants can choose to play as an attacker who performs adversarial activities against a target, a defender who deals with a potential breach, as a CISO who is managing a ransomware attack, or even as management executives going through a table-top exercise.
-         </p>
-</div></div> 
-</div>
-<div class="row download-bottom-image" data-aos="fade-up">
+   <div class="activity-col">
+      <section class="s-download target-section" style="background-color: #604ca9;">
+         <div class="container aos-init aos-animate" data-aos="fade-up">
+            <div class="row">
+               <div class="col-twelve tab-full">
+                  <h3 style="color:white;">Choose-your-own-Adversary-Adventure Tabletop Game</h3>
+                  <span style="font-weight: 800;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
+                  <p style="font-weight: 400; color: white;"> 
+                     Adversary Adventure is a Choose-Your-Own-Adventure model interactive game, where everyone can participate and choose various tasks. The participants can choose to play as an attacker who performs adversarial activities against a target, a defender who deals with a potential breach, as a CISO who is managing a ransomware attack, or even as management executives going through a table-top exercise.
+                  </p>
+               </div>
+            </div> 
+         </div>
+      </section>
    </div>
-</section> 
 
-
-
-<section id="schedule" class="section-with-bg" style="padding-top:40px; background-color: black;">
-
-   <div class="container aos-init aos-animate" data-aos="fade-up">
-
-      <div class="row">
-      
-         <div class="col-twelve tab-full">
-           
-            <h3 style="color:white;">Hands-on and guided breach simulation exercises</h3>
-            <span style="font-weight: 800;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
-      <p style=" font-weight: 400; font-size: 2rem; color: white;"> 
-          This area will feature guided breach simulation exercises for participants to engage with. There will be two activities, "Breach-the-Hospital" and "Breach-the-Office," based on two LEGO sets. A simulated cyber range will be available for each scenario, providing an exact replica of an enterprise production environment. We will provide a detailed walkthrough of the attack scenarios, including Tools-Techniques-and-Procedures (TTPs) commands and how-to guides, demonstrating how to attack and breach the hospital's infrastructure or the office environment. 
-         The participants who complete the exercises and come to the top place will be rewarded with exciting goodies.
-         
-         </p>
-</div></div> 
-</div>
-<div class="row download-bottom-image" data-aos="fade-up">
+   <div class="activity-col">
+      <section class="section-with-bg" style="padding-top:40px; background-color: black;">
+         <div class="container aos-init aos-animate" data-aos="fade-up">
+            <div class="row">
+               <div class="col-twelve tab-full">
+                  <h3 style="color:white;">Hands-on and guided breach simulation exercises</h3>
+                  <span style="font-weight: 800; color: white;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
+                  <p style="font-weight: 400; color: white;"> 
+                     This area will feature guided breach simulation exercises for participants to engage with. A simulated cyber range will be available for each scenario, providing an exact replica of an enterprise production environment. We will provide a detailed walkthrough of the attack scenarios, including Tools-Techniques-and-Procedures (TTPs) commands and how-to guides, demonstrating how to attack and breach the hospital's infrastructure or the office environment. 
+                  </p>
+               </div>
+            </div> 
+         </div>
+      </section>
    </div>
-</section> 
-
-
-
 
    
-   <section id="schedule" class="section-with-bg" style="padding-top:5px; background: url('images/bg-2-bsidesf-adv.jpg'); background-repeat: no-repeat; background-size: cover;">
-      <div class="container aos-init aos-animate" data-aos="fade-up">
-
-         <div class="row"> 
-         <h3 style="color:white;"> Adversary Simulator and Purple Teaming hands-on booth </h3>
-         <span style="font-weight: 800; color: white;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
-            <p style=" font-weight: 400; font-size: 2rem; color:white;"> 
-               Adversary Simulator booth has hands-on adversary emulation plans specific to a wide variety of threat-actors and ransomware, these are meant to provide the participant/visitor with a better understanding of the Adversary tactics. This is a volunteer assisted activity where anyone, both management and technical folks can come-in and experience different categories of simulation, emulation and purple scenarios. </br>
-            </br>Adversary Simulator booth will be having a lab environment focused on recreating enterprise infrastructure, aimed at simulation and emulating various adversaries. Visitors will be able to view, simulate and control various TTPs used by adversaries. The simulator is meant to be a learning experience, irrespective of whether one is hands-on with highly sophisticated attack tactics or from the management.
-            
-        
-           </p>
-			
+   <div class="activity-col">
+      <section class="section-with-bg" style="padding-top:40px; background-color: #604ca9;">
+         <div class="container aos-init aos-animate" data-aos="fade-up">
+            <div class="row"> 
+               <h3 style="color:white;"> Adversary Simulator and Purple Teaming hands-on booth </h3>
+               <span style="font-weight: 800; color: white;">Adversary Village area | 21-22 March, 2026 [Saturday-Sunday] | 09:00 to 17:00</span>
+               <p style="font-weight: 400; color:white;"> 
+                  Adversary Simulator booth has hands-on adversary emulation plans specific to a wide variety of threat-actors and ransomware. This is a volunteer assisted activity where anyone, both management and technical folks can come-in and experience different categories of simulation, emulation and purple scenarios. Visitors will be able to view, simulate and control various TTPs used by adversaries. The simulator is meant to be a learning experience, irrespective of whether one is hands-on with highly sophisticated attack tactics or from the management.
+               </p>
+            </div>
          </div>
-			   </div>
       </section>
+   </div>
 
+</div>
     
    
         </section>
+       
+                <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #000;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+    
+        <div class="row">
+    
+            <div class="col-twelve tab-full">
+
+
+               <h3 style="color:white;">Interactive Session: Exploiting common security gaps in SMBs</h3>
+            <div style="background-color: #604ca9; border-left: 4px solid #ff0000; border-radius: 8px; padding: 10px 18px; margin: 5px auto; display: inline-block; font-size: 1.7rem; line-height: 1.8; color:#000;">
+       <span style="font-weight: 800; color: white;">March 21st, 9:00 - 12:00 PM | Adversary Village area, City View at Metreon.</span></div>
+    
+               </br> </br>
+               
+                 <div class="container-cfp">
+            
+            <div class="row-cfp">
+       
+
+                <div class="column">
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/patrick-gorman.jpg" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+          <a href="#" target="_blank" style="color: #ffffff;">Patrick Gorman</a>
+        </h2>
+                            <h3 style="margin-top: 1rem; color:white;">CEO and Founder at ISP Security</h3>
+                        </div>
+                  
+                    </div>
+                </div>
+                
+                  <div class="column2">
+                      <p style="color:white;">
+Common Security Gaps in SMBs is a practical, real-world talk that breaks down the most common weaknesses small and mid-sized businesses struggle with, and why attackers love them. We’ll cover the “usual suspects” like weak identity and access controls, poor patching, misconfigured cloud services, insecure remote access, flat networks, lack of monitoring/logging, and missing backups/incident plans.<br>The goal is to give leaders and technical teams a clear checklist of what to fix first, quick wins that reduce risk fast, and how to build a simple security baseline without enterprise budgets.
+
+                </p>
+                    
+                </div>
+                
+                </div>
+                </div>
+    
+    
+    
+            </div>
+    
+               </div>
+            
+    
+               
+            </div>
+          
+         </section>	
+
+
+                <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #f6f7fd;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+    
+        <div class="row">
+    
+            <div class="col-twelve tab-full">
+
+
+               <h3>Interactive session: Humanity 2.0</h3>
+             <div style="background-color: #604ca9; border-left: 4px solid #ff0000; border-radius: 8px; padding: 10px 18px; margin: 5px auto; display: inline-block; font-size: 1.7rem; line-height: 1.8; color:#000;">
+       <span style="font-weight: 800; color: white;">March 21st, 12:30 - 03:30 PM | Adversary Village area, City View at Metreon.</span></div>
+               </br> </br>
+               
+                 <div class="container-cfp">
+            
+            <div class="row-cfp">
+                <div class="column">
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/len-noe-color.jpg" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+          <a href="#" target="_blank" style="color: #604ca9;">Len Noe</a>
+        </h2>
+                            <h3 style="margin-top: 1rem;">Transhuman, Former Outlaw, Cyber security Thought Leader</h3>
+                        </div>
+                  
+                    </div>
+                </div>
+                
+                  <div class="column2">
+                      <p>
+                 We are no longer standing at the edge of the future. We are living inside it.
+
+Artificial intelligence, machine learning, and autonomous systems are reshaping power, labor, warfare, and identity. In a hyperconnected world where algorithms move faster than governments and data defines influence, humanity faces a defining question. Do we remain passive users of technology, or do we become active participants in our own evolution?
+
+Humanity 2.0 explores human augmentation as a path to maintaining sovereignty and relevance in an era increasingly dominated by intelligent machines. From implanted microchips and bio integrated security systems to brain computer interfaces and cognitive enhancement, this talk examines the convergence of biology and technology not as science fiction, but as an emerging reality.
+
+But augmentation without governance becomes vulnerability.
+As we integrate technology deeper into the human condition, a new frontier of risk emerges. Neural privacy. When thoughts, biometrics, and cognitive patterns become data streams, who owns the mind? Who secures it? What happens when the last domain of human sovereignty, the brain, becomes hackable?
+
+Drawing from lived experience at the intersection of cyber security, transhumanism, and digital ethics, Len Noe challenges audiences to rethink security beyond networks and endpoints. The next perimeter is the human nervous system.
+
+                </p>
+                    
+                </div>
+                
+                </div>
+                </div></div>
+    
+               </div> </div>
+          
+         </section>	
+
+                 <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #000;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row">
+            <div class="col-twelve tab-full">
+               <h3 style="color:white;">Hands-On Activity: Adversary Simulation Exercises</h3>
+            <div style="background-color: #604ca9; border-left: 4px solid #ff0000; border-radius: 8px; padding: 10px 18px; margin: 5px auto; display: inline-block; font-size: 1.7rem; line-height: 1.8; color:#000;">
+       <span style="font-weight: 800; color: white;">March 21st, 3:30 PM - 5:00 PM | Adversary Village area, City View at Metreon.</span></div>
+               </br> </br>
+                 <div class="container-cfp">
+            <div class="row-cfp">
+                <div class="column">
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/joel.jpg" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+          <a href="#" target="_blank" style="color:white;">Joel Correa</a>
+        </h2>
+                            <h3 style="margin-top: 1rem; color:white;">CTO and Co-Founder at Glipto.io</h3>
+                        </div>
+                    </div>
+                </div>
+                  <div class="column2">
+                      <p style="color:white;">
+The objective of the workshop is to provide hands-on activity in an integrated IT and OT scenario. Participants will have access to real scenario components and artifacts to perform adversary simulation exercises using TTPs associated with specific threat groups. Throughout the activities, we will correlate the techniques employed with the events observed in the environment.<br><br>
+Each exercise will represent a phase in the exploration of the scenario. At each stage, we will explain the vulnerabilities exploited, demonstrate how the attack unfolds, and map the actions to the MITRE ATT&CK framework.
+                </p>
+                </div>
+                </div>
+                </div></div>
+               </div> </div>
+         </section>	
+
+         
+                  <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #fff;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+    
+        <div class="row">
+    
+            <div class="col-twelve tab-full">
+
+
+               <h3>Hands-On Session: Adversary and Ransomware Simulation Exercises</h3>
+            <div style="background-color: #604ca9; border-left: 4px solid #ff0000; border-radius: 8px; padding: 10px 18px; margin: 5px auto; display: inline-block; font-size: 1.7rem; line-height: 1.8; color:#000;">
+       <span style="font-weight: 800; color:white;">March 22nd, 9:00 AM - 11:00 AM | Adversary Village area, City View at Metreon.</span></div>
+               </br> </br>
+               
+                 <div class="container-cfp">
+            
+            <div class="row-cfp">
+       
+
+                <div class="column">
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/Abhijith-BR.jpg" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+
+          <a href="#" target="_blank" style="color: #604ca9;">Abhijith 'Abx' B R</a>
+        </h2>
+                            <h3 style="margin-top: 1rem;">Founder and Lead at Adversary Village</h3>
+                        </div>
+                  
+                    </div>
+                </div>
+                
+                  <div class="column2">
+                      <p>
+A practical, hands-on session where participants actively engage in adversary and ransomware simulation exercises within a guided lab environment. Attendees will emulate real-world attack techniques, including initial access, lateral movement, and ransomware execution, while assessing defensive controls and validating detection and response capabilities. The session emphasizes realistic scenarios, structured operational workflows, and mapping activity to frameworks like MITRE ATT&CK to ensure measurable outcomes.
+<br>
+Participants will gain practical, hands-on experience executing each stage of the simulation themselves, ensuring they leave with repeatable methodologies and the confidence to apply them directly in their own environments.
+
+                </p>
+                    
+                </div>
+                
+                </div>
+                </div>
+</div>
+    
+               </div>
+            
+    
+               
+            </div>
+          
+         </section>
+
+
+
+                  <section id="schedule" class="section-with-bg" style="padding-top:25px; background-color: #000;">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+    
+        <div class="row">
+    
+            <div class="col-twelve tab-full">
+
+
+               <h3 style="color: white;">Hands-On Session: APT28 BadPaw/MeowMeow: From Manual Lab to Adversary Emulation</h3>
+            <div style="background-color: #604ca9; border-left: 4px solid #ff0000; border-radius: 8px; padding: 10px 18px; margin: 5px auto; display: inline-block; font-size: 1.7rem; line-height: 1.8; color:#000;">
+       <span style="font-weight: 800; color: white;">March 22nd, 11:00 AM - 2:00 PM | Adversary Village area, City View at Metreon.</span></div>
+               </br> </br>
+               
+                 <div class="container-cfp">
+            
+            <div class="row-cfp">
+       
+
+                <div class="column">
+                    <div class="team-9">
+                        <div class="team-img">
+                            <img src="images/speakers/Filipi-Pires.jpg" alt="">
+                        </div>
+                        <div class="team-content">
+                            <h2 style="margin-top: 2rem;">
+
+          <a href="#" target="_blank" style="color: white;;">Filipi Pires</a>
+        </h2>
+                            <h3 style="margin-top: 1rem; color: #fff;">Head of Technical Advocacy at SCYTHE, Founder and Investor at CROSS-INTEL</h3>
+                        </div>
+                  
+                    </div>
+                </div>
+                
+                  <div class="column2">
+                      <p style="color: white;">
+Based on a live APT28 campaign reported in March 2026, this workshop reconstructs the full BadPaw/MeowMeow kill chain - from PNG steganography loader to multi-channel exfiltration - first through manual lab simulation, then as a continuous adversarial emulation campaign in SCYTHE. Participants leave with a repeatable validation methodology and concrete detection gap findings.
+
+<br><br>- Understand APT28's BadPaw/MeowMeow attack chain across 9 phases
+<br>- Reproduce post-compromise techniques in a controlled lab environment
+<br>- Map observed behaviors to MITRE ATT&CK with accurate TTP tagging
+<br>- Translate a manual lab exercise into a repeatable SCYTHE threat profile
+<br>- Read and act on a SCYTHE ATT&CK Coverage Report to remediate detection gaps
+
+                </p>
+                    
+                </div>
+                
+                </div>
+                </div>
+</div>
+    
+               </div>
+            
+    
+               
+            </div>
+          
+         </section>	
 
 
         <section id="download" class="s-download target-section"  style="background-color: #121619;">
@@ -210,7 +510,7 @@
                   Join Adversary Village official Discord server to connect with our amazing community of adversary simulation experts and offensive security researchers!
                  </p>
              </div>
-         </div> <!-- end section-header -->
+         </div> 
  
          <div class="row">
              <div class="col-full text-center">
