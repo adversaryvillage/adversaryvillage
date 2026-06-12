@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>404 &mdash; Wrong Place, Adversary? | Adversary Village</title>
+    <meta name="description" content="404 - This page could not be found. Are you an adversary looking in the wrong place?">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html { font-size: 62.5%; }
+
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            background: #121619 url("images/hero-bg.jpg") no-repeat center center;
+            background-size: cover;
+            color: #c2c2c2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Dark overlay to match the site's hero treatment */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: #000;
+            opacity: .8;
+            z-index: 1;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+            opacity: .3;
+            z-index: 1;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .error-logo img {
+            width: 220px;
+            max-width: 60vw;
+            height: auto;
+            margin-bottom: 3.2rem;
+        }
+
+        .error-code {
+            font-family: "Chivo", sans-serif;
+            font-weight: 900;
+            font-size: 14rem;
+            line-height: 1;
+            color: #604ca9;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 35px rgba(96, 76, 169, 0.55);
+        }
+
+        .error-title {
+            font-family: "Chivo", sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-top: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .error-text {
+            font-size: 1.8rem;
+            line-height: 1.7;
+            color: #c2c2c2;
+            margin: 2rem auto 0;
+            max-width: 540px;
+        }
+
+        .error-text .highlight {
+            color: #604ca9;
+            font-weight: 700;
+        }
+
+        .error-home-btn {
+            display: inline-block;
+            margin-top: 3.4rem;
+            padding: 1.4rem 3.2rem;
+            font-family: "Chivo", sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ffffff;
+            background: #604ca9;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+        }
+
+        .error-home-btn:hover {
+            background: #ffffff;
+            color: #604ca9;
+        }
+
+        @media screen and (max-width: 600px) {
+            .error-code { font-size: 9rem; }
+            .error-title { font-size: 2rem; }
+            .error-text { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-content">
+
+        <div class="error-logo">
+            <a href="https://adversaryvillage.org">
+                <img src="https://adversaryvillage.org/images/adversary-village-logo.png" alt="Adversary Village">
+            </a>
+        </div>
+
+        <div class="error-code">404</div>
+
+        <h1 class="error-title">You're looking in the wrong place</h1>
+
+        <p class="error-text">
+            This page doesn't exist, or maybe it was never meant to be found.
+            <span class="highlight">Are you an adversary?</span>
+            Either way, you've wandered off the path. Let's get you back to where the action is.
+        </p>
+
+        <a class="error-home-btn" href="https://adversaryvillage.org">Back to Base</a>
+
+    </div>
+
+</body>
+</html>
