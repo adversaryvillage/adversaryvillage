@@ -1,0 +1,77 @@
+/* ===================================================================
+ * Branding / Logos page styles
+ * ------------------------------------------------------------------- */
+
+/* logo image box (left column) */
+.logo-image-box {
+   text-align: center;
+   padding-top: 2rem;
+}
+
+.logo-image-box img {
+   max-width: 100%;
+   max-height: 350px;
+   width: auto;
+   height: auto;
+   object-fit: contain;
+}
+
+/* logo info (right column) */
+.logo-info {
+   padding-top: 2rem;
+}
+
+/* download button - matches site primary purple theme */
+.download-btn {
+   display: inline-block;
+   padding: 0.8rem 2rem;
+   background-color: #604ca9;
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 4px;
+   font-weight: 600;
+   transition: background-color 0.3s ease;
+   border: 2px solid #604ca9;
+   font-size: 1.5rem;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+   background-color: #4a3a85;
+   border-color: #4a3a85;
+   color: #ffffff;
+}
+
+/* -------------------------------------------------------------------
+ * Responsive
+ * ------------------------------------------------------------------- */
+
+/* tablet and below - columns stack (matches framework tab-full), center content */
+@media only screen and (max-width: 800px) {
+   .logo-image-box {
+      padding-top: 3rem;
+   }
+
+   .logo-image-box img {
+      max-height: 280px;
+   }
+
+   .logo-info {
+      padding-top: 1rem;
+      text-align: center;
+   }
+}
+
+/* mobile - tighten spacing, full-width button */
+@media only screen and (max-width: 600px) {
+   .logo-image-box img {
+      max-height: 220px;
+   }
+
+   .download-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+   }
+}
