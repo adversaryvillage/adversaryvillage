@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="no-js" lang="en">
    <head>
@@ -75,7 +75,7 @@
          </div>
       </header>
       
-      <section  class="s-home target-section" data-parallax="scroll" data-image-src="#" data-natural-width=3000 data-natural-height=1703 data-position-y=center style="background-color: black;">
+      <section  class="s-home target-section" data-parallax="scroll" data-image-src="images/dc34-wall-adv.png" data-natural-width=3000 data-natural-height=1017 data-position-y=center>
 
        
 
@@ -97,16 +97,21 @@
          <section id="schedule" style="padding-top:5px; ">
             <div class="container aos-init aos-animate" data-aos="fade-up">
                <h3 class="sub-heading"></h3>
-                     <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
-                    
-                        <li class="nav-item">
-                           <a class="nav-link active" href="https://defcon.org/html/defcon-34/dc-34-villages.html" target="_blank">DEF CON 34 Website</a>
+                     <style>
+                     .av-hero-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;list-style:none;padding:0;margin:18px 0 0;border:none;}
+                     .av-hero-tabs li{list-style:none;}
+                     .av-hero-btn{display:inline-block;padding:14px 32px;border-radius:8px;font-weight:800;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:#fff;border:2px solid rgba(255,255,255,.15);box-shadow:0 6px 16px rgba(0,0,0,.4);transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;}
+                     .av-hero-btn:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.55);filter:brightness(1.12);color:#fff;text-decoration:none;}
+                     </style>
+                     <ul class="av-hero-tabs aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <li>
+                           <a class="av-hero-btn" style="background:#387ca5;" href="https://defcon.org/html/defcon-34/dc-34-villages.html" target="_blank">DEF CON 34 Website</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link active" href="../../sponsors/" target="_blank">CALL FOR SPONSORS</a>
+                        <li>
+                           <a class="av-hero-btn" style="background:#cf2c51;" href="../../sponsors/" target="_blank">Call for Sponsors</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link active" href="#" target="_blank">Adversary Wars CTF</a>
+                        <li>
+                           <a class="av-hero-btn" style="background:#275c62;" href="../../adversary-wars-ctf" target="_blank">Adversary Wars CTF</a>
                         </li>
                      </ul>
 
@@ -118,7 +123,7 @@
                <section id="features" class="s-features target-section" style="text-align: center; padding-bottom:0px; padding-top:0px; background-color: #101125;" >
 
 
-<section id="schedule" class="section-with-bg" style="padding-top:35px; background-color: #47a; padding-bottom: 20px;">
+<section id="schedule" class="section-with-bg" style="padding-top:35px; background-color: #387ca5; padding-bottom: 20px;">
 
    <div class="row">
    <h3 style="margin-top: 1rem; color: white; margin-bottom: 2rem;">Welcome to Adversary Village at DEF CON 34!</h3>
@@ -141,7 +146,62 @@
 </section>
 
 
-<!------------------Workshops schedule-------------------------->
+
+<style>
+.sched-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;max-width:1120px;margin:0 auto;}
+.sched-card{position:relative;overflow:hidden;flex:1 1 230px;max-width:250px;text-decoration:none;border-radius:16px;padding:30px 24px 34px;text-align:left;transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column;min-height:230px;background-color:#0e0e0e;border:3px solid;}
+.sched-card:hover{transform:translateY(-6px);}
+.sched-card .sched-num{font-weight:800;font-size:2.6rem;line-height:1;color:currentColor;margin-bottom:16px;}
+.sched-card h4{color:#ffffff;font-weight:800;margin:0;line-height:1.3;font-size:1.9rem;}
+.sched-card .sched-rule{height:3px;width:48px;margin:18px 0 auto;background:currentColor;opacity:.9;}
+.sched-card .sched-cta{color:#ffffff;font-weight:700;font-size:1.25rem;letter-spacing:.04em;margin-top:24px;display:inline-block;border:2px solid rgba(255,255,255,.7);border-radius:0;padding:11px 22px;align-self:flex-start;transition:background .2s ease, border-color .2s ease;}
+.sched-card:hover .sched-cta{background:rgba(255,255,255,.14);border-color:#ffffff;}
+@media (max-width:640px){
+  .sched-cards{gap:12px;}
+  .sched-card{flex:1 1 140px;max-width:165px;min-height:auto;padding:18px 16px 20px;border-width:2px;border-radius:12px;}
+  .sched-card .sched-num{font-size:1.7rem;margin-bottom:10px;}
+  .sched-card h4{font-size:1.25rem;line-height:1.25;}
+  .sched-card .sched-rule{width:34px;height:2px;margin:10px 0 auto;}
+  .sched-card .sched-cta{font-size:.95rem;padding:8px 14px;margin-top:14px;}
+}
+</style>
+<section class="section-with-bg" style="padding-top:55px; padding-bottom:55px; background-color: #000;">
+   <div class="container aos-init aos-animate" data-aos="fade-up">
+      <div style="text-align:center; margin-bottom:34px;">
+         <h2 style="color:#387ca5;">Adversary Village DEF CON 34 Schedule</h2>
+         <p style="color:white;">Jump to the schedule you are looking for.</p>
+      </div>
+      <div class="sched-cards">
+         <a href="#creator-stage-schedule" class="smoothscroll sched-card" style="border-color:#cf2c51; color:#cf2c51;">
+            <div class="sched-num">01</div>
+            <h4>Creator Stage Talks and Panels</h4>
+            <div class="sched-rule"></div>
+            <span class="sched-cta">View schedule</span>
+         </a>
+         <a href="#workshop-schedule" class="smoothscroll sched-card" style="border-color:#e3b851; color:#e3b851;">
+            <div class="sched-num">02</div>
+            <h4>Hands-on Workshops and Village Panels</h4>
+            <div class="sched-rule"></div>
+            <span class="sched-cta">View schedule</span>
+         </a>
+         <a href="#activities-schedule" class="smoothscroll sched-card" style="border-color:#132747; color:#132747;">
+            <div class="sched-num">03</div>
+            <h4>Hands-on Activity</h4>
+            <div class="sched-rule"></div>
+            <span class="sched-cta">View schedule</span>
+         </a>
+         <a href="#tooldemo-schedule" class="smoothscroll sched-card" style="border-color:#285c63; color:#285c63;">
+            <div class="sched-num">04</div>
+            <h4>Adversary Tool Demo</h4>
+            <div class="sched-rule"></div>
+            <span class="sched-cta">View schedule</span>
+         </a>
+      </div>
+   </div>
+</section>
+
+
+<div id="workshop-schedule"></div>
 <section id="schedule" class="section-with-bg" style="padding-top:65px; background-color: #0e0e0e;">
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
@@ -151,8 +211,8 @@
   </span>
          </div>
 
-         <h2 style="color: #ccbb44;">Adversary Village Hands-on Workshops</h2>
-         <p style="color: white;">Schedule for the hands-on workshops and other sessions to be hosted in the Adversary Village workshop stage!<br>To be Updated!</p>
+         <h2 style="color: #e3b852;">Adversary Village Hands-on Workshops</h2>
+         <p style="color: white;">Schedule for the hands-on workshops and other sessions to be hosted in the Adversary Village workshop stage!</p>
       </div>
       <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
          <li class="nav-item">
@@ -165,6 +225,378 @@
             <a class="nav-link" href="#workshop-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 9<sup>th</sup></a>
          </li>
       </ul>
+                        <div class="tab-content row1 justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+         <div role="tabpanel" class="tab-pane fade active show" id="workshop-day-1">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-10:45 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Keynote</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-village-keynote" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Village kick-off keynote"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Village kick-off keynote</span>
+                     <a href="adversary-village-keynote" target="_blank">
+                        <p><span>Adversary Village opening keynote</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="William-Thomas" target="_blank"><img src="images/speakers/William-Thomas.jpg" alt="William Thomas"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">The APT OSINT Challenge</span>
+                     <a href="William-Thomas" target="_blank">
+                        <p><span>William Thomas | Senior Threat Intelligence Advisor at Team Cymru</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Ortiz" target="_blank"><img src="images/speakers/Michael-Ortiz.jpg" alt="Michael Ortiz"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">redStack: Boot-To-Breach Red Team Platform</span>
+                     <a href="Michael-Ortiz" target="_blank">
+                        <p><span>Michael Ortiz | Red Team Engineer</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Kim" target="_blank"><img src="images/speakers/Michael-Kim.jpg" alt="Michael Kim"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Michael-Kim" target="_blank">
+                        <p><span>Michael Kim | Senior Consultant, Offensive Security, Proactive Services</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>15:00-16:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Paul-McCarty" target="_blank"><img src="images/speakers/Paul-McCarty.png" alt="Paul McCarty"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hunting GitHub to identify adversary TTPs in the wild”</span>
+                     <a href="Paul-McCarty" target="_blank">
+                        <p><span>Paul McCarty | Founder and lead researcher at OpenSourceMalware, the software supply chain threat intelligence platform.  Software supply chain offensive security crazy person.</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jenn-Gile" target="_blank"><img src="images/speakers/Jenn-Gile.png" alt="Jenn Gile"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Jenn-Gile" target="_blank">
+                        <p><span>Jenn Gile | Co-Founder, OpenSourceMalware.com</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-10:45 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Keynote</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-village-keynote" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Village kick-off keynote"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Village kick-off keynote</span>
+                     <a href="adversary-village-keynote" target="_blank">
+                        <p><span>Adversary Village opening keynote</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="William-Thomas" target="_blank"><img src="images/speakers/William-Thomas.jpg" alt="William Thomas"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">The APT OSINT Challenge</span>
+                     <a href="William-Thomas" target="_blank">
+                        <p><span>William Thomas | Senior Threat Intelligence Advisor at Team Cymru</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Ortiz" target="_blank"><img src="images/speakers/Michael-Ortiz.jpg" alt="Michael Ortiz"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">redStack: Boot-To-Breach Red Team Platform</span>
+                     <a href="Michael-Ortiz" target="_blank">
+                        <p><span>Michael Ortiz | Red Team Engineer</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Kim" target="_blank"><img src="images/speakers/Michael-Kim.jpg" alt="Michael Kim"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Michael-Kim" target="_blank">
+                        <p><span>Michael Kim | Senior Consultant, Offensive Security, Proactive Services</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>15:00-16:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Paul-McCarty" target="_blank"><img src="images/speakers/Paul-McCarty.png" alt="Paul McCarty"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hunting GitHub to identify adversary TTPs in the wild”</span>
+                     <a href="Paul-McCarty" target="_blank">
+                        <p><span>Paul McCarty | Founder and lead researcher at OpenSourceMalware, the software supply chain threat intelligence platform.  Software supply chain offensive security crazy person.</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jenn-Gile" target="_blank"><img src="images/speakers/Jenn-Gile.png" alt="Jenn Gile"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Jenn-Gile" target="_blank">
+                        <p><span>Jenn Gile | Co-Founder, OpenSourceMalware.com</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="workshop-day-2">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Chan" target="_blank"><img src="images/speakers/Michael-Chan.png" alt="Michael Chan"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents</span>
+                     <a href="Michael-Chan" target="_blank">
+                        <p><span>Michael Chan | Senior Offensive Security Consultant @ KPMG Canada</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>12:00-13:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Filipi-Pires" target="_blank"><img src="images/speakers/Filipi-Pires.jpg" alt="Filipi Pires"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Infostealer: Replicating Commodity Threat Actor Credential Theft TTPs and Validating Detection Gaps</span>
+                     <a href="Filipi-Pires" target="_blank">
+                        <p><span>Filipi Pires | Head of Technical Advocacy at Cross-Intel</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>14:00-15:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Zhassulan-Zhussupov" target="_blank"><img src="images/speakers/Zhassulan-Zhussupov.jpg" alt="Zhassulan Zhussupov"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Malware Development for Ethical Hackers (Windows, Linux, Android)</span>
+                     <a href="Zhassulan-Zhussupov" target="_blank">
+                        <p><span>Zhassulan Zhussupov | Malware Researcher, Threat Hunter at ANY.RUN</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Michael-Chan" target="_blank"><img src="images/speakers/Michael-Chan.png" alt="Michael Chan"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents</span>
+                     <a href="Michael-Chan" target="_blank">
+                        <p><span>Michael Chan | Senior Offensive Security Consultant @ KPMG Canada</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>12:00-13:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Filipi-Pires" target="_blank"><img src="images/speakers/Filipi-Pires.jpg" alt="Filipi Pires"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Infostealer: Replicating Commodity Threat Actor Credential Theft TTPs and Validating Detection Gaps</span>
+                     <a href="Filipi-Pires" target="_blank">
+                        <p><span>Filipi Pires | Head of Technical Advocacy at Cross-Intel</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>14:00-15:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Zhassulan-Zhussupov" target="_blank"><img src="images/speakers/Zhassulan-Zhussupov.jpg" alt="Zhassulan Zhussupov"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Malware Development for Ethical Hackers (Windows, Linux, Android)</span>
+                     <a href="Zhassulan-Zhussupov" target="_blank">
+                        <p><span>Zhassulan Zhussupov | Malware Researcher, Threat Hunter at ANY.RUN</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="workshop-day-3">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Connor-Jackson" target="_blank"><img src="images/speakers/Connor-Jackson.jpg" alt="Connor Jackson"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Detection Coverage Is a Hypothesis: Testing It Through Adversarial Execution Variance</span>
+                     <a href="Connor-Jackson" target="_blank">
+                        <p><span>Connor Jackson | Senior Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Russell-Harvey" target="_blank"><img src="images/speakers/Russell-Harvey.png" alt="Russell Harvey"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Russell-Harvey" target="_blank">
+                        <p><span>Russell Harvey | Senior Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Nahid-Sarker" target="_blank"><img src="images/speakers/Nahid-Sarker.jpg" alt="Nahid Sarker"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Nahid-Sarker" target="_blank">
+                        <p><span>Nahid Sarker | Lead Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Connor-Jackson" target="_blank"><img src="images/speakers/Connor-Jackson.jpg" alt="Connor Jackson"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Detection Coverage Is a Hypothesis: Testing It Through Adversarial Execution Variance</span>
+                     <a href="Connor-Jackson" target="_blank">
+                        <p><span>Connor Jackson | Senior Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Russell-Harvey" target="_blank"><img src="images/speakers/Russell-Harvey.png" alt="Russell Harvey"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Russell-Harvey" target="_blank">
+                        <p><span>Russell Harvey | Senior Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Nahid-Sarker" target="_blank"><img src="images/speakers/Nahid-Sarker.jpg" alt="Nahid Sarker"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Nahid-Sarker" target="_blank">
+                        <p><span>Nahid Sarker | Lead Consultant at Security Risk Advisors</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+      </div>
+
+
      
    </div>
 </section>
@@ -180,6 +612,7 @@
 
       </section>
 <!-------------------------------------------->
+<div id="creator-stage-schedule"></div>
 <section id="schedule" class="section-with-bg" style="padding-top:65px; background-color: #0e0e0e;">
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
@@ -188,8 +621,8 @@
     Schedule: DEF CON Creator Stage
   </span>
          </div>
-         <h2 style="color: #ccbb44;">Talks and Panel discussions DEF CON Creator Stage</h2>
-         <p style="color: white;">Schedule for the Adversary Village Technical talks and Panel discussions happening in the DEF CON Creator Stages.<br> To be Updated!</p>
+         <h2 style="color: #e3b852;">Talks and Panel discussions DEF CON Creator Stage</h2>
+         <p style="color: white;">Schedule for the Adversary Village Technical talks and Panel discussions happening in the DEF CON Creator Stages.</p>
       </div>
       <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
          <li class="nav-item">
@@ -213,6 +646,7 @@
 
 
 
+         <div id="activities-schedule"></div>
          <section id="schedule" class="section-with-bg" style="padding-top:40px; background: url('images/bg2-dc32-ctf-adv.jpg'); background-repeat: no-repeat; background-size: cover; padding-bottom: 5px;;">
  <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-bottom: 30px;">
       <div style="text-align: center;">
@@ -232,20 +666,478 @@
     Schedule: Hands-on activities
   </span>
          </div>
-         <h2 style="color: #ccbb44;">Hands-on Activities</h2>
-         <p style="color: white;">Schedule for the Adversary Village Hands-on hacking activity area.<br>To be Updated!</p>
+         <h2 style="color: #e3b852;">Hands-on Activities</h2>
+         <p style="color: white;">Schedule for the Adversary Village Hands-on hacking activity area.</p>
       </div>
       <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
          <li class="nav-item">
-            <a class="nav-link active" href="#activities-day-1" role="tab" data-bs-toggle="tab" aria-selected="true">Day 1: Aug 08<sup>th</sup></a>
+            <a class="nav-link active" href="#activities-day-1" role="tab" data-bs-toggle="tab" aria-selected="true">Day 1: Aug 7<sup>th</sup></a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="#activities-day-2" role="tab" data-bs-toggle="tab" aria-selected="false">Day 2: Aug 09<sup>th</sup></a>
+            <a class="nav-link" href="#activities-day-2" role="tab" data-bs-toggle="tab" aria-selected="false">Day 2: Aug 8<sup>th</sup></a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="#activities-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 10<sup>th</sup></a>
+            <a class="nav-link" href="#activities-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 9<sup>th</sup></a>
          </li>
       </ul>
+                        <div class="tab-content row1 justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+         <div role="tabpanel" class="tab-pane fade active show" id="activities-day-1">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Trey-Bilbrey" target="_blank"><img src="images/speakers/Trey-Bilbrey.jpg" alt="Trey Bilbrey"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Power To The Purple</span>
+                     <a href="Trey-Bilbrey" target="_blank">
+                        <p><span>Trey Bilbrey | Head of SCYTHE Labs</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Tyler-Casey" target="_blank"><img src="images/speakers/Tyler-Casey.jpg" alt="Tyler Casey"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Tyler-Casey" target="_blank">
+                        <p><span>Tyler Casey | Lead Detection Engineer; Deputy of SCYTHE Labs</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="A-Stryker" target="_blank"><img src="images/speakers/A-Stryker.jpg" alt="A. Stryker"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Just a TIP: DIY Your First Adversary Threat Intelligence Platform</span>
+                     <a href="A-Stryker" target="_blank">
+                        <p><span>A. Stryker | Director of Threat Analysis at Fable Security</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Trey-Bilbrey" target="_blank"><img src="images/speakers/Trey-Bilbrey.jpg" alt="Trey Bilbrey"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Power To The Purple</span>
+                     <a href="Trey-Bilbrey" target="_blank">
+                        <p><span>Trey Bilbrey | Head of SCYTHE Labs</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Tyler-Casey" target="_blank"><img src="images/speakers/Tyler-Casey.jpg" alt="Tyler Casey"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Tyler-Casey" target="_blank">
+                        <p><span>Tyler Casey | Lead Detection Engineer; Deputy of SCYTHE Labs</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="A-Stryker" target="_blank"><img src="images/speakers/A-Stryker.jpg" alt="A. Stryker"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Just a TIP: DIY Your First Adversary Threat Intelligence Platform</span>
+                     <a href="A-Stryker" target="_blank">
+                        <p><span>A. Stryker | Director of Threat Analysis at Fable Security</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="activities-day-2">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Gregory-Carpenter-DrPH" target="_blank"><img src="images/speakers/Gregory-Carpenter-DrPH.jpg" alt="Gregory Carpenter, DrPH"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Augmented Offense: Open-Source Subdermal Implants as Hacking Tools</span>
+                     <a href="Gregory-Carpenter-DrPH" target="_blank">
+                        <p><span>Gregory Carpenter, DrPH | Principal Partner of CW PENSEC</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Gregory-Carpenter-DrPH" target="_blank"><img src="images/speakers/Gregory-Carpenter-DrPH.jpg" alt="Gregory Carpenter, DrPH"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Augmented Offense: Open-Source Subdermal Implants as Hacking Tools</span>
+                     <a href="Gregory-Carpenter-DrPH" target="_blank">
+                        <p><span>Gregory Carpenter, DrPH | Principal Partner of CW PENSEC</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="activities-day-3">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
    
    </div>
    </p>
@@ -253,20 +1145,530 @@
 </section>
       <!--------------------------------------->
 
-  <section id="sponsors" class="s-sponsors target-section" style="padding-bottom: 5rem; padding-top: 8rem; background-color: white;">
+      <div id="tooldemo-schedule"></div>
+      <section id="schedule" class="section-with-bg" style="padding-top:40px; background: url('images/bg2-dc32-ctf-adv.jpg'); background-repeat: no-repeat; background-size: cover; padding-bottom: 5px;;">
+ <div class="container aos-init aos-animate" data-aos="fade-up" style="padding-bottom: 30px;">
+      <div style="text-align: center;">
+         <h2 style="color: white;">Adversary Tool demos Schedule</br>[Adversary Village hands-on hacking area]</h2>
+         <p style="color:white;">Adversary Village will be hosting a series of adversary tool demos for the participants to explore and interact with. Here is a detailed list of the tool demo sessions. Let's hack the planet! </p>
+      </div>
+      </div>
+      </section>
+
+
+      <!--------------------Adversary Tool demos schedule--------------------------------->
+<section id="schedule" class="section-with-bg" style="padding-top:65px; background-color: #0e0e0e;">
+   <div class="container aos-init aos-animate" data-aos="fade-up">
+      <div style="text-align: center;">
+           <div style="text-align: center; margin: 20px auto;">
+  <span style="display: inline-block; background-color: #000000; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
+    Schedule: Adversary Tool demos
+  </span>
+         </div>
+         <h2 style="color: #e3b852;">Adversary Tool demos</h2>
+         <p style="color: white;">Schedule for the Adversary Village Adversary Tool demos.</p>
+      </div>
+      <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
+         <li class="nav-item">
+            <a class="nav-link active" href="#tool-demos-day-1" role="tab" data-bs-toggle="tab" aria-selected="true">Day 1: Aug 7<sup>th</sup></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#tool-demos-day-2" role="tab" data-bs-toggle="tab" aria-selected="false">Day 2: Aug 8<sup>th</sup></a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#tool-demos-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 9<sup>th</sup></a>
+         </li>
+      </ul>
+                        <div class="tab-content row1 justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+         <div role="tabpanel" class="tab-pane fade active show" id="tool-demos-day-1">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Adam-Toscher" target="_blank"><img src="images/speakers/Adam-Toscher.png" alt="Adam Toscher"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling</span>
+                     <a href="Adam-Toscher" target="_blank">
+                        <p><span>Adam Toscher | Security Researcher at Cobalt</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:30-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jordan-Bonagura" target="_blank"><img src="images/speakers/Jordan-Bonagura.png" alt="Jordan Bonagura"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Your SaaS Is My Foothold: Weaponizing Shadow SaaS for Initial Access and Persistence</span>
+                     <a href="Jordan-Bonagura" target="_blank">
+                        <p><span>Jordan Bonagura | Senior Security Consultant and Researcher at Secure Ideas</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Renze-Jongman" target="_blank"><img src="images/speakers/Renze-Jongman.png" alt="Renze Jongman"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Build a Threat Intelligence Team entirely with agents</span>
+                     <a href="Renze-Jongman" target="_blank">
+                        <p><span>Renze Jongman | Founder of Liberty91</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Adam-Toscher" target="_blank"><img src="images/speakers/Adam-Toscher.png" alt="Adam Toscher"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling</span>
+                     <a href="Adam-Toscher" target="_blank">
+                        <p><span>Adam Toscher | Security Researcher at Cobalt</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:30-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jordan-Bonagura" target="_blank"><img src="images/speakers/Jordan-Bonagura.png" alt="Jordan Bonagura"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Your SaaS Is My Foothold: Weaponizing Shadow SaaS for Initial Access and Persistence</span>
+                     <a href="Jordan-Bonagura" target="_blank">
+                        <p><span>Jordan Bonagura | Senior Security Consultant and Researcher at Secure Ideas</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Renze-Jongman" target="_blank"><img src="images/speakers/Renze-Jongman.png" alt="Renze Jongman"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Build a Threat Intelligence Team entirely with agents</span>
+                     <a href="Renze-Jongman" target="_blank">
+                        <p><span>Renze Jongman | Founder of Liberty91</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="tool-demos-day-2">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Redon-Gashi" target="_blank"><img src="images/speakers/Redon-Gashi.jpg" alt="Redon Gashi"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Living Off Someone Else's Inference</span>
+                     <a href="Redon-Gashi" target="_blank">
+                        <p><span>Redon Gashi | Managing Security Consultant - Sentry Cybersecurity</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Armend-Gashi" target="_blank"><img src="images/speakers/Armend-Gashi.jpg" alt="Armend Gashi"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Armend-Gashi" target="_blank">
+                        <p><span>Armend Gashi | Managing Security Consultant at Sentry Cybersecurity</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:30-10:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Dhruva-Goyal" target="_blank"><img src="images/speakers/Dhruva-Goyal.jpg" alt="Dhruva Goyal"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hands-On Autonomous Pentesting with Pentest Copilot</span>
+                     <a href="Dhruva-Goyal" target="_blank">
+                        <p><span>Dhruva Goyal | Founder, BugBase Security</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Sitaraman-Subramanian" target="_blank"><img src="images/speakers/Sitaraman-Subramanian.jpg" alt="Sitaraman Subramanian"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Sitaraman-Subramanian" target="_blank">
+                        <p><span>Sitaraman Subramanian | BugBase, Co-founder &amp; CTO</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Duane-Dunston" target="_blank"><img src="images/speakers/Duane-Dunston.jpg" alt="Duane Dunston"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hiding Infrastructure in Plain Sight</span>
+                     <a href="Duane-Dunston" target="_blank">
+                        <p><span>Duane Dunston | Cybersecurity Training for Everyone</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Redon-Gashi" target="_blank"><img src="images/speakers/Redon-Gashi.jpg" alt="Redon Gashi"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Living Off Someone Else's Inference</span>
+                     <a href="Redon-Gashi" target="_blank">
+                        <p><span>Redon Gashi | Managing Security Consultant - Sentry Cybersecurity</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Armend-Gashi" target="_blank"><img src="images/speakers/Armend-Gashi.jpg" alt="Armend Gashi"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Armend-Gashi" target="_blank">
+                        <p><span>Armend Gashi | Managing Security Consultant at Sentry Cybersecurity</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:30-10:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Dhruva-Goyal" target="_blank"><img src="images/speakers/Dhruva-Goyal.jpg" alt="Dhruva Goyal"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hands-On Autonomous Pentesting with Pentest Copilot</span>
+                     <a href="Dhruva-Goyal" target="_blank">
+                        <p><span>Dhruva Goyal | Founder, BugBase Security</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Sitaraman-Subramanian" target="_blank"><img src="images/speakers/Sitaraman-Subramanian.jpg" alt="Sitaraman Subramanian"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Sitaraman-Subramanian" target="_blank">
+                        <p><span>Sitaraman Subramanian | BugBase, Co-founder &amp; CTO</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Duane-Dunston" target="_blank"><img src="images/speakers/Duane-Dunston.jpg" alt="Duane Dunston"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Hiding Infrastructure in Plain Sight</span>
+                     <a href="Duane-Dunston" target="_blank">
+                        <p><span>Duane Dunston | Cybersecurity Training for Everyone</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane fade" id="tool-demos-day-3">
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jared-Dobbelaer" target="_blank"><img src="images/speakers/Jared-Dobbelaer.png" alt="Jared Dobbelaer"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Establishing a Beachhead: Post-Exploitation in Azure DevOps</span>
+                     <a href="Jared-Dobbelaer" target="_blank">
+                        <p><span>Jared Dobbelaer | Adversarial Engineer at Blackbaud</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jon-Rhodes" target="_blank"><img src="images/speakers/Jon-Rhodes.jpg" alt="Jon Rhodes"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Jon-Rhodes" target="_blank">
+                        <p><span>Jon Rhodes | Adversarial Engineer at Blackbaud</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #275c62; padding: 4px; color: white;"><b>Tool Demo</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jared-Dobbelaer" target="_blank"><img src="images/speakers/Jared-Dobbelaer.png" alt="Jared Dobbelaer"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ce;">Establishing a Beachhead: Post-Exploitation in Azure DevOps</span>
+                     <a href="Jared-Dobbelaer" target="_blank">
+                        <p><span>Jared Dobbelaer | Adversarial Engineer at Blackbaud</span></p>
+                     </a>
+                  </h4>
+               </div>               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jon-Rhodes" target="_blank"><img src="images/speakers/Jon-Rhodes.jpg" alt="Jon Rhodes"></a>
+                  </div>
+                  <h4>
+                     &nbsp;
+                     <a href="Jon-Rhodes" target="_blank">
+                        <p><span>Jon Rhodes | Adversarial Engineer at Blackbaud</span></p>
+                     </a>
+                  </h4>
+               </div>            </div>
+         </div>
+      </div>
+
+
+
+   </div>
+   </p>
+   </div>
+</section>
+      <!--------------------------------------->
+
+    <section id="sponsors" class="s-sponsors target-section" style="padding-bottom: 5rem; padding-top: 8rem; background-color: #fff;">
          <div class="row section-header align-center" data-aos="fade-up">
             <div class="">
-               <h1 class="display-1" style="font-size:4rem;">
-                  Shout-out to our <br>DEF CON 34 Sponsors
+               <h1 class="display-1" style="font-size:4rem; color:#387ca5;">
+                  Shout-out to our Sponsors for<br> DEF CON 34!
                </h1>
-               <p class="lead" style="font-size: 4rem; font-weight: 900; color: gold;">
-                  Sponsors Will be Updated Soon!
+            </div>
+         </div>
+
+          <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #604ca9;">
+                  Platinum Sponsors
                </p>
             </div>
          </div>
-         
 
-      </section>
+<div class="sponsor-box platinum-sponsor" data-aos="fade-up">
+  <div style="margin-bottom: 25px; width: 100%; display: flex; justify-content: center;">
+    <img src="../../images/offsec3.png" alt="Sponsor Logo" class="logo platinum-logo">
+  </div>
+
+  <p style="font-size: 1.5rem;">
+  OffSec is a leading cyber security training and certification company known for its hands-on, adversarial approach to developing world-class offensive security professionals.
+  </p>
+  <div class="sponsor-socials">
+    <a href="https://offsec.com" target="_blank">
+      <img src="../../images/icons/internetarchive.svg" alt="Website" class="icon" style="filter: invert(0);"> Visit Website
+    </a>
+
+    <a href="https://x.com/offsectraining/" target="_blank">
+      <img src="../../images/icons/x.svg" alt="X" class="icon" style="filter: invert(13%) sepia(95%) saturate(4600%) hue-rotate(195deg) brightness(100%) contrast(90%);"> X (Twitter)
+    </a>
+
+ <a href="https://www.linkedin.com/company/offensive-security/" target="_blank">
+      <img src="../../images/icons/linkedin.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> LinkedIn
+    </a>
+  </div>
+</div>
+<br><br>
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="">
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: gold;">
+                  Gold Sponsors
+               </p>
+            </div>
+         </div>
+
+         <div class="sponsor-box" data-aos="fade-up" style="border: 3px solid #375e80; position: relative;">
+  <div style="position: absolute; top: -15px; right: 20px; background-color: #375e80; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
+    Year Round Sponsor
+  </div>
+  <div style="margin-bottom: 25px;">
+    <img src="../../images/SRA-logo.png" alt="Sponsor Logo" class="logo" style="max-height: 160px;">
+  </div>
+
+  <p style="font-size: 1.5rem;">
+Security Risk Advisors (SRA) provides specialized security services including Penetration Testing, VECTRâ„¢ Purple Teams, Cloud Security, Resilience, Cyber Physical Systems Security, Engineering, and 24x7x365 Cybersecurity Operations. SRA's mission is to "Level Up" every day to protect our clients and their customers. We deliver our security services to Fortune and Global 1000 companies, innovating technology startups, and mission-oriented non-profits. 
+  </p>
+  <div class="sponsor-socials">
+    <a href="https://sra.io" target="_blank">
+      <img src="../../images/icons/internetarchive.svg" alt="Website" class="icon" style="filter: invert(0);"> Visit Website
+    </a>
+
+    <a href="https://twitter.com/secrisk" target="_blank">
+      <img src="../../images/icons/x.svg" alt="X" class="icon" style="filter: invert(13%) sepia(95%) saturate(4600%) hue-rotate(195deg) brightness(100%) contrast(90%);"> X (Twitter)
+    </a>
+
+ <a href="https://www.linkedin.com/company/security-risk-advisors" target="_blank">
+      <img src="../../images/icons/linkedin.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> LinkedIn
+    </a>
+  </div>
+</div>
+<br><br>
+          <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+               </br>
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #CD7F32;">
+                  Bronze Sponsors
+               </p>
+            </div>
+
+         </div>
+
+
+
+
+    <div class="sponsors-row" data-aos="fade-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1100px; margin: 0 auto;">
+        <div class="sponsor-box" style="max-width: 100%;">
+            <div style="margin-bottom: 25px;">
+                <img src="../../images/cobalt-strike-logo-1.png" alt="Sponsor Logo" class="logo">
+            </div>
+            <p style="font-size: 1.5rem;">Cobalt Strike is the industry-standard adversary simulation platform trusted by red teams worldwide for conducting advanced security assessments and threat emulation exercises. Founded by Raphael Mudge in 2012, Cobalt Strike pioneered the modern red team command and control framework, enabling security professionals to replicate advanced persistent threat behaviors and strengthen organizational defenses through realistic attack simulations.</p>
+            <div class="sponsor-socials">
+                <a href="https://fortra.com" target="_blank">
+                    <img src="../../images/icons/internetarchive.svg" alt="Website" class="icon" style="filter: invert(0);"> Visit Website
+                </a>
+                <a href="https://x.com/_CobaltStrike" target="_blank">
+                    <img src="../../images/icons/x.svg" alt="X" class="icon" style="filter: invert(13%) sepia(95%) saturate(4600%) hue-rotate(195deg) brightness(100%) contrast(90%);"> X (Twitter)
+                </a>
+                <a href="https://www.linkedin.com/company/cobalt-strike" target="_blank">
+                    <img src="../../images/icons/linkedin.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> LinkedIn
+                </a>
+ <a href="https://www.youtube.com/channel/UCXr2bT_K0WpaBrhRlhpFwdw" target="_blank">
+                    <img src="../../images/icons/youtube.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> YouTube
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="sponsor-box" style="max-width: 100%;">
+            <div style="margin-bottom: 25px;">
+                <img src="../../images/plextrac.png" alt="Sponsor Logo" class="logo">
+            </div>
+            <p style="font-size: 1.5rem;">PlexTrac is the #1 AI-powered penetration test reporting tool and platform for real time threat exposure management. It helps cybersecurity teams address the most critical threats and vulnerabilities efficiently.</p>
+            <div class="sponsor-socials">
+                <a href="https://plextrac.com/" target="_blank">
+                    <img src="../../images/icons/internetarchive.svg" alt="Website" class="icon" style="filter: invert(0);"> Visit Website
+                </a>
+                <a href="https://x.com/plextrac" target="_blank">
+                    <img src="../../images/icons/x.svg" alt="X" class="icon" style="filter: invert(13%) sepia(95%) saturate(4600%) hue-rotate(195deg) brightness(100%) contrast(90%);"> X (Twitter)
+                </a>
+                <a href="https://www.linkedin.com/company/plextrac" target="_blank">
+                    <img src="../../images/icons/linkedin.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> LinkedIn
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</br> <br />
+
+
+          <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+               </br>
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #1f1f1f;">
+                  CTF Prize Sponsors
+               </p>
+            </div>
+
+         </div>
+<!--
+    <div class="sponsors-row" data-aos="fade-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1100px; margin: 0 auto;">
+        <div class="sponsor-box" style="max-width: 100%;">
+            <div style="margin-bottom: 25px;">
+                <img src="../../images/altered-security.png" alt="Sponsor Logo" class="logo" style="max-height: 160px;">
+            </div>
+
+            <p style="font-size: 1.5rem;">
+                Altered Security is an edtech with focus on hands-on learning through its red team training platform and cyber ranges.  It has offices in India and Singapore. Altered Security pioneered affordable red team labs and have trained more than 40000+ information security professionals  from more than 130+ countries across the globe through our in person and online trainings.
+            </p>
+            <div class="sponsor-socials">
+                <a href="https://alteredsecurity.com" target="_blank">
+                    <img src="../../images/icons/internetarchive.svg" alt="Website" class="icon" style="filter: invert(0);"> Visit Website
+                </a>
+
+                <a href="https://twitter.com/AlteredSecurity" target="_blank">
+                    <img src="../../images/icons/x.svg" alt="X" class="icon" style="filter: invert(13%) sepia(95%) saturate(4600%) hue-rotate(195deg) brightness(100%) contrast(90%);"> X (Twitter)
+                </a>
+
+                <a href="https://www.linkedin.com/company/alteredsecurity/" target="_blank">
+                    <img src="../../images/icons/linkedin.svg" alt="LinkedIn" class="icon" style="filter: invert(27%) sepia(88%) saturate(642%) hue-rotate(179deg) brightness(91%) contrast(90%);"> LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+-->
+         </section>
 
          
       <footer class="s-footer footer">
@@ -323,7 +1725,7 @@
                </div>
             </div>
             <div class="col-full ss-copyright">
-               <span>Copyright &copy; 2021-2026, Adversary Village<sup>®</sup> All Rights Reserved.</span>
+               <span>Copyright &copy; 2021-2026, Adversary Village<sup>Â®</sup> All Rights Reserved.</span>
             </div>
          </div>
          <div class="go-top">
@@ -334,5 +1736,74 @@
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
       <script src="./js/bootstrap.bundle.min.js"></script>
-   </body>
+         <style>
+    <style>
+        .sponsor-box {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .platinum-sponsor {
+            max-width: 960px;
+            padding: 40px;
+        }
+
+        .sponsor-box[style*="604ca9"] {
+            max-width: 900px;
+        }
+
+        .platinum-logo {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: contain;
+        }
+
+        .sponsors-row[style*="grid-template-columns: 1fr 1fr"] {
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+        .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box:only-child {
+            width: 550px;
+            grid-column: 1 / -1;
+            justify-self: center;
+        }
+
+        @media (max-width: 768px) {
+            .sponsor-box {
+                padding: 20px;
+                margin: 0 auto 30px auto !important;
+                margin-left: 15px !important;
+                margin-right: 15px !important;
+            }
+
+            .platinum-sponsor {
+                padding: 20px !important;
+            }
+
+            .platinum-logo {
+                max-height: 250px !important;
+            }
+
+            .sponsors-row[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                max-width: 100% !important;
+                padding: 0 15px;
+                justify-items: center;
+            }
+
+            /* Make bronze and CTF sponsor boxes smaller on mobile */
+            .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box {
+                max-width: 350px !important;
+            }
+        }
+    </style>
+      </style>
+</body>
 </html>
