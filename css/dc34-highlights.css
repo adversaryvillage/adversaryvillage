@@ -1,21 +1,19 @@
-/* =====================================================================
-   DEF CON 34 highlights — themed cards section (root index.html)
-   Palette from the DEF CON 34 theme guide:
-   #387ca5  #e3b851  #285c63  #cf2c51  #132747
-   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lato:wght@400;700;900&display=swap');
 
 .dc34-highlights {
   position: relative;
   padding: 6.5rem 0;
-  background: url('../images/bg-1-dc32-adv.jpg') center center / cover no-repeat;
+  background: url('../images/dc34-wall-adv.png') center center / cover no-repeat;
   background-attachment: fixed;
 }
 
+/* lighter overlay so the background image stays visible */
 .dc34-highlights::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6, 10, 20, .88) 0%, rgba(6, 10, 20, .80) 100%);
+  background: linear-gradient(180deg, rgba(6, 10, 20, .88) 0%, rgba(6, 10, 20, .82) 100%);
 }
 
 .dc34-highlights .dc34-inner {
@@ -32,23 +30,27 @@
 }
 
 .dc34-highlights .dc34-head h2 {
+  font-family: "Atkinson Hyperlegible", sans-serif;
   color: #ffffff;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 3.6rem;
   line-height: 1.15;
   margin: 0 0 1.2rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .45);
 }
 
 .dc34-highlights .dc34-head h2 span {
-  color: #387ca5;
+  color: #6ccdb8;
 }
 
 .dc34-highlights .dc34-head p {
-  color: rgba(255, 255, 255, .82);
+  font-family: "Lato", sans-serif;
+  color: rgba(255, 255, 255, .9);
   font-size: 1.75rem;
   line-height: 1.6;
-  max-width: 780px;
+  max-width: 800px;
   margin: 0 auto;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .5);
 }
 
 .dc34-cards {
@@ -61,43 +63,42 @@
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  padding: 28px 24px 30px;
+  padding: 26px 24px 30px;
   min-height: 258px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
   color: #ffffff;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .4);
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .dc34-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 38px rgba(0, 0, 0, .5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .55);
   color: #ffffff;
   text-decoration: none;
 }
 
-/* decorative bubble accent inside each card */
+/* subtle diagonal light sheen (replaces the old corner circle) */
 .dc34-card::after {
   content: "";
   position: absolute;
-  right: -46px;
-  bottom: -46px;
-  width: 158px;
-  height: 158px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .10);
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .16) 0%, rgba(255, 255, 255, 0) 46%);
+  pointer-events: none;
 }
 
 .dc34-card .dc34-num {
   position: relative;
   z-index: 2;
-  font-size: 1.4rem;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 3.4rem;
   font-weight: 700;
-  letter-spacing: .22em;
-  opacity: .78;
+  line-height: 1;
+  letter-spacing: .04em;
+  opacity: .9;
 }
 
 .dc34-card .dc34-body {
@@ -106,9 +107,10 @@
 }
 
 .dc34-card h3 {
+  font-family: "Atkinson Hyperlegible", sans-serif;
   color: inherit;
   font-size: 2.15rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   margin: 0;
 }
@@ -124,29 +126,32 @@
 .dc34-card .dc34-cta {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   margin-top: 16px;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: .03em;
 }
 
-.dc34-card .dc34-cta i {
-  font-style: normal;
+.dc34-card .dc34-arrow {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
   transition: transform .2s ease;
 }
 
-.dc34-card:hover .dc34-cta i {
+.dc34-card:hover .dc34-arrow {
   transform: translateX(6px);
 }
 
-/* per-card theme colors */
-.dc34-card.c1 { background: #387ca5; }
-.dc34-card.c2 { background: #e3b851; color: #14243a; }
-.dc34-card.c2:hover { color: #14243a; }
-.dc34-card.c3 { background: #285c63; }
-.dc34-card.c4 { background: #cf2c51; }
-.dc34-card.c5 { background: #132747; }
+/* per-card colors from the official DEF CON 34 palette */
+.dc34-card.c1 { background: #017fa4; }
+.dc34-card.c2 { background: #f1b435; color: #0d294a; }
+.dc34-card.c2:hover { color: #0d294a; }
+.dc34-card.c3 { background: #105f66; }
+.dc34-card.c4 { background: #e0004e; }
+.dc34-card.c5 { background: #0d294a; }
 
 /* responsive */
 @media (max-width: 1100px) {
@@ -159,5 +164,5 @@
   .dc34-highlights { padding: 4.5rem 0; }
   .dc34-highlights .dc34-head h2 { font-size: 2.7rem; }
   .dc34-highlights .dc34-head p { font-size: 1.55rem; }
-  .dc34-card { min-height: 170px; }
+  .dc34-card { min-height: 160px; }
 }

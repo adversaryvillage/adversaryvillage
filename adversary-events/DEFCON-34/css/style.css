@@ -770,7 +770,7 @@ p {
 
 #schedule .nav-tabs a {
   border-style: solid;
-  border-color: #275c62;
+  border-color: #105f66;
   border-radius: 5px;
   font-weight: 600;
   background-color: #E6E6FA;
@@ -797,7 +797,7 @@ p {
 }
 
 #schedule .nav-tabs a.active {
-  background-color: #275c62;
+  background-color: #105f66;
   color: #fff;
 }
 
