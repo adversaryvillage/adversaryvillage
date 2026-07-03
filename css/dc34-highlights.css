@@ -1,0 +1,163 @@
+/* =====================================================================
+   DEF CON 34 highlights — themed cards section (root index.html)
+   Palette from the DEF CON 34 theme guide:
+   #387ca5  #e3b851  #285c63  #cf2c51  #132747
+   ===================================================================== */
+
+.dc34-highlights {
+  position: relative;
+  padding: 6.5rem 0;
+  background: url('../images/bg-1-dc32-adv.jpg') center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.dc34-highlights::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 10, 20, .88) 0%, rgba(6, 10, 20, .80) 100%);
+}
+
+.dc34-highlights .dc34-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.dc34-highlights .dc34-head {
+  text-align: center;
+  margin-bottom: 3.6rem;
+}
+
+.dc34-highlights .dc34-head h2 {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 3.6rem;
+  line-height: 1.15;
+  margin: 0 0 1.2rem;
+}
+
+.dc34-highlights .dc34-head h2 span {
+  color: #387ca5;
+}
+
+.dc34-highlights .dc34-head p {
+  color: rgba(255, 255, 255, .82);
+  font-size: 1.75rem;
+  line-height: 1.6;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.dc34-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.dc34-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 28px 24px 30px;
+  min-height: 258px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.dc34-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, .5);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* decorative bubble accent inside each card */
+.dc34-card::after {
+  content: "";
+  position: absolute;
+  right: -46px;
+  bottom: -46px;
+  width: 158px;
+  height: 158px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .10);
+}
+
+.dc34-card .dc34-num {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  opacity: .78;
+}
+
+.dc34-card .dc34-body {
+  position: relative;
+  z-index: 2;
+}
+
+.dc34-card h3 {
+  color: inherit;
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.dc34-card .dc34-rule {
+  height: 3px;
+  width: 42px;
+  background: currentColor;
+  opacity: .55;
+  margin: 14px 0 0;
+}
+
+.dc34-card .dc34-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: .03em;
+}
+
+.dc34-card .dc34-cta i {
+  font-style: normal;
+  transition: transform .2s ease;
+}
+
+.dc34-card:hover .dc34-cta i {
+  transform: translateX(6px);
+}
+
+/* per-card theme colors */
+.dc34-card.c1 { background: #387ca5; }
+.dc34-card.c2 { background: #e3b851; color: #14243a; }
+.dc34-card.c2:hover { color: #14243a; }
+.dc34-card.c3 { background: #285c63; }
+.dc34-card.c4 { background: #cf2c51; }
+.dc34-card.c5 { background: #132747; }
+
+/* responsive */
+@media (max-width: 1100px) {
+  .dc34-cards { grid-template-columns: repeat(2, 1fr); }
+  .dc34-highlights { background-attachment: scroll; }
+}
+
+@media (max-width: 620px) {
+  .dc34-cards { grid-template-columns: 1fr; }
+  .dc34-highlights { padding: 4.5rem 0; }
+  .dc34-highlights .dc34-head h2 { font-size: 2.7rem; }
+  .dc34-highlights .dc34-head p { font-size: 1.55rem; }
+  .dc34-card { min-height: 170px; }
+}
