@@ -40,6 +40,10 @@
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="../../favicon/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
+      <style>
+        /* mobile responsiveness safety net */
+        @media (max-width: 767px) { html, body { overflow-x: hidden; } }
+      </style>
    </head>
    <body id="top">
       
@@ -102,6 +106,12 @@
                      .av-hero-tabs li{list-style:none;}
                      .av-hero-btn{display:inline-block;padding:14px 32px;border-radius:8px;font-weight:800;font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;color:#fff;border:2px solid rgba(255,255,255,.15);box-shadow:0 6px 16px rgba(0,0,0,.4);transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;}
                      .av-hero-btn:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.55);filter:brightness(1.12);color:#fff;text-decoration:none;}
+                     .av-hero-sponsors{max-width:720px;margin:26px auto 0;text-align:center;}
+                     .av-hero-sponsors .lbl{font-size:1.05rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);font-weight:600;margin-bottom:12px;}
+                     .av-hero-sponsors .logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;}
+                     .av-hero-sponsors .logos a{background:#fff;border-radius:8px;padding:8px 14px;display:inline-flex;align-items:center;transition:transform .18s ease;}
+                     .av-hero-sponsors .logos a:hover{transform:translateY(-3px);}
+                     .av-hero-sponsors .logos img{height:30px;width:auto;display:block;}
                      </style>
                      <ul class="av-hero-tabs aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                         <li>
@@ -114,6 +124,15 @@
                            <a class="av-hero-btn" style="background:#105f66;" href="../../adversary-wars-ctf" target="_blank">Adversary Wars CTF</a>
                         </li>
                      </ul>
+                     <div class="av-hero-sponsors aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                        <div class="lbl">Our Sponsors</div>
+                        <div class="logos">
+                           <a href="https://offsec.com" target="_blank" title="OffSec"><img src="../../images/offsec3.png" alt="OffSec"></a>
+                           <a href="https://sra.io" target="_blank" title="Security Risk Advisors"><img src="../../images/SRA-logo.png" alt="Security Risk Advisors"></a>
+                           <a href="https://fortra.com/products/cobalt-strike" target="_blank" title="Cobalt Strike"><img src="../../images/cobalt-strike-logo-1.png" alt="Cobalt Strike"></a>
+                           <a href="https://plextrac.com" target="_blank" title="PlexTrac"><img src="../../images/plextrac.png" alt="PlexTrac"></a>
+                        </div>
+                     </div>
 
                   
                   </div>
@@ -207,8 +226,8 @@
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
          <div style="text-align: center; margin: 20px auto;">
-  <span style="display: inline-block; background-color: #000000; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
-    Schedule: Village Workshop Stage
+  <span style="display: inline-block; background-color: #017fa4; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
+    Schedule: Hands-on Workshops<br><span style="font-weight: 400; font-size: 0.82em;"><svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:5px;fill:currentColor;" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Adversary Village Workshop Stage | West Hall, Level 2, Las Vegas Convention Center</span>
   </span>
          </div>
 
@@ -435,7 +454,60 @@
          </div>
          <div role="tabpanel" class="tab-pane fade" id="workshop-day-2">
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+               <div class="col-md-3"><time>10:00-10:45 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Panel Discussion</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <h4><span style="color:#6ccdb8;">Panel discussion: Offensive Security, AI, and You: What Does the Future Hold?</span></h4>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/Phillip-Wylie.jpg" alt="Phillip Wylie"></a>
+                  </div>
+                  <h4><span style="color:#ffffff; font-style:normal; font-weight:600;">Moderator</span>
+                     <a href="#" target="_blank">
+                        <p><span>Phillip Wylie | Offensive Security Mentor, Podcast Host of Phillip Wylie Show</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -452,7 +524,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>12:00-13:55 PDT</time><br>
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -469,7 +541,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>14:00-15:55 PDT</time><br>
+               <div class="col-md-3"><time>15:00-16:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -486,7 +558,60 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
+               <div class="col-md-3"><time>10:00-10:45 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Panel Discussion</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <h4><span style="color:#6ccdb8;">Panel discussion: Offensive Security, AI, and You: What Does the Future Hold?</span></h4>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/Phillip-Wylie.jpg" alt="Phillip Wylie"></a>
+                  </div>
+                  <h4><span style="color:#ffffff; font-style:normal; font-weight:600;">Moderator</span>
+                     <a href="#" target="_blank">
+                        <p><span>Phillip Wylie | Offensive Security Mentor, Podcast Host of Phillip Wylie Show</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+               <div class="col-md-3"><time></time></div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="#" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Panelist to be announced"></a>
+                  </div>
+                  <h4>
+                     <a href="#" target="_blank">
+                        <p><span>To be announced</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -503,7 +628,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>12:00-13:55 PDT</time><br>
+               <div class="col-md-3"><time>13:00-14:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -520,7 +645,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>14:00-15:55 PDT</time><br>
+               <div class="col-md-3"><time>15:00-16:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Workshop</b></span>
                   </time>
@@ -618,8 +743,8 @@
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
            <div style="text-align: center; margin: 20px auto;">
-  <span style="display: inline-block; background-color: #000000; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
-    Schedule: DEF CON Creator Stage
+  <span style="display: inline-block; background-color: #017fa4; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
+    Schedule: DEF CON Creator Stage<br><span style="font-weight: 400; font-size: 0.82em;"><svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:5px;fill:currentColor;" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>DEF CON Creator Stages | Las Vegas Convention Center</span>
   </span>
          </div>
          <h2 style="color: #f1b435;">Talks and Panel discussions DEF CON Creator Stage</h2>
@@ -627,13 +752,13 @@
       </div>
       <ul class="nav nav-tabs aos-init aos-animate" role="tablist" data-aos="fade-up" data-aos-delay="100">
          <li class="nav-item">
-            <a class="nav-link active" href="#creator-stage-day-1" role="tab" data-bs-toggle="tab" aria-selected="true">Day 1: Aug 08<sup>th</sup></a>
+            <a class="nav-link active" href="#creator-stage-day-1" role="tab" data-bs-toggle="tab" aria-selected="true">Day 1: Aug 07<sup>th</sup></a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="#creator-stage-day-2" role="tab" data-bs-toggle="tab" aria-selected="false">Day 2: Aug 09<sup>th</sup></a>
+            <a class="nav-link" href="#creator-stage-day-2" role="tab" data-bs-toggle="tab" aria-selected="false">Day 2: Aug 08<sup>th</sup></a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="#creator-stage-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 10<sup>th</sup></a>
+            <a class="nav-link" href="#creator-stage-day-3" role="tab" data-bs-toggle="tab" aria-selected="false">Day 3: Aug 09<sup>th</sup></a>
          </li>
       </ul>
  
@@ -663,8 +788,8 @@
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
            <div style="text-align: center; margin: 20px auto;">
-  <span style="display: inline-block; background-color: #000000; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
-    Schedule: Hands-on activities
+  <span style="display: inline-block; background-color: #017fa4; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
+    Schedule: Hands-on activities<br><span style="font-weight: 400; font-size: 0.82em;"><svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:5px;fill:currentColor;" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Adversary Village Hands-on Activity Area Stage | West Hall, Level 2, Las Vegas Convention Center</span>
   </span>
          </div>
          <h2 style="color: #f1b435;">Hands-on Activities</h2>
@@ -684,60 +809,6 @@
                         <div class="tab-content row1 justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
          <div role="tabpanel" class="tab-pane fade active show" id="activities-day-1">
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
-                     <a href="choose-your-own-adversary-adventure" target="_blank">
-                        <p><span>More details</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
-                     <a href="adversary-simulator" target="_blank">
-                        <p><span>More details</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Breach and attack simulation exercises</span>
-                     <a href="breach-simulation-exercises" target="_blank">
-                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
                <div class="col-md-3"><time>11:00-12:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
@@ -782,10 +853,10 @@
                      </a>
                   </h4>
                </div>            </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -800,10 +871,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -818,10 +889,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -881,63 +952,63 @@
                      </a>
                   </h4>
                </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
          </div>
          <div role="tabpanel" class="tab-pane fade" id="activities-day-2">
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
-                     <a href="choose-your-own-adversary-adventure" target="_blank">
-                        <p><span>More details</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
-                     <a href="adversary-simulator" target="_blank">
-                        <p><span>More details</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
-                  <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
-                  </time>
-               </div>
-               <div class="col-md-9">
-                  <div class="speaker">
-                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
-                  </div>
-                  <h4>
-                     <span style="color:#6ccdb8;">Breach and attack simulation exercises</span>
-                     <a href="breach-simulation-exercises" target="_blank">
-                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
-                     </a>
-                  </h4>
-               </div>
-            </div>
-            <div class="row1 schedule-item" id="content-desktop">
                <div class="col-md-3"><time>10:00-11:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
@@ -954,10 +1025,10 @@
                      </a>
                   </h4>
                </div>            </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -972,10 +1043,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -990,10 +1061,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1025,12 +1096,84 @@
                      </a>
                   </h4>
                </div>            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="choose-your-own-adversary-adventure" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Choose-your-own-Adversary-Adventure Tabletop Game"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Choose-your-own-Adversary-Adventure Tabletop Game</span>
+                     <a href="choose-your-own-adversary-adventure" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="adversary-simulator" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Adversary Simulator Booth<br />Adversary attack simulation and purple teaming hands-on booth</span>
+                     <a href="adversary-simulator" target="_blank">
+                        <p><span>More details</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
+               <div class="col-md-3"><time>10:00-18:00 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="breach-simulation-exercises" target="_blank"><img src="images/speakers/adversary-village.jpg" alt="Breach and attack simulation exercises"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Breach and attack simulation exercises</span>
+                     <a href="breach-simulation-exercises" target="_blank">
+                        <p><span>Guided breach and offensive attack simulation hands-on exercises</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
          </div>
          <div role="tabpanel" class="tab-pane fade" id="activities-day-3">
-            <div class="row1 schedule-item" id="content-desktop">
+<div class="row1 schedule-item" id="content-desktop">
+               <div class="col-md-3"><time>10:30-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jun-Miura" target="_blank"><img src="images/speakers/Jun-Miura.jpg" alt="Jun Miura"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Reconstructing Red Team Engagements: Developing Your Own Red Agent</span>
+                     <a href="Jun-Miura" target="_blank">
+                        <p><span>Jun Miura | Offensive Security Researcher at Fujitsu LTD</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1045,10 +1188,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-desktop">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1063,10 +1206,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-desktop">
+            <div class="row1 schedule-item" id="content-desktop" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1081,10 +1224,28 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+<div class="row1 schedule-item" id="content-mobile">
+               <div class="col-md-3"><time>10:30-11:55 PDT</time><br>
+                  <time>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Activity</b></span>
+                  </time>
+               </div>
+               <div class="col-md-9">
+                  <div class="speaker">
+                     <a href="Jun-Miura" target="_blank"><img src="images/speakers/Jun-Miura.jpg" alt="Jun Miura"></a>
+                  </div>
+                  <h4>
+                     <span style="color:#6ccdb8;">Reconstructing Red Team Engagements: Developing Your Own Red Agent</span>
+                     <a href="Jun-Miura" target="_blank">
+                        <p><span>Jun Miura | Offensive Security Researcher at Fujitsu LTD</span></p>
+                     </a>
+                  </h4>
+               </div>
+            </div>
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Hands-on Game</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1099,10 +1260,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Adversary Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1117,10 +1278,10 @@
                   </h4>
                </div>
             </div>
-            <div class="row1 schedule-item" id="content-mobile">
+            <div class="row1 schedule-item" id="content-mobile" style="background-color:#0f141b;">
                <div class="col-md-3"><time>10:00-12:00 PDT</time><br>
                   <time>
-                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span>
+                  <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Breach Simulation</b></span><br><span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Full-day activity</b></span>
                   </time>
                </div>
                <div class="col-md-9">
@@ -1162,8 +1323,8 @@
    <div class="container aos-init aos-animate" data-aos="fade-up">
       <div style="text-align: center;">
            <div style="text-align: center; margin: 20px auto;">
-  <span style="display: inline-block; background-color: #000000; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
-    Schedule: Adversary Tool demos
+  <span style="display: inline-block; background-color: #017fa4; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold;">
+    Schedule: Adversary Tool demos<br><span style="font-weight: 400; font-size: 0.82em;"><svg viewBox="0 0 24 24" width="13" height="13" style="vertical-align:-2px;margin-right:5px;fill:currentColor;" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Adversary Village Hands-on Activity Area Stage | West Hall, Level 2, Las Vegas Convention Center</span>
   </span>
          </div>
          <h2 style="color: #f1b435;">Adversary Tool demos</h2>
@@ -1183,7 +1344,7 @@
                         <div class="tab-content row1 justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
          <div role="tabpanel" class="tab-pane fade active show" id="tool-demos-day-1">
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+               <div class="col-md-3"><time>15:00-15:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1200,7 +1361,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>11:30-11:55 PDT</time><br>
+               <div class="col-md-3"><time>15:30-15:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1217,7 +1378,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
+               <div class="col-md-3"><time>16:00-16:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1234,7 +1395,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+               <div class="col-md-3"><time>15:00-15:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1251,7 +1412,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>11:30-11:55 PDT</time><br>
+               <div class="col-md-3"><time>15:30-15:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1268,7 +1429,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
+               <div class="col-md-3"><time>16:00-16:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1287,7 +1448,7 @@
          </div>
          <div role="tabpanel" class="tab-pane fade" id="tool-demos-day-2">
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1315,7 +1476,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>10:30-10:55 PDT</time><br>
+               <div class="col-md-3"><time>12:30-12:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1343,7 +1504,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-desktop">
-               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+               <div class="col-md-3"><time>13:00-13:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1360,7 +1521,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>10:00-10:25 PDT</time><br>
+               <div class="col-md-3"><time>12:00-12:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1388,7 +1549,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>10:30-10:55 PDT</time><br>
+               <div class="col-md-3"><time>12:30-12:55 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>
@@ -1416,7 +1577,7 @@
                   </h4>
                </div>            </div>
             <div class="row1 schedule-item" id="content-mobile">
-               <div class="col-md-3"><time>11:00-11:25 PDT</time><br>
+               <div class="col-md-3"><time>13:00-13:25 PDT</time><br>
                   <time>
                   <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;"><b>Tool Demo</b></span>
                   </time>

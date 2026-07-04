@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <title>Adam Toscher | Adversary Village at DEF CON 34</title>
+   <meta name="description" content="Adam Toscher - Security Researcher. Presenting the adversary tool demo 'Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling' at Adversary Village, DEF CON 34, Las Vegas.">
+   <meta name="keywords" content="Adam Toscher, Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling, Adversary Village, DEF CON 34, adversary tool demo, adversary simulation, adversary emulation, offensive security, red team, purple teaming">
+   <meta name="author" content="Adversary Village at DEF CON 34">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://adversaryvillage.org/adversary-events/DEFCON-34/Adam-Toscher/">
+   <meta property="og:type" content="profile" />
+   <meta property="og:site_name" content="Adversary Village" />
+   <meta property="og:url" content="https://adversaryvillage.org/adversary-events/DEFCON-34/Adam-Toscher/" />
+   <meta property="og:title" content="Adam Toscher | Adversary Village at DEF CON 34" />
+   <meta property="og:description" content="Adam Toscher - Security Researcher. Presenting the adversary tool demo 'Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Adam-Toscher.png" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@AdversaryVillag" />
+   <meta name="twitter:title" content="Adam Toscher | Adversary Village at DEF CON 34" />
+   <meta name="twitter:description" content="Adam Toscher - Security Researcher. Presenting the adversary tool demo 'Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta name="twitter:image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Adam-Toscher.png" />
+   <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "ProfilePage",
+    "mainEntity":  {
+                       "@type":  "Person",
+                       "name":  "Adam Toscher",
+                       "jobTitle":  "Security Researcher",
+                       "description":  "Adam Toscher (w00tock) is an offensive security engineer and red team operator with over 20 years of experience across IT, network engineering, adversary simulation, and AI-assisted security research. His current conference-focused work includes Mainframe-AI, an AI-assisted mainframe security education platform, and Honey-AI, an AI API honeypot for deception across MCP, agentic workflows, and AI infrastructure abuse. He has assessed enterprise environments across multiple industries, translating deep technical findings into clear, actionable remediation. Adam has spoken at Hushcon (2019, 2023, and 2025), PRaSEC (2023), and CypherCon (2026), and has been selected to speak at OrangeCon (2026).",
+                       "url":  "https://adversaryvillage.org/adversary-events/DEFCON-34/Adam-Toscher/",
+                       "image":  "https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Adam-Toscher.png",
+                       "sameAs":  [
+                                      "https://www.linkedin.com/in/adam-toscher/"
+                                  ],
+                       "performerIn":  {
+                                           "@type":  "Event",
+                                           "name":  "Adversary Village at DEF CON 34",
+                                           "startDate":  "2026-08-07",
+                                           "endDate":  "2026-08-09",
+                                           "location":  {
+                                                            "@type":  "Place",
+                                                            "name":  "Las Vegas Convention Center",
+                                                            "address":  "Las Vegas, NV, USA"
+                                                        }
+                                       }
+                   }
+}
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../../css/base.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../css/speaker.css">
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <link rel="apple-touch-icon" sizes="57x57" href="../../../favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="../../../favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="../../../favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="../../../favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../../../favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="../../../favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="../../../favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../../../favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../../../favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="../../../favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="top">
+
+   <div id="preloader">
+      <div id="loader" class="dots-jump">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+
+   <header class="s-header">
+      <div class="row">
+         <div class="header-logo">
+            <a class="site-logo" href="../../../">
+               <img src="../../../images/adversary-village-org.png" alt="Homepage">
+            </a>
+         </div>
+         <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+               <li><a href="../../../">Home</a></li>
+               <li class="current"><a href="../../">Events</a>
+               </li>
+               <li><a href="../../../call-for-papers">Call for papers</a></li>
+               <li><a href="../../../adversary-wars-ctf">Adversary Wars CTF</a></li>
+               <li><a href="../../../sponsors">Sponsors</a></li>
+               <li><a href="../../../live-streaming-series">LiveStream</a></li>
+               <li><a href="../../../about-us">About</a></li>
+            </ul>
+         </nav>
+         <a class="header-menu-toggle" href="#"><span></span></a>
+      </div>
+   </header>
+
+   <section id="features" class="s-features target-section" style="background-color: #0e0e0e; color: #f1b435;">
+      <div class="row section-header" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1" style="color: #f1b435;  text-align: center; padding-bottom: 4.8rem; ">
+               [Speakers]</br>Adversary Village at </br>DEF CON 34
+            </h1>
+            <div class="home-content__btn-wrap" style="margin-top: 2.2rem; text-align: center;">
+               <a href="../" class="btn btn--primary" target="_blank"
+                  style="background-color: #105f66; border-color:#105f66;">
+                  DEF CON 34 Schedule
+               </a>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <section id="features" style="background-color:white;">
+      <div class="row half-bottom" style="background-color:white;">
+         <div class="col-six tab-full">
+            </br>
+            <p style="text-align: center;"><img src="../images/speakers/Adam-Toscher.png"
+                  sizes="(max-width: 1000px) 100vw, 1000px" alt="Adam Toscher">
+            <div class="footer-social-icons">
+               <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/adam-toscher/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="#" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
+               </ul>
+            </div>
+            </p>
+         </div>
+         <div class="col-six tab-full">
+            <h2> Adam Toscher </h2>
+            <p class="job">Security Researcher</p>
+            <p>Adam Toscher (w00tock) is an offensive security engineer and red team operator with over 20 years of experience across IT, network engineering, adversary simulation, and AI-assisted security research.<br>
+<br>
+His current conference-focused work includes Mainframe-AI, an AI-assisted mainframe security education platform, and Honey-AI, an AI API honeypot for deception across MCP, agentic workflows, and AI infrastructure abuse. <br>
+<br>
+He has assessed enterprise environments across multiple industries, translating deep technical findings into clear, actionable remediation. Adam has spoken at Hushcon (2019, 2023, and 2025), PRaSEC (2023), and CypherCon (2026), and has been selected to speak at OrangeCon (2026).</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="features" style="background-color:#0e0e0e; padding-top: 20px; color: white;">
+
+      <div class="row" style="background-color:#0e0e0e; color: white;">
+         <div class="col-twelve tab-full">
+
+            <h2 style="color: #6ccdb8;">Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling</h2>
+            <p>
+               <span style="font-weight: 600; color: white;">15:00-15:25 PDT | Friday, Aug 7<sup>th</sup> 2026 | Adversary Village Hands-on Activity Area, Las Vegas Convention Center</span>
+               </br>
+               <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;">Tool Demo</span>
+            </p>
+            
+            <h3 style="color:#f1b435; margin-top:2rem;">Abstract</h3>
+            <div style="color:white;"><p>Honey-AI is an AI API honeypot that impersonates OpenAI, Anthropic, Gemini, Cohere, Azure OpenAI, MCP servers, vector databases, and SSH environments to capture attacks against modern AI infrastructure. This tool demo shows how it detects credential stuffing, prompt injection, MCP tool abuse, RAG poisoning, agentic framework enumeration, stolen key reuse, and AI-specific reconnaissance without forwarding traffic to real providers. Attendees will see live attack telemetry, deception lures, canary credentials, tactical mapping, and exportable threat intelligence built around the emerging AI attack surface.</p><br>
+<p>Check out the Abstract and a video demo - https://w00t3k.github.io/Honey-AI/</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Tool demo outline</h3>
+            <div style="color:white;"><p>## Detailed Tool Demo Outline</p><br>
+<p>**Honey-AI: Deceiving AI Agents, Prompt Thieves, and LLM Attack Tooling**<br>
+**Format:** Offensive and Adversary Tools<br>
+**Length:** 30 minutes</p><br>
+<p>### 0:00–3:00 - Why AI Infrastructure Needs Honeypots</p><br>
+<p>Open with the problem: AI infrastructure is becoming a real attack surface, but most defenders are still treating it like normal web/API traffic.</p><br>
+<p>Key points:</p><br>
+<p>* Attackers are already testing stolen AI API keys.<br>
+* Agentic tools enumerate models, files, vector stores, MCP servers, and project metadata.<br>
+* Prompt-injection attacks often happen through tool output, config files, MCP resources, or RAG content.<br>
+* Traditional honeypots usually catch scanners, shells, and commodity web attacks, but miss AI-specific behavior.</p><br>
+<p>Transition:</p><br>
+<p>&gt; Honey-AI was built to answer a simple question: what does hostile traffic against AI-native infrastructure actually look like?</p><br>
+<p>---</p><br>
+<p>### 3:00–6:00 - Tool Architecture Overview</p><br>
+<p>Show the high-level architecture of Honey-AI.</p><br>
+<p>Cover:</p><br>
+<p>* OpenAI-compatible API deception endpoints<br>
+* Anthropic, Gemini, Cohere, and Azure OpenAI impersonation<br>
+* MCP honeypot endpoint<br>
+* Vector database lure surfaces<br>
+* SSH deception engine<br>
+* Agent-readable lure files<br>
+* Canary credentials and beacon tokens<br>
+* Local SQLite storage<br>
+* Admin dashboard and tactical map<br>
+* Optional enrichment through AbuseIPDB, and Shodan<br>
+* STIX, Prometheus, and JSONL export paths</p><br>
+<p>Core message:</p><br>
+<p>&gt; Honey-AI does not proxy real AI traffic. It creates believable AI infrastructure surfaces and records how attackers interact with them.</p><br>
+<p>---</p><br>
+<p>### 6:00–9:00 - Deployment and First Look</p><br>
+<p>Demo quick deployment.</p><br>
+<p>Commands to show:</p><br>
+<p>```bash #./start.sh (venv localhost)  (or Docker) <br>
+```<br>
+Then open:</p><br>
+<p>http://localhost/admin</p><br>
+<p>Show:</p><br>
+<p>* Admin dashboard<br>
+* Animated tactical map<br>
+* Request feed<br>
+* Classification labels<br>
+* Protocol breakdown<br>
+* Suspicious IPs<br>
+* Canary/trap hits</p><br>
+<p>Narration:</p><br>
+<p>&gt; For the demo, I am using seeded data so we can see realistic activity immediately. In a real deployment, you would expose selected ports and let scanners, key testers, and agents discover the environment naturally.</p><br>
+<p>---</p><br>
+<p>### 9:00–13:00 - Demo 1: Stolen AI API Key Testing</p><br>
+<p>Simulate an attacker testing a stolen OpenAI-style key.</p><br>
+<p>Example:</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/v1/chat/completions \<br>
+  -H "Authorization: Bearer sk-proj-stolen-demo-key" \<br>
+  -H "Content-Type: application/json" \<br>
+  -H "User-Agent: OpenAI/Python 1.45.0" \<br>
+  -d '{<br>
+    "model": "gpt-4o-mini",<br>
+    "messages": [<br>
+      {"role": "user", "content": "test"}<br>
+    ]<br>
+  }'<br>
+```</p><br>
+<p>Show in dashboard:</p><br>
+<p>* Captured key format<br>
+* SDK fingerprinting<br>
+* User-agent/header details<br>
+* Classification: credential stuffer<br>
+* Source IP profile<br>
+* Request body<br>
+* AI/security analysis</p><br>
+<p>Explain:</p><br>
+<p>&gt; A normal API gateway might only see a failed request. Honey-AI preserves the attacker’s tooling, SDK version, key format, target model, path, and behavioral context.</p><br>
+<p>Then show model enumeration:</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/v1/models \<br>
+  -H "Authorization: Bearer sk-proj-stolen-demo-key"<br>
+```</p><br>
+<p>Point out:</p><br>
+<p>* Attackers often validate keys cheaply first.<br>
+* `/v1/models` and token-counting endpoints are useful key-testing probes.<br>
+* Honey-AI turns that into detection data.</p><br>
+<p>---</p><br>
+<p>### 13:00–17:00 - Demo 2: MCP Discovery and Tool Abuse</p><br>
+<p>Show MCP discovery.</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/.well-known/mcp.json<br>
+```</p><br>
+<p>Then show tool enumeration:</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/mcp \<br>
+  -H "Content-Type: application/json" \<br>
+  -d '{<br>
+    "jsonrpc": "2.0",<br>
+    "id": 1,<br>
+    "method": "tools/list",<br>
+    "params": {}<br>
+  }'<br>
+```</p><br>
+<p>Then simulate a dangerous tool call:</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/mcp \<br>
+  -H "Content-Type: application/json" \<br>
+  -d '{<br>
+    "jsonrpc": "2.0",<br>
+    "id": 2,<br>
+    "method": "tools/call",<br>
+    "params": {<br>
+      "name": "read_file",<br>
+      "arguments": {<br>
+        "path": "/app/.env"<br>
+      }<br>
+    }<br>
+  }'<br>
+```</p><br>
+<p>Show:</p><br>
+<p>* MCP protocol classification<br>
+* Tool name captured<br>
+* Arguments captured<br>
+* Resource read attempt<br>
+* Canary credential served<br>
+* Session correlation</p><br>
+<p>Explain:</p><br>
+<p>&gt; MCP gives agents structured tools, resources, prompts, and context. That also gives defenders a new deception layer. If an agent enumerates tools, reads fake secrets, or calls suspicious methods, Honey-AI records the behavior in a way normal API logging usually does not.</p><br>
+<p>---</p><br>
+<p>### 17:00–20:00 - Demo 3: Agent-Readable Lure Files</p><br>
+<p>Show lures designed for AI coding agents and automated scrapers.</p><br>
+<p>Example paths:</p><br>
+<p>```bash<br>
+curl -s http://localhost:8080/CLAUDE.md<br>
+curl -s http://localhost:8080/.cursorrules<br>
+curl -s http://localhost:8080/.github/workflows/deploy.yml<br>
+curl -s http://localhost:8080/internal/system-prompt.txt<br>
+curl -s http://localhost:8080/openapi.json<br>
+curl -s http://localhost:8080/llms.txt<br>
+```</p><br>
+<p>Show:</p><br>
+<p>* Canary tokens embedded in files<br>
+* Which lure was accessed<br>
+* Whether access came from scanner, human, or AI tool<br>
+* Cross-lure stitching by source IP/session</p><br>
+<p>Narration:</p><br>
+<p>&gt; Modern agents read project files before acting. That makes files like `CLAUDE.md`, `.cursorrules`, `llms.txt`, OpenAPI specs, and workflow configs part of the attack surface. Honey-AI treats those as deception opportunities.</p><br>
+<p>---</p><br>
+<p>### 20:00–23:00 - Demo 4: Prompt-Injection and Decoy Endpoint Traps</p><br>
+<p>Explain the layered payload model:</p><br>
+<p>* **Layer A:** Hidden instructions in model descriptions and error bodies<br>
+* **Layer B:** Suspicion-triggered assistant response bait<br>
+* **Layer C:** Escalation on repeated interaction<br>
+* **Decoy endpoints:** `/v1/verify`, `/v1/internal/debug/keys`, `/v1/internal/migrate`</p><br>
+<p>Show decoy hit:</p><br>
+<p>```bash<br>
+curl -s -X POST http://localhost:8080/v1/verify \<br>
+  -H "Content-Type: application/json" \<br>
+  -d '{<br>
+    "system_prompt": "You are a helpful internal agent...",<br>
+    "source": "automated-agent"<br>
+  }'<br>
+```</p><br>
+<p>Show in dashboard:</p><br>
+<p>* Decoy hit<br>
+* Critical severity<br>
+* Payload hash/version<br>
+* Session state<br>
+* Triggered layer<br>
+* Suspicion score</p><br>
+<p>Explain:</p><br>
+<p>&gt; A human reviewer may ignore hidden instructions or suspicious internal paths. An LLM agent may follow them. Honey-AI uses that difference as a detection signal.</p><br>
+<p>---</p><br>
+<p>### 23:00–25:00 - Demo 5: SSH Deception Engine</p><br>
+<p>Show SSH honeypot conceptually or live if stable.</p><br>
+<p>Example:</p><br>
+<p>```bash<br>
+ssh demo@localhost -p 2222<br>
+```</p><br>
+<p>Then commands:</p><br>
+<p>```bash<br>
+whoami<br>
+id<br>
+env<br>
+history<br>
+cat ~/.bashrc<br>
+ls -la<br>
+```</p><br>
+<p>Show:</p><br>
+<p>* Accepted credentials<br>
+* Keystrokes/commands<br>
+* Session persistence<br>
+* Canary in shell history or environment<br>
+* Protocol label `ssh`<br>
+* Cross-linking with HTTP/API lures</p><br>
+<p>Narration:</p><br>
+<p>&gt; AI infrastructure attacks do not always stay inside HTTP. If a leaked MCP resource or fake org endpoint exposes usernames or keys, the same actor may pivot to SSH. Honey-AI links that activity back to the broader deception story.</p><br>
+<p>---</p><br>
+<p>### 25:00–27:00 - Research and Detection Output</p><br>
+<p>Show outputs useful to defenders and researchers.</p><br>
+<p>Cover:</p><br>
+<p>* STIX 2.1 export<br>
+* Prometheus `/metrics`<br>
+* JSONL dataset export<br>
+* SQLite queries<br>
+* Tradecraft fields<br>
+* Enrichment data<br>
+* Canary reuse events</p><br>
+<p>Example SQLite query:</p><br>
+<p>```bash<br>
+sqlite3 honeypot.db "<br>
+SELECT protocol, classification, COUNT(*) as count<br>
+FROM requests<br>
+GROUP BY protocol, classification<br>
+ORDER BY count DESC;<br>
+"<br>
+```</p><br>
+<p>Example canary query:</p><br>
+<p>```bash<br>
+sqlite3 honeypot.db "<br>
+SELECT timestamp, source_ip, country_name, path, api_key, notes<br>
+FROM requests<br>
+WHERE is_flagged = 1<br>
+ORDER BY timestamp DESC;<br>
+"<br>
+```</p><br>
+<p>Explain:</p><br>
+<p>&gt; The value is not just the trap. The value is turning attacker behavior into structured detection content, threat intelligence, and red-team evaluation data.</p><br>
+<p>---</p><br>
+<p>### 27:00–29:00 - Lessons Learned</p><br>
+<p>Summarize key findings:</p><br>
+<p>* AI attackers often look like normal API clients until you inspect intent.<br>
+* Stolen key testing leaves useful fingerprints.<br>
+* MCP creates a new discovery and tool-abuse surface.<br>
+* Agent-readable project files are now deception surfaces.<br>
+* Canary credentials help prove theft and reuse.<br>
+* Prompt-injection traps can distinguish humans, scanners, and agents.<br>
+* AI honeypots should capture behavior, not just payloads.</p><br>
+<p>Strong closing line:</p><br>
+<p>&gt; Honey-AI is not trying to be another chatbot wrapper. It is a research platform for watching how attackers and agents behave when they think they have found real AI infrastructure.</p><br>
+<p>---</p><br>
+<p>### 29:00–30:00 - Q&amp;A / Release Notes</p><br>
+<p>Close with:</p><br>
+<p>* GitHub repo<br>
+* Defensive/research purpose<br>
+* Local deployment model<br>
+* No real provider forwarding<br>
+* Future work:</p><br>
+<p>* More MCP client fingerprints<br>
+  * Better agent framework detection<br>
+  * More vector DB lures<br>
+  * Public dataset generation<br>
+  * Detection rules from captured traffic</p><br>
+<p>Final sentence:</p><br>
+<p>&gt; The goal is to give defenders an AI-native deception layer before attackers fully industrialize this space.</p></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="schedule" class="section-with-bg"
+      style="padding-top:35px; padding-bottom: 20px; background: url('../images/dc34-wall-adv.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #6ccdb8;">
+                  Agency.
+               </p>
+            </div>
+
+         </div>
+         <div class="row align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+               <div class="col-twelve tab-full" style="padding 0 2px;">
+
+                  <style>
+                     @media (min-width: 1000px) {
+                        .contents {
+                           margin-left: 10%;
+                        }
+                     }
+                  </style>
+                  <center>
+                     <div class="col-five contents" style="padding-right:0px;">
+                        <a href="https://defcon.org/html/defcon-34/dc-34-index.html" target="_blank">
+                           <img width="250" height="112" class="pull-center" alt="DEF CON 34"
+                              src="../images/dc34-logo-adv.png"></a>
+
+                     </div>
+
+                     <div class="col-seven" style="width: 40%;">
+                        <a href="https://adversaryvillage.org/adversary-events/DEFCON-34/" target="_blank"
+                           style="padding-left:-50%">
+                           <img width="250" height="112" class="pull-center" alt="Adversary Village"
+                              src="../images/adv-logo-dc33.png"></a>
+
+                     </div>
+                  </center>
+               </div>
+
+            </div>
+
+         </div>
+
+         </br>
+
+   </section>
+
+
+   <section id="download" class="s-download target-section" style="background-color: #121619; padding-top:8rem;">
+
+      <div class="row section-header align-center" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1">
+               Join Adversary Village Discord Server.
+            </h1>
+            <p class="lead">
+               Join Adversary Village official Discord server to connect with our amazing community of adversary
+               simulation experts and offensive security researchers!
+            </p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+               <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join
+                     Discord</a></li>
+
+            </ul>
+         </div>
+      </div>
+
+
+
+   </section>
+
+   <footer class="s-footer footer">
+
+
+      <div class="row footer__bottom">
+         <div class="footer__about col-five tab-full left">
+            <h4>About Adversary Village.</h4>
+            <p>
+               Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics,
+               Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a
+               bit of purple teaming.
+            </p>
+            <ul class="footer__social">
+               <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+               <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"
+                        aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-five md-seven tab-full right end">
+            <div class="row">
+               <div class="footer__site-links col-five mob-full">
+                  <h4>Site links.</h4>
+                  <ul class="footer__site-links">
+                     <li><a href="../../DEFCON-34" target="_blank">DEF CON 34</a></li>
+                     <li><a href="../../../about-us">About Us</a></li>
+                     <li><a href="../../../call-for-papers">Call for papers</a></li>
+                     <li><a href="../../../call-for-volunteers">Call for volunteers</a></li>
+                     <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                     <li><a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
+                  </ul>
+               </div>
+               <div class="footer__contact col-seven mob-full">
+                  <h4>Contact Us.</h4>
+                  <p>
+                     Would you like to sponsor? or have a question for us? Ping us: <br>
+                     <a href="mailto:hello@adversaryvillage.org"
+                        class="footer__mail-link">hello@adversaryvillage.org</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-full ss-copyright">
+            <span>Copyright &copy; 2021-2026, Adversary Village<sup>&reg;</sup> All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="go-top">
+         <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+   </footer>
+   <script src="../js/jquery-3.2.1.min.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>
