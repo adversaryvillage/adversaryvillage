@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <title>Dominika Pietrzak | Adversary Village at DEF CON 34</title>
+   <meta name="description" content="Dominika Pietrzak - Offensive AI Engineer. Presenting the talk 'Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks' at Adversary Village, DEF CON 34, Las Vegas.">
+   <meta name="keywords" content="Dominika Pietrzak, Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks, Adversary Village, DEF CON 34, DEF CON Creator Stage, talk, adversary simulation, offensive security, red team">
+   <meta name="author" content="Adversary Village at DEF CON 34">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://adversaryvillage.org/adversary-events/DEFCON-34/Dominika-Pietrzak/">
+   <meta property="og:type" content="profile" />
+   <meta property="og:site_name" content="Adversary Village" />
+   <meta property="og:url" content="https://adversaryvillage.org/adversary-events/DEFCON-34/Dominika-Pietrzak/" />
+   <meta property="og:title" content="Dominika Pietrzak | Adversary Village at DEF CON 34" />
+   <meta property="og:description" content="Dominika Pietrzak - Offensive AI Engineer. Presenting the talk 'Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Dominika-Pietrzak.jpg" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@AdversaryVillag" />
+   <meta name="twitter:title" content="Dominika Pietrzak | Adversary Village at DEF CON 34" />
+   <meta name="twitter:description" content="Dominika Pietrzak - Offensive AI Engineer. Presenting the talk 'Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta name="twitter:image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Dominika-Pietrzak.jpg" />
+   <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "ProfilePage",
+    "mainEntity":  {
+                       "@type":  "Person",
+                       "name":  "Dominika Pietrzak",
+                       "jobTitle":  "Offensive AI Engineer",
+                       "description":  "Building AI-led tooling to scale offensive security operations.",
+                       "url":  "https://adversaryvillage.org/adversary-events/DEFCON-34/Dominika-Pietrzak/",
+                       "image":  "https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Dominika-Pietrzak.jpg",
+                       "sameAs":  [
+                                      "https://www.linkedin.com/in/dominika-pietrzak-183755137/"
+                                  ],
+                       "performerIn":  {
+                                           "@type":  "Event",
+                                           "name":  "Adversary Village at DEF CON 34",
+                                           "startDate":  "2026-08-07",
+                                           "endDate":  "2026-08-09",
+                                           "location":  {
+                                                            "@type":  "Place",
+                                                            "name":  "Las Vegas Convention Center",
+                                                            "address":  "Las Vegas, NV, USA"
+                                                        }
+                                       }
+                   }
+}
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../../css/base.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../css/speaker.css">
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <link rel="apple-touch-icon" sizes="57x57" href="../../../favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="../../../favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="../../../favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="../../../favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../../../favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="../../../favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="../../../favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../../../favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../../../favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="../../../favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="top">
+
+   <div id="preloader">
+      <div id="loader" class="dots-jump">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+
+   <header class="s-header">
+      <div class="row">
+         <div class="header-logo">
+            <a class="site-logo" href="../../../">
+               <img src="../../../images/adversary-village-org.png" alt="Homepage">
+            </a>
+         </div>
+         <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+               <li><a href="../../../">Home</a></li>
+               <li class="current"><a href="../../">Events</a>
+               </li>
+               <li><a href="../../../call-for-papers">Call for papers</a></li>
+               <li><a href="../../../adversary-wars-ctf">Adversary Wars CTF</a></li>
+               <li><a href="../../../sponsors">Sponsors</a></li>
+               <li><a href="../../../live-streaming-series">LiveStream</a></li>
+               <li><a href="../../../about-us">About</a></li>
+            </ul>
+         </nav>
+         <a class="header-menu-toggle" href="#"><span></span></a>
+      </div>
+   </header>
+
+   <section id="features" class="s-features target-section" style="background-color: #0e0e0e; color: #f1b435;">
+      <div class="row section-header" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1" style="color: #f1b435;  text-align: center; padding-bottom: 4.8rem; ">
+               [Speakers]</br>Adversary Village at </br>DEF CON 34
+            </h1>
+            <div class="home-content__btn-wrap" style="margin-top: 2.2rem; text-align: center;">
+               <a href="../" class="btn btn--primary" target="_blank"
+                  style="background-color: #105f66; border-color:#105f66;">
+                  DEF CON 34 Schedule
+               </a>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <section id="features" style="background-color:white;">
+      <div class="row half-bottom" style="background-color:white;">
+         <div class="col-six tab-full">
+            </br>
+            <p style="text-align: center;"><img src="../images/speakers/Dominika-Pietrzak.jpg"
+                  sizes="(max-width: 1000px) 100vw, 1000px" alt="Dominika Pietrzak">
+            <div class="footer-social-icons">
+               <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/dominika-pietrzak-183755137/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="#" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
+               </ul>
+            </div>
+            </p>
+         </div>
+         <div class="col-six tab-full">
+            <h2> Dominika Pietrzak </h2>
+            <p class="job">Offensive AI Engineer</p>
+            <p>Building AI-led tooling to scale offensive security operations.</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="features" style="background-color:#0e0e0e; padding-top: 20px; color: white;">
+
+      <div class="row" style="background-color:#0e0e0e; color: white;">
+         <div class="col-twelve tab-full">
+
+            <h2 style="color: #6ccdb8;">Field Notes on Offensive Agents: Reusability, Reliability, and What Breaks</h2>
+            <p>
+               <span style="font-weight: 600; color: white;">TBA | Sunday, Aug 9<sup>th</sup> 2026 | DEF CON Creator Stages, Las Vegas Convention Center</span>
+               </br>
+               <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;">Talk</span>
+            </p>
+                        <p style="color:white;"><strong style="color:#f1b435;">Co-presented with:</strong> <a href="../Ibai-Castells/" style="color:#6ccdb8;">Ibai Castells</a></p>
+            <h3 style="color:#f1b435; margin-top:2rem;">Abstract</h3>
+            <div style="color:white;"><p>Offensive agents are easy to demo, but much harder to make useful across real adversary emulation work. Key challenges lie in making agents reusable and reliable across different assessment types, tech stacks and doing so, as models, tools, and environments change.</p><br>
+<p>This talk shares lessons from designing, deploying, and refining a suite of modular offensive agents used in real client engagements. We will cover what made the agents reusable, where they broke against real-world complexity, and how we evaluated their effectiveness over time as prompts degraded, models drifted, and underlying tools evolved. The session is framework-agnostic and vendor-neutral.</p><br>
+<p>Attendees will leave with a practical model for building composable offensive agents that remain useful and reliable across attack types.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Talk outline</h3>
+            <div style="color:white;"><p>0–4 minutes: Framing the problem<br>
+Why offensive agents for adversary emulation are easy to demo, but hard to make reusable, reliable, and safe in practice.</p><br>
+<p>4–10 minutes: Designing reusable agents<br>
+How we built agents that can be applied across tech stacks and plug into different orchestration layers without being tied to one workflow or framework.</p><br>
+<p>10–15 minutes: Building portable workflows<br>
+How we structured agents so they can support different assessment types, attack paths, and toolchains.</p><br>
+<p>15–22 minutes: Evaluating performance over time<br>
+What we have found to be most impactful on agent performance and how to measure whether agents improve, regress, or behave inconsistently as models, prompts, scoring methods, and tools change.</p><br>
+<p>22–27 minutes: Lessons from testing<br>
+Common failure modes, what broke in practice, and how those lessons informed better design and evaluation.</p><br>
+<p>27–30 minutes: Safety, takeaways, and Q&amp;A<br>
+Key guardrails, responsible-use considerations, and practical takeaways for framework-agnostic offensive agents.</p></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="schedule" class="section-with-bg"
+      style="padding-top:35px; padding-bottom: 20px; background: url('../images/dc34-wall-adv.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #6ccdb8;">
+                  Agency.
+               </p>
+            </div>
+
+         </div>
+         <div class="row align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+               <div class="col-twelve tab-full" style="padding 0 2px;">
+
+                  <style>
+                     @media (min-width: 1000px) {
+                        .contents {
+                           margin-left: 10%;
+                        }
+                     }
+                  </style>
+                  <center>
+                     <div class="col-five contents" style="padding-right:0px;">
+                        <a href="https://defcon.org/html/defcon-34/dc-34-index.html" target="_blank">
+                           <img width="250" height="112" class="pull-center" alt="DEF CON 34"
+                              src="../images/dc34-logo-adv.png"></a>
+
+                     </div>
+
+                     <div class="col-seven" style="width: 40%;">
+                        <a href="https://adversaryvillage.org/adversary-events/DEFCON-34/" target="_blank"
+                           style="padding-left:-50%">
+                           <img width="250" height="112" class="pull-center" alt="Adversary Village"
+                              src="../images/adv-logo-dc33.png"></a>
+
+                     </div>
+                  </center>
+               </div>
+
+            </div>
+
+         </div>
+
+         </br>
+
+   </section>
+
+
+   <section id="download" class="s-download target-section" style="background-color: #121619; padding-top:8rem;">
+
+      <div class="row section-header align-center" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1">
+               Join Adversary Village Discord Server.
+            </h1>
+            <p class="lead">
+               Join Adversary Village official Discord server to connect with our amazing community of adversary
+               simulation experts and offensive security researchers!
+            </p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+               <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join
+                     Discord</a></li>
+
+            </ul>
+         </div>
+      </div>
+
+
+
+   </section>
+
+   <footer class="s-footer footer">
+
+
+      <div class="row footer__bottom">
+         <div class="footer__about col-five tab-full left">
+            <h4>About Adversary Village.</h4>
+            <p>
+               Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics,
+               Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a
+               bit of purple teaming.
+            </p>
+            <ul class="footer__social">
+               <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+               <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"
+                        aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-five md-seven tab-full right end">
+            <div class="row">
+               <div class="footer__site-links col-five mob-full">
+                  <h4>Site links.</h4>
+                  <ul class="footer__site-links">
+                     <li><a href="../../DEFCON-34" target="_blank">DEF CON 34</a></li>
+                     <li><a href="../../../about-us">About Us</a></li>
+                     <li><a href="../../../call-for-papers">Call for papers</a></li>
+                     <li><a href="../../../call-for-volunteers">Call for volunteers</a></li>
+                     <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                     <li><a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
+                  </ul>
+               </div>
+               <div class="footer__contact col-seven mob-full">
+                  <h4>Contact Us.</h4>
+                  <p>
+                     Would you like to sponsor? or have a question for us? Ping us: <br>
+                     <a href="mailto:hello@adversaryvillage.org"
+                        class="footer__mail-link">hello@adversaryvillage.org</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-full ss-copyright">
+            <span>Copyright &copy; 2021-2026, Adversary Village<sup>&reg;</sup> All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="go-top">
+         <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+   </footer>
+   <script src="../js/jquery-3.2.1.min.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>

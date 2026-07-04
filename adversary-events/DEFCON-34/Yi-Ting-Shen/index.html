@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <title>Yi Ting Shen | Adversary Village at DEF CON 34</title>
+   <meta name="description" content="Yi Ting Shen - AIFT - Associate GenAI Security Researcher. Presenting the talk 'SEND: Teaching Machines to Lie to Defenders' at Adversary Village, DEF CON 34, Las Vegas.">
+   <meta name="keywords" content="Yi Ting Shen, SEND: Teaching Machines to Lie to Defenders, Adversary Village, DEF CON 34, DEF CON Creator Stage, talk, adversary simulation, offensive security, red team">
+   <meta name="author" content="Adversary Village at DEF CON 34">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://adversaryvillage.org/adversary-events/DEFCON-34/Yi-Ting-Shen/">
+   <meta property="og:type" content="profile" />
+   <meta property="og:site_name" content="Adversary Village" />
+   <meta property="og:url" content="https://adversaryvillage.org/adversary-events/DEFCON-34/Yi-Ting-Shen/" />
+   <meta property="og:title" content="Yi Ting Shen | Adversary Village at DEF CON 34" />
+   <meta property="og:description" content="Yi Ting Shen - AIFT - Associate GenAI Security Researcher. Presenting the talk 'SEND: Teaching Machines to Lie to Defenders' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Yi-Ting-Shen.jpg" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@AdversaryVillag" />
+   <meta name="twitter:title" content="Yi Ting Shen | Adversary Village at DEF CON 34" />
+   <meta name="twitter:description" content="Yi Ting Shen - AIFT - Associate GenAI Security Researcher. Presenting the talk 'SEND: Teaching Machines to Lie to Defenders' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta name="twitter:image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Yi-Ting-Shen.jpg" />
+   <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "ProfilePage",
+    "mainEntity":  {
+                       "@type":  "Person",
+                       "name":  "Yi Ting Shen",
+                       "jobTitle":  "AIFT - Associate GenAI Security Researcher",
+                       "description":  "I am currently working as a Associate Associate GenAI Security Researcher at AIFT. Over the past year, I have presented various cybersecurity-related research topics at more than 20 domestic and international conferences (DEFCON, ROOTCON, BSides..). I enjoy conducting research, especially focusing on AI/ML applications this year. By engaging with different technical domains, I aim to solve cybersecurity problems, uncover vulnerabilities across various platforms, and identify new CVE vulnerabilities. I have found vulnerabilities in multiple platforms, including Google, Cloudflare, open-source projects, and educational institutions. Learning and research have become the central focus of my life. Blog: https://no-flag.com/",
+                       "url":  "https://adversaryvillage.org/adversary-events/DEFCON-34/Yi-Ting-Shen/",
+                       "image":  "https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Yi-Ting-Shen.jpg",
+                       "sameAs":  [
+                                      "https://www.linkedin.com/in/yi-ting-shen-712434211/"
+                                  ],
+                       "performerIn":  {
+                                           "@type":  "Event",
+                                           "name":  "Adversary Village at DEF CON 34",
+                                           "startDate":  "2026-08-07",
+                                           "endDate":  "2026-08-09",
+                                           "location":  {
+                                                            "@type":  "Place",
+                                                            "name":  "Las Vegas Convention Center",
+                                                            "address":  "Las Vegas, NV, USA"
+                                                        }
+                                       }
+                   }
+}
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../../css/base.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../css/speaker.css">
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <link rel="apple-touch-icon" sizes="57x57" href="../../../favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="../../../favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="../../../favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="../../../favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../../../favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="../../../favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="../../../favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../../../favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../../../favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="../../../favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="top">
+
+   <div id="preloader">
+      <div id="loader" class="dots-jump">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+
+   <header class="s-header">
+      <div class="row">
+         <div class="header-logo">
+            <a class="site-logo" href="../../../">
+               <img src="../../../images/adversary-village-org.png" alt="Homepage">
+            </a>
+         </div>
+         <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+               <li><a href="../../../">Home</a></li>
+               <li class="current"><a href="../../">Events</a>
+               </li>
+               <li><a href="../../../call-for-papers">Call for papers</a></li>
+               <li><a href="../../../adversary-wars-ctf">Adversary Wars CTF</a></li>
+               <li><a href="../../../sponsors">Sponsors</a></li>
+               <li><a href="../../../live-streaming-series">LiveStream</a></li>
+               <li><a href="../../../about-us">About</a></li>
+            </ul>
+         </nav>
+         <a class="header-menu-toggle" href="#"><span></span></a>
+      </div>
+   </header>
+
+   <section id="features" class="s-features target-section" style="background-color: #0e0e0e; color: #f1b435;">
+      <div class="row section-header" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1" style="color: #f1b435;  text-align: center; padding-bottom: 4.8rem; ">
+               [Speakers]</br>Adversary Village at </br>DEF CON 34
+            </h1>
+            <div class="home-content__btn-wrap" style="margin-top: 2.2rem; text-align: center;">
+               <a href="../" class="btn btn--primary" target="_blank"
+                  style="background-color: #105f66; border-color:#105f66;">
+                  DEF CON 34 Schedule
+               </a>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <section id="features" style="background-color:white;">
+      <div class="row half-bottom" style="background-color:white;">
+         <div class="col-six tab-full">
+            </br>
+            <p style="text-align: center;"><img src="../images/speakers/Yi-Ting-Shen.jpg"
+                  sizes="(max-width: 1000px) 100vw, 1000px" alt="Yi Ting Shen">
+            <div class="footer-social-icons">
+               <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/yi-ting-shen-712434211/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="#" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
+               </ul>
+            </div>
+            </p>
+         </div>
+         <div class="col-six tab-full">
+            <h2> Yi Ting Shen </h2>
+            <p class="job">AIFT - Associate GenAI Security Researcher</p>
+            <p>I am currently working as a Associate Associate GenAI Security Researcher at AIFT. Over the past year, I have presented various cybersecurity-related research topics at more than 20 domestic and international conferences (DEFCON, ROOTCON, BSides..). I enjoy conducting research, especially focusing on AI/ML applications this year. By engaging with different technical domains, I aim to solve cybersecurity problems, uncover vulnerabilities across various platforms, and identify new CVE vulnerabilities. I have found vulnerabilities in multiple platforms, including Google, Cloudflare, open-source projects, and educational institutions. Learning and research have become the central focus of my life.<br>
+<br>
+Blog: https://no-flag.com/</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="features" style="background-color:#0e0e0e; padding-top: 20px; color: white;">
+
+      <div class="row" style="background-color:#0e0e0e; color: white;">
+         <div class="col-twelve tab-full">
+
+            <h2 style="color: #6ccdb8;">SEND: Teaching Machines to Lie to Defenders</h2>
+            <p>
+               <span style="font-weight: 600; color: white;">TBA | Friday, Aug 7<sup>th</sup> 2026 | DEF CON Creator Stages, Las Vegas Convention Center</span>
+               </br>
+               <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;">Talk</span>
+            </p>
+                        <p style="color:white;"><strong style="color:#f1b435;">Co-presented with:</strong> <a href="../Ariz-Soriano/" style="color:#6ccdb8;">Ariz Soriano</a></p>
+            <h3 style="color:#f1b435; margin-top:2rem;">Abstract</h3>
+            <div style="color:white;"><p>Cyber deception research has spent decades placing honeypots, honeyfiles, and fake credentials in enterprise environments to catch attackers. Yet practitioners in real Security Operations Centers do not investigate individual artifacts in isolation  -  they construct causal narratives to explain sequences of events, routing attention toward high-severity signals, end-of-attack-chain activities, and operations in sensitive infrastructure. As Sundaramurthy et al. documented through ethnographic study of live SOC environments, analyst behavior under alert overload is governed by triage heuristics and pattern-matching rather than systematic evidence review  -  creating a systematic cognitive attack surface that no existing offensive framework has been designed to exploit.</p><br>
+<p>In this work, we introduce SEND (Self-Evolving Narrative Deception), an adversary simulation framework that reframes offensive deception as an investigation narrative poisoning problem: the objective is not to evade detection, but to corrupt the causal story defenders reconstruct during incident response. Drawing on direct consultation with active SOC analysts and incident responders, we identify three empirically grounded cognitive attack vectors that structure the SEND action space  -  (a.) severity escalation exploitation, targeting the operational requirement to fully investigate HIGH/CRITICAL alerts regardless of underlying harm, (b.) end-of-chain activity simulation, targeting mandatory runbook escalation triggered by ransomware staging or exfiltration patterns regardless of actual file content, and (c.) sensitive location poisoning, targeting the elevated investigative attention guaranteed by activity near domain controllers, privileged shares, and executive endpoints.</p><br>
+<p>We present a design analysis showing that each attack vector can be instantiated at negligible red team cost  -  failed LSASS reads, dummy outbound transfers of random bytes, and mass-created ransomware-extension files are designed to generate the same mandatory investigation burden as their genuine counterparts, without requiring those actions to succeed. A key design distinction structures the SEND action space: activity simulation generates authentic system telemetry that defenders cannot distinguish from genuine attacker behavior at the telemetry level, while artifact implantation provides cross-system narrative coherence. A Narrative Consistency Engine coordinates both modalities using an LLM to ensure every fabricated email thread, file access log, and collaboration platform entry supports a single coherent false story  -  shifting the defender's task from "did something anomalous happen?" to "which of several plausible explanations is true?"<br>
+Moreover, to enable rigorous evaluation of narrative deception beyond detection evasion metrics, we introduce the Investigation Narrative Divergence Reward (INDR)  -  a four-dimensional cognitive metric quantifying divergence across event reconstruction, causal graph structure, inferred attacker intent, and attribution outcome. INDR is designed to capture a class of deception success that existing red team metrics cannot measure: a defender may correctly identify every process in a malicious process tree yet still produce an incident report attributing the wrong objective, wrong actor, and wrong scope. We further formalize Investigation Graph Poisoning as a measurable attack surface, and outline experimental protocols for evaluating SEND across SOC environments of varying maturity, tooling, and analyst expertise.</p><br>
+<p>In conclusion, SEND establishes the incident investigation itself as a first-class attack surface in adversary simulation, derives deception strategy from empirically grounded blue team cognitive prioritization rather than intuition, and proposes INDR as a new evaluation metric for simulation fidelity  -  one that asks not whether a simulation triggered alerts, but whether it distorted the reasoning of the defenders who responded to them. Our framework operationalizes at a systematic level what nation-state actors have long practiced intuitively, and makes that threat model legible enough for both red teams and defenders to reason about and build against.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Talk outline</h3>
+            <div style="color:white;"><p>[0:00 – 3:00] Opening: The Wrong Question</p><br>
+<p>* The assumption every red team operates on: "How do I avoid being detected?"<br>
+* The real question experienced defenders ask: "What story explains these events?"<br>
+* Cold open: walk the audience through a hypothetical IR scenario where the defenders caught everything  -  and still got the narrative completely wrong<br>
+* Thesis stated: detection is not the attack surface. The investigation is.</p><br>
+<p>[3:00 – 8:00] How SOCs Actually Investigate (And Why That's Exploitable)</p><br>
+<p>* Not every alert gets equal attention. How do analysts actually triage under load?<br>
+* Direct insights from practitioner consultation: the three consistent prioritization behaviors</p><br>
+<p>* Severity escalation bias  -  critical alerts get fully investigated, full stop<br>
+  * End-of-chain focus  -  ransomware staging, exfiltration patterns, and credential dumps trigger mandatory runbooks, regardless of whether any harm has actually occurred<br>
+  * Sensitive location salience  -  anything near DC01, SYSVOL, HR shares, or executive endpoints gets deep investigation even at low severity<br>
+* The cognitive science behind this: Endsley's situation awareness model, Klein's Recognition-Primed Decision framework, and how narrative construction shapes incident conclusions<br>
+* Key insight: defenders investigate causal stories, not artifacts. A plausible false story, supported by authentic telemetry, is more dangerous than a genuine attack that looks anomalous</p><br>
+<p>[8:00 – 13:00] SEND: Architecture and Action Space</p><br>
+<p>* What SEND is: an adversarial simulation framework that treats the defender's investigation graph as an optimization target<br>
+* The Deception Priority Engine: how the three tiers map to concrete red team actions</p><br>
+<p>* Tier 1  -  Severity-aware alert fabrication:</p><br>
+<p>* LSASS read attempts (no actual dump)<br>
+    * Fake scheduled tasks as SYSTEM<br>
+    * Failed logon attempts to non-existent accounts (different Event ID sub-status, zero lockout risk)<br>
+    * Kerberoasting enumeration<br>
+  * Tier 2  -  End-of-chain simulation:</p><br>
+<p>* Sensitivity-named staging files<br>
+    * Dummy large-file outbound transfers (random data, real DLP trigger)<br>
+    * Mass ransomware-extension file creation<br>
+    * Zero-sleep C2 beaconing<br>
+  * Tier 3  -  Sensitive location exploitation:</p><br>
+<p>* Route all deceptive activity through DC01<br>
+    * SYSVOL<br>
+    * Finance/HR shares<br>
+    * Backup infrastructure<br>
+* The key insight: the red team does not need these actions to succeed. They only need to log. A failed LSASS access generates the same mandatory investigation as a successful one. Cost: negligible. Defender cost: hours.<br>
+* Activity simulation vs. artifact implantation: why behavior-generated telemetry is fundamentally harder to dismiss as deception than static files<br>
+* The Narrative Consistency Engine: how an LLM layer ensures cross-artifact coherence across the fabricated scenario</p><br>
+<p>[13:00 – 18:00] Live Demonstration</p><br>
+<p>* We walk through a complete end-to-end deception campaign as generated by SEND  -  from priority tier selection through narrative artifact generation to the resulting defender investigation graph<br>
+* The demo concretely illustrates how a coordinated set of low-cost actions, each individually unremarkable, assembles into a coherent false narrative that a defender following standard SOC procedure would be compelled to investigate in full<br>
+* The audience sees what the investigation looks like from the blue team's perspective  -  and then sees what actually happened</p><br>
+<p>Specific scenario and tooling to be finalized prior to submission of final materials.</p><br>
+<p>[18:00 – 23:00] Measuring What Matters: INDR and the Cognitive Reward Model</p><br>
+<p>* Why traditional evasion metrics are the wrong measurement for narrative deception<br>
+* Introducing INDR (Investigation Narrative Divergence Reward): a four-dimensional metric for measuring how badly the defender's reconstruction diverges from reality</p><br>
+<p>* Event divergence: did they identify the right events?<br>
+  * Causal divergence: did they connect events correctly? (measured via graph edit distance on the investigation graph)<br>
+  * Intent divergence: did they infer the correct attacker objective? (semantic embedding comparison)<br>
+  * Attribution divergence: did they identify the right actor?<br>
+* A defender can correctly observe every malicious process in the tree and still score high divergence on intent and attribution  -  SEND optimizes the entire chain, not just individual alerts<br>
+* Additional reward signals:</p><br>
+<p>* Investigation graph poison ratio<br>
+  * Severity queue saturation<br>
+  * Confidence miscalibration<br>
+* Multi-agent co-evolutionary training:</p><br>
+<p>* Red agents learn which narratives work<br>
+  * Blue agents adapt countermeasures<br>
+  * Co-evolution surfaces emergent deception strategies that nobody pre-designed<br>
+* Preview of expected co-evolutionary dynamics:</p><br>
+<p>* Early generations use basic artifact planting<br>
+  * Later generations discover that end-of-chain simulation creates mandatory escalation paths no analyst heuristic can shortcut</p><br>
+<p>[23:00 – 27:00] Implications and Open Questions</p><br>
+<p>* What this means for red team doctrine:</p><br>
+<p>* Stealth is not always the right objective<br>
+  * Sometimes being partially caught in the right way is more disruptive than full evasion<br>
+* What this means for blue teams:</p><br>
+<p>* How to build investigation workflows more resilient to narrative poisoning<br>
+  * Narrative plausibility scoring<br>
+  * Decoupled confirmation pipelines<br>
+  * Skepticism toward end-of-chain discoveries that arrive too cleanly<br>
+* What this means for adversary simulation practitioners:</p><br>
+<p>* INDR as a new class of evaluation metric for simulation fidelity<br>
+  * Measuring whether a simulation actually distorted defender reasoning, not just triggered alerts<br>
+* Open research questions previewed:</p><br>
+<p>* Can evolved narrative deception strategies transfer across SOC environments with different maturity levels?<br>
+  * Are LLM-assisted defenders more susceptible to well-crafted narrative deception due to similar confirmation bias patterns?<br>
+  * What novel tactic families emerge from long-term co-evolution that are not present in the initial action space?<br>
+* Ethics and responsible use framing:</p><br>
+<p>* This research operationalizes what nation-state actors already do intuitively<br>
+  * The goal is to make the threat legible so defenders can build countermeasures</p><br>
+<p>[27:00 – 30:00] Conclusion and Q&amp;A Setup</p><br>
+<p>* Summary:</p><br>
+<p>* SEND treats the incident investigation as an attack surface<br>
+  * Derives deception strategy from empirically grounded blue team cognition<br>
+  * Measures success as narrative divergence rather than detection evasion<br>
+* Core takeaway for the room:</p><br>
+<p>* The next time you do a purple team exercise, ask not "was the attack detected?" but "did the incident report reflect what actually happened?"<br>
+* Invitation to Q&amp;A and collaboration:</p><br>
+<p>* This is an early-stage framework<br>
+  * Practitioners with SOC/IR/adversary simulation experience are exactly the people whose input shapes what gets built</p><br>
+<p>This contains detailed research information:<br>
+https://drive.google.com/file/d/1QANouyEWrzCVAzpHl47x7BHk8LUxlqJ4/view?usp=sharing</p></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="schedule" class="section-with-bg"
+      style="padding-top:35px; padding-bottom: 20px; background: url('../images/dc34-wall-adv.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #6ccdb8;">
+                  Agency.
+               </p>
+            </div>
+
+         </div>
+         <div class="row align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+               <div class="col-twelve tab-full" style="padding 0 2px;">
+
+                  <style>
+                     @media (min-width: 1000px) {
+                        .contents {
+                           margin-left: 10%;
+                        }
+                     }
+                  </style>
+                  <center>
+                     <div class="col-five contents" style="padding-right:0px;">
+                        <a href="https://defcon.org/html/defcon-34/dc-34-index.html" target="_blank">
+                           <img width="250" height="112" class="pull-center" alt="DEF CON 34"
+                              src="../images/dc34-logo-adv.png"></a>
+
+                     </div>
+
+                     <div class="col-seven" style="width: 40%;">
+                        <a href="https://adversaryvillage.org/adversary-events/DEFCON-34/" target="_blank"
+                           style="padding-left:-50%">
+                           <img width="250" height="112" class="pull-center" alt="Adversary Village"
+                              src="../images/adv-logo-dc33.png"></a>
+
+                     </div>
+                  </center>
+               </div>
+
+            </div>
+
+         </div>
+
+         </br>
+
+   </section>
+
+
+   <section id="download" class="s-download target-section" style="background-color: #121619; padding-top:8rem;">
+
+      <div class="row section-header align-center" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1">
+               Join Adversary Village Discord Server.
+            </h1>
+            <p class="lead">
+               Join Adversary Village official Discord server to connect with our amazing community of adversary
+               simulation experts and offensive security researchers!
+            </p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+               <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join
+                     Discord</a></li>
+
+            </ul>
+         </div>
+      </div>
+
+
+
+   </section>
+
+   <footer class="s-footer footer">
+
+
+      <div class="row footer__bottom">
+         <div class="footer__about col-five tab-full left">
+            <h4>About Adversary Village.</h4>
+            <p>
+               Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics,
+               Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a
+               bit of purple teaming.
+            </p>
+            <ul class="footer__social">
+               <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+               <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"
+                        aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-five md-seven tab-full right end">
+            <div class="row">
+               <div class="footer__site-links col-five mob-full">
+                  <h4>Site links.</h4>
+                  <ul class="footer__site-links">
+                     <li><a href="../../DEFCON-34" target="_blank">DEF CON 34</a></li>
+                     <li><a href="../../../about-us">About Us</a></li>
+                     <li><a href="../../../call-for-papers">Call for papers</a></li>
+                     <li><a href="../../../call-for-volunteers">Call for volunteers</a></li>
+                     <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                     <li><a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
+                  </ul>
+               </div>
+               <div class="footer__contact col-seven mob-full">
+                  <h4>Contact Us.</h4>
+                  <p>
+                     Would you like to sponsor? or have a question for us? Ping us: <br>
+                     <a href="mailto:hello@adversaryvillage.org"
+                        class="footer__mail-link">hello@adversaryvillage.org</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-full ss-copyright">
+            <span>Copyright &copy; 2021-2026, Adversary Village<sup>&reg;</sup> All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="go-top">
+         <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+   </footer>
+   <script src="../js/jquery-3.2.1.min.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>

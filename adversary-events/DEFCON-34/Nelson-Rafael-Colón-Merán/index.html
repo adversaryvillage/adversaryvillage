@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+   <title>Nelson Rafael Colón Merán | Adversary Village at DEF CON 34</title>
+   <meta name="description" content="Nelson Rafael Colón Merán - Security Engineer. Presenting the talk 'Haetae: An Agent to Takedown North Korean C2 Servers' at Adversary Village, DEF CON 34, Las Vegas.">
+   <meta name="keywords" content="Nelson Rafael Colón Merán, Haetae: An Agent to Takedown North Korean C2 Servers, Adversary Village, DEF CON 34, DEF CON Creator Stage, talk, adversary simulation, offensive security, red team">
+   <meta name="author" content="Adversary Village at DEF CON 34">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://adversaryvillage.org/adversary-events/DEFCON-34/Nelson-Rafael-Colón-Merán/">
+   <meta property="og:type" content="profile" />
+   <meta property="og:site_name" content="Adversary Village" />
+   <meta property="og:url" content="https://adversaryvillage.org/adversary-events/DEFCON-34/Nelson-Rafael-Colón-Merán/" />
+   <meta property="og:title" content="Nelson Rafael Colón Merán | Adversary Village at DEF CON 34" />
+   <meta property="og:description" content="Nelson Rafael Colón Merán - Security Engineer. Presenting the talk 'Haetae: An Agent to Takedown North Korean C2 Servers' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta property="og:image" itemprop="image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Nelson-Rafael-Colón-Merán.jpg" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@AdversaryVillag" />
+   <meta name="twitter:title" content="Nelson Rafael Colón Merán | Adversary Village at DEF CON 34" />
+   <meta name="twitter:description" content="Nelson Rafael Colón Merán - Security Engineer. Presenting the talk 'Haetae: An Agent to Takedown North Korean C2 Servers' at Adversary Village, DEF CON 34, Las Vegas." />
+   <meta name="twitter:image" content="https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Nelson-Rafael-Colón-Merán.jpg" />
+   <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@type":  "ProfilePage",
+    "mainEntity":  {
+                       "@type":  "Person",
+                       "name":  "Nelson Rafael Colón Merán",
+                       "jobTitle":  "Security Engineer",
+                       "description":  "Security Engineer at Bitso, Latin America\u0027s leading crypto-first financial platform. I\u0027ve specialized in red team operations, penetration testing, and malware development. Recognized speaker in the Dominican Republic\u0027s RedTeamRD cybersecurity community, where I\u0027ve given a couple talks and previously assisted DEFCON as a speaker.",
+                       "url":  "https://adversaryvillage.org/adversary-events/DEFCON-34/Nelson-Rafael-Colón-Merán/",
+                       "image":  "https://adversaryvillage.org/adversary-events/DEFCON-34/images/speakers/Nelson-Rafael-Colón-Merán.jpg",
+                       "sameAs":  [
+                                      "https://www.linkedin.com/in/nelcolon22/",
+                                      "https://x.com/chiclematicao"
+                                  ],
+                       "performerIn":  {
+                                           "@type":  "Event",
+                                           "name":  "Adversary Village at DEF CON 34",
+                                           "startDate":  "2026-08-07",
+                                           "endDate":  "2026-08-09",
+                                           "location":  {
+                                                            "@type":  "Place",
+                                                            "name":  "Las Vegas Convention Center",
+                                                            "address":  "Las Vegas, NV, USA"
+                                                        }
+                                       }
+                   }
+}
+   </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../../../css/base.css">
+   <link rel="stylesheet" href="../../../css/vendor.css">
+   <link rel="stylesheet" href="../../../css/main.css">
+   <link rel="stylesheet" href="../css/speaker.css">
+   <script src="../js/modernizr.js"></script>
+   <script src="../js/pace.min.js"></script>
+   <link rel="apple-touch-icon" sizes="57x57" href="../../../favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="../../../favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="../../../favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="../../../favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="../../../favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="../../../favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="../../../favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="../../../favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="../../../favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="../../../favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="../../../favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+   <link rel="manifest" href="../../../favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="../../../favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="top">
+
+   <div id="preloader">
+      <div id="loader" class="dots-jump">
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+
+   <header class="s-header">
+      <div class="row">
+         <div class="header-logo">
+            <a class="site-logo" href="../../../">
+               <img src="../../../images/adversary-village-org.png" alt="Homepage">
+            </a>
+         </div>
+         <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+               <li><a href="../../../">Home</a></li>
+               <li class="current"><a href="../../">Events</a>
+               </li>
+               <li><a href="../../../call-for-papers">Call for papers</a></li>
+               <li><a href="../../../adversary-wars-ctf">Adversary Wars CTF</a></li>
+               <li><a href="../../../sponsors">Sponsors</a></li>
+               <li><a href="../../../live-streaming-series">LiveStream</a></li>
+               <li><a href="../../../about-us">About</a></li>
+            </ul>
+         </nav>
+         <a class="header-menu-toggle" href="#"><span></span></a>
+      </div>
+   </header>
+
+   <section id="features" class="s-features target-section" style="background-color: #0e0e0e; color: #f1b435;">
+      <div class="row section-header" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1" style="color: #f1b435;  text-align: center; padding-bottom: 4.8rem; ">
+               [Speakers]</br>Adversary Village at </br>DEF CON 34
+            </h1>
+            <div class="home-content__btn-wrap" style="margin-top: 2.2rem; text-align: center;">
+               <a href="../" class="btn btn--primary" target="_blank"
+                  style="background-color: #105f66; border-color:#105f66;">
+                  DEF CON 34 Schedule
+               </a>
+
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <section id="features" style="background-color:white;">
+      <div class="row half-bottom" style="background-color:white;">
+         <div class="col-six tab-full">
+            </br>
+            <p style="text-align: center;"><img src="../images/speakers/Nelson-Rafael-Colón-Merán.jpg"
+                  sizes="(max-width: 1000px) 100vw, 1000px" alt="Nelson Rafael Colón Merán">
+            <div class="footer-social-icons">
+               <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/nelcolon22/" target="_blank" class="social-icon"> <i
+                           class="fa fa-linkedin linkedin"></i></a></li>
+                  <li><a href="https://x.com/chiclematicao" target="_blank" class="social-icon"> <i
+                           class="fa fa-twitter twitter"></i></a></li>
+               </ul>
+            </div>
+            </p>
+         </div>
+         <div class="col-six tab-full">
+            <h2> Nelson Rafael Colón Merán </h2>
+            <p class="job">Security Engineer</p>
+            <p>Security Engineer at Bitso, Latin America's leading crypto-first financial platform. I've specialized in red team operations, penetration testing, and malware development. <br>
+<br>
+Recognized speaker in the Dominican Republic's RedTeamRD cybersecurity community, where I've given a couple talks and previously assisted DEFCON as a speaker.</p>
+         </div>
+      </div>
+   </section>
+
+   <section id="features" style="background-color:#0e0e0e; padding-top: 20px; color: white;">
+
+      <div class="row" style="background-color:#0e0e0e; color: white;">
+         <div class="col-twelve tab-full">
+
+            <h2 style="color: #6ccdb8;">Haetae: An Agent to Takedown North Korean C2 Servers</h2>
+            <p>
+               <span style="font-weight: 600; color: white;">TBA | Friday, Aug 7<sup>th</sup> 2026 | DEF CON Creator Stages, Las Vegas Convention Center</span>
+               </br>
+               <span style="font-size:1rem; background-color: #105f66; padding: 4px; color: white;">Talk</span>
+            </p>
+                        <p style="color:white;"><strong style="color:#f1b435;">Co-presented with:</strong> <a href="../Mauro-Eldritch/" style="color:#6ccdb8;">Mauro Eldritch</a></p>
+            <h3 style="color:#f1b435; margin-top:2rem;">Abstract</h3>
+            <div style="color:white;"><p>In this talk, we introduce Haetae, an agent designed to profile, identify, and exploit C2 frameworks used by North Korean malware.</p><br>
+<p>Haetae supports both automated and interactive modes, allowing analysts to map and understand adversary infrastructure with different levels of control. It is built around a flexible rule-based system, enabling users to extend and refine detections as new patterns and frameworks emerge.</p><br>
+<p>In this first release, we will walk through real-world cases where Haetae was used to identify and take down infrastructure associated with Mach-O Man and POWerful Armadillo.</p><br>
+<p>We will also release a safe emulator of both malware C2 servers, allowing researchers and newcomers to experiment with Haetae in realistic, controlled environments without risk.</p><br>
+<p>This is a highly technical talk but can be enjoyed by both beginners and seasoned threat hunters.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Talk outline</h3>
+            <div style="color:white;"><p>Haetae – Detailed Outline</p><br>
+<p>0. Opening / Hook</p><br>
+<p>- What Haetae is: profiling, identifying and exploiting DPRK C2 frameworks<br>
+- Why it matters: repeatable patterns lead to repeatable takedowns<br>
+- What we will show: real cases, real infrastructure, live demos</p><br>
+<p>A) Who we are and Lazarus overview<br>
+- Brief introduction and prior work on DPRK campaigns<br>
+- Lazarus as an ecosystem, not a single group<br>
+- Why their infrastructure is a viable target</p><br>
+<p>B) Common Lazarus techniques<br>
+- Reuse of C2 frameworks across campaigns<br>
+- Weak validation, exposed endpoints and predictable routes</p><br>
+<p>C) Haetae agent design<br>
+- Agent for C2 profiling and exploitation<br>
+- Automatic mode for fast fingerprinting at scale<br>
+- Interactive mode for manual exploration and validation<br>
+- Rule-based engine covering endpoints, headers, responses and artifacts<br>
+- Extensible by users to refine detections<br>
+- Separation of identification, validation and exploitation</p><br>
+<p>D) POWerful Armadillo<br>
+- Rework of Digit Stealer<br>
+- C2 structure and communication model<br>
+- Identifiable traits including endpoints, response formats and weak validation<br>
+- What can be fingerprinted remotely</p><br>
+<p>E) Demo – POWerful Armadillo<br>
+- Live demo of detection and exploitation using Haetae</p><br>
+<p>F) GoLangGhost new iteration<br>
+- Updated variant of GoLangGhostRAT<br>
+- Changes compared to previous versions<br>
+- C2 behavior and exposed surfaces<br>
+- Profiling opportunities</p><br>
+<p>G) Demo – GoLangGhost<br>
+- Live demo of detection and exploitation using Haetae</p><br>
+<p>H) Mach-O Man<br>
+- macOS-focused malware kit<br>
+- Differences from typical DPRK tooling<br>
+- C2 design and communication patterns<br>
+- Unique fingerprinting angles</p><br>
+<p>I) Demo – Mach-O Man<br>
+- Live demo of detection and exploitation using Haetae</p><br>
+<p>J) Release and resources<br>
+- Haetae download links<br>
+- Rule sets and examples<br>
+- Safe C2 emulators for GoLangGhost, POWerful Armadillo and Mach-O Man<br>
+- How to get started</p><br>
+<p>K) Questions and answers<br>
+- Open discussion<br>
+- Use cases, limitations and extensions</p></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="schedule" class="section-with-bg"
+      style="padding-top:35px; padding-bottom: 20px; background: url('../images/dc34-wall-adv.png'); background-repeat: no-repeat; background-size: cover;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+         <div class="row section-header align-center" data-aos="fade-up">
+            <div class="col-full">
+
+               <p class="lead" style="font-size: 4rem; font-weight: 900; color: #6ccdb8;">
+                  Agency.
+               </p>
+            </div>
+
+         </div>
+         <div class="row align-center" data-aos="fade-up">
+            <div class="row download-bottom-image" data-aos="fade-up">
+               <div class="col-twelve tab-full" style="padding 0 2px;">
+
+                  <style>
+                     @media (min-width: 1000px) {
+                        .contents {
+                           margin-left: 10%;
+                        }
+                     }
+                  </style>
+                  <center>
+                     <div class="col-five contents" style="padding-right:0px;">
+                        <a href="https://defcon.org/html/defcon-34/dc-34-index.html" target="_blank">
+                           <img width="250" height="112" class="pull-center" alt="DEF CON 34"
+                              src="../images/dc34-logo-adv.png"></a>
+
+                     </div>
+
+                     <div class="col-seven" style="width: 40%;">
+                        <a href="https://adversaryvillage.org/adversary-events/DEFCON-34/" target="_blank"
+                           style="padding-left:-50%">
+                           <img width="250" height="112" class="pull-center" alt="Adversary Village"
+                              src="../images/adv-logo-dc33.png"></a>
+
+                     </div>
+                  </center>
+               </div>
+
+            </div>
+
+         </div>
+
+         </br>
+
+   </section>
+
+
+   <section id="download" class="s-download target-section" style="background-color: #121619; padding-top:8rem;">
+
+      <div class="row section-header align-center" data-aos="fade-up">
+         <div class="col-full">
+            <h1 class="display-1">
+               Join Adversary Village Discord Server.
+            </h1>
+            <p class="lead">
+               Join Adversary Village official Discord server to connect with our amazing community of adversary
+               simulation experts and offensive security researchers!
+            </p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+               <li><a href="https://discord.gg/GDB3rC7KYz" title="" class="badge-appstore" target="_blank">Join
+                     Discord</a></li>
+
+            </ul>
+         </div>
+      </div>
+
+
+
+   </section>
+
+   <footer class="s-footer footer">
+
+
+      <div class="row footer__bottom">
+         <div class="footer__about col-five tab-full left">
+            <h4>About Adversary Village.</h4>
+            <p>
+               Adversary Village is a community initiative purely focuses on Adversary simulation, emulation tactics,
+               Simulation CTFs, Supply chain security, Adversary Tactics, Philosophy, life, urban survival skills and a
+               bit of purple teaming.
+            </p>
+            <ul class="footer__social">
+               <li><a href="https://twitter.com/AdversaryVillag" target="_blank"><i class="fab fa-x-twitter"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://instagram.com/AdversaryVillage" target="_blank"><i class="fab fa-instagram"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/company/adversaryvillage" target="_blank"><i
+                        class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+               <li><a href="https://facebook.com/AdversaryVillage" target="_blank"><i class="fab fa-facebook-f"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://twitch.tv/AdversaryVillage" target="_blank"><i class="fab fa-twitch"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://youtube.com/AdversaryVillage" target="_blank"><i class="fab fa-youtube"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://defcon.social/@AdversaryVillage" target="_blank"><i class="fab fa-mastodon"
+                        aria-hidden="true"></i></a></li>
+               <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank"><i class="fab fa-discord"
+                        aria-hidden="true"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-five md-seven tab-full right end">
+            <div class="row">
+               <div class="footer__site-links col-five mob-full">
+                  <h4>Site links.</h4>
+                  <ul class="footer__site-links">
+                     <li><a href="../../DEFCON-34" target="_blank">DEF CON 34</a></li>
+                     <li><a href="../../../about-us">About Us</a></li>
+                     <li><a href="../../../call-for-papers">Call for papers</a></li>
+                     <li><a href="../../../call-for-volunteers">Call for volunteers</a></li>
+                     <li><a href="https://discord.gg/GDB3rC7KYz" target="_blank">Join Discord</a></li>
+                     <li><a href="
+                           https://www.defcon.org/html/links/dc-code-of-conduct.html">Code of conduct</a></li>
+                  </ul>
+               </div>
+               <div class="footer__contact col-seven mob-full">
+                  <h4>Contact Us.</h4>
+                  <p>
+                     Would you like to sponsor? or have a question for us? Ping us: <br>
+                     <a href="mailto:hello@adversaryvillage.org"
+                        class="footer__mail-link">hello@adversaryvillage.org</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="col-full ss-copyright">
+            <span>Copyright &copy; 2021-2026, Adversary Village<sup>&reg;</sup> All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="go-top">
+         <a class="smoothscroll" title="Back to Top" href="#top"></a>
+      </div>
+   </footer>
+   <script src="../js/jquery-3.2.1.min.js"></script>
+   <script src="../js/plugins.js"></script>
+   <script src="../js/main.js"></script>
+</body>
+
+</html>
