@@ -483,3 +483,10 @@
 #content-mobile {display: block;}
 
 }
+
+/* Creator Stage (float grid): force each speaker column to start a cleared row
+   so co-speakers stay aligned under the main speaker regardless of the
+   time-column height. Only applies at desktop widths; mobile stacks anyway. */
+@media screen and (min-width: 1025px) {
+  [id^="creator-stage-day"] .schedule-item .col-md-3 { clear: both; }
+}
