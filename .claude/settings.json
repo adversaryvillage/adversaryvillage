@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(& \"C:\\\\Users\\\\ADVERS~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Adversary-Documents-GitHub-adversaryvillage\\\\76bae6d2-5fff-429e-a188-fbf3f2b42fdf\\\\scratchpad\\\\gen-creator-v2.ps1\")",
-      "Bash(awk 'NR>=803 && NR<=1390 && /id=\"content-mobile\"/{f=1} f&&c<6{print NR\": \"$0; c++} /col-md-9/&&f{f=0;c=0}' index.html)",
-      "PowerShell(& \"C:\\\\Users\\\\ADVERS~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Adversary-Documents-GitHub-adversaryvillage\\\\76bae6d2-5fff-429e-a188-fbf3f2b42fdf\\\\scratchpad\\\\gen-reorder.ps1\")"
-    ]
-  }
-}
