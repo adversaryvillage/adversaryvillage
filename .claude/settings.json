@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(& \"C:\\\\Users\\\\ADVERS~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Adversary-Documents-GitHub-adversaryvillage\\\\76bae6d2-5fff-429e-a188-fbf3f2b42fdf\\\\scratchpad\\\\extract-sched.ps1\")",
-      "PowerShell(& \"C:\\\\Users\\\\ADVERS~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Adversary-Documents-GitHub-adversaryvillage\\\\76bae6d2-5fff-429e-a188-fbf3f2b42fdf\\\\scratchpad\\\\gen-sched-style.ps1\")",
-      "PowerShell(& \"C:\\\\Users\\\\ADVERS~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Adversary-Documents-GitHub-adversaryvillage\\\\76bae6d2-5fff-429e-a188-fbf3f2b42fdf\\\\scratchpad\\\\diff-sched.ps1\")"
-    ]
-  }
-}
