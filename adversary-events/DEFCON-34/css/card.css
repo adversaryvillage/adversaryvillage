@@ -484,9 +484,13 @@
 
 }
 
-/* Creator Stage (float grid): force each speaker column to start a cleared row
-   so co-speakers stay aligned under the main speaker regardless of the
-   time-column height. Only applies at desktop widths; mobile stacks anyway. */
+/* Schedule (desktop): media-object layout. Keep the time/tag column floated on
+   the left, then stack EVERY speaker in the right 75% column so co-speakers sit
+   directly under the main speaker with no gap, no matter how tall the time/tag
+   column is. overflow:hidden makes each speaker block contain its round photo.
+   Mobile (<=1024px) stacks full-width and is unaffected. */
 @media screen and (min-width: 1025px) {
-  [id^="creator-stage-day"] .schedule-item .col-md-3 { clear: both; }
+  .schedule-item .col-md-3 { float: left; width: 25%; clear: none; }
+  .schedule-item .col-md-3 ~ .col-md-3 { display: none; }   /* drop the empty co-speaker spacers */
+  .schedule-item .col-md-9 { float: none; clear: none; width: 75%; margin-left: 25%; overflow: hidden; }
 }
