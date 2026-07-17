@@ -23,6 +23,7 @@
       <link rel="stylesheet" href="./css/main.css">
       <link rel="stylesheet" href="./css/bootstrap.css">
       <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/awctf-scenario.css">
 
       <script src="js/modernizr.js"></script>
       <script src="js/pace.min.js"></script>
@@ -100,26 +101,27 @@
 
       <section id="features" class="s-features target-section" style="padding-bottom:0px; padding-top:0px; background-color: #101125;">
 
-         <section id="schedule" class="section-with-bg" style="padding-top:45px; padding-bottom:35px; background-color: #017fa4;">
+         <section id="schedule" class="section-with-bg" style="padding-top:50px; padding-bottom:55px; background-color: #017fa4;">
             <div class="container aos-init aos-animate" data-aos="fade-up">
-               <div class="row" style="font-weight: 400; color: white;">
-                  <div class="col-twelve tab-full">
-                     <h3 style="margin-top: 1rem; color: white;">Adversary Wars Contest Schedule</h3></br>
-                     <div class="col-six tab-full">
-                        <ul class="disc" style="margin-bottom: 1rem;">
-                           <li><b>Friday, Aug 07, 10:00-18:00 PDT</b></li>
-                        </ul>
-                     </div>
-                     <div class="col-six tab-full">
-                        <ul class="disc">
-                           <li><b>Saturday, Aug 08, 10:00-18:00 PDT</b></li>
-                        </ul>
-                     </div>
-                     <div class="col-six tab-full">
-                        <ul class="disc" style="margin-bottom: 1rem;">
-                           <li><b>Sunday, Aug 09, 10:00-12:00 PDT</b></li>
-                        </ul>
-                     </div>
+               <h3 class="awc-sched-heading">Adversary Wars Contest Schedule</h3>
+               <div class="awc-sched-grid">
+                  <div class="awc-sched-card">
+                     <div class="awc-sched-ico"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></div>
+                     <div class="awc-sched-day">Friday</div>
+                     <div class="awc-sched-date">August 7, 2026</div>
+                     <span class="awc-sched-time">10:00-18:00 PDT</span>
+                  </div>
+                  <div class="awc-sched-card">
+                     <div class="awc-sched-ico"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></div>
+                     <div class="awc-sched-day">Saturday</div>
+                     <div class="awc-sched-date">August 8, 2026</div>
+                     <span class="awc-sched-time">10:00-18:00 PDT</span>
+                  </div>
+                  <div class="awc-sched-card">
+                     <div class="awc-sched-ico"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></div>
+                     <div class="awc-sched-day">Sunday</div>
+                     <div class="awc-sched-date">August 9, 2026</div>
+                     <span class="awc-sched-time">10:00-12:00 PDT</span>
                   </div>
                </div>
             </div>
@@ -133,6 +135,29 @@
                </div>
             </div>
          </section>
+        <section class="awc-mission">
+            <div class="awc-mission-inner aos-init aos-animate" data-aos="fade-up">
+               <h3 class="awc-mission-title">Adversary Wars CTF<br>Storyline and Mission!</h3>
+               <div class="awc-rule"></div>
+               <p class="awc-lead">There is a target city called <b class="awc-hl">Adversary City</b>, and it is under attack. Its hospitals, banks and other critical organizations are all in the crosshairs of real-world threat actors.</p>
+               <p class="awc-lead">As <b>adversary simulation specialists</b>, your job plays out in three stages:</p>
+               <div class="awc-steps">
+                  <div class="awc-step"><span class="awc-step-num">1</span><p><b class="awc-hl">Investigate.</b> Dig into the attacks that have already hit the city and collect the <b>TTPs</b> (tactics, techniques and procedures) the attackers used.</p></div>
+                  <div class="awc-step"><span class="awc-step-num">2</span><p><b class="awc-hl">Breach first.</b> Using what you learn, break into each organization across Adversary City (hospitals, banks and beyond) <b>before the real attackers do</b>, and capture the flags hidden inside every target.</p></div>
+                  <div class="awc-step"><span class="awc-step-num">3</span><p><b class="awc-hl">Help the defenders.</b> Every target you compromise yields intelligence the defenders can use to fix the weaknesses and harden the city... theoretically, at least; this is a CTF, so we will leave the actual patching to them!</p></div>
+               </div>
+               <p class="awc-tagline">Think like the adversary. Move faster than the threat. Take back Adversary City.</p>
+            </div>
+         </section>
+         <section class="awc-banner">
+            <img src="images/adversary-village-ctf-victimcorp.png" alt="Adversary Wars CTF Scenario" class="awc-banner-img">
+            <div class="awc-banner-cap" data-aos="fade-up">
+               <h2 class="awc-banner-title">Join us<br> Adversary Village at DEF CON 34.<br> Starts at 10:00, 7 August 2026.</h2>
+            </div>
+         </section>
+
+   
+ 
 
          <section id="schedule" style="padding-top:30px; background-color: rgb(229, 228, 228);">
             <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -386,22 +411,5 @@ Security Risk Advisors (SRA) provides specialized security services including Pe
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
       <script src="./js/bootstrap.bundle.min.js"></script>
-      <style>
-        /* sponsor styling matched to root index.html */
-        #sponsors .sponsor-box { background:#f9f9f9; border:1px solid #e0e0e0; border-radius:8px; padding:30px; margin:0 auto 30px auto; text-align:center; box-sizing:border-box; box-shadow:none; }
-        #sponsors .platinum-sponsor { max-width:960px; padding:40px; }
-        #sponsors .sponsor-box[style*="604ca9"] { max-width:900px; }
-        #sponsors .sponsor-box img.logo { max-height:90px; width:auto; max-width:100%; }
-        #sponsors .platinum-logo { width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain; }
-        #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] { justify-items:center; margin:0 auto; }
-        #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box:only-child { width:550px; grid-column:1 / -1; justify-self:center; }
-        @media (max-width:768px){
-          #sponsors .sponsor-box { padding:20px; margin:0 15px 30px !important; }
-          #sponsors .platinum-sponsor { padding:20px !important; }
-          #sponsors .platinum-logo { max-height:250px !important; }
-          #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns:1fr !important; max-width:100% !important; padding:0 15px; }
-          #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box { max-width:350px !important; }
-        }
-      </style>
    </body>
 </html>

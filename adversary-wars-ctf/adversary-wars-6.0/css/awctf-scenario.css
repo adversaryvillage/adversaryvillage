@@ -1,0 +1,217 @@
+/* Adversary Wars CTF 6.0 - scenario banner & mission sections
+   (new page-specific styles; kept out of the inline HTML) */
+
+/* ---- full-width scenario banner: image shown as-is, no crop ---- */
+.awc-banner { position: relative; }
+
+.awc-banner-img {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+.awc-banner-cap {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   text-align: center;
+   padding: 6vw 20px 20px 20px;
+}
+
+.awc-banner-title {
+   font-family: "Chivo", sans-serif;
+   color: #ffffff;
+   font-size: clamp(1.4rem, 4.5vw, 3.8rem);
+   font-weight: 800;
+   margin: 0;
+   letter-spacing: .02em;
+   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85), 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+   .awc-banner-img { height: 340px; object-fit: cover; object-position: center; }
+}
+
+/* ---- mission / story section: image shown as-is at full width, no bg colour ---- */
+.awc-mission {
+   position: relative;
+   background-color: #020203;
+   padding: 80px 20px;
+}
+
+.awc-mission-inner {
+   position: relative;
+   z-index: 2;
+   max-width: 940px;
+   margin: 0 auto;
+   color: #ffffff;
+   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.awc-mission-title {
+   font-family: "Chivo", sans-serif;
+   color: #ffffff;
+   text-align: center;
+   font-size: 4rem;
+   margin: 0;
+}
+
+.awc-rule {
+   width: 72px;
+   height: 4px;
+   background: #6ccdb8;
+   border-radius: 3px;
+   margin: 14px auto 32px;
+}
+
+.awc-lead {
+   font-size: 1.75rem;
+   line-height: 1.6;
+   margin: 0 0 1.6rem;
+}
+
+.awc-steps {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   margin: 1.6rem 0 2rem;
+}
+
+.awc-step {
+   display: flex;
+   gap: 16px;
+   align-items: flex-start;
+}
+
+.awc-step-num {
+   flex-shrink: 0;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background: #017fa4;
+   color: #ffffff;
+   font-family: "Chivo", sans-serif;
+   font-weight: 700;
+   font-size: 1.6rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-shadow: none;
+}
+
+.awc-step p {
+   font-size: 1.7rem;
+   line-height: 1.55;
+   margin: 5px 0 0;
+}
+
+.awc-hl { color: #6ccdb8; }
+
+.awc-tagline {
+   font-family: "Chivo", sans-serif;
+   font-size: 1.9rem;
+   font-weight: 800;
+   text-align: center;
+   color: #f1b435;
+   margin: 0;
+   line-height: 1.4;
+}
+
+/* ---- sponsor boxes (matched to root index.html) ---- */
+#sponsors .sponsor-box { background:#f9f9f9; border:1px solid #e0e0e0; border-radius:8px; padding:30px; margin:0 auto 30px auto; text-align:center; box-sizing:border-box; box-shadow:none; }
+#sponsors .platinum-sponsor { max-width:960px; padding:40px; }
+#sponsors .sponsor-box[style*="604ca9"] { max-width:900px; }
+#sponsors .sponsor-box img.logo { max-height:90px; width:auto; max-width:100%; }
+#sponsors .platinum-logo { width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain; }
+#sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] { justify-items:center; margin:0 auto; }
+#sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box:only-child { width:550px; grid-column:1 / -1; justify-self:center; }
+@media (max-width:768px){
+  #sponsors .sponsor-box { padding:20px; margin:0 15px 30px !important; }
+  #sponsors .platinum-sponsor { padding:20px !important; }
+  #sponsors .platinum-logo { max-height:250px !important; }
+  #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns:1fr !important; max-width:100% !important; padding:0 15px; }
+  #sponsors .sponsors-row[style*="grid-template-columns: 1fr 1fr"] .sponsor-box { max-width:350px !important; }
+}
+
+/* ---- contest schedule cards ---- */
+.awc-sched-heading {
+   font-family: "Chivo", sans-serif;
+   color: #ffffff;
+   text-align: center;
+   font-size: 3rem;
+   margin: 1rem 0 2.6rem;
+}
+.awc-sched-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 24px;
+   max-width: 1040px;
+   margin: 0 auto;
+}
+.awc-sched-card {
+   background: #020203;
+   border-radius: 16px;
+   padding: 34px 24px 30px;
+   text-align: center;
+   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   border-top: 5px solid #f1b435;
+   transition: transform .2s ease, box-shadow .2s ease;
+}
+.awc-sched-card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+}
+.awc-sched-ico {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin: 0 auto 16px;
+   background-color: #017fa4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.awc-sched-ico svg { width: 30px; height: 30px; fill: #ffffff; }
+.awc-sched-day {
+   font-family: "Chivo", sans-serif;
+   font-size: 2.4rem;
+   font-weight: 800;
+   color: #ffffff;
+   line-height: 1.1;
+}
+.awc-sched-date {
+   font-size: 1.5rem;
+   color: #6ccdb8;
+   font-weight: 700;
+   margin: 6px 0 18px;
+}
+.awc-sched-time {
+   display: inline-block;
+   background: #f1b435;
+   color: #0d294a;
+   font-family: "Chivo", sans-serif;
+   font-weight: 700;
+   font-size: 1.4rem;
+   padding: 8px 18px;
+   border-radius: 30px;
+   letter-spacing: .02em;
+}
+@media (max-width: 767px) {
+   .awc-sched-grid { grid-template-columns: 1fr; max-width: 420px; }
+   .awc-sched-heading { font-size: 2.4rem; }
+}
+
+/* keep the two hero (DEF CON + Adversary Village) logos side by side on mobile */
+@media (max-width: 600px) {
+   .s-home .half-bottom .col-twelve { white-space: nowrap; }
+   .s-home .half-bottom img {
+      width: 40vw !important;
+      max-width: 190px;
+      height: auto;
+      margin: 10px 5px !important;
+      vertical-align: middle;
+   }
+}

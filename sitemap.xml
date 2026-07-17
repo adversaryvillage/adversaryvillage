@@ -58,7 +58,257 @@
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/</loc>
-  <lastmod>2026-07-03T00:00:00+00:00</lastmod>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/schedule/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Abhijith-B-R/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Adam-Pennington/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Adam-Toscher/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/adversary-simulator/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Arad-Donenfeld/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Ariz-Soriano/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Armend-Gashi/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/A-Stryker/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/breach-simulation-exercises/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Cheryl-Biswas/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/choose-your-own-adversary-adventure/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Connor-Jackson/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Daniel-Isler/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Dhruva-Goyal/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Dominika-Pietrzak/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Duane-Dunston/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Eli-Woodward/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Filipi-Pires/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Gregory-Carpenter-DrPH/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Ibai-Castells/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Jared-Dobbelaer/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Jenn-Gile/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Jon-Rhodes/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Jordan-Bonagura/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Jun-Miura/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Mauro-Eldritch/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Mehmet-%C3%96nder-Key/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Chan/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Kim/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Leibowitz/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Michael-Ortiz/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Nahid-Sarker/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Nelson-Rafael-Col%C3%B3n-Mer%C3%A1n/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Nikos-Vourdas/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Niranjanaa-Ragupathy/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Paul-McCarty/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Redon-Gashi/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Renze-Jongman/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Robert-Pimentel/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Russell-Harvey/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Samet-Can-Tasci/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Sarah-Hume/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Seeyew-Mo/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Sitaraman-Subramanian/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Trey-Bilbrey/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Tyler-Casey/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/William-Thomas/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Yi-Ting-Shen/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Zhassulan-Zhussupov/</loc>
+  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
