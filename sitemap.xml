@@ -87,6 +87,11 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Anto-Joseph/</loc>
+  <lastmod>2026-07-22T00:00:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Arad-Donenfeld/</loc>
   <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   <priority>0.64</priority>
@@ -283,16 +288,6 @@
 </url>
 <url>
   <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Sitaraman-Subramanian/</loc>
-  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Trey-Bilbrey/</loc>
-  <lastmod>2026-07-17T00:00:00+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://adversaryvillage.org/adversary-events/DEFCON-34/Tyler-Casey/</loc>
   <lastmod>2026-07-17T00:00:00+00:00</lastmod>
   <priority>0.64</priority>
 </url>
