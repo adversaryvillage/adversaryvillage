@@ -174,37 +174,38 @@
 7. Dependency confusion attacks targeting internal package names<br>
 8. Backstopped GitHub repositories with fabricated commit histories</p></div>
             <h3 style="color:#f1b435; margin-top:2rem;">Workshop outline</h3>
-            <div style="color:white;"><p>## Exercise 1: "Publish the Trojan" - Build &amp; Deploy a Malicious npm Package</p><br>
-<p>**Objective:** Participants create a malicious npm package from scratch and publish it to a local registry.</p><br>
-<p>**Steps:**</p><br>
-<p>1. Write a `postinstall.js` script that exfiltrates environment variables to a controlled webhook (using a shared RequestBin or webhook.site endpoint)<br>
-2. Obfuscate the payload using `Buffer.from()` and hex encoding to evade casual review<br>
-3. Craft a convincing `package.json` with a typosquat name<br>
+            <div style="color:white;"><p><strong style="color:#f1b435;">Exercise 1: "Publish the Trojan" &mdash; Build &amp; Deploy a Malicious npm Package</strong><br>
+<strong>Objective:</strong> Participants create a malicious npm package from scratch and publish it to a local registry.<br>
+<strong>Steps:</strong><br>
+1. Write a postinstall.js script that exfiltrates environment variables to a controlled webhook (using a shared RequestBin or webhook.site endpoint)<br>
+2. Obfuscate the payload using Buffer.from() and hex encoding to evade casual review<br>
+3. Craft a convincing package.json with a typosquat name<br>
 4. Publish the package to a local Verdaccio registry<br>
 5. Install the malicious package on a victim VM and observe the data exfiltration<br>
-6. Discussion: Review how defenders detect and prevent this type of attack</p><br>
-<p>**Why it works:** Participants walk through the exact attack chain used by DPRK and other threat actors - package creation, payload hiding, registry abuse, and data exfiltration.</p><br>
-<p>---</p><br>
-<p>## Exercise 2: "Hijack the Dependency" - Dependency Confusion Attack</p><br>
-<p>**Objective:** Execute a dependency confusion attack against a pre-configured target application.</p><br>
-<p>**Setup:** A simple Node.js app with a `package.json` referencing an internal scoped package is provided.</p><br>
-<p>**Steps:**</p><br>
-<p>1. Create a public package with a higher version number on a local registry<br>
+6. Discussion: Review how defenders detect and prevent this type of attack<br>
+<strong>Why it works:</strong> Participants walk through the exact attack chain used by DPRK and other threat actors - package creation, payload hiding, registry abuse, and data exfiltration.</p><br>
+<p><strong style="color:#f1b435;">Exercise 2: "Hijack the Dependency" &mdash; Dependency Confusion Attack</strong><br>
+<strong>Objective:</strong> Execute a dependency confusion attack against a pre-configured target application.<br>
+<strong>Setup:</strong> A simple Node.js app with a package.json referencing an internal scoped package is provided.<br>
+<strong>Steps:</strong><br>
+1. Create a public package with a higher version number on a local registry<br>
 2. Embed a reverse shell or data exfiltration payload in the install hook<br>
-3. Trigger `npm install` on the target app<br>
+3. Trigger npm install on the target app<br>
 4. Watch as the malicious package is pulled instead of the legitimate one<br>
-5. Observe the payload execute in real time</p><br>
-<p>**Why it works:** Dependency confusion is a real, actively exploited vector. Participants experience firsthand why private registries and proper scoping matter for security.</p><br>
-<p>---</p><br>
-<p>## Exercise 3: "Poison the Repo" - GitHub Repository Backstopping</p><br>
-<p>**Objective:** Create a convincing fake GitHub presence to backstop a malicious package.</p><br>
-<p>**Steps:**</p><br>
-<p>1. Fork a legitimate utility repository<br>
-2. Rewrite git history to fabricate months of commit activity using `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE`<br>
-3. Inject a subtle payload into one of the source files (e.g., a `fetch()` call buried in a utility function)<br>
+5. Observe the payload execute in real time<br>
+<strong>Why it works:</strong> Dependency confusion is a real, actively exploited vector. Participants experience firsthand why private registries and proper scoping matter for security.</p><br>
+<p><strong style="color:#f1b435;">Exercise 3: "Poison the Repo" &mdash; GitHub Repository Backstopping</strong><br>
+<strong>Objective:</strong> Create a convincing fake GitHub presence to backstop a malicious package.<br>
+<strong>Steps:</strong><br>
+1. Fork a legitimate utility repository<br>
+2. Rewrite git history to fabricate months of commit activity using GIT_AUTHOR_DATE and GIT_COMMITTER_DATE<br>
+3. Inject a subtle payload into one of the source files (e.g., a fetch() call buried in a utility function)<br>
 4. Craft a README that mirrors the original to pass casual trust checks<br>
-5. Review how git forensics (timestamp clustering, author analysis) can expose fabricated repositories</p><br>
-<p>**Why it works:** This demonstrates exactly how threat actors backstop campaigns - a technique most defenders have never seen from the attacker's perspective.</p></div>
+5. Review how git forensics (timestamp clustering, author analysis) can expose fabricated repositories<br>
+<strong>Why it works:</strong> This demonstrates exactly how threat actors backstop campaigns - a technique most defenders have never seen from the attacker's perspective.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Prerequisites</h3>
+            <div style="color:white;"><p>Participants should bring their own device and a secure internet connection, or use the DEF CON Wi-Fi.</p></div>
+
          </div>
       </div>
    </section>

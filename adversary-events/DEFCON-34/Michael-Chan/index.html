@@ -201,6 +201,9 @@ Attendees work through a malicious take-home assessment repo, the same shape DPR
 <p>Lab 3b - worm enumeration. A defanged Shai-Hulud-style simulation enumerates sibling package names (read-only - it never modifies a package.json) to show the self-propagation step: stolen NPM_TOKEN → republish the maintainer's other packages → exponential fanout. Anchored to 2026 incidents: TanStack (84 malicious versions / 42 packages, OIDC theft via pull_request_target), node-ipc reincident (&gt;10M weekly downloads), and GlassWorm's invisible-unicode payloads shown via a cat vs xxd contrast (a file that looks empty is 1KB of code to the parser).</p><br>
 <p>Setup and safety<br>
 Everything is intentionally defanged: payloads steal nothing real, contact no real server, persist nothing, and only write marker files under /tmp/labs/ inside the container to simulate exfiltration. Attendees need only Docker or Podman - the image (~800 MB) is pulled at the start, and a browser-based IDE is bundled so there's no host editor to configure. Teardown removes the image and reminds attendees to rotate any key exported during the agent lab.</p></div>
+            <h3 style="color:#f1b435; margin-top:2rem;">Prerequisites</h3>
+            <div style="color:white;"><p>Participants should bring their own device and a secure internet connection, or use the DEF CON Wi-Fi.</p></div>
+
          </div>
       </div>
    </section>
