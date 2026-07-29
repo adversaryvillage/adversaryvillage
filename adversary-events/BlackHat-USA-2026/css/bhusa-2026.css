@@ -1,13 +1,4 @@
-/* -------------------------------------------------------------------
- * Adversary Village @ Black Hat USA 2026
- * Page-specific styles for adversary-events/BlackHat-USA-2026/index.html
- * ------------------------------------------------------------------- */
 
-
-/* -------------------------------------------------------------------
- * hero call-to-action buttons + sponsor strip
- * (carried over from the DEF CON 34 hero section)
- * ------------------------------------------------------------------- */
 .av-hero-tabs {
   display: flex;
   flex-wrap: wrap;
