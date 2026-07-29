@@ -1,0 +1,304 @@
+/* -------------------------------------------------------------------
+ * Adversary Village @ Black Hat USA 2026
+ * Page-specific styles for adversary-events/BlackHat-USA-2026/index.html
+ * ------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------
+ * hero call-to-action buttons + sponsor strip
+ * (carried over from the DEF CON 34 hero section)
+ * ------------------------------------------------------------------- */
+.av-hero-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  border: none;
+}
+
+.av-hero-tabs li {
+  list-style: none;
+}
+
+.av-hero-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, .15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .4);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.av-hero-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .55);
+  filter: brightness(1.12);
+  color: #fff;
+  text-decoration: none;
+}
+
+.av-hero-sponsors {
+  max-width: 920px;
+  margin: 26px auto 0;
+  text-align: center;
+}
+
+.av-hero-sponsors .lbl {
+  font-size: 1.05rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .65);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.av-hero-sponsors .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.av-hero-sponsors .logos a {
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  transition: transform .18s ease;
+}
+
+.av-hero-sponsors .logos a:hover {
+  transform: translateY(-3px);
+}
+
+.av-hero-sponsors .logos img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .av-hero-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .av-hero-tabs li {
+    flex: 0 0 calc(50% - 8px);
+    display: flex;
+  }
+
+  .av-hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 12px 6px;
+    font-size: 1.22rem;
+    letter-spacing: .01em;
+    min-height: 56px;
+  }
+}
+
+
+/* -------------------------------------------------------------------
+ * village schedule: day tabs + timeline
+ * ------------------------------------------------------------------- */
+.schedule-box {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.day-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.day-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.day-button.active {
+  background-color: #604ca9;
+  color: #fff;
+}
+
+.add-calendar-btn {
+  background-color: #604ca9;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.add-calendar-btn:hover {
+  background-color: #5a00b5;
+  transform: scale(1.05);
+  color: white;
+}
+
+.schedule-content {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #604ca9;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: #604ca9;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.3);
+}
+
+.timeline-time {
+  font-weight: bold;
+  color: #604ca9;
+  font-size: 1.1rem;
+}
+
+.timeline-description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.timeline-description a {
+  color: #333;
+}
+
+.timeline-location {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.timeline-photo-time {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.timeline-photo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* -------------------------------------------------------------------
+ * activity sections: date/location badge + meta chips
+ * ------------------------------------------------------------------- */
+.activity-badge {
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 5px auto;
+  display: inline-block;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+.activity-chip {
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin: 0 8px 8px 0;
+}
+
+.activity-chip--severity {
+  background-color: #e01e2b;
+}
+
+.activity-chip--info {
+  background-color: #604ca9;
+}
+
+.activity-chip--neutral {
+  background-color: #3a3a44;
+}
+
+.activity-chips {
+  margin: 14px 0 18px 0;
+}
