@@ -1,0 +1,207 @@
+/* ===================================================================
+ * Cover pics and wallpapers page styles - Adversary Village DEF CON 34
+ * Alternating dark / white sections, preview in one column and the
+ * details in the other, tops aligned.
+ * ------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------
+ * Section shell - alternating dark and white with even vertical padding
+ * ------------------------------------------------------------------- */
+.asset-section {
+   padding: 7.2rem 0;
+}
+
+.asset-section--light {
+   background-color: #ffffff;
+}
+
+.asset-section--dark {
+   background-color: #0e0e0e;
+}
+
+/* The framework floats its columns, which cannot vertically centre one
+   against the other. Flex just these rows so the artwork sits centred
+   against the full height of its text block. */
+.asset-section .row {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   margin-bottom: 0;
+}
+
+/* .row:after is a float clearfix; inside a flex row it would become a
+   stray flex item, so switch it off here */
+.asset-section .row:after {
+   display: none;
+}
+
+/* -------------------------------------------------------------------
+ * Columns - image left, details right, tops aligned
+ * ------------------------------------------------------------------- */
+.asset-image-box {
+   text-align: center;
+   padding-top: 0;
+}
+
+.asset-image-box img {
+   max-width: 100%;
+   max-height: 350px;
+   width: auto;
+   height: auto;
+   object-fit: contain;
+   border-radius: 4px;
+   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
+.asset-info {
+   padding-top: 0;
+}
+
+/* zero the top margin so the heading starts level with the image */
+.asset-info h2 {
+   margin-top: 0;
+   margin-bottom: 1rem;
+}
+
+/* speaker.css sets .job { margin-top: -4% }; reset so it can't ride up
+   into the heading */
+.asset-info .job {
+   margin-top: 0;
+   margin-bottom: 1.6rem;
+   margin-left: 0;
+}
+
+/* -------------------------------------------------------------------
+ * Per-variant colours
+ * ------------------------------------------------------------------- */
+.asset-section--light .asset-info h2 {
+   color: #000000;
+}
+
+.asset-section--light .asset-info .job {
+   color: #666666;
+}
+
+.asset-section--light .asset-info p {
+   color: #333333;
+}
+
+.asset-section--dark .asset-info h2 {
+   color: #6ccdb8;
+}
+
+.asset-section--dark .asset-info .job {
+   color: #b4b4b4;
+}
+
+.asset-section--dark .asset-info p {
+   color: #e6e6e6;
+}
+
+/* -------------------------------------------------------------------
+ * Spec chips - dimensions, ratio, format, file size
+ * ------------------------------------------------------------------- */
+.asset-meta {
+   list-style: none;
+   margin: 0 0 2rem 0;
+   padding: 0;
+}
+
+.asset-meta li {
+   display: inline-block;
+   margin: 0 0.6rem 0.6rem 0;
+   padding: 0.4rem 1.2rem;
+   background-color: #105f66;
+   color: #ffffff;
+   border-radius: 3px;
+   font-size: 1.2rem;
+   font-weight: 600;
+   letter-spacing: 0.04em;
+}
+
+/* -------------------------------------------------------------------
+ * Download button - matches the branding page button
+ * ------------------------------------------------------------------- */
+.download-btn {
+   display: inline-block;
+   padding: 0.8rem 2rem;
+   background-color: #604ca9;
+   color: #ffffff;
+   text-decoration: none;
+   border-radius: 4px;
+   font-weight: 600;
+   transition: background-color 0.3s ease;
+   border: 2px solid #604ca9;
+   font-size: 1.5rem;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+   background-color: #4a3a85;
+   border-color: #4a3a85;
+   color: #ffffff;
+}
+
+/* -------------------------------------------------------------------
+ * Usage note
+ * ------------------------------------------------------------------- */
+.asset-usage h3 {
+   margin-top: 0;
+}
+
+.asset-usage p {
+   color: #333333;
+   margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------------
+ * Responsive
+ * ------------------------------------------------------------------- */
+
+/* tablet and below - columns stack (matches framework tab-full) */
+@media only screen and (max-width: 800px) {
+   .asset-section {
+      padding: 5.2rem 0;
+   }
+
+   .asset-image-box img {
+      max-height: 280px;
+   }
+
+   /* stacked: give the details room under the image and centre them */
+   .asset-info {
+      padding-top: 3.2rem;
+      text-align: center;
+   }
+
+   .asset-meta {
+      padding-left: 0;
+   }
+}
+
+/* mobile - tighten spacing, full-width button */
+@media only screen and (max-width: 600px) {
+   .asset-section {
+      padding: 4rem 0;
+   }
+
+   .asset-image-box img {
+      max-height: 220px;
+   }
+
+   .asset-info {
+      padding-top: 2.6rem;
+   }
+
+   .asset-meta li {
+      font-size: 1.1rem;
+      padding: 0.35rem 1rem;
+   }
+
+   .download-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+   }
+}
