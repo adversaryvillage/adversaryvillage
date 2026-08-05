@@ -6510,11 +6510,97 @@ document.querySelectorAll('.nav-bar a').forEach(a => {
 
   /* ---------------------------------------------------------- validation -- */
 
+  /* Web Crypto only exists in a secure context, so it is missing when the page is
+     served over plain http from anything other than localhost. Labs are rarely on
+     TLS, so fall back to a plain implementation that produces identical digests. */
+  var K256 = [
+    0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
+    0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
+    0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da,
+    0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967,
+    0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,
+    0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,
+    0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
+    0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
+  ];
+
+  function utf8Bytes(str) {
+    var out = [], i, c, cp;
+    for (i = 0; i < str.length; i++) {
+      c = str.charCodeAt(i);
+      if (c < 0x80) {
+        out.push(c);
+      } else if (c < 0x800) {
+        out.push(0xc0 | (c >> 6), 0x80 | (c & 63));
+      } else if (c < 0xd800 || c >= 0xe000) {
+        out.push(0xe0 | (c >> 12), 0x80 | ((c >> 6) & 63), 0x80 | (c & 63));
+      } else {                                     // surrogate pair
+        cp = 0x10000 + (((c & 0x3ff) << 10) | (str.charCodeAt(++i) & 0x3ff));
+        out.push(0xf0 | (cp >> 18), 0x80 | ((cp >> 12) & 63),
+                 0x80 | ((cp >> 6) & 63), 0x80 | (cp & 63));
+      }
+    }
+    return out;
+  }
+
+  function sha256Sync(str) {
+    var h = [0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
+             0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19];
+    var bytes = utf8Bytes(str);
+    var bitLen = bytes.length * 8;
+
+    bytes.push(0x80);
+    while (bytes.length % 64 !== 56) bytes.push(0);
+    // length is 64-bit big-endian; flag strings never approach the 2^32-bit limit
+    bytes.push(0, 0, 0, 0,
+               (bitLen >>> 24) & 255, (bitLen >>> 16) & 255, (bitLen >>> 8) & 255, bitLen & 255);
+
+    var w = new Array(64), i, j, a, b, c, d, e, f, g, hh, s0, s1, ch, maj, t1, t2;
+
+    for (i = 0; i < bytes.length; i += 64) {
+      for (j = 0; j < 16; j++) {
+        w[j] = (bytes[i + j * 4] << 24) | (bytes[i + j * 4 + 1] << 16) |
+               (bytes[i + j * 4 + 2] << 8) | bytes[i + j * 4 + 3];
+      }
+      for (j = 16; j < 64; j++) {
+        s0 = ((w[j - 15] >>> 7) | (w[j - 15] << 25)) ^
+             ((w[j - 15] >>> 18) | (w[j - 15] << 14)) ^ (w[j - 15] >>> 3);
+        s1 = ((w[j - 2] >>> 17) | (w[j - 2] << 15)) ^
+             ((w[j - 2] >>> 19) | (w[j - 2] << 13)) ^ (w[j - 2] >>> 10);
+        w[j] = (w[j - 16] + s0 + w[j - 7] + s1) | 0;
+      }
+
+      a = h[0]; b = h[1]; c = h[2]; d = h[3];
+      e = h[4]; f = h[5]; g = h[6]; hh = h[7];
+
+      for (j = 0; j < 64; j++) {
+        s1 = ((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7));
+        ch = (e & f) ^ (~e & g);
+        t1 = (hh + s1 + ch + K256[j] + w[j]) | 0;
+        s0 = ((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10));
+        maj = (a & b) ^ (a & c) ^ (b & c);
+        t2 = (s0 + maj) | 0;
+        hh = g; g = f; f = e; e = (d + t1) | 0;
+        d = c; c = b; b = a; a = (t1 + t2) | 0;
+      }
+
+      h[0] = (h[0] + a) | 0; h[1] = (h[1] + b) | 0; h[2] = (h[2] + c) | 0; h[3] = (h[3] + d) | 0;
+      h[4] = (h[4] + e) | 0; h[5] = (h[5] + f) | 0; h[6] = (h[6] + g) | 0; h[7] = (h[7] + hh) | 0;
+    }
+
+    return h.map(function (n) { return (n >>> 0).toString(16).padStart(8, '0'); }).join('');
+  }
+
   async function sha256(message) {
-    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(message));
-    return Array.prototype.map.call(new Uint8Array(buf), function (b) {
-      return b.toString(16).padStart(2, '0');
-    }).join('');
+    if (window.crypto && window.crypto.subtle) {
+      try {
+        var buf = await window.crypto.subtle.digest('SHA-256', new TextEncoder().encode(message));
+        return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+          return b.toString(16).padStart(2, '0');
+        }).join('');
+      } catch (e) { /* insecure context or disabled: use the fallback */ }
+    }
+    return sha256Sync(message);
   }
 
   function looksLikeFlag(v) {
@@ -6559,7 +6645,15 @@ document.querySelectorAll('.nav-bar a').forEach(a => {
       return;
     }
 
-    var digest = await sha256(value);
+    var digest;
+    try {
+      digest = await sha256(value);
+    } catch (e) {
+      result.textContent = 'This browser could not check the flag. Tell your instructor.';
+      result.className = 'flag-result incorrect';
+      flash(widget, 'bad');
+      return;
+    }
     await new Promise(function (r) { setTimeout(r, 250); });   // rate-limit guessing
 
     if (digest === DIGESTS[id]) {
@@ -6678,28 +6772,56 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Single command copy
+// navigator.clipboard is undefined outside a secure context, so touching
+// .writeText threw synchronously and the .catch() fallback never ran.
+function legacyCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:0;opacity:0';
+  document.body.appendChild(ta);
+
+  var sel = document.getSelection();
+  var prev = (sel && sel.rangeCount) ? sel.getRangeAt(0) : null;
+
+  ta.select();
+  ta.setSelectionRange(0, ta.value.length);          // iOS needs the explicit range
+
+  var ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+
+  document.body.removeChild(ta);
+  if (prev && sel) { sel.removeAllRanges(); sel.addRange(prev); }
+  return ok;
+}
+
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      return navigator.clipboard.writeText(text).then(
+        function () { return true; },
+        function () { return legacyCopy(text); });
+    } catch (e) { /* fall through to the synchronous path */ }
+  }
+  return Promise.resolve(legacyCopy(text));
+}
+
 function copySingleCmd(row, text) {
   var btn = row.querySelector('.cmd-single-copy');
   if (!btn) return;
-  var origHTML = btn.innerHTML;
-  navigator.clipboard.writeText(text).then(function() {
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> COPIED';
-    btn.classList.add('copied-cmd');
-    setTimeout(function() {
+  if (btn.dataset.origHtml === undefined) btn.dataset.origHtml = btn.innerHTML;
+  var origHTML = btn.dataset.origHtml;
+
+  copyText(text).then(function (ok) {
+    btn.innerHTML = ok
+      ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> COPIED'
+      : 'SELECT &amp; COPY';
+    btn.classList.toggle('copied-cmd', ok);
+    clearTimeout(btn._resetTimer);
+    btn._resetTimer = setTimeout(function () {
       btn.innerHTML = origHTML;
       btn.classList.remove('copied-cmd');
-    }, 1500);
-  }).catch(function() {
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.cssText = 'position:fixed;opacity:0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> COPIED';
-    btn.classList.add('copied-cmd');
-    setTimeout(function() { btn.innerHTML = origHTML; btn.classList.remove('copied-cmd'); }, 1500);
+    }, ok ? 1500 : 2500);
   });
 }
 </script>
